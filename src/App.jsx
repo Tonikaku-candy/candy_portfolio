@@ -1,0 +1,37 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+//components
+import Navbar from './components/Navbar';
+//pages
+import About from './pages/About/About';
+import Works from './pages/Works/Works';
+import Home from './pages/Home/Home';
+import '../src/styles/global.css';
+import BumperProject from './pages/Projects/BumperProject';
+import ThreeDPackagingAd from './pages/Projects/ThreeDPackagingAd';
+import ScrollToTop from './components/ScrollToTop';
+
+
+// to show inside app
+function App() {
+  return (
+    //to change pages
+    <BrowserRouter>
+      <ScrollToTop />
+      {/* to show menu */}
+      <Navbar />
+      {/* rule to change url */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/works" element={<Works />} />
+
+
+        {/* 他のルート */}
+        <Route path="/projects/bumper" element={<BumperProject />} />
+        <Route path='/projects/3d-packaging-ad' element={<ThreeDPackagingAd />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;

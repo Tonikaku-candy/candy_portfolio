@@ -1,0 +1,17 @@
+.subtitles.all-projects {
+  font-family: 'Bungee', sans-serif;
+  font-size: 40px;
+  border-bottom: 8px solid #00cfff;
+  display: inline-block;
+}
+
+.all-projects-title {
+  display: inline-block;
+}
+
+.all-projects-title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}

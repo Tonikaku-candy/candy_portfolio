@@ -1,0 +1,86 @@
+/* BumperProject.css */
+.project-detail-page {
+  position: relative;
+}
+.video-wrapper {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+/* .bumper-inspiration {
+  width: 20%;
+ display: block;
+  margin: 20px auto; /* 中央寄せ＆少し余白 */
+
+/* .box-split {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+} */
+
+.box-split {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.box-text {
+  flex: 1 1 45%;
+}
+
+.box-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+}
+
+.box-image {
+  flex: 1 1 36%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* ← 画像を上寄せ！ */
+  align-self: flex-start; /* ← 全体も上寄せ！←これがけっこう効く！ */
+  max-width: 700px;
+}
+
+/* .box-image.stair {
+  max-width: 600px;
+    width: 100%;
+} */
+
+.tight-paragraph {
+  margin: 3rem 0; /* 上下の余白を小さくする */
+  padding: 0; /* paddingは完全にゼロ */
+}
+
+.green-bg-works.bumper {
+  position: absolute;
+  /* bottom: -209px; */
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+  transform: scaleY(-1);
+}
+
+.footer-detail {
+  padding-top: 130px;
+}

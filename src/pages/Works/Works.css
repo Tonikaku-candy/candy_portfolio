@@ -1,0 +1,185 @@
+.works {
+  background-color: #79ff4c;
+  position: relative;
+padding-bottom: 150px;
+margin-bottom: 200px;
+}
+
+/* title */
+
+.subtitles.all-projects {
+  font-family: 'Bungee', sans-serif;
+  font-size: 40px;
+  border-bottom: 8px solid #00cfff;
+  display: inline-block;
+}
+
+.all-projects-title {
+  display: inline-block;
+}
+
+.all-projects-title-wrapper {
+  text-align: left;
+  margin-left: 40px;
+}
+.all-projects-title-image-wrapper {
+  text-align: center;
+}
+
+.all-projects-title-image {
+  width: 70px;
+  transform: scaleX(-1);
+}
+
+/* title end */
+
+/* section */
+.section-center {
+  text-align: center;
+  margin-right: 40px;
+}
+
+.section-center span {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 500;
+  color: #000000;
+}
+
+.section-center span:hover {
+  color: #ffffff;
+}
+
+.section-center .active-tag {
+  color: #ff62bc;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* section end */
+
+/* projects card */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* ← 2列に固定 */
+  gap: 50px;
+  padding: 20px 0;
+  max-width: 1200px; /* ← 横幅を制限 */
+  margin: 0 auto;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 900px;
+  min-height: 350px;
+  max-width: none; /* ← これを追加または上書き */
+  width: 100%;
+  height:100%;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  height: 360px; /* 好みで調整してOK */
+  object-fit: cover;
+}
+
+.project-title,
+.project-tags {
+  margin: 0;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 4px;
+}
+
+.project-tags {
+  display: none;
+}
+
+/* テキスト部分のラッパー */
+.project-info {
+  font-family: 'Fredoka', sans-serif;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+}
+
+/* projects card end */
+
+.green-bg-works {
+  position: absolute;
+  /* bottom: -209px; */
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  pointer-events: none;
+  transform: scaleY(-1);
+}
+
+@media (max-width: 600px) {
+  .works {
+    padding-bottom: 100px;
+    margin-bottom: 120px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr; 
+
+  }
+
+    .subtitles.all-projects {
+    font-size: 28px;
+    margin-left: 20px;
+    border-bottom-width: 4px;
+  }
+
+  .all-projects-title-image {
+    width: 50px;
+  }
+
+  .section-right {
+    margin-right: 20px;
+    text-align: center;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-description {
+    font-size: 0.95rem;
+  }
+
+   .project-card {
+  margin: 20px 20px; 
+}
+}
+
+

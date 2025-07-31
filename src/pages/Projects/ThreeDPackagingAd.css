@@ -1,0 +1,82 @@
+/* BumperProject.css */
+.project-detail-page {
+  position: relative;
+}
+
+.food-poster {
+   max-width: 1000px;
+
+}
+.video-wrapper.poster {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  position: relative;
+  aspect-ratio: 1600 / 995; 
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.food-poster {
+  max-width: 1000px;
+  display: block;
+  margin: 40px auto;
+  border-radius: 12px;
+}
+
+.box-split {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap; /* スマホ用に折り返しも */
+}
+
+.box-text {
+  flex: 1 1 60%;
+}
+
+.box-image.sushi {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: flex-start;
+  max-width: 600px;
+}
+
+.box-image.sushi img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.box-image.tshirts {
+  flex: 1 1 35%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* ← 画像を上寄せ！ */
+  align-self: flex-start; /* ← 全体も上寄せ！←これがけっこう効く！ */
+  max-width: 600px;
+}
+
+
+
+.green-bg-works.three-d {
+  position: absolute;
+  /* bottom: -209px; */
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+  pointer-events: none;
+  transform: scaleY(-1);
+}
+
+.footer-detail {
+  padding-top: 130px;
+}

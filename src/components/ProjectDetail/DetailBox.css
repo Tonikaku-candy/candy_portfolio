@@ -1,0 +1,132 @@
+/* detail box css */
+
+/* DetailBox 全体のレイアウト */
+/* .detail-box {
+  background-color: #fff;
+  padding: 20px;
+  margin: 30px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+} */
+
+/* DetailBox 全体のレイアウト */
+.detail-box {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px auto; /* 中央に寄せる */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+
+  /* 💡追加する部分： */
+  max-width: 1200px; /* または600pxでもOK！ */
+  width: 100%; /* レスポンシブ対応 */
+}
+
+/* タイトル部分の共通スタイル */
+.detail-box-title {
+  font-family: 'Bungee', sans-serif;
+  font-size: 28px;
+  color: #000;
+  padding: 10px 24px;
+  border-radius: 30px;
+  border: solid 3px #000;
+  display: inline-block;
+  margin-bottom: 16px;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+/* list */
+.detail-box-content ul {
+  padding-left: 1.2rem; /* 左のインデント少しだけ残す */
+  margin: 0; /* 上下の余白をなくす */
+}
+
+.detail-box-content li {
+  margin-bottom: 14px; /* すこし間をあける（好みで） */
+  padding: 0; /* 内側の余白をゼロに */
+  line-height: 1.8; /* ← 行間もゆったりめに */
+  list-style-position: inside; /* 丸ポチも中に入れるとバランスよし */
+  text-align: left; /* ← 左揃えで視線を整える */
+}
+
+/* カラーバリエーション（propsで渡すcolorClass用） */
+.pink {
+  background-color: #ff62bc;
+}
+.blue {
+  background-color: #00cfff;
+}
+.yellow {
+  background-color: #fff94c;
+}
+.purple {
+  background-color: #caa3fc;
+}
+.green {
+  background-color: #aaff00;
+}
+.orange {
+  background-color: #ffc400;
+}
+
+/* 中身部分 */
+.detail-box-content {
+  font-size: 20px;
+  line-height: 1.7;
+  padding: 0 10px;
+}
+
+/* .S {
+  width: 75%;
+} */
+
+.text-align-center {
+  text-align: center;
+}
+
+/* サイズバリエーション */
+
+/* .S {
+  width: 280px;
+  height: 200px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+} */
+.S {
+  width: 550px;
+  height: 280px;
+  padding: 10px;
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.M {
+  padding: 20px;
+  margin: 30px 0;
+}
+
+.L {
+  padding: 30px;
+  margin: 40px 0;
+}
+
+@media (max-width: 1200px) {
+  .detail-box {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .detail-box {
+    max-width: 100%;
+    padding: 16px;
+  }
+}

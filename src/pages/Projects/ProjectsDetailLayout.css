@@ -1,0 +1,97 @@
+/* 全体 */
+
+.project-detail-page {
+  background-color: #79ff4c;
+  font-family: 'Rubik', sans-serif;
+  color: #000;
+  
+}
+
+
+
+/* .detail-box {
+  background: white;
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 30px;
+} */
+
+.detail-box {
+  background: white;
+  border: 3px solid black;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 0 auto 30px; /* ← margin-bottom に auto を追加して中央寄せ！ */
+  max-width: 1400px;   /* ← 中の白ボックスの最大幅を制限 */
+}
+
+
+/* .detail-box-wrapper {
+  padding-left: 4rem;
+  padding-right: 4rem;
+} */
+
+.detail-box-wrapper {
+  max-width: 1300px; /* ← ここを少し広げた！ */
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+/* 
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8rem;
+} */
+
+.project-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+.info-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start; /* ← これを追加！ */
+}
+
+.subtitles {
+  margin-bottom: 2rem;
+  
+}
+.project-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Bungee', sans-serif;
+  margin-bottom: 2rem;
+}
+
+.back-to-works {
+  margin: 40px 0;
+  text-align: center;
+    z-index: 2;
+}
+
+.back-to-works.top {
+  margin: 40px 20px;
+  text-align: left;
+}
+
+.back-button {
+  font-family: 'Bungee', sans-serif;
+  font-size: 16px;
+  background-color: #ff6ea0;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #e35b92;
+}

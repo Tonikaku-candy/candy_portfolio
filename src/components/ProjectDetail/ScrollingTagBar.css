@@ -1,0 +1,45 @@
+/* ScrollingTagBar.css */
+
+.tag-bar-scroll-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  /* padding-top: 30px; */
+}
+
+.tag-bar2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  animation: scroll-left 60s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.33%);
+  }
+}
+
+.tag-button2 {
+  font-family: 'Bungee', sans-serif;
+  padding: 0.5rem 1rem;
+  min-height: 54px;
+  background-color: #fff;
+  border: 2px solid #25282B;
+  border-radius: 30px;
+  font-weight: bold;
+  color: #25282B;
+ cursor: default;
+
+}
+
+
+.tag-heart {
+  width: 40px;
+  height: auto;
+  flex-shrink: 0;
+  margin: 0 4px;
+}
