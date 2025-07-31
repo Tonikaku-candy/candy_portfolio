@@ -86,7 +86,7 @@ function Home() {
               />
             </div>
             <div className="subtitles featured">
-              <h2>FEATURED PROJECTS</h2>
+              <h2>FEATURED PROJECTS!</h2>
             </div>
           </div>
         </div>
