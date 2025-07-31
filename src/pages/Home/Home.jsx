@@ -1,4 +1,4 @@
-import './home.css';
+import './Home.css';
 import ProjectSlider from '../../components/ProjectSlider';
 import { Link } from 'react-router-dom';
 import PhotoGallery from '../../components/PhotoGallery';
