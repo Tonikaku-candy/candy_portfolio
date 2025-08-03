@@ -1,6 +1,7 @@
 import './About.css';
 import PhotoGallery from '../../components/PhotoGallery';
 import Footer from '../../components/Footer';
+import { useEffect } from 'react';
 
 // images
 import ufoImage from '../../assets/About/rabbit-ufo.svg';
@@ -30,8 +31,32 @@ import wordpressIcon from '../../assets/About/icons/wordpress-icon.png';
 import profileBg from '../../assets/About/sakura-bg.jpg';
 import profile1 from '../../assets/About/candy-profile1.png';
 import profile2 from '../../assets/About/candy-profile2.png';
+import colorfulChameleon from '../../assets/About/colorful-chameleon.png';
+
+
+
+
 
 function About() {
+  useEffect(() => {
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      const chameleon = document.querySelector('.colorful-chameleon');
+      if (entry.isIntersecting) {
+        chameleon.classList.remove('animate'); // アニメ用クラスを一度外す
+        void chameleon.offsetWidth; // リフローさせて強制再描画
+        chameleon.classList.add('animate'); // もう一回つける
+      }
+    },
+    { threshold: 0.5 }
+  );
+
+  const target = document.querySelector('.chameleon-wrapper');
+  if (target) observer.observe(target);
+
+  return () => observer.disconnect();
+}, []);
+
   return (
     <>
       {/* hello section */}
@@ -76,24 +101,24 @@ function About() {
               <p>
                 I’m a New Media student at BCIT, originally from Japan.
                 <br />
-                  <br />
+                <br />
                 Before starting this program, I had almost no experience with
                 technology — I could barely use a computer. But through this
                 journey, I’ve discovered a true passion for creating digital
                 work that blends fun, weirdness, and heartfelt expression.
                 <br />
-                  <br />
+                <br />
                 My creative style is inspired by Japanese kawaii culture,
                 Harajuku fashion, and pixel art. I love bold colors, playful
                 aesthetics, and visuals that spark joy or curiosity.
                 <br />
-                  <br />
+                <br />
                 I come from a fashion design background, where I made handmade
                 clothes and accessories. That experience taught me how to
                 express personality through design — something I now bring into
                 my digital projects.
                 <br />
-                  <br />
+                <br />
                 I’m also a fan of Japanese comedy, and I enjoy creating work
                 that’s a little silly or chaotic — but always made with full
                 sincerity. Whether it’s an animation or a quirky interface, my
@@ -105,20 +130,21 @@ function About() {
                 humor, when treated with care, can be just as powerful as any
                 serious message.
                 <br />
-                  <br />
+                <br />
                 I like working ahead and pushing myself beyond just meeting
                 deadlines because I truly want to improve, experiment, and keep
                 learning. Even when I struggle, I stay committed. My dedication
                 and sense of responsibility are traits I’m proud of — rooted in
                 my Japanese upbringing.
                 <br />
-                  <br />
-                My personal logo<strong> — a colorful chameleon — </strong>reflects this mindset.
-                It symbolizes the ability to adapt, explore, and grow into new
-                creative forms, even without much experience. It reminds me that
-                there’s value in trying, changing, and becoming.
                 <br />
-                  <br />
+                My personal logo<strong> — a colorful chameleon — </strong>
+                reflects this mindset. It symbolizes the ability to adapt,
+                explore, and grow into new creative forms, even without much
+                experience. It reminds me that there’s value in trying,
+                changing, and becoming.
+                <br />
+                <br />
                 Right now, I’m focused on growing as a designer who can turn
                 unique ideas into meaningful, memorable experiences. Cute,
                 strange, funny — and made to make people happy.
@@ -229,7 +255,16 @@ function About() {
           </div>
 
           {/* Extra Skills */}
+          <div className="chameleon-wrapper">
+  <img
+    src={colorfulChameleon}
+    alt="Colorful Chameleon Logo"
+    className="colorful-chameleon"
+  />
+</div>
+       
           <div className="skills-card extra">
+       
             <h2 className="about-section-title extra">EXTRA SKILLS</h2>
             <ul className="extra-skills-list">
               <li>Content Creation for Social Media</li>

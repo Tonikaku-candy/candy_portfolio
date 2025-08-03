@@ -391,6 +391,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+  z-index: 2;
 }
 
 .extra-skills-list li {
@@ -400,6 +401,57 @@ body {
   border-radius: 1rem;
   border: 2px solid #ff62bc;
 }
+
+/* chameleon */
+.chameleon-wrapper {
+  position: absolute;
+  left: 80%;
+  transform: translateX(-50%)  scaleX(-1);
+  bottom: -323px;
+  z-index: 1; /* 最初は box より後ろに見せる */
+  pointer-events: none; /* カーソル干渉しないように */
+}
+
+/* アニメーション用クラス */
+.colorful-chameleon {
+  width: 200px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(40px);
+
+}
+@keyframes popFromBehindBox {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.8) rotate(-8deg);
+    z-index: 0;
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(-20px) scale(1.05) rotate(3deg); /* ジャンプ！ */
+    z-index: 3;
+  }
+  60% {
+    transform: translateY(0px) scale(1) rotate(0deg); /* 着地1 */
+  }
+  75% {
+    transform: translateY(-6px); /* 軽くバウンド */
+  }
+  90% {
+    transform: translateY(0px); /* 着地2 */
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+
+
+.colorful-chameleon.animate {
+  animation: popFromBehindBox 1.2s ease-out forwards;
+}
+
 
 /* about section end */
 

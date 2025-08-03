@@ -33,7 +33,7 @@
 } */
 
 .detail-box-wrapper {
-  max-width: 1300px; /* ← ここを少し広げた！ */
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -51,12 +51,17 @@
 }
 
 
-.info-grid {
+/* .info-grid {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
-  align-items: flex-start; /* ← これを追加！ */
+  align-items: flex-start;
+} */
+
+.project-grid .detail-box {
+  flex: 1 1 300px; 
+  max-width: 400px;
 }
 
 .subtitles {
