@@ -13,13 +13,15 @@ function Navbar() {
   return (
     <header className="header-bar">
       <nav className="navbar">
-        <Link to="/">
-          <img
-            src={logo}
-            className="logo"
-            alt="colorful chameleon logo for Candy Fukaya brand"
-          />
-        </Link>
+  <Link to="/" className="logo-wrapper">
+  <div className="logo-tab-box">
+    <img
+      src={logo}
+      className="logo"
+      alt="colorful chameleon logo for Candy Fukaya brand"
+    />
+  </div>
+</Link>
 
         {/* only mobile image */}
         {isOpen ? (
@@ -51,7 +53,7 @@ function Navbar() {
           </li>
           <li>
             <Link to="/works" className="works-button">
-              <span className="text">Works</span>
+              <span className="text">Projects</span>
             </Link>
           </li>
         </ul>

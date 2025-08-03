@@ -1,24 +1,14 @@
-/* detail box css */
 
-/* DetailBox 全体のレイアウト */
-/* .detail-box {
-  background-color: #fff;
-  padding: 20px;
-  margin: 30px 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
-} */
 
 /* DetailBox 全体のレイアウト */
 .detail-box {
   background-color: #fff;
   padding: 20px;
-  margin: 20px auto; /* 中央に寄せる */
+  margin: 20px auto;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 
-  /* 💡追加する部分： */
-  max-width: 1200px; /* または600pxでもOK！ */
+  max-width: 1800px;
   width: 100%; /* レスポンシブ対応 */
 }
 
@@ -43,11 +33,11 @@
 }
 
 .detail-box-content li {
-  margin-bottom: 14px; /* すこし間をあける（好みで） */
-  padding: 0; /* 内側の余白をゼロに */
-  line-height: 1.8; /* ← 行間もゆったりめに */
-  list-style-position: inside; /* 丸ポチも中に入れるとバランスよし */
-  text-align: left; /* ← 左揃えで視線を整える */
+  margin-bottom: 14px; 
+  padding: 0; 
+  line-height: 1.8;
+  list-style-position: inside; 
+  text-align: left; 
 }
 
 /* カラーバリエーション（propsで渡すcolorClass用） */
@@ -70,6 +60,10 @@
   background-color: #ffc400;
 }
 
+.red {
+  background-color: #ff4c4c;
+}
+
 /* 中身部分 */
 .detail-box-content {
   font-size: 20px;
@@ -87,16 +81,7 @@
 
 /* サイズバリエーション */
 
-/* .S {
-  width: 280px;
-  height: 200px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-} */
+
 .S {
   width: 550px;
   height: 280px;

@@ -10,11 +10,15 @@ import ScrollingTagBar from '../../components/ProjectDetail/ScrollingTagBar';
 import '../../components/ProjectDetail/ScrollingTagBar.css';
 import './BumperProject.css';
 import ProjectTitle from '../../components/ProjectDetail/ProjectTitle';
-import projectData from '../../data/ProjectData';
+
+// photo slide
+import SlideCard from '../../components/ProjectDetail/SlideCard.jsx';
+import SlideData from '../../components/ProjectDetail/BumperSlideData.js';
+import '../../components/ProjectDetail/SlideCard.css';
 
 // image
 import brainstormingImage from '../../assets/ProjectDetails/Bumper/bumper-origin-visual.png';
-import inspirationImage from '../../assets/ProjectDetails/Bumper/colorful-staircase.jpg';
+// import inspirationImage from '../../assets/ProjectDetails/Bumper/colorful-staircase.jpg';
 import greenBgWorks from '../../assets/home/header/green-bg-top.png';
 
 const baseTags = [
@@ -71,6 +75,19 @@ function BumperProject() {
 
             <DetailBox
               size="S"
+              title="ROLE"
+              colorClass="red"
+              extraClass="small-padding-box"
+            >
+              <ul>
+                <li>Direction & Motion</li>
+                <li>Design & Pixel Art</li>
+                <li>Costume by Me</li>
+              </ul>
+            </DetailBox>
+
+            <DetailBox
+              size="S"
               title="DURATION"
               colorClass="yellow"
               extraClass="small-padding-box"
@@ -79,17 +96,15 @@ function BumperProject() {
             </DetailBox>
           </div>
 
-          <DetailBox title="GOAL" colorClass="pink">
+          <DetailBox title="OVERVIEW" colorClass="pink">
             <p>
-              This project’s goal was to create a short animated bumper to open
-              a video series.
+              This short animated bumper was created to open a video series.
               <br />
-              I wanted the animation to reflect my playful, quirky personal
-              style while showcasing my motion graphics skills in Adobe After
-              Effects.
+              I aimed to reflect my playful, quirky style while showcasing
+              motion graphics skills in Adobe After Effects.
               <br />
-              Through this, I explored timing, typography, visual rhythm, and
-              transitions to deliver a fun, cohesive intro.
+              The piece explores timing, typography, visual rhythm, and
+              transitions to deliver a fun and cohesive intro.
             </p>
           </DetailBox>
 
@@ -105,8 +120,8 @@ function BumperProject() {
                   <br />I also made sure the process was fun for me. I wanted to
                   feel excited every time I watched it — and that feeling guided
                   the creative direction. One key inspiration for this animation
-                  was the colorful staircase in my childhood home. It was
-                  handmade by my dad, and I painted it myself as a kid. That
+                  was the colorful staircase in my parents' home. It was
+                  handmade by my dad, and I painted it myself. That
                   staircase has always been one of my favorite spots — full of
                   color, memories, and creativity.
                   <br />
@@ -120,16 +135,16 @@ function BumperProject() {
                   <br />
                   Including that staircase made the piece feel more personal. It
                   wasn’t just about ramen anymore — it became a tribute to my
-                  childhood, my family, and the playful way I’ve always
+                  life, my family, and the playful way I’ve always
                   approached design.
                 </p>
               </div>
-              <div className="box-image stair">
-                <img
-                  src={inspirationImage}
-                  alt="Colorful staircase from my childhood home"
-                  className="bumper-inspiration"
-                />
+           
+
+              <div className="project-slider-detail">
+                <div className="project-slider-detail">
+                  <SlideCard />
+                </div>
               </div>
             </div>
           </DetailBox>

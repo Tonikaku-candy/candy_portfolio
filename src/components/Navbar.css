@@ -2,10 +2,36 @@
 
 /* logo */
 .logo {
-  width: 90px;
+  width: 120px;
   height: auto;
-  margin-left: 20px;
+
+   margin-top: 4rem;
+  margin-bottom: auto;
+  z-index: 5;
+  position: relative;
 }
+
+/* ロゴとタブをまとめて配置 */
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* ロゴの上にちょっと飛び出すボックス */
+.logo-tab-box {
+    display: flex;                  /* ←中央揃えのキモ！ */
+  justify-content: center;        /* 横方向に中央 */
+  align-items: center;            /* 縦方向に中央 */
+  position: relative; 
+margin-left: 80px;
+  width: 150px;
+  height: 190px;
+  background-color: #FF44B7;
+  border: solid 4px #fff;
+  border-radius: 10px;
+  z-index: 1;
+}
+
 /* logo end */
 
 /* header bar */
@@ -13,6 +39,10 @@
   background-color: #fff94d;
   top: 0;
   width: 100vw;
+  height: 80px;
+  z-index: 10;
+  position: relative;
+  overflow: visible;
 }
 
 /* nav  */
@@ -22,31 +52,38 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 80px;
   margin: 0 auto;
   max-width: none;
+  padding: 0 0px; 
 }
 
 .nav-links {
   display: none;
-  gap: 20px;
+  gap: 10px;
   list-style: none;
+  
 }
 
 .nav-links li a {
-  display: inline-block;
+
+   display: flex;
+  justify-content: center;
+  align-items: center;   
   font-family: 'Bungee', sans-serif;
-  font-size: 24px;
+  width:150px;
+  height: 45px;
+
+  font-size: 20px;
   text-decoration: none;
   text-align: center;
-  padding: 10px 40px;
-  margin: 0 15px;
   border-radius: 50px;
   color: #fff;
   position: relative;
-  /* box-shadow: inset 0 -12px 0 rgba(0, 0, 0, 0.3), 0 10px 15px rgba(0, 0, 0, 0.4); */
   transition: transform 0.2s;
   overflow: hidden;
   z-index: 1;
+
 }
 
 .nav-links li a .text {
@@ -108,6 +145,7 @@
   /* background: #02ff44; */
   background: linear-gradient(to bottom, #02ff44 0%, #00c938 100%);
   border: 2px solid #343434;
+  margin-right: 80px;
 }
 
 /* .works-button::before {

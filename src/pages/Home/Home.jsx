@@ -3,30 +3,76 @@ import ProjectSlider from '../../components/ProjectSlider';
 import { Link } from 'react-router-dom';
 import PhotoGallery from '../../components/PhotoGallery';
 import Footer from '../../components/Footer';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 //images
-import headerImage from '../../assets/home/header/header.png';
 import headerVideo from '../../assets/home/header/candy-fukaya-motion-design-portfolio.mp4';
-import greenBg from '../../assets/home/header/green-bg-top.png';
 import featuredProjectsTitleImage from '../../assets/home/featured-projects/eye.png';
 import aboutMeTitleImage from '../../assets/home/about-me/candy.png';
 import aboutMeVideo from '../../assets/home/about-me/kawaii-intro-candy-fukaya.mp4';
-import yellowBg from '../../assets/home/about-me/yellow-bg.png';
+import lollipop from '../../assets/home/about-me/heart-lollipop.png';
+import jellyBeans from '../../assets/home/about-me/jelly-beans.png';
+
 import letsConnectTitleImage from '../../assets/home/connect/mail.png';
-import yellowBgBottom from '../../assets/home/about-me/yellow-bg-bottom.png';
 import rainbow from '../../assets/home/connect/rainbow-stripe.png';
 import mailIcon from '../../assets/home/connect/mail-icon.png';
 import instagramIcon from '../../assets/home/connect/instagram-icon.png';
 import linkedinIcon from '../../assets/home/connect/linkedin-icon.png';
 import girl from '../../assets/home/connect/girl.png';
-import pinkBg from '../../assets/home/connect/pink-bg.png';
+
 import myLookTitleImage from '../../assets/home/my-look/dress-icon.png';
-import blueBg from '../../assets/home/my-look/blue-bg-bottom.png';
+import sewingMachine from '../../assets/home/my-look/sewing-machine.png';
 
 function Home() {
+  // time
+  const [currentTime, setCurrentTime] = useState('');
+
+  // about image animation
+  // 追加
+  const lollipopRef = useRef(null);
+  const jellyRef = useRef(null);
+  const [lollipopVisible, setLollipopVisible] = useState(false);
+  const [jellyVisible, setJellyVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === lollipopRef.current && entry.isIntersecting) {
+            setLollipopVisible(true);
+            observer.unobserve(entry.target); // 一度だけ
+          }
+          if (entry.target === jellyRef.current && entry.isIntersecting) {
+            setJellyVisible(true);
+            observer.unobserve(entry.target); // 一度だけ
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    if (lollipopRef.current) observer.observe(lollipopRef.current);
+    if (jellyRef.current) observer.observe(jellyRef.current);
+
+    return () => {
+      if (lollipopRef.current) observer.unobserve(lollipopRef.current);
+      if (jellyRef.current) observer.unobserve(jellyRef.current);
+    };
+  }, []);
+
   // girl comment
   const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const now = new Date();
+      const hours = now.getHours().toString().padStart(2, '0');
+      const minutes = now.getMinutes().toString().padStart(2, '0');
+      const seconds = now.getSeconds().toString().padStart(2, '0');
+      setCurrentTime(`${hours}:${minutes}:${seconds}`);
+    }, 1000);
+
+    return () => clearInterval(interval); // コンポーネント破棄時にタイマー解除
+  }, []);
 
   useEffect(() => {
     const comment = document.querySelector('.girl-comment');
@@ -54,6 +100,8 @@ function Home() {
     <div>
       {/* header */}
       <div className="hero-wrapper">
+        <div className="video-timer">{currentTime}</div>
+
         <h1 className="visually-hidden">
           Candy Fukaya – Graphic & Motion Designer Portfolio
         </h1>
@@ -65,17 +113,13 @@ function Home() {
           loop
           playsInline
         ></video>
-
-        <img
-          src={greenBg}
-          className="green-bg-top"
-          alt="section top decoration"
-        />
       </div>
       {/* header end */}
 
       {/* feature products */}
       <section className="featured-projects">
+        {/* div inside section add max-width 1400 margin 0 auto */}
+
         <div className="featured-title-wrapper">
           <div className="featured-title">
             <div className="featured-title-image-wrapper">
@@ -97,11 +141,14 @@ function Home() {
       {/* about me */}
 
       <section className="about-section">
+        <img
+          ref={lollipopRef}
+          src={lollipop}
+          className={`lollipop ${lollipopVisible ? 'visible' : ''}`}
+          alt="heart lollipop"
+        />
         {/* bg */}
 
-        <div className="bg-top">
-          <img src={yellowBg} alt="section top decoration" />
-        </div>
         <div className="about-title-wrapper">
           <div className="about-title">
             <div className="about-title-image-wrapper">
@@ -145,18 +192,20 @@ function Home() {
                 loop
                 playsInline
               />
-              {/* <img
-                src={aboutMeImage}
-                alt="Candy's self-introduction visual with pixel rainbow, flip phone, and bunny"
-              /> */}
             </div>
           </div>
         </div>
+        <img
+          ref={jellyRef}
+          src={jellyBeans}
+          className={`jelly ${jellyVisible ? 'visible' : ''}`}
+          alt="jelly beans"
+        />
       </section>
 
-      <div className="bg-bottom">
+      {/* <div className="bg-bottom">
         <img src={yellowBgBottom} alt="section bottom decoration" />
-      </div>
+      </div> */}
 
       {/* about me end */}
 
@@ -211,14 +260,15 @@ function Home() {
             ))}
           </p>
         </div>
+             <img src={sewingMachine} alt='pink sewing machine image' className='sewing-machine' />
+     
       </section>
-      <div className="pink-bg-bottom">
-        <img src={pinkBg} alt="section bottom decoration" />
-      </div>
+
       {/* connect end */}
 
       {/* my looks */}
       <section className="my-looks-section">
+      
         <div className="my-look-title-wrapper">
           <div className="my-look-title">
             <div className="my-look-title-image-wrapper">
@@ -236,9 +286,6 @@ function Home() {
           <h3 className="made-by-me">🩷#MadeByMe🩷</h3>
         </div>
         <PhotoGallery />
-        <div className="blue-bg-bottom">
-          <img src={blueBg} alt="section bottom decoration" />
-        </div>
       </section>
 
       <Footer />

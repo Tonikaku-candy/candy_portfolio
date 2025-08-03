@@ -15,3 +15,16 @@
   align-items: center;
   margin: 20px 0;
 }
+
+
+@media (max-width: 768px) {
+  .subtitles.all-projects {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .subtitles.all-projects {
+    font-size: 18px;
+  }
+}
