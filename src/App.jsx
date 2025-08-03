@@ -6,8 +6,10 @@ import About from './pages/About/About';
 import Works from './pages/Works/Works';
 import Home from './pages/Home/Home';
 import '../src/styles/global.css';
-import BumperProject from './pages/Projects/BumperProject';
-import ThreeDPackagingAd from './pages/Projects/ThreeDPackagingAd';
+import BumperProject from "./pages/Projects/Bumper/BumperProject";
+import ThreeDPackagingAd from "./pages/Projects/ThreeDPackaging/ThreeDPackagingAd";
+
+
 import ScrollToTop from './components/ScrollToTop';
 
 

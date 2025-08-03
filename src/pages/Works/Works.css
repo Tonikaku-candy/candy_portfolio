@@ -131,16 +131,20 @@ margin-bottom: 200px;
 
 /* projects card end */
 
-.green-bg-works {
+
+
+.all-projects-section::before {
+  content: '';
   position: absolute;
-  /* bottom: -209px; */
-  top: 100%;
+  bottom: -146px;
   left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 1;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 100vw 146px 0;
+  border-color: transparent #7aff4c transparent transparent;
+  z-index: -1;
   pointer-events: none;
-  transform: scaleY(-1);
 }
 
 @media (max-width: 600px) {

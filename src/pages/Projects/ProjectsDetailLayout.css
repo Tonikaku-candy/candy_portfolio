@@ -2,7 +2,7 @@
 
 .project-detail-page {
   background-color: #79ff4c;
-  font-family: 'Rubik', sans-serif;
+   font-family: 'Fredoka', 'sans-serif';
   color: #000;
   
 }
@@ -99,4 +99,18 @@
 
 .back-button:hover {
   background-color: #e35b92;
+}
+
+.project-detail-page::before {
+  content: '';
+  position: absolute;
+  bottom: -146px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 100vw 146px 0;
+  border-color: transparent #7aff4c transparent transparent;
+  z-index: -1;
+  pointer-events: none;
 }

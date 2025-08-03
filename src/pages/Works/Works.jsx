@@ -32,7 +32,11 @@ function Works() {
       <div className="works">
         {/* タグバー */}
         <div className="work-section">
-          <TagBar tags={tags} activeTag={selectedTag} onTagClick={setSelectedTag} />
+          <TagBar
+            tags={tags}
+            activeTag={selectedTag}
+            onTagClick={setSelectedTag}
+          />
         </div>
 
         {/* プロジェクト一覧セクション */}
@@ -54,22 +58,26 @@ function Works() {
 
           {/* カテゴリーフィルター */}
           <div className="section-center">
-            {['All', 'Content Creation', 'Motion Graphics', 'Graphic Design', 'Branding'].map(
-              (tag, index) => (
-                <span
-                  key={index}
-                  className={
-                    selectedTag === tag || (tag === 'All' && selectedTag === '')
-                      ? 'active-tag'
-                      : ''
-                  }
-                  onClick={() => setSelectedTag(tag === 'All' ? '' : tag)}
-                  style={{ cursor: 'pointer', margin: '0 8px' }}
-                >
-                  {tag}
-                </span>
-              )
-            )}
+            {[
+              'All',
+              'Content Creation',
+              'Motion Graphics',
+              'Graphic Design',
+              'Branding',
+            ].map((tag, index) => (
+              <span
+                key={index}
+                className={
+                  selectedTag === tag || (tag === 'All' && selectedTag === '')
+                    ? 'active-tag'
+                    : ''
+                }
+                onClick={() => setSelectedTag(tag === 'All' ? '' : tag)}
+                style={{ cursor: 'pointer', margin: '0 8px' }}
+              >
+                {tag}
+              </span>
+            ))}
           </div>
 
           {/* プロジェクトカード表示 */}
@@ -96,21 +104,18 @@ function Works() {
                     />
                     <div className="project-info">
                       <h3 className="project-title">{project.title}</h3>
-                      <p className="project-description">{project.description}</p>
-                      <p className="project-tags">{project.category.join(', ')}</p>
+                      <p className="project-description">
+                        {project.description}
+                      </p>
+                      <p className="project-tags">
+                        {project.category.join(', ')}
+                      </p>
                     </div>
                   </div>
                 </Link>
               ))}
           </div>
         </section>
-
-        {/* セクション下の装飾画像 */}
-        <img
-          src={greenBgWorks}
-          className="green-bg-works"
-          alt="section top decoration"
-        />
       </div>
 
       <Footer />
