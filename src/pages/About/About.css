@@ -6,7 +6,7 @@ body {
 .hello-section {
   position: relative;
   background: #ff62bc;
-  padding: 10rem 2rem 12rem;
+  padding: 10rem 2rem 15rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,9 +20,8 @@ body {
   max-width: 1200px;
   width: 100%;
   gap: 2rem;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
-
 
 .hello-text {
   flex: 1;
@@ -76,7 +75,6 @@ body {
   z-index: 0;
   opacity: 0;
   animation: lightBeamLoop 5s ease-in-out infinite;
-
 }
 
 @keyframes lightBeamLoop {
@@ -94,7 +92,6 @@ body {
   }
 }
 
-
 /* girl animation */
 .girl {
   position: absolute;
@@ -106,7 +103,6 @@ body {
   z-index: 1;
   animation: girlLoop 5s ease-in-out infinite;
   /* animation-delay: 1s; */
-
 }
 
 @keyframes girlLoop {
@@ -131,13 +127,27 @@ body {
 
 /* About Section */
 
+.about-page-section::before {
+  content: '';
+  position: absolute;
+  top: -400px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 400px 100vw;
+  border-color: transparent transparent #03cfff transparent;
+  z-index: -1;
+  pointer-events: none;
+}
+
 .about-blue-bg {
   position: absolute;
-  bottom:100%; 
+  bottom: 100%;
   left: 0;
   width: 100%;
   height: auto;
-  z-index: 0; 
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -186,7 +196,6 @@ body {
   font-weight: bold;
   margin-bottom: 10px;
 }
-
 
 /* profile picture */
 
@@ -245,12 +254,9 @@ body {
 }
 
 .about-profile-image-wrapper:hover .side {
-    transform: translateY(0%);
+  transform: translateY(0%);
   opacity: 1;
 }
-
-
-
 
 /* .about-profile-image-wrapper {
   position: absolute;
@@ -326,7 +332,7 @@ body {
   width: 750px;
   bottom: -770px;
   left: 316px;
-  
+
   /* left: -130px; */
 }
 
@@ -406,7 +412,7 @@ body {
 .chameleon-wrapper {
   position: absolute;
   left: 80%;
-  transform: translateX(-50%)  scaleX(-1);
+  transform: translateX(-50%) scaleX(-1);
   bottom: -323px;
   z-index: 1; /* 最初は box より後ろに見せる */
   pointer-events: none; /* カーソル干渉しないように */
@@ -418,7 +424,6 @@ body {
   position: relative;
   opacity: 0;
   transform: translateY(40px);
-
 }
 @keyframes popFromBehindBox {
   0% {
@@ -446,16 +451,43 @@ body {
   }
 }
 
-
-
 .colorful-chameleon.animate {
   animation: popFromBehindBox 1.2s ease-out forwards;
 }
 
-
 /* about section end */
 
 /* my look */
+
+.my-looks-about-section::before {
+  content: '';
+  position: absolute;
+  top: -300px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 300px 100vw;
+  border-color: transparent transparent #fff94d transparent;
+  z-index: -1;
+  pointer-events: none;
+  transform: scale(-1, 1);
+}
+
+.my-looks-about-section::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 100px 130vw;
+  border-color: transparent transparent #fff94d transparent;
+  z-index: -1;
+  pointer-events: none;
+  transform: scale(-1, -1);
+}
 
 .about-yellow-bg-top {
   width: 100%;
@@ -542,7 +574,6 @@ body {
 
 .footer-about {
   padding-top: 160px;
-
 }
 
 /* my look end */
@@ -567,7 +598,7 @@ body {
     font-size: 1.5rem;
   }
   .ufo-wrapper {
-  display: none;
+    display: none;
   }
 
   .about-profile-image-wrapper {

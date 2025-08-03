@@ -1,7 +1,9 @@
-import image1 from '../../assets/ProjectDetails/Bumper/colorful-staircase.jpg';
-import image2 from '../../assets/ProjectDetails/Bumper/arm.png';
-import image3 from '../../assets/ProjectDetails/Bumper/shibuya-art.jpg';
-import image4 from '../../assets/ProjectDetails/Bumper/travellers-palm.jpeg';
+// src/pages/ProjectDetails/Bumper/BumperSlideData.js
+
+import image1 from '../../../assets/ProjectDetails/Bumper/colorful-staircase.jpg';
+import image2 from '../../../assets/ProjectDetails/Bumper/arm.png';
+import image3 from '../../../assets/ProjectDetails/Bumper/shibuya-art.jpg';
+import image4 from '../../../assets/ProjectDetails/Bumper/travellers-palm.jpeg';
 
 const SlideData = [
   {

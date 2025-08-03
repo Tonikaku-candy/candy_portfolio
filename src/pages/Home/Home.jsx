@@ -71,7 +71,7 @@ function Home() {
       setCurrentTime(`${hours}:${minutes}:${seconds}`);
     }, 1000);
 
-    return () => clearInterval(interval); // コンポーネント破棄時にタイマー解除
+    return () => clearInterval(interval); 
   }, []);
 
   useEffect(() => {
@@ -203,9 +203,7 @@ function Home() {
         />
       </section>
 
-      {/* <div className="bg-bottom">
-        <img src={yellowBgBottom} alt="section bottom decoration" />
-      </div> */}
+   
 
       {/* about me end */}
 

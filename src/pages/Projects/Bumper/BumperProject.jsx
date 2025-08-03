@@ -1,25 +1,26 @@
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
-import '../../components/TagBar.css';
-import DetailBox from '../../components/ProjectDetail/DetailBox';
-import '../../components/ProjectDetail/DetailBox.css';
+import '../../../components/TagBar.css';
+import DetailBox from '../../../components/ProjectDetail/DetailBox.jsx';
+import '../../../components/ProjectDetail/DetailBox.css';
 import { Link } from 'react-router-dom';
-import Footer from '../../components/Footer';
-import './ProjectsDetailLayout.css';
-import ScrollingTagBar from '../../components/ProjectDetail/ScrollingTagBar';
-import '../../components/ProjectDetail/ScrollingTagBar.css';
+import Footer from '../../../components/Footer.jsx';
+import '../../../components/ProjectDetail/DetailBox.css';
+import ScrollingTagBar from '../../../components/ProjectDetail/ScrollingTagBar.jsx';
+import '../../../components/ProjectDetail/ScrollingTagBar.css';
 import './BumperProject.css';
-import ProjectTitle from '../../components/ProjectDetail/ProjectTitle';
+import ProjectTitle from '../../../components/ProjectDetail/ProjectTitle.jsx';
+import ProcessSteps from '../../../components/ProjectDetail/ProcessSteps.jsx';
 
 // photo slide
-import SlideCard from '../../components/ProjectDetail/SlideCard.jsx';
-import SlideData from '../../components/ProjectDetail/BumperSlideData.js';
-import '../../components/ProjectDetail/SlideCard.css';
+import SlideCard from '../../../components/ProjectDetail/SlideCard.jsx';
+
+import '../../../components/ProjectDetail/SlideCard.css';
+import BumperSlideData from './BumperSlideData.js';
 
 // image
-import brainstormingImage from '../../assets/ProjectDetails/Bumper/bumper-origin-visual.png';
-// import inspirationImage from '../../assets/ProjectDetails/Bumper/colorful-staircase.jpg';
-import greenBgWorks from '../../assets/home/header/green-bg-top.png';
+import brainstormingImage from '../../../assets/ProjectDetails/Bumper/bumper-origin-visual.png';
+
 
 const baseTags = [
   'CONTENT CREATION',
@@ -49,9 +50,7 @@ function BumperProject() {
           </Link>
         </div>
         <ProjectTitle title="Bumper Opener Video" />
-        {/* <div className="subtitles">
-        <h1 className="detail-title">Bumper Opener Video</h1>
-      </div> */}
+      
         <div className="video-wrapper">
           <iframe
             width="560"
@@ -121,9 +120,9 @@ function BumperProject() {
                   feel excited every time I watched it — and that feeling guided
                   the creative direction. One key inspiration for this animation
                   was the colorful staircase in my parents' home. It was
-                  handmade by my dad, and I painted it myself. That
-                  staircase has always been one of my favorite spots — full of
-                  color, memories, and creativity.
+                  handmade by my dad, and I painted it myself. That staircase
+                  has always been one of my favorite spots — full of color,
+                  memories, and creativity.
                   <br />
                   <br />
                   When I was animating a pixel art of a ramen bowl inside an
@@ -135,15 +134,14 @@ function BumperProject() {
                   <br />
                   Including that staircase made the piece feel more personal. It
                   wasn’t just about ramen anymore — it became a tribute to my
-                  life, my family, and the playful way I’ve always
-                  approached design.
+                  life, my family, and the playful way I’ve always approached
+                  design.
                 </p>
               </div>
-           
 
               <div className="project-slider-detail">
                 <div className="project-slider-detail">
-                  <SlideCard />
+                  <SlideCard slideData={BumperSlideData} />
                 </div>
               </div>
             </div>
@@ -189,28 +187,15 @@ function BumperProject() {
           </DetailBox>
 
           <DetailBox title="PROCESS" colorClass="orange">
-            <ol>
-              <li>
-                Decided on the background music first to set the tone and pacing
-                of the animation.
-              </li>
-              <li>
-                Chose what I wanted to show — mainly my original pixel art
-                pieces that reflect my style.
-              </li>
-              <li>
-                Created supporting assets that matched the theme and visuals of
-                the pixel animation.
-              </li>
-              <li>
-                Synchronized the animation with the rhythm of the music to
-                create an engaging flow.
-              </li>
-              <li>
-                Added fun details, such as playful tiny texts and hidden visual
-                elements for viewers to discover.
-              </li>
-            </ol>
+            <ProcessSteps
+              steps={[
+                'Decided on the background music first to set the tone and pacing of the animation.',
+                'Chose what I wanted to show — mainly my original pixel art pieces that reflect my style.',
+                'Created supporting assets that matched the theme and visuals of the pixel animation.',
+                'Synchronized the animation with the rhythm of the music to create an engaging flow.',
+                'Added fun details, such as playful tiny texts and hidden visual elements for viewers to discover.',
+              ]}
+            />
           </DetailBox>
 
           <DetailBox title="CHALLENGES" colorClass="blue">
@@ -239,11 +224,7 @@ function BumperProject() {
             ← Back to Works
           </Link>
         </div>
-        <img
-          src={greenBgWorks}
-          className="green-bg-works bumper"
-          alt="section top decoration"
-        />
+       
       </div>
       <div className="footer-detail">
         <Footer />

@@ -7,11 +7,7 @@ import { useEffect } from 'react';
 import ufoImage from '../../assets/About/rabbit-ufo.svg';
 import lightImage from '../../assets/About/light.svg';
 import girlImage from '../../assets/About/girl.png';
-import aboutBlueBgTop from '../../assets/About/blue-bg-top.png';
-import profilePicture from '../../assets/About/candy-profile-picture.JPG';
 import myLookTitleImage from '../../assets/home/my-look/dress-icon.png';
-import aboutYellowBgTop from '../../assets/About/about-yellow-bg-top.png';
-import aboutYellowBgBottom from '../../assets/About/about-yellow-bg-bottom.png';
 
 //icons
 import illustratorIcon from '../../assets/About/icons/illustrator-icon.png';
@@ -43,9 +39,9 @@ function About() {
     ([entry]) => {
       const chameleon = document.querySelector('.colorful-chameleon');
       if (entry.isIntersecting) {
-        chameleon.classList.remove('animate'); // アニメ用クラスを一度外す
-        void chameleon.offsetWidth; // リフローさせて強制再描画
-        chameleon.classList.add('animate'); // もう一回つける
+        chameleon.classList.remove('animate'); 
+        void chameleon.offsetWidth; 
+        chameleon.classList.add('animate'); 
       }
     },
     { threshold: 0.5 }
@@ -87,11 +83,7 @@ function About() {
 
       {/* about section */}
       <div className="about-page-section">
-        <img
-          src={aboutBlueBgTop}
-          alt="section bottom decoration"
-          className="about-blue-bg"
-        />
+     
         {/* Section Title & Text Box */}
         <div className="about-card">
           <h2 className="about-section-title">ABOUT</h2>
@@ -170,13 +162,7 @@ function About() {
               />
             </div>
 
-            {/* <div className="about-profile-image-wrapper">
-              <img
-                src={profilePicture}
-                alt="Candy profile picture"
-                className="about-profile-image"
-              />
-            </div> */}
+          
           </div>
 
           {/* Technical Skills */}
@@ -283,11 +269,7 @@ function About() {
       {/* my looks */}
 
       <div className="my-looks-about-section">
-        <img
-          src={aboutYellowBgTop}
-          alt="section bottom decoration"
-          className="about-yellow-bg-top"
-        />
+      
         <div className="my-look-title-wrapper">
           <div className="my-look-title">
             <div className="my-look-title-image-wrapper">
@@ -304,11 +286,7 @@ function About() {
           <h3 className="made-by-me-about">🩷#MadeByMe🩷</h3>
         </div>
         <PhotoGallery />
-        <img
-          src={aboutYellowBgBottom}
-          alt="section bottom decoration"
-          className="about-yellow-bg-bottom"
-        />
+        
       </div>
       <div className="footer-about">
         <Footer />

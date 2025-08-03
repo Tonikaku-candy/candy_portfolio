@@ -1,20 +1,19 @@
 import React, { useState } from 'react';
-import '../../components/TagBar.css';
-import DetailBox from '../../components/ProjectDetail/DetailBox';
-import '../../components/ProjectDetail/DetailBox.css';
+import '../../../components/TagBar.css';
+import DetailBox from '../../../components/ProjectDetail/DetailBox';
+import '../../../components/ProjectDetail/DetailBox.css';
 import { Link } from 'react-router-dom';
-import Footer from '../../components/Footer';
-import './ProjectsDetailLayout.css';
-import ScrollingTagBar from '../../components/ProjectDetail/ScrollingTagBar';
-import '../../components/ProjectDetail/ScrollingTagBar.css';
+import Footer from '../../../components/Footer';
+import '../ProjectsDetailLayout.css';
+import ScrollingTagBar from '../../../components/ProjectDetail/ScrollingTagBar';
+import '../../../components/ProjectDetail/ScrollingTagBar.css';
 import './ThreeDPackagingAd.css';
-import ProjectTitle from '../../components/ProjectDetail/ProjectTitle';
+import ProjectTitle from '../../../components/ProjectDetail/ProjectTitle';
 
 // image
-import foodPoster from '../../components/assets/3d-sushi-packaging-ad.png';
-import greenBgWorks from '../../assets/home/header/green-bg-top.png';
-import sushiWip from '../../assets/ProjectDetails/pixel-food-wip.jpg';
-import foodTshirts from '../../assets/ProjectDetails/food-tshirts.jpg';
+import foodPoster from '../../../components/assets/3d-sushi-packaging-ad.png';
+import sushiWip from '../../../assets/ProjectDetails/pixel-food-wip.jpg';
+import foodTshirts from '../../../assets/ProjectDetails/food-tshirts.jpg';
 
 const baseTags = [
    '3D DESIGN',
@@ -239,11 +238,7 @@ function ThreeDPackagingAd() {
             ← Back to Works
           </Link>
         </div>
-        <img
-          src={greenBgWorks}
-          className="green-bg-works three-d"
-          alt="section bottom decoration"
-        />
+    
       </div>
       <div className="footer-detail">
         <Footer />

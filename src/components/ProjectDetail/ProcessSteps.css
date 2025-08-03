@@ -1,0 +1,75 @@
+.step-item {
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.phase-label-line {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* ← 左寄せ！ */
+}
+
+.phase-label {
+  background-color: #ffc107; /* オレンジ黄色 */
+  color: white;
+  font-family: 'Bungee', sans-serif;
+  padding: 0.4rem 1.2rem;
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem;
+  box-shadow: 2px 2px 0 #e58b00;
+  z-index: 1;
+  position: relative;
+}
+.phase-label {
+  margin-left: 0;
+}
+
+
+.dotted-line {
+  flex-grow: 1;
+  height: 2px;
+  border-top: 2px dotted #ffc107;
+  margin-left: 10px;
+  position: relative;
+  top: 2px;
+}
+
+.step-text {
+
+  padding-left: 10px;
+}
+
+.process-steps-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.process-text {
+  flex: 1;
+  min-width: 0;
+  
+}
+
+.process-image-column {
+  width: 40%; 
+}
+/* 
+.slide-card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+} */
+
+/* ProcessSteps.css に追加 */
+.process-steps-grid.full-width-text {
+  grid-template-columns: 1fr; /* 1列だけ（=テキストだけ） */
+}
+
+.process-steps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 通常：テキスト + 画像 */
+  gap: 2rem;
+}

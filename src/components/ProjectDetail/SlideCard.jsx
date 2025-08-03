@@ -1,14 +1,14 @@
-// SlideCard.jsx
+// src/components/SlideCard.jsx
+
 import React, { useRef, useState } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
-import SlideData from './BumperSlideData';
 import './SlideCard.css';
 
-export default function SlideCard() {
+export default function SlideCard({ slideData }) {
   const mainRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [modalImage, setModalImage] = useState(null); // ⬅️ ここに置く！
+  const [modalImage, setModalImage] = useState(null);
 
   const handleThumbnailClick = (index) => {
     mainRef.current?.go(index);
@@ -22,9 +22,12 @@ export default function SlideCard() {
     setModalImage(null);
   };
 
+  if (!Array.isArray(slideData)) {
+    return <p>Slide data is missing or invalid.</p>;
+  }
+
   return (
     <div className="gallery02">
-      {/* メインスライダー */}
       <Splide
         options={{
           type: 'fade',
@@ -36,7 +39,7 @@ export default function SlideCard() {
         ref={mainRef}
         className="main-slider"
       >
-        {SlideData.map((slide, index) => (
+        {slideData.map((slide, index) => (
           <SplideSlide key={index}>
             <div className="slide-wrapper">
               <img
@@ -52,22 +55,16 @@ export default function SlideCard() {
         ))}
       </Splide>
 
-      {/* ← → ボタン + サムネイル */}
       <div className="thumbnail-slider-wrapper">
-        <button
-          className="custom-arrow"
-          onClick={() => mainRef.current?.go('<')} // ← rewinding OK
-        >
+        <button className="custom-arrow" onClick={() => mainRef.current?.go('<')}>
           ←
         </button>
 
         <div className="thumbnail-slider">
-          {SlideData.map((slide, index) => (
+          {slideData.map((slide, index) => (
             <div
               key={index}
-              className={`thumb-media ${
-                index === currentSlide ? 'is-active' : ''
-              }`}
+              className={`thumb-media ${index === currentSlide ? 'is-active' : ''}`}
               onClick={() => handleThumbnailClick(index)}
             >
               <img src={slide.image} alt={slide.alt} />
@@ -75,17 +72,11 @@ export default function SlideCard() {
           ))}
         </div>
 
-    
-
-        <button
-          className="custom-arrow"
-          onClick={() => mainRef.current?.go('>')} // → rewinding OK
-        >
+        <button className="custom-arrow" onClick={() => mainRef.current?.go('>')}>
           →
         </button>
       </div>
 
-      {/* 画像モーダル */}
       {modalImage && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content">
