@@ -24,7 +24,14 @@ const projects = [
     image: image2,
     link: '/projects/3d-packaging-ad',
   },
-
+ {
+    title: 'Instagram Contents',
+    category: ['Branding', 'Social Media', 'Content Creation', 'MARKETING'],
+    description: '— Content Creation, Character Branding, Social Media Design',
+    image: image4,
+     link: '/projects/japanese-instagram-project',
+  },
+  
   {
     title: 'Fashion Zine',
     category: ['Branding', 'Fashion'],
@@ -32,12 +39,7 @@ const projects = [
     image: image3,
   },
 
-  {
-    title: 'Instagram Contents',
-    category: ['Branding', 'Social Media', 'Content Creation'],
-    description: '— Content Creation, Character Branding, Social Media Design',
-    image: image4,
-  },
+ 
 ];
 
 export default projects;

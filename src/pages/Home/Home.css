@@ -68,7 +68,7 @@
   border-style: solid;
   border-width: 0 0 146px 100vw;
   border-color: transparent transparent #7aff4c transparent;
-  z-index: 1;
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -124,8 +124,24 @@
   position: relative;
   background: #fff94c;
   padding: 1rem 2rem;
-  z-index: 5;
+  z-index: 0;
   padding-bottom: 90px;
+    background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.about-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 縦横比を維持しながらフィット */
+  z-index: 0;
+  opacity: 0.15; /* お好みで透明度を調整 */
+  pointer-events: none; /* 上にあるけどクリックできないように */
 }
 
 .bg-top {
@@ -150,7 +166,7 @@
   top: -1rem;
   right: -5rem;
   width: 330px;
-  z-index: 3;
+  z-index: 1;
   pointer-events: none;
   opacity: 0.9;
   transform: rotate(-50deg);
@@ -161,7 +177,7 @@
   bottom: -9em;
   left: 0;
   width: 420px; /* 好きなサイズに調整してね */
-  z-index: 5; /* 背景より上、テキストより下くらいが◎ */
+  z-index: 1; /* 背景より上、テキストより下くらいが◎ */
   pointer-events: none;
   transform: scaleX(-1);
 }
@@ -285,7 +301,7 @@
   word-spacing: 10rem;
   white-space: nowrap;
   animation: topMove 15s linear infinite;
-  z-index: 6;
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -300,7 +316,7 @@
   color: #343434;
   white-space: nowrap;
   animation: bottomMove 15s linear infinite;
-  z-index: 6;
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -365,8 +381,13 @@
   border-style: solid;
   border-width: 186px 120vw 0 0; /* 高さ100px、幅100pxの三角 */
   border-color: #FFF94D transparent transparent transparent; /* 色は上だけ */
-  z-index: -1;
+  z-index: 1;
   pointer-events: none;
+}
+
+
+.test {
+  z-index: 3;
 }
 
 /* about me end */
@@ -378,7 +399,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  z-index: 4;
+  z-index: -1;
 }
 
 .rainbow {
@@ -498,7 +519,7 @@
   width: 100%;
   position: relative;
   margin-top: -160px;
-  z-index: 1;
+  z-index: 0;
 }
 
 .pink-bg-bottom img {
@@ -516,8 +537,8 @@
   height: 0;
   border-style: solid;
   border-width:166px 100vw 0 0;
-  border-color: transparent #03CFFF transparent transparent;
-  z-index: -1;
+  border-color: transparent #00cfff transparent transparent;
+  z-index: 1;
   pointer-events: none;
   transform: scaleX(-1, 1);
 }
@@ -529,6 +550,7 @@
   width: 250px;
   right: 90px;
   bottom: -80px;
+  z-index: 5;
 }
 
 
@@ -543,13 +565,12 @@
 .my-looks-section {
   position: relative;
   background-color: #00cfff;
-  padding: 10rem 0rem;
+  padding: 1rem 0rem;
   text-align: center;
   position: relative;
   /* overflow: hidden; */
-  z-index: -1;
+  z-index: 2;
   padding-bottom: 90px;
-  top: -140px;
 }
 
 .my-look-title {
@@ -601,17 +622,21 @@
 .my-looks-section::after {
   content: '';
   position: absolute;
-  bottom: -100px;
+  bottom: -99px;
   left: 0;
   width: 0;
   height: 0;
   border-style: solid;
   border-width:100px 100vw 0 0;
-  border-color: transparent #03cfff transparent transparent;
-  z-index: 0;
+  border-color: transparent #00cfff transparent transparent;
+  z-index: 2;
   pointer-events: none;
   /* transform: scale(-1, 1); */
     transform: scaleY(-1);
+}
+
+.footer-home {
+  margin-top: 100px; /* or padding-top: 100px; */
 }
 
 /* my looks end */

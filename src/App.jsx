@@ -8,6 +8,8 @@ import Home from './pages/Home/Home';
 import '../src/styles/global.css';
 import BumperProject from "./pages/Projects/Bumper/BumperProject";
 import ThreeDPackagingAd from "./pages/Projects/ThreeDPackaging/ThreeDPackagingAd";
+import JapaneseInstagramProject from "./pages/Projects/Instagram/JapaneseInstagramProject";
+
 
 
 import ScrollToTop from './components/ScrollToTop';
@@ -31,6 +33,7 @@ function App() {
         {/* 他のルート */}
         <Route path="/projects/bumper" element={<BumperProject />} />
         <Route path='/projects/3d-packaging-ad' element={<ThreeDPackagingAd />} />
+        <Route path="/projects/japanese-instagram-project" element={<JapaneseInstagramProject />} />
       </Routes>
     </BrowserRouter>
   );
