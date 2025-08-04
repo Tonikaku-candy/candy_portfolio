@@ -24,27 +24,13 @@
   font-family: 'Jersey 15', sans-serif;
 }
 
-.green-bg-top {
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
-  width: 100%;
-}
 .video {
   display: block;
   width: 100%;
   height: auto;
 }
 
-.green-bg-bottom {
-  position: absolute;
-  bottom: -20px;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 1;
-  pointer-events: none;
-}
+
 
 .visually-hidden {
   position: absolute;
@@ -71,9 +57,6 @@
   z-index: 0;
   pointer-events: none;
 }
-
-
-
 
 /* sub titles */
 .subtitles {
@@ -114,8 +97,6 @@
   text-align: center;
 }
 
-
-
 /* featured products end  */
 
 /* about me */
@@ -123,26 +104,16 @@
 .about-section {
   position: relative;
   background: #fff94c;
+
   padding: 1rem 2rem;
   z-index: 0;
   padding-bottom: 90px;
-    background-size: contain;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+
 }
 
-
-.about-bg-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* 縦横比を維持しながらフィット */
-  z-index: 0;
-  opacity: 0.15; /* お好みで透明度を調整 */
-  pointer-events: none; /* 上にあるけどクリックできないように */
-}
 
 .bg-top {
   position: absolute;
@@ -176,8 +147,8 @@
   position: absolute;
   bottom: -9em;
   left: 0;
-  width: 420px; /* 好きなサイズに調整してね */
-  z-index: 1; /* 背景より上、テキストより下くらいが◎ */
+  width: 420px;
+  z-index: 1;
   pointer-events: none;
   transform: scaleX(-1);
 }
@@ -221,9 +192,8 @@
 
 .intro-outline-wrapper {
   position: relative;
-  max-width: 1200px;
   height: 480px;
-  margin: 0 auto;
+  margin: 0 5rem;
   padding: 50px;
   background: #ffffff;
   border-radius: 50px;
@@ -238,7 +208,6 @@
   background: #ff62bc;
   border-radius: 2rem;
   padding: 1rem;
-  max-width: 1200px;
   height: 400px;
   margin: 0 auto;
   display: flex;
@@ -265,7 +234,7 @@
   font-family: 'Fredoka', sans-serif;
   font-size: 1.5rem;
   color: #333;
-  padding: 0 20px;
+  padding: 0 50px;
 }
 
 .intro-button {
@@ -334,7 +303,7 @@
     transform: translateX(-200%) translateY(0);
   }
   100% {
-    transform: translateX(80%) translateY(0);
+    transform: translateX(100%) translateY(0);
   }
 }
 
@@ -358,20 +327,22 @@
 
 .about-section::after {
   content: '';
+   background-image: url("src/pages/Home/test.png");
   position: absolute;
   top: -140px;
   left: 0;
   width: 0;
   height: 0;
   border-style: solid;
-  border-width:166px 170vw 0 0;
-  border-color: transparent #FFF94D transparent transparent;
+  border-width: 166px 170vw 0 0;
+  border-color: transparent #fff94d transparent transparent;
   z-index: -1;
   pointer-events: none;
   transform: scale(-1, 1);
 }
 
 .about-section::before {
+   background-image: url("src/pages/Home/test.png");
   content: '';
   position: absolute;
   bottom: -170px;
@@ -380,11 +351,10 @@
   height: 0;
   border-style: solid;
   border-width: 186px 120vw 0 0; /* 高さ100px、幅100pxの三角 */
-  border-color: #FFF94D transparent transparent transparent; /* 色は上だけ */
+  border-color: #fff94d transparent transparent transparent; /* 色は上だけ */
   z-index: 1;
   pointer-events: none;
 }
-
 
 .test {
   z-index: 3;
@@ -406,7 +376,7 @@
   position: absolute;
   top: -454px;
   left: 89%;
-  transform: translateX(-50%) rotate(29deg) scale(0.30);
+  transform: translateX(-50%) rotate(29deg) scale(0.3);
   z-index: 1;
   pointer-events: none;
 }
@@ -507,7 +477,6 @@
   animation: fadeInUp 0.4s forwards;
 }
 
-
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -536,31 +505,24 @@
   width: 0;
   height: 0;
   border-style: solid;
-  border-width:166px 100vw 0 0;
+  border-width: 166px 100vw 0 0;
   border-color: transparent #00cfff transparent transparent;
   z-index: 1;
   pointer-events: none;
   transform: scaleX(-1, 1);
 }
 
-
-
 .sewing-machine {
   position: absolute;
   width: 250px;
   right: 90px;
-  bottom: -80px;
+      bottom: 513px;
   z-index: 5;
 }
-
-
 
 /* connect end */
 
 /* my looks */
-
-
-
 
 .my-looks-section {
   position: relative;
@@ -571,6 +533,7 @@
   /* overflow: hidden; */
   z-index: 2;
   padding-bottom: 90px;
+  margin-bottom: 100px;
 }
 
 .my-look-title {
@@ -615,10 +578,6 @@
   margin-top: 70px;
 }
 
-
-
-
-
 .my-looks-section::after {
   content: '';
   position: absolute;
@@ -627,12 +586,12 @@
   width: 0;
   height: 0;
   border-style: solid;
-  border-width:100px 100vw 0 0;
+  border-width: 100px 100vw 0 0;
   border-color: transparent #00cfff transparent transparent;
   z-index: 2;
   pointer-events: none;
   /* transform: scale(-1, 1); */
-    transform: scaleY(-1);
+  transform: scaleY(-1);
 }
 
 .footer-home {
@@ -641,10 +600,116 @@
 
 /* my looks end */
 
+
+@media (min-width: 1600px) {
+
+.intro-outline-wrapper {
+  position: relative;
+  max-width: 1500px;
+  height: 580px;
+  margin: 0 auto;
+  padding: 50px;
+  background: #ffffff;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(229, 151, 7, 0.5);
+}
+.intro-card {
+  background: #ff62bc;
+  border-radius: 2rem;
+  padding: 1rem;
+  max-width: 1500px;
+  height: 500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.about-video {
+  width: 470px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.lollipop {
+  position: absolute;
+  top: 1rem;
+  right: -5rem;
+  width: 530px;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.9;
+  transform: rotate(-50deg);
+}
+
+.jelly {
+  position: absolute;
+  bottom: -9em;
+  left: 0;
+  width: 620px;
+  z-index: 1;
+  pointer-events: none;
+  transform: scaleX(-1);
+}
+
+.sewing-machine {
+  position: absolute;
+  width: 350px;
+  right: 90px;
+      bottom: 400px;
+  z-index: 5;
+}
+}
+
+
+/* mobile */
+
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
+    width: 100vw;
   }
+
+  .hero-wrapper::before {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 30px 100vw;
+  border-color: transparent transparent #7aff4c transparent;
+  z-index: 0;
+  pointer-events: none;
+}
+
+  .video-timer {
+    top: 15px;
+    left: -7px;
+    font-size: 1.5rem; /* ↓これで文字サイズも小さめに */
+    width: 90px;
+    height: 30px;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+.featured-projects {
+  padding-bottom: 50px;
+}
+
+.featured-title {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: 0px;
+}
+
   .featured-projects-title-image {
     display: block;
     width: 50px;
@@ -661,7 +726,28 @@
 
   .featured-title-wrapper {
     text-align: center;
+
   }
+
+  .about-section::after {
+  content: '';
+   background-image: url("src/pages/Home/test.png");
+  position: absolute;
+  top: -80px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 100px 130vw 0 0;
+  border-color: transparent #fff94d transparent transparent;
+  z-index: -1;
+  pointer-events: none;
+  transform: scale(-1, 1);
+}
+
+.about-section{
+  padding-top: 0;
+}
   .intro-outline-wrapper {
     display: flex;
     width: 100%;
@@ -669,10 +755,11 @@
     padding: 2rem;
     flex-direction: column;
     border-radius: 20px;
+    margin: 0 auto;
   }
 
   .intro-card {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 2rem;
     max-width: 100%;
     padding: 2rem 1rem;
@@ -680,22 +767,38 @@
     box-sizing: border-box;
   }
 
+
+.intro-card {
+  background: #ff62bc;
+  border-radius: 2rem;
+  padding: 1rem;
+  /* max-width: 1200px; */
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
   .intro-text {
     text-align: center;
     flex: none;
   }
 
   .intro-text h2 {
-    font-size: 2rem;
+    font-size: 1.9rem;
   }
 
   .intro-text p {
     font-size: 1rem;
+    padding: 0 0 0 20px;
+    text-align: left;
   }
 
   .intro-button {
-    font-size: 0.9rem;
-    padding: 0 1.2rem;
+    font-size: 1rem;
+    padding: 0.5rem;
   }
 
   .subtitles.about {
@@ -705,9 +808,17 @@
     text-align: center;
   }
 
-  .about-video {
-    display: none;
+  .about-image {
+    margin: 0 auto;
   }
+
+.about-video {
+  width: 190px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
 
   .about-me-title-image {
     width: 50px;
@@ -732,6 +843,7 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+
     margin-bottom: 2rem;
   }
 
@@ -741,9 +853,30 @@
     top: -40px;
   }
 
+  .lollipop {
+  position: absolute;
+  top: 6rem;
+  right: -2rem;
+  width:130px;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.9;
+  transform: rotate(-50deg);
+}
+
+.jelly {
+  position: absolute;
+  bottom: -6em;
+  left: 0;
+  width: 220px;
+  z-index: 1;
+  pointer-events: none;
+  transform: scaleX(-1);
+}
   .connect-section {
     padding: 3rem 1.5rem;
     margin-top: 20px;
+    margin-bottom: ;
   }
 
   .lets-connect-title-image {
@@ -770,14 +903,15 @@
 
   .girl-comment-wrapper {
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     gap: 0.5rem;
     margin-top: 2rem;
     text-align: center;
+    margin-left: 0;
   }
 
   .girl-image {
-    width: 100px;
+    width: 90px;
   }
 
   .girl-comment.visible {
@@ -786,15 +920,17 @@
   }
 
   .girl-comment {
-    font-size: 1.2rem;
-    margin-top: 2rem;
+    position: absolute;
+    font-size: 1rem;
+    margin-top: 0rem;
+    left: 100px;
     line-height: 1.4;
     padding: 0 1rem;
-    text-align: center;
+    text-align: right;
   }
 
   .girl-comment .char {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   @keyframes popFade {
@@ -822,8 +958,31 @@
     margin-left: 0;
     text-align: center;
   }
+  .connect-section::before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 100px 100vw 0 0;
+  border-color: transparent #00cfff transparent transparent;
+  z-index: 1;
+  pointer-events: none;
+  transform: scaleX(-1, 1);
+}
+
+.sewing-machine {
+  position: absolute;
+  width: 100px;
+  right: 10px;
+  bottom: 530px;
+  z-index: 5;
+}
 
   .made-by-me {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin: px;
   }
 }

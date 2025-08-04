@@ -24,7 +24,7 @@ import myLookTitleImage from '../../assets/home/my-look/dress-icon.png';
 import sewingMachine from '../../assets/home/my-look/sewing-machine.png';
 
 
-import test from '../Home/test.png';
+
 
 function Home() {
   // time
@@ -43,12 +43,12 @@ function Home() {
         entries.forEach((entry) => {
           if (entry.target === lollipopRef.current && entry.isIntersecting) {
             setLollipopVisible(true);
-            observer.unobserve(entry.target); // 一度だけ
+            observer.unobserve(entry.target); 
           }
-          if (entry.target === jellyRef.current && entry.isIntersecting) {
-            setJellyVisible(true);
-            observer.unobserve(entry.target); // 一度だけ
-          }
+          // if (entry.target === jellyRef.current && entry.isIntersecting) {
+          //   setJellyVisible(true);
+          //   observer.unobserve(entry.target); 
+          // }
         });
       },
       { threshold: 0.3 }
@@ -143,8 +143,10 @@ function Home() {
 
       {/* about me */}
 
+
+  
       <section className="about-section">
-          <img src={test} alt="background" className="about-bg-overlay" />
+          
         <img
           ref={lollipopRef}
           src={lollipop}
@@ -175,7 +177,7 @@ function Home() {
 
           <div className="intro-card">
             <div className="intro-text">
-              <h2>HELLO!!&nbsp;!&nbsp; I'M CANDY</h2>
+              <h2>HELLO!!&nbsp;&nbsp; I'M CANDY</h2>
               <p>
                 I'm interested in content creation, graphic design, and motion
                 design. With a background in fashion design, I love building
@@ -206,6 +208,7 @@ function Home() {
           alt="jelly beans"
         />
       </section>
+      
 
    
 
@@ -262,7 +265,7 @@ function Home() {
             ))}
           </p>
         </div>
-             <img src={sewingMachine} alt='pink sewing machine image' className='sewing-machine' />
+     
      
       </section>
 
@@ -270,6 +273,7 @@ function Home() {
 
       {/* my looks */}
       <section className="my-looks-section">
+                <img src={sewingMachine} alt='pink sewing machine image' className='sewing-machine' />
       
         <div className="my-look-title-wrapper">
           <div className="my-look-title">
