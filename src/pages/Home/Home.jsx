@@ -23,6 +23,9 @@ import girl from '../../assets/home/connect/girl.png';
 import myLookTitleImage from '../../assets/home/my-look/dress-icon.png';
 import sewingMachine from '../../assets/home/my-look/sewing-machine.png';
 
+
+import test from '../Home/test.png';
+
 function Home() {
   // time
   const [currentTime, setCurrentTime] = useState('');
@@ -141,6 +144,7 @@ function Home() {
       {/* about me */}
 
       <section className="about-section">
+          <img src={test} alt="background" className="about-bg-overlay" />
         <img
           ref={lollipopRef}
           src={lollipop}
@@ -286,7 +290,7 @@ function Home() {
         <PhotoGallery />
       </section>
 
-      <Footer />
+      <Footer className='footer-home' />
     </div>
   );
 }

@@ -12,6 +12,7 @@ const projectData = [
     subtitle: 'PHOTOSHOP / CAPCUT',
     description: 'Posts & Reels for Japanese Teaching Instagram Account',
     image: img1,
+    link: '/projects/japanese-instagram-project',
   },
   {
     id: 2,
@@ -27,6 +28,7 @@ const projectData = [
     subtitle: 'ADOBE ILLUSTRATOR / PHOTOSHOP / INDESIGN',
     description: "A zine spotlighting Vancouver's J-fashion community",
     image: img3,
+      link: '/projects/fashion-zine',
   },
 
   {

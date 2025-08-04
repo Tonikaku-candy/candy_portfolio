@@ -11,6 +11,8 @@ import './Works.css';
 import eyeIcon from '../../assets/home/featured-projects/eye.png';
 import greenBgWorks from '../../assets/home/header/green-bg-top.png';
 
+
+// scrolling tab bar
 const baseTags = [
   'CONTENT CREATION',
   'FASHION',
@@ -18,8 +20,7 @@ const baseTags = [
   'GRAPHIC DESIGN',
   'BRANDING',
   'SOCIAL MEDIA',
-  'WEB DESIGN',
-  'UX/UI',
+  'MARKETING',
 ];
 
 const tags = [...baseTags, ...baseTags, ...baseTags]; // タグを繰り返し表示（スクロール用など）

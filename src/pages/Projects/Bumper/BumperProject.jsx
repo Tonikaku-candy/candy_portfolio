@@ -21,7 +21,6 @@ import BumperSlideData from './BumperSlideData.js';
 // image
 import brainstormingImage from '../../../assets/ProjectDetails/Bumper/bumper-origin-visual.png';
 
-
 const baseTags = [
   'CONTENT CREATION',
   'FASHION',
@@ -46,11 +45,11 @@ function BumperProject() {
 
         <div className="back-to-works top">
           <Link to="/works" className="back-button">
-            ← Back to Works
+            ← Back to Projects
           </Link>
         </div>
         <ProjectTitle title="Bumper Opener Video" />
-      
+
         <div className="video-wrapper">
           <iframe
             width="560"
@@ -140,9 +139,7 @@ function BumperProject() {
               </div>
 
               <div className="project-slider-detail">
-                <div className="project-slider-detail">
-                  <SlideCard slideData={BumperSlideData} />
-                </div>
+                <SlideCard slideData={BumperSlideData} />
               </div>
             </div>
           </DetailBox>
@@ -221,10 +218,9 @@ function BumperProject() {
         </div>
         <div className="back-to-works">
           <Link to="/works" className="back-button">
-            ← Back to Works
+            ← Back to Projects
           </Link>
         </div>
-       
       </div>
       <div className="footer-detail">
         <Footer />
