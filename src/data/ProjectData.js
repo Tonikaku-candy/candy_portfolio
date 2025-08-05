@@ -8,6 +8,7 @@ import image1 from '../components/assets/bumper-animation.png';
 import image2 from '../components/assets/3d-sushi-packaging-ad.png';
 import image3 from '../components/assets/vancouver-jfashion-zine-cover.png';
 import image4 from '../components/assets/japanese-instagram-content-posts.png';
+import image5 from '../assets/ProjectDetails/Canada/Promotional-Short-Video.jpg';
 
 const projects = [
   {
@@ -39,7 +40,13 @@ const projects = [
     image: image3,
   },
 
- 
-];
+    {
+    title: 'Promotional Short Film',
+    category: ['Branding', 'Content Creation', 'MARKETING'],
+    description: '—— Musical-style Promotional Video, Storytelling',
+    image: image5,
+      link: '/projects/canada-promotional-video',
+  },
+]
 
 export default projects;
