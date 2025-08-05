@@ -220,6 +220,9 @@
   max-width: 100%;
   flex: 300px;
   font-family: 'Fredoka One', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .intro-text h2 {
@@ -245,8 +248,7 @@
   padding: 0.8rem 1.5rem;
   border: solid #343434;
   text-decoration: none;
-  margin-top: 2rem;
-  margin-left: 1rem;
+    margin: 2rem auto 0;
   display: inline-block;
   font-weight: bold;
 }
@@ -876,8 +878,12 @@
   .connect-section {
     padding: 3rem 1.5rem;
     margin-top: 20px;
-    margin-bottom: ;
+    margin-bottom: 1px;
   }
+
+
+
+  /* plese check m-b later candy!!! */
 
   .lets-connect-title-image {
     width: 50px;
