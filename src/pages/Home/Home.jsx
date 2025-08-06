@@ -149,7 +149,8 @@ function Home() {
 
   
       <section className="about-section">
-          
+        <div class="diagonal-top"></div>
+            <div class="grid-overlay"></div>
         <img
           ref={lollipopRef}
           src={lollipop}
@@ -210,6 +211,7 @@ function Home() {
           className={`jelly ${jellyVisible ? 'visible' : ''}`}
           alt="jelly beans"
         />
+        <div class="diagonal-bottom"></div>
       </section>
       
 
@@ -276,6 +278,8 @@ function Home() {
 
       {/* my looks */}
       <section className="my-looks-section">
+        <div className="diagonal-top-mylooks"></div>
+        <div class="grid-overlay-mylooks"></div>
                 <img src={sewingMachine} alt='pink sewing machine image' className='sewing-machine' />
                   <img src={tomato} alt='tomato sewing cushion image' className='tomato' />
                     <img src={thread} alt='colorful thread image' className='thread' />
@@ -297,6 +301,7 @@ function Home() {
           <h3 className="made-by-me">🩷#MadeByMe🩷</h3>
         </div>
         <PhotoGallery />
+        <div className="diagonal-bottom-mylooks"></div> 
       </section>
 
       <Footer className='footer-home' />
