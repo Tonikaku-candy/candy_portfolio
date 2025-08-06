@@ -140,7 +140,7 @@ body {
   max-width: 330px;
   z-index: 1;
   pointer-events: none;
-  opacity: 0.9;
+
   transform: rotate(-50deg);
 }
 
@@ -519,17 +519,35 @@ body {
   transform: scaleX(-1, 1);
 }
 
-.sewing-machine {
-  position: absolute;
-  width: 250px;
-  right: 90px;
-  bottom: 513px;
-  z-index: 5;
-}
+
 
 /* connect end */
 
 /* my looks */
+
+.sewing-machine {
+  position: absolute;
+  width: 250px;
+  right: 220px;
+  bottom: 410px;
+  z-index: 6;
+  transform: rotate(0deg);
+}
+.tomato{
+    position: absolute;
+  width: 200px;
+  right: 90px;
+  bottom: 470px;
+  z-index: 5;
+}
+
+.thread {
+  position: absolute;
+  width: 150px;
+  right: 70px;
+  bottom: 453px;
+  z-index: 5;
+}
 
 .my-looks-section {
   position: relative;
@@ -644,13 +662,12 @@ body {
 
   .lollipop {
     position: absolute;
-    top: 1rem;
+    top: 2%;
     right: -5rem;
-    width: 530px;
-    max-width: 530px;
+    width: 22%;
+    max-width: 100%;
     z-index: 1;
     pointer-events: none;
-    opacity: 0.9;
     transform: rotate(-50deg);
   }
 
@@ -668,9 +685,25 @@ body {
 
   .sewing-machine {
     position: absolute;
-    width: 350px;
-    right: 90px;
-    bottom: 400px;
+    width: 300px;
+    right: 13%;
+    bottom: 60%;
+    z-index: 5;
+  }
+
+  .tomato {
+ position: absolute;
+    width: 230px;
+    right: 8%;
+    bottom: 66%;
+    z-index: 4;
+  }
+
+  .thread {
+ position: absolute;
+    width: 200px;
+    right: 6%;
+    bottom: 63%;
     z-index: 5;
   }
 }
@@ -801,10 +834,21 @@ body {
     text-align: left;
   }
 
-  .intro-button {
-    font-size: 1rem;
-    padding: 0.5rem;
-  }
+.intro-button {
+  font-size: 1rem;
+  text-align: center;
+  width: 70%;
+  background: #79ff4c;
+  color: #343434;
+  border-radius: 30px;
+  padding:5px 5px;
+  border: solid #343434;
+  text-decoration: none;
+  margin: 2rem;
+  /* margin: 2rem auto; */
+  display: inline-block;
+  font-weight: bold;
+}
 
   .subtitles.about {
     font-size: 24px;
@@ -988,5 +1032,9 @@ body {
   .made-by-me {
     font-size: 1rem;
     margin: px;
+  }
+
+  .sewing-machine, .tomato, .thread {
+    display: none;
   }
 }

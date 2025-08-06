@@ -6,14 +6,14 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 import './PhotoGallery.css';
 
 //images
-import look1 from './assets/PhotoGallery/look1.JPG';
-import look2 from './assets/PhotoGallery/look2.jpg';
-import look3 from './assets/PhotoGallery/look3.JPG';
-import look4 from './assets/PhotoGallery/look4.jpg';
-import look5 from './assets/PhotoGallery/look5.jpg';
-import look6 from './assets/PhotoGallery/look6.jpg';
-import look7 from './assets/PhotoGallery/look7.jpg';
-import look8 from './assets/PhotoGallery/look8.jpg';
+import look1 from './assets/PhotoGallery/look1.webp';
+import look2 from './assets/PhotoGallery/look2.webp';
+import look3 from './assets/PhotoGallery/look3.webp';
+import look4 from './assets/PhotoGallery/look4.webp';
+import look5 from './assets/PhotoGallery/look5.webp';
+import look6 from './assets/PhotoGallery/look6.webp';
+import look7 from './assets/PhotoGallery/look7.webp';
+import look8 from './assets/PhotoGallery/look8.webp';
 
 // 仮の画像
 const images = [

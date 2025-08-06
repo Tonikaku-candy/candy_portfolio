@@ -9,7 +9,7 @@ import './Works.css';
 
 // images
 import eyeIcon from '../../assets/home/featured-projects/eye.png';
-import greenBgWorks from '../../assets/home/header/green-bg-top.png';
+
 
 
 // scrolling tab bar

@@ -1,6 +1,6 @@
 .subtitles.all-projects {
   font-family: 'Bungee', sans-serif;
-  font-size: 40px;
+  font-size: 38px;
   border-bottom: 8px solid #00cfff;
   display: inline-block;
   max-width: 100%; /* ✅ 親の90%までに制限 */

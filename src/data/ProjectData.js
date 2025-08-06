@@ -4,11 +4,11 @@
 
 // image
 
-import image1 from '../components/assets/bumper-animation.png';
-import image2 from '../components/assets/3d-sushi-packaging-ad.png';
-import image3 from '../components/assets/vancouver-jfashion-zine-cover.png';
-import image4 from '../components/assets/japanese-instagram-content-posts.png';
-import image5 from '../assets/ProjectDetails/Canada/Promotional-Short-Video.jpg';
+import image1 from '../components/assets/bumper-animation.webp';
+import image2 from '../components/assets/3d-sushi-packaging-ad.webp';
+import image3 from '../components/assets/vancouver-jfashion-zine-cover.webp';
+import image4 from '../components/assets/japanese-instagram-content-posts.webp';
+import image5 from '../assets/ProjectDetails/Canada/Promotional-Short-Video.webp';
 
 const projects = [
   {
@@ -41,7 +41,7 @@ const projects = [
   },
 
     {
-    title: 'Promotional Short Film',
+    title: 'Promotional Film',
     category: ['Branding', 'Content Creation', 'MARKETING'],
     description: '—— Musical-style Promotional Video, Storytelling',
     image: image5,
