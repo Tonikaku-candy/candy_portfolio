@@ -666,7 +666,9 @@ body {
 }
 
 @media (max-width: 768px) {
-  body {
+    body {
+    overflow-x: hidden;
+    width: 100vw;
   }
 
   .hello-section {
