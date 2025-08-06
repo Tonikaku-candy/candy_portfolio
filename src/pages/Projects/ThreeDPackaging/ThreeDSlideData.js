@@ -1,10 +1,10 @@
-import image1 from '../../../assets/ProjectDetails/ThreeD/pixel-food-wip.jpg';
-import image2 from '../../../assets/ProjectDetails/ThreeD/Adobe-Dimension-wip.png';
+import image1 from '../../../assets/ProjectDetails/ThreeD/pixel-food-wip.webp';
+import image2 from '../../../assets/ProjectDetails/ThreeD/Adobe-Dimension-wip.webp';
 
-import image3 from '../../../components/assets/3d-sushi-packaging-ad.png';
-import image4 from '../../../assets/ProjectDetails/ThreeD/after-effects-wip.png';
-import image5 from '../../../assets/ProjectDetails/ThreeD/food-tshirts.jpg';
-import image6 from '../../../assets/ProjectDetails/ThreeD/sushi-earrings.jpg';
+import image3 from '../../../components/assets/3d-sushi-packaging-ad.webp';
+import image4 from '../../../assets/ProjectDetails/ThreeD/after-effects-wip.webp';
+import image5 from '../../../assets/ProjectDetails/ThreeD/food-tshirts.webp';
+import image6 from '../../../assets/ProjectDetails/ThreeD/sushi-earrings.webp';
 
 const SlideData = [
   {

@@ -14,7 +14,7 @@ import lollipop from '../../assets/home/about-me/heart-lollipop.png';
 import jellyBeans from '../../assets/home/about-me/jelly-beans.png';
 
 import letsConnectTitleImage from '../../assets/home/connect/mail.png';
-import rainbow from '../../assets/home/connect/rainbow-stripe.png';
+import rainbow from '../../assets/home/connect/rainbow-stripe.webp';
 import mailIcon from '../../assets/home/connect/mail-icon.png';
 import instagramIcon from '../../assets/home/connect/instagram-icon.png';
 import linkedinIcon from '../../assets/home/connect/linkedin-icon.png';
@@ -22,6 +22,9 @@ import girl from '../../assets/home/connect/girl.png';
 
 import myLookTitleImage from '../../assets/home/my-look/dress-icon.png';
 import sewingMachine from '../../assets/home/my-look/sewing-machine.png';
+import tomato from '../../assets/home/my-look/tomato-pin-cushion.png';
+import thread from '../../assets/home/my-look/colorful-thread.png';
+
 
 
 
@@ -274,6 +277,8 @@ function Home() {
       {/* my looks */}
       <section className="my-looks-section">
                 <img src={sewingMachine} alt='pink sewing machine image' className='sewing-machine' />
+                  <img src={tomato} alt='tomato sewing cushion image' className='tomato' />
+                    <img src={thread} alt='colorful thread image' className='thread' />
       
         <div className="my-look-title-wrapper">
           <div className="my-look-title">

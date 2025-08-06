@@ -1,9 +1,9 @@
 // this is for project slider
 
-import img1 from './assets/japanese-instagram-content-posts.png';
-import img2 from './assets/3d-sushi-packaging-ad.png';
-import img3 from './assets/vancouver-jfashion-zine-cover.png';
-import img4 from './assets/bumper-animation.png';
+import img1 from './assets/japanese-instagram-content-posts.webp';
+import img2 from './assets/3d-sushi-packaging-ad.webp';
+import img3 from './assets/vancouver-jfashion-zine-cover.webp';
+import img4 from './assets/bumper-animation.webp';
 
 const projectData = [
   {

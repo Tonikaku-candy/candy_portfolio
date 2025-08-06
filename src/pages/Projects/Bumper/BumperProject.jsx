@@ -19,7 +19,7 @@ import '../../../components/ProjectDetail/SlideCard.css';
 import BumperSlideData from './BumperSlideData.js';
 
 // image
-import brainstormingImage from '../../../assets/ProjectDetails/Bumper/bumper-origin-visual.png';
+import brainstormingImage from '../../../assets/ProjectDetails/Bumper/bumper-origin-visual.webp';
 
 const baseTags = [
   'CONTENT CREATION',

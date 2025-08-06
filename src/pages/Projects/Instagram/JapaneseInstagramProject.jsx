@@ -18,7 +18,7 @@ import SlideCard from '../../../components/ProjectDetail/SlideCard';
 import SlideData from './InstagramSlideData.js';
 
 // image
-import instagramImage from '../../../components/assets/japanese-instagram-content-posts.png';
+import instagramImage from '../../../components/assets/japanese-instagram-content-posts.webp';
 
 
 

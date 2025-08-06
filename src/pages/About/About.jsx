@@ -24,10 +24,14 @@ import premiereproIcon from '../../assets/About/icons/premierepro-icon.png';
 import reactIcon from '../../assets/About/icons/react-icon.png';
 import tailwindIcon from '../../assets/About/icons/tailwind-icon.png';
 import wordpressIcon from '../../assets/About/icons/wordpress-icon.png';
-import profileBg from '../../assets/About/sakura-bg.jpg';
+import profileBg from '../../assets/About/sakura-bg.webp';
 import profile1 from '../../assets/About/candy-profile1.png';
 import profile2 from '../../assets/About/candy-profile2.png';
 import colorfulChameleon from '../../assets/About/colorful-chameleon.png';
+import sewingMachine from '../../assets/home/my-look/sewing-machine.png';
+import tomato from '../../assets/home/my-look/tomato-pin-cushion.png';
+import thread from '../../assets/home/my-look/colorful-thread.png';
+
 
 
 
@@ -269,7 +273,10 @@ function About() {
       {/* my looks */}
 
       <div className="my-looks-about-section">
-      
+            <img src={sewingMachine} alt='pink sewing machine image' className='sewing-machine about' />
+         <img src={tomato} alt='tomato sewing cushion image' className='tomato about' />
+                          <img src={thread} alt='colorful thread image' className='thread about' />
+                          
         <div className="my-look-title-wrapper">
           <div className="my-look-title">
             <div className="my-look-title-image-wrapper">
