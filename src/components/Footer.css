@@ -42,10 +42,13 @@
   transform: scale(1.3);
 }
 
+.jump {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Fredoka', sans-serif;
+}
 
 @media (max-width: 768px) {
-
-
   .footer-text p {
     font-size: 1rem;
   }
