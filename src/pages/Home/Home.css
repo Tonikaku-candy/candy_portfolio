@@ -108,7 +108,7 @@ body {
   background: #fff94c;
 
   padding: 1rem 2rem;
-  z-index: 0;
+  z-index: 2;
   padding-bottom: 90px;
   background-size: contain;
   background-position: center;
@@ -133,7 +133,7 @@ body {
   left: 0;
   width: 420px;
   max-width: 450px;
-  z-index: 1;
+  z-index: 2;
   pointer-events: none;
   transform: scaleX(-1);
 }
@@ -413,20 +413,6 @@ linear-gradient(90deg, rgba(255, 225, 72, 0.7) 3px, transparent 0);
   pointer-events: none;
 }
 
-.diagonal-bottom {
-  position: absolute;
-  bottom: -120px;
-  left: 0;
-  width: 100%;
-  height: 170px;
-  background-color: #FFF94D;
-  background-image: 
-    linear-gradient(90deg, rgba(255, 225, 72, 0.7) 3px, transparent 0); 
-  background-size: 200px 200px;
-  transform: skewY(-2deg);
-  z-index: 0;
-  pointer-events: none;
-}
 
 
 
@@ -434,13 +420,44 @@ linear-gradient(90deg, rgba(255, 225, 72, 0.7) 3px, transparent 0);
 /* about me end */
 
 /* connect */
+
+
+/* .diagonal-bottom {
+  position: absolute;
+  bottom: -110px;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-color: #FFF94D;
+  background-image: 
+    linear-gradient(90deg, rgba(255, 225, 72, 0.7) 3px, transparent 0); 
+  background-size: 200px 200px;
+  transform: skewY(-2deg);
+  z-index: 2;
+  pointer-events: none;
+} */
+
+.diagonal-bottom {
+  position: absolute;
+  bottom: -2100px;
+  left: 0;
+  width: 100%;
+  height: 170px;
+  background-color: #FFF94D;;
+  background-image: linear-gradient(90deg, #ffe148 3px, transparent 0);
+  background-size: 200px 200px;
+  transform: skewY(-2deg);
+  z-index: 1;
+  pointer-events: none;
+}
+
 .connect-section {
   background: #ff4dc4;
   padding: 10rem 2rem 5rem;
   text-align: center;
   position: relative;
   overflow: hidden;
-  z-index: -1;
+  z-index: 0;
 }
 
 .rainbow {
@@ -476,6 +493,7 @@ linear-gradient(90deg, rgba(255, 225, 72, 0.7) 3px, transparent 0);
   gap: 10rem;
   margin-top: 3rem;
   flex-wrap: wrap;
+  z-index: 2;
 }
 
 .social-links img {
@@ -737,6 +755,7 @@ linear-gradient(90deg, rgba(63, 176, 218, 0.7) 3px, transparent 0);
 
 /* my looks end */
 
+
 @media (min-width: 1600px) {
   .intro-outline-wrapper {
     position: relative;
@@ -790,11 +809,32 @@ linear-gradient(90deg, rgba(63, 176, 218, 0.7) 3px, transparent 0);
     width: 620px;
     width: 620px;
     max-width: 620px;
-    z-index: 1;
+    z-index: 2;
     pointer-events: none;
     transform: scaleX(-1);
   }
+.diagonal-bottom {
+  position: absolute;
+  bottom: -2350px;
+  left: 0;
+  width: 100%;
+  height: 370px;
+  background-color: #FFF94D;;
+  background-image: linear-gradient(90deg, #ffe148 3px, transparent 0);
+  background-size: 200px 200px;
+  transform: skewY(-2deg);
+  z-index: 1;
+  pointer-events: none;
+}
 
+.connect-section {
+  background: #ff4dc4;
+  padding: 18rem 2rem 5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
   .sewing-machine {
     position: absolute;
     width: 300px;
@@ -1049,6 +1089,21 @@ linear-gradient(90deg, rgba(63, 176, 218, 0.7) 3px, transparent 0);
     pointer-events: none;
     transform: scaleX(-1);
   }
+
+
+.diagonal-bottom {
+  position: absolute;
+  bottom: -1470px;
+  left: 0;
+  width: 100%;
+  height: 128px;
+  background-color: #FFF94D;;
+  background-image: linear-gradient(90deg, #ffe148 3px, transparent 0);
+  background-size: 200px 200px;
+  transform: skewY(-2deg);
+  z-index: 1;
+  pointer-events: none;
+}
   .connect-section {
     padding: 3rem 1.5rem;
     margin-top: 20px;
