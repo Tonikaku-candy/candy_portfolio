@@ -12,9 +12,6 @@ import ScrollingTagBar from '../../../components/ProjectDetail/ScrollingTagBar.j
 import '../../../components/ProjectDetail/ScrollingTagBar.css';
 import ProjectTitle from '../../../components/ProjectDetail/ProjectTitle.jsx';
 
-
-
-
 // image
 
 const baseTags = [
@@ -41,16 +38,16 @@ function CanadaPromotionalVideo() {
         </div>
 
         <ProjectTitle title="“Canada Ain’t What I Thought!” – Promotional Film" />
-<div className='video-wrapper canada'>
-        <iframe 
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/a3DQwQlLYbs?si=dWl7Kf6ajfWYsc_b"
-          title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        />
+        <div className="video-wrapper canada">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/o0zuYan30wI?si=G6HFcPcZ5pCGQiz3" 
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
         </div>
 
         <div className="detail-box-wrapper">
@@ -65,9 +62,9 @@ function CanadaPromotionalVideo() {
 
             <DetailBox size="S" title="ROLE" colorClass="red">
               <ul>
-                <li>Content Creator</li>
-                <li>Japanese Language Instructor</li>
-                <li>Social Media Manager</li>
+                <li>Creative Director</li>
+                <li>Video Editor</li>
+                <li>Lyric Writer</li>
               </ul>
             </DetailBox>
 
