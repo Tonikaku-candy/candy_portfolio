@@ -211,17 +211,18 @@ function Home() {
           className={`jelly ${jellyVisible ? 'visible' : ''}`}
           alt="jelly beans"
         />
-        <div class="diagonal-bottom"></div>
+    
       </section>
       
 
-   
+
 
       {/* about me end */}
 
       {/* connect */}
-
+           <div class="diagonal-bottom"></div>
       <section className="connect-section">
+    
         <div className="rainbow">
           <img src={rainbow} alt="rainbow-stripe" />
         </div>
