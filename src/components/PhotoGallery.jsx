@@ -38,7 +38,7 @@ const images = [
     src: look4,
     alt: 'Candy twirling in a fruit-printed dress with green frills in a vibrant floral garden',
   },
-    {
+  {
     src: look5,
     alt: 'Rainbow-themed decora outfit with matching rainbow face mask and colorful yarn hair extensions',
   },
@@ -50,9 +50,9 @@ const images = [
     src: look7,
     alt: 'Candy in a purple lolita-style dress',
   },
-    {
-    src: look8,
-    alt: 'Graffiti backdrop with colorful decora fashion, featuring rainbow overalls and handmade accessories',
+  {
+    src: look12,
+    alt: 'Pastel fairy kei style with oversized lollipop prop and star accessories under dreamy pink and blue lighting',
   },
   {
     src: look9,
@@ -62,17 +62,18 @@ const images = [
     src: look10,
     alt: 'Colorful Decora-inspired outfit posing in front of a Harajuku-style mural wall',
   },
-    {
+  {
     src: look11,
     alt: 'Vintage-inspired colorful floral dress in Shinsekai, Osaka, with matching hat and sunglasses',
   },
-    {
-    src: look12,
-    alt: 'Pastel fairy kei style with oversized lollipop prop and star accessories under dreamy pink and blue lighting',
+
+  {
+    src: look8,
+    alt: 'Graffiti backdrop with colorful decora fashion, featuring rainbow overalls and handmade accessories',
   },
-    {
+  {
     src: look13,
-    alt: 'Neon tie-dye coordinated outfit with spiral patterns and braided colorful extensions, in graffiti-covered alley',
+    alt: 'Vintage-inspired colorful floral dress in Shinsekai, Osaka, with matching hat and sunglasses',
   },
 ];
 
