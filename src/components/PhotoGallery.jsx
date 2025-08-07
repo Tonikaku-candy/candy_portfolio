@@ -14,6 +14,11 @@ import look5 from './assets/PhotoGallery/look5.webp';
 import look6 from './assets/PhotoGallery/look6.webp';
 import look7 from './assets/PhotoGallery/look7.webp';
 import look8 from './assets/PhotoGallery/look8.webp';
+import look9 from './assets/PhotoGallery/look9.webp';
+import look10 from './assets/PhotoGallery/look10.webp';
+import look11 from './assets/PhotoGallery/look11.webp';
+import look12 from './assets/PhotoGallery/look12.webp';
+import look13 from './assets/PhotoGallery/look13.webp';
 
 // 仮の画像
 const images = [
@@ -33,21 +38,41 @@ const images = [
     src: look4,
     alt: 'Candy twirling in a fruit-printed dress with green frills in a vibrant floral garden',
   },
-  {
+    {
     src: look5,
-    alt: 'colorful kimono style outfit with cherry blossom background',
+    alt: 'Rainbow-themed decora outfit with matching rainbow face mask and colorful yarn hair extensions',
   },
   {
     src: look6,
-    alt: 'Candy in a purple lolita-style dress',
+    alt: 'colorful kimono style outfit with cherry blossom background',
   },
   {
     src: look7,
+    alt: 'Candy in a purple lolita-style dress',
+  },
+    {
+    src: look8,
+    alt: 'Graffiti backdrop with colorful decora fashion, featuring rainbow overalls and handmade accessories',
+  },
+  {
+    src: look9,
     alt: 'Candy in a patchwork dress and rainbow boots posing joyfully by a colorful urban wall',
   },
   {
-    src: look8,
+    src: look10,
     alt: 'Colorful Decora-inspired outfit posing in front of a Harajuku-style mural wall',
+  },
+    {
+    src: look11,
+    alt: 'Vintage-inspired colorful floral dress in Shinsekai, Osaka, with matching hat and sunglasses',
+  },
+    {
+    src: look12,
+    alt: 'Pastel fairy kei style with oversized lollipop prop and star accessories under dreamy pink and blue lighting',
+  },
+    {
+    src: look13,
+    alt: 'Neon tie-dye coordinated outfit with spiral patterns and braided colorful extensions, in graffiti-covered alley',
   },
 ];
 
