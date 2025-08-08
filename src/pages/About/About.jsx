@@ -32,30 +32,25 @@ import sewingMachine from '../../assets/home/my-look/sewing-machine.png';
 import tomato from '../../assets/home/my-look/tomato-pin-cushion.png';
 import thread from '../../assets/home/my-look/colorful-thread.png';
 
-
-
-
-
-
 function About() {
   useEffect(() => {
-  const observer = new IntersectionObserver(
-    ([entry]) => {
-      const chameleon = document.querySelector('.colorful-chameleon');
-      if (entry.isIntersecting) {
-        chameleon.classList.remove('animate'); 
-        void chameleon.offsetWidth; 
-        chameleon.classList.add('animate'); 
-      }
-    },
-    { threshold: 0.5 }
-  );
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const chameleon = document.querySelector('.colorful-chameleon');
+        if (entry.isIntersecting) {
+          chameleon.classList.remove('animate');
+          void chameleon.offsetWidth;
+          chameleon.classList.add('animate');
+        }
+      },
+      { threshold: 0.5 }
+    );
 
-  const target = document.querySelector('.chameleon-wrapper');
-  if (target) observer.observe(target);
+    const target = document.querySelector('.chameleon-wrapper');
+    if (target) observer.observe(target);
 
-  return () => observer.disconnect();
-}, []);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
@@ -87,7 +82,6 @@ function About() {
 
       {/* about section */}
       <div className="about-page-section">
-     
         {/* Section Title & Text Box */}
         <div className="about-card">
           <h2 className="about-section-title">ABOUT</h2>
@@ -165,8 +159,6 @@ function About() {
                 className="about-profile-image front"
               />
             </div>
-
-          
           </div>
 
           {/* Technical Skills */}
@@ -246,15 +238,14 @@ function About() {
 
           {/* Extra Skills */}
           <div className="chameleon-wrapper">
-  <img
-    src={colorfulChameleon}
-    alt="Colorful Chameleon Logo"
-    className="colorful-chameleon"
-  />
-</div>
-       
+            <img
+              src={colorfulChameleon}
+              alt="Colorful Chameleon Logo"
+              className="colorful-chameleon"
+            />
+          </div>
+
           <div className="skills-card extra">
-       
             <h2 className="about-section-title extra">EXTRA SKILLS</h2>
             <ul className="extra-skills-list">
               <li>Content Creation for Social Media</li>
@@ -273,10 +264,22 @@ function About() {
       {/* my looks */}
 
       <div className="my-looks-about-section">
-            <img src={sewingMachine} alt='pink sewing machine image' className='sewing-machine about' />
-         <img src={tomato} alt='tomato sewing cushion image' className='tomato about' />
-                          <img src={thread} alt='colorful thread image' className='thread about' />
-                          
+        <img
+          src={sewingMachine}
+          alt="pink sewing machine image"
+          className="sewing-machine about"
+        />
+        <img
+          src={tomato}
+          alt="tomato sewing cushion image"
+          className="tomato about"
+        />
+        <img
+          src={thread}
+          alt="colorful thread image"
+          className="thread about"
+        />
+
         <div className="my-look-title-wrapper">
           <div className="my-look-title">
             <div className="my-look-title-image-wrapper">
@@ -287,13 +290,12 @@ function About() {
               />
             </div>
             <div className="subtitles look">
-              <h2>MY LOOKS</h2>
+              <h2>MY SEWING WORKS</h2>
             </div>
           </div>
           <h3 className="made-by-me-about">🩷#MadeByMe🩷</h3>
         </div>
         <PhotoGallery />
-        
       </div>
       <div className="footer-about">
         <Footer />
