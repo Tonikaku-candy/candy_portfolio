@@ -296,7 +296,7 @@ function Home() {
             </div>
 
             <div className="subtitles look">
-              <h2>MY LOOKS</h2>
+              <h2>MY SEWING WORKS</h2>
             </div>
           </div>
           <h3 className="made-by-me">🩷#MadeByMe🩷</h3>
