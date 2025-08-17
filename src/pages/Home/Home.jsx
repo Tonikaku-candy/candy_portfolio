@@ -25,10 +25,6 @@ import sewingMachine from '../../assets/home/my-look/sewing-machine.png';
 import tomato from '../../assets/home/my-look/tomato-pin-cushion.png';
 import thread from '../../assets/home/my-look/colorful-thread.png';
 
-
-
-
-
 function Home() {
   // time
   const [currentTime, setCurrentTime] = useState('');
@@ -46,11 +42,11 @@ function Home() {
         entries.forEach((entry) => {
           if (entry.target === lollipopRef.current && entry.isIntersecting) {
             setLollipopVisible(true);
-            observer.unobserve(entry.target); 
+            observer.unobserve(entry.target);
           }
           // if (entry.target === jellyRef.current && entry.isIntersecting) {
           //   setJellyVisible(true);
-          //   observer.unobserve(entry.target); 
+          //   observer.unobserve(entry.target);
           // }
         });
       },
@@ -77,7 +73,7 @@ function Home() {
       setCurrentTime(`${hours}:${minutes}:${seconds}`);
     }, 1000);
 
-    return () => clearInterval(interval); 
+    return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
@@ -146,22 +142,21 @@ function Home() {
 
       {/* about me */}
 
-
-  
       <section className="about-section">
-        <div class="diagonal-top"></div>
-            <div class="grid-overlay"></div>
-        <img
-          ref={lollipopRef}
-          src={lollipop}
-          className={`lollipop ${lollipopVisible ? 'visible' : ''}`}
-          alt="heart lollipop"
-        />
+        <div className="diagonal-top"></div>
+        <div className="grid-overlay"></div>
+        <div className='about-section-inner'>
+        
+    
         {/* bg */}
 
         <div className="about-title-wrapper">
+     
           <div className="about-title">
+    
             <div className="about-title-image-wrapper">
+
+
               <img
                 src={aboutMeTitleImage}
                 className="about-me-title-image"
@@ -173,37 +168,50 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="intro-outline-wrapper">
-          <div className="candy-outline-text-top">CANDY CANDY CANDY CANDY</div>
-          <div className="candy-outline-text-bottom">
-            CANDY CANDY CANDY CANDY
-          </div>
 
-          <div className="intro-card">
-            <div className="intro-text">
-              <h2>HELLO!!&nbsp;&nbsp; I'M CANDY</h2>
-              <p>
-                I'm interested in content creation, graphic design, and motion
-                design. With a background in fashion design, I love building
-                unique, playful worlds inspired by Japanese kawaii culture — a
-                Japanese aesthetic centered around cuteness, color, and
-                playfulness!
-              </p>
-              <Link to="/about" className="intro-button">
-                More about me
-              </Link>
+        <div className="intro-outline-wrapper">
+                           <img
+          ref={lollipopRef}
+          src={lollipop}
+          className={`lollipop ${lollipopVisible ? 'visible' : ''}`}
+          alt="heart lollipop"
+        />
+
+          <div className="candy-text-wrapper">
+            <div className="candy-outline-text-top">
+              CANDY CANDY CANDY CANDY
             </div>
-            <div className="about-image">
-              <video
-                className="about-video"
-                src={aboutMeVideo}
-                autoPlay
-                muted
-                loop
-                playsInline
-              />
+            <div className="candy-outline-text-bottom">
+              CANDY CANDY CANDY CANDY
+            </div>
+
+            <div className="intro-card">
+              <div className="intro-text">
+                <h2>HELLO!!&nbsp;&nbsp; I'M CANDY</h2>
+                <p>
+                  I'm interested in content creation, graphic design, and motion
+                  design. With a background in fashion design, I love building
+                  unique, playful worlds inspired by Japanese kawaii culture — a
+                  Japanese aesthetic centered around cuteness, color, and
+                  playfulness!
+                </p>
+                <Link to="/about" className="intro-button">
+                  More about me
+                </Link>
+              </div>
+              <div className="about-image">
+                <video
+                  className="about-video"
+                  src={aboutMeVideo}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
+              </div>
             </div>
           </div>
+        </div>
         </div>
         <img
           ref={jellyRef}
@@ -211,18 +219,14 @@ function Home() {
           className={`jelly ${jellyVisible ? 'visible' : ''}`}
           alt="jelly beans"
         />
-    
+              <div className="diagonal-bottom"></div>
       </section>
-      
-
-
 
       {/* about me end */}
 
       {/* connect */}
-           <div class="diagonal-bottom"></div>
+
       <section className="connect-section">
-    
         <div className="rainbow">
           <img src={rainbow} alt="rainbow-stripe" />
         </div>
@@ -271,8 +275,6 @@ function Home() {
             ))}
           </p>
         </div>
-     
-     
       </section>
 
       {/* connect end */}
@@ -280,11 +282,19 @@ function Home() {
       {/* my looks */}
       <section className="my-looks-section">
         <div className="diagonal-top-mylooks"></div>
-        <div class="grid-overlay-mylooks"></div>
-                <img src={sewingMachine} alt='pink sewing machine image' className='sewing-machine' />
-                  <img src={tomato} alt='tomato sewing cushion image' className='tomato' />
-                    <img src={thread} alt='colorful thread image' className='thread' />
-      
+        <div className="grid-overlay-mylooks"></div>
+        <img
+          src={sewingMachine}
+          alt="pink sewing machine image"
+          className="sewing-machine"
+        />
+        <img
+          src={tomato}
+          alt="tomato sewing cushion image"
+          className="tomato"
+        />
+        <img src={thread} alt="colorful thread image" className="thread" />
+
         <div className="my-look-title-wrapper">
           <div className="my-look-title">
             <div className="my-look-title-image-wrapper">
@@ -302,10 +312,10 @@ function Home() {
           <h3 className="made-by-me">🩷#MadeByMe🩷</h3>
         </div>
         <PhotoGallery />
-        <div className="diagonal-bottom-mylooks"></div> 
+        <div className="diagonal-bottom-mylooks"></div>
       </section>
 
-      <Footer className='footer-home' />
+      <Footer className="footer-home" />
     </div>
   );
 }

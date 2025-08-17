@@ -31,14 +31,14 @@
   width: 120px;
 }
 
-.go-to-top {
+.footer-section .go-to-top {
   margin-top: 1rem;
   cursor: pointer;
   display: inline-block;
   transition: transform 0.3s ease;
 }
 
-.go-to-top:hover {
+.footer-section .go-to-top:hover {
   transform: scale(1.3);
 }
 
@@ -59,7 +59,7 @@
     flex-wrap: wrap;
   }
 
-  .go-to-top img {
+  .footer-section .go-to-top img {
     width: 90px;
   }
 

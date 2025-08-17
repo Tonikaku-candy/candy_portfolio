@@ -31,9 +31,11 @@ function ProjectSlider() {
                   style={{ backgroundImage: `url(${project.image})` }}
                 />
                 {/* <img src={project.image} alt={project.title} /> */}
+                <div className='slide-text'>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <h4>{project.subtitle}</h4>
+                </div>
               </div>
             </Link>
           </SplideSlide>

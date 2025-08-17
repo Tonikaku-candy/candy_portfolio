@@ -10,8 +10,6 @@ import './Works.css';
 // images
 import eyeIcon from '../../assets/home/featured-projects/eye.png';
 
-
-
 // scrolling tab bar
 const baseTags = [
   'CONTENT CREATION',
@@ -105,9 +103,11 @@ function Works() {
                     />
                     <div className="project-info">
                       <h3 className="project-title">{project.title}</h3>
-                      <p className="project-description">
-                        {project.description}
-                      </p>
+                      <ul className="project-description">
+                        {project.description.map((point, index) => (
+                          <li key={index}>{point}</li>
+                        ))}
+                      </ul>
                       <p className="project-tags">
                         {project.category.join(', ')}
                       </p>

@@ -1,4 +1,4 @@
-// src/pages/Projects/Canada/CanadaPromotionalVideoFilm.jsx
+// src/pages/Projects/RhythmGame/RhythmGame.jsx
 
 import React, { useState } from 'react';
 import '../../../components/TagBar.css';
@@ -16,9 +16,9 @@ import ProjectTitle from '../../../components/ProjectDetail/ProjectTitle.jsx';
 
 const baseTags = [
   'CONTENT CREATION',
-  'VIDEO EDITING',
-  'PROMOTIONAL VIDEO',
-  'MARKETING',
+  'MOTION GRAPHICS',
+  'AFTER EFFECTS',
+  'MUSIC SYNC',
   'STORYTELLING',
 ];
 const tags = [...baseTags, ...baseTags];
@@ -37,12 +37,12 @@ function CanadaPromotionalVideo() {
           </Link>
         </div>
 
-        <ProjectTitle title="“Canada Ain’t What I Thought!” – Playful Travel Campaign Film" />
+        <ProjectTitle title="Rhythm Game Animation in After Effects" />
         <div className="video-wrapper canada">
           <iframe
             width="560"
             height="315"
-            src="https://www.youtube.com/embed/o0zuYan30wI?si=G6HFcPcZ5pCGQiz3" 
+            src="https://www.youtube.com/embed/o0zuYan30wI?si=G6HFcPcZ5pCGQiz3"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
@@ -62,9 +62,9 @@ function CanadaPromotionalVideo() {
 
             <DetailBox size="S" title="ROLE" colorClass="red">
               <ul>
-                <li>Creative Director</li>
-                <li>Video Editor</li>
-                <li>Lyric Writer</li>
+                <li>Motion Designer</li>
+                <li>UI Animator</li>
+                <li>Editor</li>
               </ul>
             </DetailBox>
 
@@ -78,7 +78,6 @@ function CanadaPromotionalVideo() {
                 {' '}
                 <ul>
                   <li>March 20th – April 11th, 2025</li>
-                  <li>Re-edited August 4th, 2025</li>
                 </ul>
               </p>
             </DetailBox>
@@ -86,11 +85,13 @@ function CanadaPromotionalVideo() {
 
           <DetailBox title="Overview" colorClass="pink">
             <p>
-              This project was a promotional video created for a fictional
-              company chosen in our video storytelling class. <br /> <br /> Our
-              group selected a travel agency, and the goal was to produce a 2–5
-              minute piece based on the storyboard we developed in the previous
-              term.
+              This is a rhythm game–style animation created in After Effects. It
+              focuses on precise beat synchronization and visual effects,
+              capturing the quick and satisfying feel of hitting the beat.
+              Elements move in sync with the music’s rhythm, resulting in a
+              simple yet enjoyable piece to watch. <br></br>A small video in the top
+              right corner simulates actual gameplay, visually reinforcing that
+              this is a rhythm game.
             </p>
           </DetailBox>
 

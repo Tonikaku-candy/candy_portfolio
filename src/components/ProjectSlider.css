@@ -6,6 +6,7 @@ body {
   padding: 3rem 1rem;
   text-align: center;
     overflow-x: hidden;
+
 }
 
 .splide__track {
@@ -25,6 +26,8 @@ body {
   transition: transform 0.4s, opacity 0.4s;
   display: flex;
   justify-content: center;
+  /* aspect-ratio: 1/1.3; */
+
 
 }
 
@@ -43,6 +46,15 @@ body {
   overflow: hidden;
   box-shadow: 0 0 20px #34c700;
   /* height: 35em; */
+  /* aspect-ratio: 1/2; */
+
+
+}
+
+.slide-text{
+
+    min-height: 200px;
+
 }
 
 .splide__slide.is-active .slide-card {
@@ -64,12 +76,17 @@ body {
 
 .slide-card h3 {
   font-size: 35px;
-  height: 2em;
+  /* height: 2em; */
    /* max-width: 600px; */
 
   /* height: 70px; */
   /* max-width: 20ch; */
   font-family: 'Bungee', sans-serif;
+  margin-bottom: 30px;
+}
+
+.slide-card h3 {
+  font-size: clamp (12px, 2vw, 35px)
 }
 
 .slide-card h4 {
@@ -88,10 +105,13 @@ body {
   color: #666;
   padding-left: 15px;
   padding-right: 15px;
-  height: 2.8em;
+  /* height: 2.8em; */
    /* max-width: 600px; */
 }
 
+.slide-card h3 {
+  font-size: clamp (12px, 2vw, 23px)
+}
 
 /* arrow position */
 .splide__arrow {
@@ -213,4 +233,8 @@ body {
     top: 90%;
     right: 10%;
   }
+  .slide-text{
+        min-height: 0;
+
+}
 }

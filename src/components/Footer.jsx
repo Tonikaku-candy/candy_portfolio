@@ -18,7 +18,7 @@ const Footer = () => {
       </div>
       <div className="footer-icons">
         <a
-         href="https://www.instagram.com/candy_ramune/"
+          href="https://www.instagram.com/candy_ramune/"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -39,7 +39,7 @@ const Footer = () => {
       <div className="go-to-top" onClick={scrollToTop}>
         <img src={logo} alt="colorful chameleon logo for Candy Fukaya brand" />
       </div>
-      <p className='jump'>Press Chameleon to jump to top</p>
+      <p className="jump">Press Chameleon to jump to top</p>
     </footer>
   );
 };
