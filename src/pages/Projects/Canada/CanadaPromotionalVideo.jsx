@@ -37,7 +37,7 @@ function CanadaPromotionalVideo() {
           </Link>
         </div>
 
-        <ProjectTitle title="“Canada Ain’t What I Thought!” – Promotional Film" />
+        <ProjectTitle title="“Canada Ain’t What I Thought!” – Playful Travel Campaign Film" />
         <div className="video-wrapper canada">
           <iframe
             width="560"

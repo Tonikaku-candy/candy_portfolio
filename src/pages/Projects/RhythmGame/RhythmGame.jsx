@@ -1,0 +1,172 @@
+// src/pages/Projects/RhythmGame/RhythmGame.jsx
+
+import React, { useState } from 'react';
+import '../../../components/TagBar.css';
+import DetailBox from '../../../components/ProjectDetail/DetailBox.jsx';
+import '../../../components/ProjectDetail/DetailBox.css';
+import { Link } from 'react-router-dom';
+import Footer from '../../../components/Footer.jsx';
+import '../ProjectsDetailLayout.css';
+import '../../Projects/Canada/CanadaPromotionalVideo.css';
+import ScrollingTagBar from '../../../components/ProjectDetail/ScrollingTagBar.jsx';
+import '../../../components/ProjectDetail/ScrollingTagBar.css';
+import ProjectTitle from '../../../components/ProjectDetail/ProjectTitle.jsx';
+
+// image
+
+const baseTags = [
+  'CONTENT CREATION',
+  'MOTION GRAPHICS',
+  'AFTER EFFECTS',
+  'MUSIC SYNC',
+  'STORYTELLING',
+];
+const tags = [...baseTags, ...baseTags];
+
+function CanadaPromotionalVideo() {
+  const [selectedTag, setSelectedTag] = useState('');
+
+  return (
+    <>
+      <div className="project-detail-page">
+        <ScrollingTagBar tags={tags} />
+
+        <div className="back-to-works top">
+          <Link to="/works" className="back-button">
+            ← Back to projects
+          </Link>
+        </div>
+
+        <ProjectTitle title="Rhythm Game Animation in After Effects" />
+        <div className="video-wrapper canada">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/o0zuYan30wI?si=G6HFcPcZ5pCGQiz3"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
+          />
+        </div>
+
+        <div className="detail-box-wrapper">
+          <div className="project-grid">
+            <DetailBox size="S" title="SOFTWARE" colorClass="blue">
+              <ul>
+                <li>Photoshop</li>
+                <li>Premiere Pro</li>
+                <li>After Effects</li>
+              </ul>
+            </DetailBox>
+
+            <DetailBox size="S" title="ROLE" colorClass="red">
+              <ul>
+                <li>Motion Designer</li>
+                <li>UI Animator</li>
+                <li>Editor</li>
+              </ul>
+            </DetailBox>
+
+            <DetailBox
+              size="S"
+              title="DURATION"
+              colorClass="yellow"
+              extraClass="small-padding-box"
+            >
+              <p className="tight-paragraph canada">
+                {' '}
+                <ul>
+                  <li>March 20th – April 11th, 2025</li>
+                </ul>
+              </p>
+            </DetailBox>
+          </div>
+
+          <DetailBox title="Overview" colorClass="pink">
+            <p>
+              This is a rhythm game–style animation created in After Effects. It
+              focuses on precise beat synchronization and visual effects,
+              capturing the quick and satisfying feel of hitting the beat.
+              Elements move in sync with the music’s rhythm, resulting in a
+              simple yet enjoyable piece to watch. <br></br>A small video in the top
+              right corner simulates actual gameplay, visually reinforcing that
+              this is a rhythm game.
+            </p>
+          </DetailBox>
+
+          <DetailBox title="CONCEPT & DIRECTION" colorClass="green">
+            <p>
+              At first, we planned a typical story of an international student
+              who feels lonely after arriving in Canada but eventually finds joy
+              through online friendships during the pandemic. <br /> <br />
+              However, I was in charge of directing and editing, and I asked
+              myself "Do I really want to make this story?" I noticed that the
+              team wasn’t very enthusiastic either, so I proposed something more
+              fun to create, something that would reflect our real experiences.
+            </p>
+          </DetailBox>
+
+          <DetailBox title="NEW APPROACH &  INSPIRATION" colorClass="purple">
+            <div
+              style={{
+                display: 'flex',
+                gap: '2rem',
+                flexWrap: 'wrap',
+                alignItems: 'flex-start',
+              }}
+            >
+              {/* Left: Text */}
+              <p>
+                Rather than making a sugar-coated promotional video, I wanted to
+                start with the reality: “Canada wasn’t exactly what I expected.”
+                I had high expectations before coming here, but faced many
+                surprises like being placed in a language school full of people
+                from my own country, or realizing how different the environment
+                was from what the travel agents told me.
+                <br />
+                <br />
+                Over time, though, I found joy in multicultural life, especially
+                the shared food and culture, and eventually came to love living
+                in Canada. This personal experience shaped the new storyline: a
+                humorous musical-style journey from disappointment to
+                appreciation.
+              </p>
+            </div>
+          </DetailBox>
+          <DetailBox title="MUSIC & EDITING" colorClass="orange">
+            <p>
+              I wrote the lyrics in Japanese and generated the song using the AI
+              music tool Suno. Since AI outcomes vary each time, I generated
+              several tracks and chose the one with the most catchy, upbeat, and
+              memorable melody. I also structured the video to include dramatic
+              cutscenes between musical sections, making it more engaging and
+              not just a simple music video.
+            </p>
+          </DetailBox>
+
+          <DetailBox title="PRODUCTION HIGHLIGHTS" colorClass="pink">
+            <p>
+              The video features a mix of scripted acting, vlog-style dialogue,
+              original music, and comedic exaggeration. We wanted it to feel
+              like a musical, but with a twist showing the honest experience of
+              an international student, with both the ups and downs.
+            </p>
+          </DetailBox>
+        </div>
+
+        <div className="back-to-works">
+          <Link to="/works" className="back-button">
+            ← Back to Projects
+          </Link>
+        </div>
+      </div>
+
+      <div className="footer-detail">
+        <Footer />
+      </div>
+    </>
+  );
+}
+
+export default CanadaPromotionalVideo;

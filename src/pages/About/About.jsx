@@ -70,18 +70,38 @@ function About() {
             </p>
           </div>
 
-          <div className="ufo-wrapper">
-            <img src={lightImage} alt="light" className="light" />
-            <img src={ufoImage} alt="rabbit-ufo" className="ufo" />
-            <img src={girlImage} alt="girl" className="girl" />
-          </div>
+
+       
         </div>
       </div>
-
+             
       {/* hello section end */}
 
       {/* about section */}
       <div className="about-page-section">
+          <div className="diagonal-top-about"></div>
+        <div className="grid-overlay-about"></div>
+           <div className="about-profile-image-wrapper">
+              <img
+                src={profileBg}
+                alt="sakura background"
+                className="about-profile-bg"
+              />
+
+              <img
+                src={profile2}
+                alt="Candy profile picture hover"
+                className="about-profile-image side"
+              />
+
+              <img
+                src={profile1}
+                alt="Candy profile picture"
+                className="about-profile-image front"
+              />
+              <p className="about-profile-text">Hover me!</p>
+            </div>
+
         {/* Section Title & Text Box */}
         <div className="about-card">
           <h2 className="about-section-title">ABOUT</h2>
@@ -119,6 +139,11 @@ function About() {
                 <strong>“Make something silly, seriously.”</strong> I believe
                 humor, when treated with care, can be just as powerful as any
                 serious message.
+                   {/* <div className="ufo-wrapper">
+            <img src={lightImage} alt="light" className="light" />
+            <img src={ufoImage} alt="rabbit-ufo" className="ufo" />
+            <img src={girlImage} alt="girl" className="girl" />
+          </div> */}
                 <br />
                 <br />
                 I like working ahead and pushing myself beyond just meeting
@@ -140,25 +165,7 @@ function About() {
                 strange, funny — and made to make people happy.
               </p>
             </div>
-            <div className="about-profile-image-wrapper">
-              <img
-                src={profileBg}
-                alt="sakura background"
-                className="about-profile-bg"
-              />
-
-              <img
-                src={profile2}
-                alt="Candy profile picture hover"
-                className="about-profile-image side"
-              />
-
-              <img
-                src={profile1}
-                alt="Candy profile picture"
-                className="about-profile-image front"
-              />
-            </div>
+            
           </div>
 
           {/* Technical Skills */}

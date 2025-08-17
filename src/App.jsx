@@ -10,6 +10,7 @@ import BumperProject from './pages/Projects/Bumper/BumperProject';
 import ThreeDPackagingAd from './pages/Projects/ThreeDPackaging/ThreeDPackagingAd';
 import JapaneseInstagramProject from './pages/Projects/Instagram/JapaneseInstagramProject';
 import CanadaPromotionalVideo from './pages/Projects/Canada/CanadaPromotionalVideo';
+// import GoToTop from './components/GoToTop';
 
 import ScrollToTop from './components/ScrollToTop';
 
@@ -21,7 +22,9 @@ function App() {
       <ScrollToTop />
       {/* to show menu */}
       <Navbar />
+  
       {/* rule to change url */}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -37,8 +40,12 @@ function App() {
           path="/projects/japanese-instagram-project"
           element={<JapaneseInstagramProject />}
         />
-        <Route path="/projects/canada-promotional-video" element={<CanadaPromotionalVideo />} />
+        <Route
+          path="/projects/canada-promotional-video"
+          element={<CanadaPromotionalVideo />}
+        />
       </Routes>
+          {/* <GoToTop /> */}
     </BrowserRouter>
   );
 }
