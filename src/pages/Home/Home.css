@@ -263,7 +263,6 @@ body {
 }
 
 .about-video {
- 
   width: 100%;
   max-width: 500px;
   height: auto;
@@ -410,7 +409,7 @@ body {
 .social-links {
   display: flex;
   justify-content: center;
-  gap: 10rem;
+  gap: 5rem;
   margin-top: 3rem;
   flex-wrap: wrap;
   z-index: 2;
@@ -506,32 +505,38 @@ body {
   display: block;
 }
 
-
 /* connect end */
 
 /* my looks */
 
 .sewing-machine {
   position: absolute;
-  width: 250px;
-  right: 220px;
-  bottom: 410px;
+  /* width: 250px; */
+  width: 15%;
+  max-width: 250px;
+  /* right: 220px; */
+  right: 15%;
+  top: -10%;
   z-index: 6;
   transform: rotate(0deg);
 }
 .tomato {
   position: absolute;
-  width: 200px;
-  right: 90px;
-  bottom: 470px;
+  /* width: 200px; */
+  width: 15%;
+  max-width: 200px;
+  right: 8%;
+  top: -30%;
   z-index: 5;
 }
 
 .thread {
   position: absolute;
-  width: 150px;
-  right: 70px;
-  bottom: 453px;
+  /* width: 150px; */
+  width: 15%;
+  max-width: 150px;
+  right: 5%;
+  top: 2%;
   z-index: 5;
 }
 
@@ -569,6 +574,7 @@ body {
   text-align: center;
 }
 
+
 .my-look-title-image {
   width: 70px;
   text-align: center;
@@ -580,6 +586,9 @@ body {
   color: #222222;
   border-bottom: 4px solid #ff4dc4;
   display: inline-block;
+  h2 {
+    font-size: clamp(24px, 3vw, 60px);
+  }
 }
 
 .made-by-me {
@@ -589,6 +598,13 @@ body {
   margin-top: 70px;
 }
 
+.my-look-title {
+  .made-by-me {
+    margin: 0;
+    display: none;
+    text-align: center;
+  }
+}
 
 .footer-home {
   margin-top: 100px; /* or padding-top: 100px; */
@@ -725,6 +741,12 @@ body {
     overflow: hidden;
     z-index: 0;
   }
+
+  .rainbow {
+    top: -330px;
+    left: 90%;
+  }
+
   .sewing-machine {
     position: absolute;
     width: 300px;
@@ -768,13 +790,30 @@ body {
   }
 }
 
-
+/* 最低 330px か 360px　一般的が390px */
+/* pc 1440  */
 
 /* mobile */
 @media (max-width: 768px) {
   body {
     overflow-x: hidden;
     width: 100vw;
+  }
+  .made-by-me {
+    display: none;
+  }
+
+  .my-look-title {
+    .made-by-me {
+      margin: 0;
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .made-by-me {
+    font-size: 1rem;
+    margin: 0 auto;
   }
 
   .hero-wrapper::before {
@@ -829,34 +868,17 @@ body {
     text-align: center;
   }
 
-
-  .about-section__inner {
+  .about-section-inner {
     position: relative;
-    overflow: hidden;
-
-    &::after {
-      content: "";
-      background-image: url("src/pages/Home/test.png");
-      position: absolute;
-      top: -80px;
-      left: 0;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 100px 130vw 0 0;
-      border-color: transparent #fff94d transparent transparent;
-      z-index: -1;
-      pointer-events: none;
-      transform: scale(-1, 1);
-    }
+    /* overflow: hidden; */
   }
 
   .about-section {
     padding-top: 0;
   }
-   .candy-text-wrapper {
+  .candy-text-wrapper {
     overflow: hidden;
-    padding: 0;
+    padding: 35px;
   }
 
   .intro-outline-wrapper {
@@ -864,7 +886,6 @@ body {
     width: 100%;
     max-width: 500px;
     height: auto;
-    padding: 1.5rem;
     flex-direction: column;
     border-radius: 60px;
     margin: 0 auto;
@@ -943,7 +964,8 @@ body {
   }
 
   .about-video {
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
     height: auto;
     margin: 0 auto;
     border-radius: 20px;
@@ -996,7 +1018,7 @@ body {
 
   .jelly {
     position: absolute;
-    bottom: -6em;
+    bottom: 0;
     left: 0;
     width: 220px;
     z-index: 1;
@@ -1018,60 +1040,57 @@ body {
     pointer-events: none;
   }
 
-
-.candy-outline-text-top {
-  position: absolute;
-  top: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Bungee', sans-serif;
-  font-size: 20px;
-  color: #343434;
-  word-spacing: 10rem;
-  white-space: nowrap;
-  animation: topMove 15s linear infinite;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.candy-outline-text-bottom {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  word-spacing: 10rem;
-  transform: translateX(-50%);
-  font-family: 'Bungee', sans-serif;
-  font-size: 20px;
-  color: #343434;
-  white-space: nowrap;
-  animation: bottomMove 15s linear infinite;
-  z-index: 0;
-  pointer-events: none;
-}
-
-@keyframes topMove {
-  0% {
-    transform: translateX(90%) translateY(0);
+  .candy-outline-text-top {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Bungee', sans-serif;
+    font-size: 20px;
+    color: #343434;
+    word-spacing: 10rem;
+    white-space: nowrap;
+    animation: topMove 15s linear infinite;
+    z-index: 0;
+    pointer-events: none;
   }
-  100% {
-    transform: translateX(-200%) translateY(0);
-  }
-}
 
-@keyframes bottomMove {
-  0% {
-    transform: translateX(-200%) translateY(0);
+  .candy-outline-text-bottom {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    word-spacing: 10rem;
+    transform: translateX(-50%);
+    font-family: 'Bungee', sans-serif;
+    font-size: 20px;
+    color: #343434;
+    white-space: nowrap;
+    animation: bottomMove 15s linear infinite;
+    z-index: 0;
+    pointer-events: none;
   }
-  100% {
-    transform: translateX(100%) translateY(0);
+
+  @keyframes topMove {
+    0% {
+      transform: translateX(90%) translateY(0);
+    }
+    100% {
+      transform: translateX(-200%) translateY(0);
+    }
   }
-}
 
-
+  @keyframes bottomMove {
+    0% {
+      transform: translateX(-200%) translateY(0);
+    }
+    100% {
+      transform: translateX(100%) translateY(0);
+    }
+  }
 
   /* connect */
   .connect-section {
-    padding: 3rem 1.5rem;
+    padding: 5rem 1.5rem;
     margin-top: 20px;
   }
 
@@ -1108,6 +1127,7 @@ body {
 
   .girl-image {
     width: 90px;
+    padding-bottom: 3rem;
   }
 
   .girl-comment.visible {
@@ -1145,9 +1165,14 @@ body {
 
   .rainbow {
     top: -520px;
-    left: 80%;
+    left: 88%;
     transform: translateX(-50%) rotate(15deg) scale(0.1);
   }
+
+  .diagonal-top-mylooks {
+    top: -88px;
+  }
+
   .subtitles.look {
     font-size: 20px;
     border-bottom-width: 4px;
@@ -1171,18 +1196,14 @@ body {
 
   .sewing-machine {
     position: absolute;
-    width: 100px;
-    right: 10px;
-    bottom: 530px;
+    display: block;
+    width: 30%;
+    max-width: 200px;
+    right: 30px;
+    top: -50px;
     z-index: 5;
   }
 
-  .made-by-me {
-    font-size: 1rem;
-    margin: 0 auto;
-  }
-
-  .sewing-machine,
   .tomato,
   .thread {
     display: none;
