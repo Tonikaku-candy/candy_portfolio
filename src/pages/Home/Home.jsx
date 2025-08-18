@@ -145,73 +145,67 @@ function Home() {
       <section className="about-section">
         <div className="diagonal-top"></div>
         <div className="grid-overlay"></div>
-        <div className='about-section-inner'>
-        
-    
-        {/* bg */}
+        <div className="about-section-inner">
+          {/* bg */}
 
-        <div className="about-title-wrapper">
-     
-          <div className="about-title">
-    
-            <div className="about-title-image-wrapper">
-
-
-              <img
-                src={aboutMeTitleImage}
-                className="about-me-title-image"
-                alt="candy emoji"
-              />
-            </div>
-            <div className="subtitles about">
-              <h2>ABOUT ME</h2>
-            </div>
-          </div>
-        </div>
-
-        <div className="intro-outline-wrapper">
-                           <img
-          ref={lollipopRef}
-          src={lollipop}
-          className={`lollipop ${lollipopVisible ? 'visible' : ''}`}
-          alt="heart lollipop"
-        />
-
-          <div className="candy-text-wrapper">
-            <div className="candy-outline-text-top">
-              CANDY CANDY CANDY CANDY
-            </div>
-            <div className="candy-outline-text-bottom">
-              CANDY CANDY CANDY CANDY
-            </div>
-
-            <div className="intro-card">
-              <div className="intro-text">
-                <h2>HELLO!!&nbsp;&nbsp; I'M CANDY</h2>
-                <p>
-                  I'm interested in content creation, graphic design, and motion
-                  design. With a background in fashion design, I love building
-                  unique, playful worlds inspired by Japanese kawaii culture — a
-                  Japanese aesthetic centered around cuteness, color, and
-                  playfulness!
-                </p>
-                <Link to="/about" className="intro-button">
-                  More about me
-                </Link>
-              </div>
-              <div className="about-image">
-                <video
-                  className="about-video"
-                  src={aboutMeVideo}
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
+          <div className="about-title-wrapper">
+            <div className="about-title">
+              <div className="about-title-image-wrapper">
+                <img
+                  src={aboutMeTitleImage}
+                  className="about-me-title-image"
+                  alt="candy emoji"
                 />
               </div>
+              <div className="subtitles about">
+                <h2>ABOUT ME</h2>
+              </div>
             </div>
           </div>
-        </div>
+
+          <div className="intro-outline-wrapper">
+            <img
+              ref={lollipopRef}
+              src={lollipop}
+              className={`lollipop ${lollipopVisible ? 'visible' : ''}`}
+              alt="heart lollipop"
+            />
+
+            <div className="candy-text-wrapper">
+              <div className="candy-outline-text-top">
+                CANDY CANDY CANDY CANDY
+              </div>
+              <div className="candy-outline-text-bottom">
+                CANDY CANDY CANDY CANDY
+              </div>
+
+              <div className="intro-card">
+                <div className="intro-text">
+                  <h2>HELLO!!&nbsp;&nbsp; I'M CANDY</h2>
+                  <p>
+                    I'm interested in content creation, graphic design, and
+                    motion design. With a background in fashion design, I love
+                    building unique, playful worlds inspired by Japanese kawaii
+                    culture — a Japanese aesthetic centered around cuteness,
+                    color, and playfulness!
+                  </p>
+                  <Link to="/about" className="intro-button">
+                    More about me
+                  </Link>
+                </div>
+                <div className="about-image">
+                  <video
+                    className="about-video"
+                    src={aboutMeVideo}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <img
           ref={jellyRef}
@@ -219,7 +213,7 @@ function Home() {
           className={`jelly ${jellyVisible ? 'visible' : ''}`}
           alt="jelly beans"
         />
-              <div className="diagonal-bottom"></div>
+        <div className="diagonal-bottom"></div>
       </section>
 
       {/* about me end */}
@@ -285,13 +279,13 @@ function Home() {
         <div className="grid-overlay-mylooks"></div>
         <img
           src={sewingMachine}
-          alt="pink sewing machine image"
           className="sewing-machine"
+          alt="pink sewing machine image"
         />
         <img
           src={tomato}
-          alt="tomato sewing cushion image"
           className="tomato"
+          alt="tomato sewing cushion image"
         />
         <img src={thread} alt="colorful thread image" className="thread" />
 
@@ -308,9 +302,11 @@ function Home() {
             <div className="subtitles look">
               <h2>MY SEWING WORKS</h2>
             </div>
+            <h3 className="made-by-me">🩷#MadeByMe🩷</h3>
           </div>
           <h3 className="made-by-me">🩷#MadeByMe🩷</h3>
         </div>
+
         <PhotoGallery />
         <div className="diagonal-bottom-mylooks"></div>
       </section>

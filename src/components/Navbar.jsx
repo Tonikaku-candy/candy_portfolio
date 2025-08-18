@@ -14,6 +14,7 @@ function Navbar() {
   return (
     <header className="header-bar">
       <nav className="navbar">
+        <div className="mobile-cover"></div>
         <NavLink to="/" className="logo-wrapper">
           <div className="logo-tab-box">
             <img
@@ -25,6 +26,7 @@ function Navbar() {
         </NavLink>
 
         {/* only mobile image */}
+
         {isOpen ? (
           <span
             className="burger-icon close-icon"
@@ -36,6 +38,7 @@ function Navbar() {
           <img
             src={humburger}
             className="burger-icon"
+            id="burger-icon"
             alt="menu"
             onClick={() => setIsOpen(true)}
           />
@@ -69,7 +72,7 @@ function Navbar() {
                 isActive ? 'about-button active' : 'about-button'
               }
             >
-               {({ isActive }) => (
+              {({ isActive }) => (
                 <span className="text-with-hearts">
                   {isActive && (
                     <img src={heart} alt="" className="active-heart left" />
@@ -89,7 +92,7 @@ function Navbar() {
                 isActive ? 'works-button active' : 'works-button'
               }
             >
-               {({ isActive }) => (
+              {({ isActive }) => (
                 <span className="text-with-hearts">
                   {isActive && (
                     <img src={heart} alt="" className="active-heart left" />

@@ -31,6 +31,10 @@ import colorfulChameleon from '../../assets/About/colorful-chameleon.png';
 import sewingMachine from '../../assets/home/my-look/sewing-machine.png';
 import tomato from '../../assets/home/my-look/tomato-pin-cushion.png';
 import thread from '../../assets/home/my-look/colorful-thread.png';
+import speechBubble from '../../assets/About/speech-bubble.png';
+import jordan from '../../assets/About/jordan-profile-photo.png';
+import sunny from '../../assets/About/sunny-profile-photo.png';
+import branden from '../../assets/About/branden-profile-photo.png';
 
 function About() {
   useEffect(() => {
@@ -69,41 +73,39 @@ function About() {
               kawaii culture ✨
             </p>
           </div>
-
-
-       
         </div>
       </div>
-             
+
       {/* hello section end */}
 
       {/* about section */}
       <div className="about-page-section">
-          <div className="diagonal-top-about"></div>
+        <div className="diagonal-top-about"></div>
         <div className="grid-overlay-about"></div>
-           <div className="about-profile-image-wrapper">
-              <img
-                src={profileBg}
-                alt="sakura background"
-                className="about-profile-bg"
-              />
+        <div className="about-profile-image-wrapper">
+          <img
+            src={profileBg}
+            alt="sakura background"
+            className="about-profile-bg"
+          />
 
-              <img
-                src={profile2}
-                alt="Candy profile picture hover"
-                className="about-profile-image side"
-              />
+          <img
+            src={profile2}
+            alt="Candy profile picture hover"
+            className="about-profile-image side"
+          />
 
-              <img
-                src={profile1}
-                alt="Candy profile picture"
-                className="about-profile-image front"
-              />
-              <p className="about-profile-text">Hover me!</p>
-            </div>
+          <img
+            src={profile1}
+            alt="Candy profile picture"
+            className="about-profile-image front"
+          />
+          <p className="about-profile-text">Hover me!</p>
+        </div>
 
         {/* Section Title & Text Box */}
         <div className="about-card">
+          <div className="about-card-inner"></div>
           <h2 className="about-section-title">ABOUT</h2>
           <div className="about-page-content">
             <div className="about-page-text">
@@ -139,11 +141,11 @@ function About() {
                 <strong>“Make something silly, seriously.”</strong> I believe
                 humor, when treated with care, can be just as powerful as any
                 serious message.
-                   {/* <div className="ufo-wrapper">
-            <img src={lightImage} alt="light" className="light" />
-            <img src={ufoImage} alt="rabbit-ufo" className="ufo" />
-            <img src={girlImage} alt="girl" className="girl" />
-          </div> */}
+                {/* <div className="ufo-wrapper">
+                  <img src={lightImage} alt="light" className="light" />
+                  <img src={ufoImage} alt="rabbit-ufo" className="ufo" />
+                  <img src={girlImage} alt="girl" className="girl" />
+                </div> */}
                 <br />
                 <br />
                 I like working ahead and pushing myself beyond just meeting
@@ -165,7 +167,6 @@ function About() {
                 strange, funny — and made to make people happy.
               </p>
             </div>
-            
           </div>
 
           {/* Technical Skills */}
@@ -266,6 +267,102 @@ function About() {
             </ul>
           </div>
         </div>
+        <div className="classmates-section">
+          <div className="say-title-wrapper">
+            <div className="say-title">
+              <div className="say-title-image-wrapper">
+                <img
+                  src={speechBubble}
+                  className="say-title-image"
+                  alt="speech bubble icon"
+                />
+              </div>
+
+              <div className="subtitles say">
+                <h2>WHAT MY CLASSMATES SAY</h2>
+              </div>
+            </div>
+          </div>
+          {/* jordan */}
+          <div className="classmates-grid">
+            <div className="classmate-card">
+              <img
+                src={jordan}
+                className="profile-photo"
+                alt="Jordan's profile photo"
+              />
+              <h3>
+                <a
+                  href="https://jordanasseff.ca/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="profile-link"
+                >
+                  Jordan
+                </a>
+              </h3>
+              <p>
+                Candy’s creativity and enthusiasm shine through in every
+                project. Even though she can be a little shy in daily life, her
+                confidence and energy on screen reveal her true talent. She has
+                a unique attitude and imagination, and I believe she’s a
+                superstar in the making.
+              </p>
+            </div>
+            {/* sunny */}
+            <div className="classmate-card">
+              <img
+                src={sunny}
+                className="profile-photo"
+                alt="sunny's profile photo"
+              />
+              <h3>
+                <a
+                  href="https://jisun-ju.ca/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="profile-link"
+                >
+                  Sunny
+                </a>
+              </h3>
+              <p>
+                Candy is one of the most hardworking and caring classmates I
+                know. The more you get to know her, the more her true charm and
+                talents shine through. She’s not only creative and dedicated,
+                but also someone who leaves a lasting impression. I feel lucky
+                to be in the same class and to see firsthand just how amazing
+                she is.
+              </p>
+            </div>
+            {/* branden */}
+            <div className="classmate-card">
+              <img
+                src={branden}
+                className="profile-photo"
+                alt="Branden's profile photo"
+              />
+              <h3>
+                <a
+                  href="https://taito.ca/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="profile-link"
+                >
+                  Branden
+                </a>
+              </h3>
+              <p>
+                Candy is hilarious and always makes people laugh, sometimes
+                without even trying. At the same time, she’s one of the
+                hardest-working and most productive students I know — like a
+                one-person creative agency handling design, social media, and
+                more. Her unique mix of humor and dedication is a rare strength,
+                and it makes her stand out in the best way.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* my looks */}
@@ -296,11 +393,13 @@ function About() {
                 alt="dress icon"
               />
             </div>
+
             <div className="subtitles look">
               <h2>MY SEWING WORKS</h2>
             </div>
+            <h3 className="made-by-me">🩷#MadeByMe🩷</h3>
           </div>
-          <h3 className="made-by-me-about">🩷#MadeByMe🩷</h3>
+          <h3 className="made-by-me about">🩷#MadeByMe🩷</h3>
         </div>
         <PhotoGallery />
       </div>

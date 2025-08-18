@@ -127,7 +127,6 @@ body {
 
 /* About Section */
 
-
 .grid-overlay-about {
   position: absolute;
   top: 0;
@@ -141,14 +140,13 @@ body {
   z-index: -1;
 }
 
-
 .diagonal-top-about {
   position: absolute;
   top: -200px;
   left: 0;
   width: 100%;
   height: 410px;
-  background-color: #00cfff;;
+  background-color: #00cfff;
   background-image: linear-gradient(
     90deg,
     rgba(63, 176, 218, 0.7) 3px,
@@ -176,7 +174,6 @@ body {
 } */
 
 .about-page-section {
-
   background-color: #00cfff;
   text-align: center;
   position: relative;
@@ -193,8 +190,7 @@ body {
   max-width: 1000px;
   height: auto;
   /* height: 700px; */
-  margin: 0px auto 950px;
-  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
+  margin: 0px auto 55%;
   border: 5px solid #343434;
 }
 
@@ -231,9 +227,8 @@ body {
   border: 5px solid #343434;
   overflow: hidden;
   right: 12%;
-  top: -23%;
-    margin-right: 5rem;
-
+  top: -20%;
+  margin-right: 5rem;
 }
 
 /* 背景の桜画像 */
@@ -245,7 +240,6 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: 0;
-  
 }
 
 /* 通常の顔 */
@@ -287,14 +281,14 @@ body {
 
 .about-profile-text {
   position: absolute;
-  z-index: 3;               
+  z-index: 3;
   left: 50%;
-  top: 12px;              
+  top: 12px;
   transform: translateX(-50%);
   color: #fff;
   font-weight: 700;
-  text-shadow: 0 2px 8px rgba(0,0,0,.6); 
-  pointer-events: none;      
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  pointer-events: none;
 }
 
 /* profile image end */
@@ -477,6 +471,87 @@ body {
   animation: popFromBehindBox 1.2s ease-out forwards;
 }
 
+/* what my classmates say */
+
+
+
+.say-title {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.say-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.say-title-image-wrapper {
+  text-align: center;
+}
+
+.say-title-image {
+  width: 70px;
+  text-align: center;
+}
+
+.subtitles.say {
+  font-family: 'Bungee', sans-serif;
+  font-size: 2.5rem;
+  color: #222222;
+  border-bottom: 4px solid #ff4dc4;
+  display: inline-block;
+  h2 {
+    font-size: clamp(24px, 3vw, 60px);
+  }
+}
+
+.classmates-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+.classmate-card {
+  flex: 1 1 300px; /* 最小300pxでリサイズ */
+  max-width: 450px;
+  background: #fff;
+  border: 5px solid #343434;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 2rem;
+}
+
+.profile-photo {
+  max-width: 150px;
+}
+
+.classmate-card h3 {
+  margin: 0.5rem 1rem;
+}
+
+.classmate-card h3 a {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.5rem;
+  color: #ff62bc;
+  margin-bottom: 2rem;
+}
+
+.classmate-card p {
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin: 0; /* 余計な上下スペースを消す */
+}
+
 /* about section end */
 
 /* my look */
@@ -562,11 +637,9 @@ body {
   display: inline-block;
 }
 
-.made-by-me-about {
+.made-by-me.about {
   color: #ff62bc;
   font-size: 1.5rem;
-  margin-left: 40px;
-  margin-top: 70px;
 }
 
 /* .about-yellow-bg-bottom {
@@ -608,30 +681,37 @@ body {
 
 .sewing-machine.about {
   position: absolute;
-  width: 180px;
-  right: 220px;
-  bottom: 420px;
+  /* width: 250px; */
+  width: 15%;
+  max-width: 250px;
+  /* right: 220px; */
+  right: 15%;
+  top: -10%;
   z-index: 6;
   transform: rotate(0deg);
 }
-.tomato.about{
-    position: absolute;
-  width: 130px;
-  right: 140px;
-  bottom: 440px;
+.tomato.about {
+  position: absolute;
+  /* width: 200px; */
+  width: 15%;
+  max-width: 200px;
+  right: 8%;
+  top: -30%;
   z-index: 5;
 }
 
 .thread.about {
   position: absolute;
-  width: 130px;
-  right: 75px;
-  bottom: 423px;
+  /* width: 150px; */
+  width: 15%;
+  max-width: 150px;
+  right: 5%;
+  top: 2%;
   z-index: 5;
 }
 
 .fabric.about {
-   position: absolute;
+  position: absolute;
   width: 240px;
   left: 75px;
   top: -200px;
@@ -642,52 +722,51 @@ body {
 /* Responsive */
 
 @media (min-width: 1600px) {
-  
-.about-profile-image-wrapper {
-  position: absolute;
-  width: 450px;
-  height: 550px;
-  border-radius: 2rem;
-  border: 5px solid #343434;
-  overflow: hidden;
-  right: 20%;
-  top: -27%;
+  .about-profile-image-wrapper {
+    position: absolute;
+    width: 450px;
+    height: 550px;
+    border-radius: 2rem;
+    border: 5px solid #343434;
+    overflow: hidden;
+    right: 20%;
+    top: -20%;
     margin-right: 5rem;
+  }
 
-}
+  .grid-overlay-about {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        rgba(63, 176, 218, 0.7) 3px,
+        transparent 0
+      ),
+      linear-gradient(90deg, rgba(63, 176, 218, 0.7) 3px, transparent 0);
+    background-size: 200px 200px;
+    pointer-events: none;
+    z-index: -1;
+  }
 
-
-.grid-overlay-about {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(rgba(63, 176, 218, 0.7) 3px, transparent 0),
-    linear-gradient(90deg, rgba(63, 176, 218, 0.7) 3px, transparent 0);
-  background-size: 200px 200px;
-  pointer-events: none;
-  z-index: -1;
-}
-
-
-.diagonal-top-about {
-  position: absolute;
-  top: -200px;
-  left: 0;
-  width: 100%;
-  height: 410px;
-  background-color: #00cfff;;
-  background-image: linear-gradient(
-    90deg,
-    rgba(63, 176, 218, 0.7) 3px,
-    transparent 0
-  );
-  background-size: 200px 200px;
-  transform: skewY(-8deg);
-  z-index: -1;
-  pointer-events: none;
-}
+  .diagonal-top-about {
+    position: absolute;
+    top: -200px;
+    left: 0;
+    width: 100%;
+    height: 410px;
+    background-color: #00cfff;
+    background-image: linear-gradient(
+      90deg,
+      rgba(63, 176, 218, 0.7) 3px,
+      transparent 0
+    );
+    background-size: 200px 200px;
+    transform: skewY(-8deg);
+    z-index: -1;
+    pointer-events: none;
+  }
 
   .about-card {
     position: relative;
@@ -733,7 +812,7 @@ body {
 }
 
 @media (max-width: 768px) {
-    body {
+  body {
     overflow-x: hidden;
     width: 100vw;
   }
@@ -936,5 +1015,20 @@ body {
     text-align: right;
     font-size: 1rem;
     margin: 2rem auto 0;
+  }
+
+  .sewing-machine.about {
+    position: absolute;
+    display: block;
+    width: 30%;
+    max-width: 200px;
+    right: 30px;
+    top: -50px;
+    z-index: 5;
+  }
+
+  .tomato.about,
+  .thread.about {
+    display: none;
   }
 }

@@ -25,7 +25,7 @@ const projectData = [
   {
     id: 3,
     title: 'FASHION ZINE',
-    subtitle: 'ADOBE ILLUSTRATOR / PHOTOSHOP / INDESIGN',
+    subtitle: 'ILLUSTRATOR / PHOTOSHOP / INDESIGN',
     description: "A zine spotlighting Vancouver's J-fashion community",
     image: img3,
       link: '/projects/fashion-zine',
@@ -36,7 +36,7 @@ const projectData = [
     title: 'Bumper Opener Video',
     subtitle: 'Motion Graphics',
     description:
-      'Brand identity expressed through an animated bumper designed in After Effects.',
+      'Animated bumper showcasing brand identity in After Effects.',
     image: img4,
     link: '/projects/bumper',
   },
