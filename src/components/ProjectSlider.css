@@ -224,11 +224,13 @@ body {
   .splide__arrow--prev {
     top: 90%;
     left: 10%;
+    z-index: 0;
   }
 
   .splide__arrow--next {
     top: 90%;
     right: 10%;
+    z-index: 0;
   }
   .slide-text{
         min-height: 0;

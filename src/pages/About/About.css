@@ -6,7 +6,7 @@ body {
 .hello-section {
   position: relative;
   background: #ff62bc;
-  padding: 6rem 2rem 15rem;
+  padding: 6rem 2rem 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,26 +19,37 @@ body {
   justify-content: space-between;
   max-width: 1100px;
   width: 100%;
-  gap: 2rem;
   flex-wrap: wrap;
+
+  .about-profile-image-wrapper {
+    display: block;
+    position: relative;
+    height: auto;
+    aspect-ratio: 1/1.3;
+    width: 35%;
+    margin: 0;
+  }
 }
 
 .hello-text {
   flex: 1;
   min-width: 280px;
+  margin-left: 8%;
+  width: 48%;
 }
 
 .hello-title-top {
   font-family: 'Bungee', sans-serif;
   font-size: 5rem;
   color: #343434;
+  font-size: clamp(3.5rem, 4vw, 5rem);
 }
 
 .hello-title-bottom {
   font-family: 'Bungee', sans-serif;
-  font-size: 6.5rem;
   color: #343434;
   font-weight: bold;
+  font-size: clamp(4.5rem, 5vw, 6.5rem);
 }
 
 .hello-subtitle {
@@ -48,6 +59,7 @@ body {
   color: #fff94c;
   line-height: 1.5;
   margin-top: 1rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
 }
 
 /* UFO + Girl */
@@ -55,13 +67,15 @@ body {
   flex: 1;
   position: relative;
   height: 300px;
-  min-width: 280px;
-  right: -56px;
+  right: -100px;
+  width: 50%;
+  top: 10%;
+  margin-bottom: 2rem;
 }
 
 .ufo {
   position: absolute;
-  top: -184px;
+  top: -48px;
   width: 50%;
   z-index: 2;
 }
@@ -69,8 +83,8 @@ body {
 /* light animation */
 .light {
   position: absolute;
-  top: -60px;
-  left: 5%;
+  top: 50px;
+  left: 20px;
   width: 40%;
   z-index: 0;
   opacity: 0;
@@ -95,14 +109,14 @@ body {
 /* girl animation */
 .girl {
   position: absolute;
-  top: 95px;
+  top: 160px;
   left: 25%;
-  width: 150px;
+  width: 30%;
+  width: clamp(70px, 10vw, 120px);
   transform: translateX(-50%) translateY(20px) scaleX(-1);
   opacity: 0;
   z-index: 1;
   animation: girlLoop 5s ease-in-out infinite;
-  /* animation-delay: 1s; */
 }
 
 @keyframes girlLoop {
@@ -142,7 +156,7 @@ body {
 
 .diagonal-top-about {
   position: absolute;
-  top: -200px;
+  top: -150px;
   left: 0;
   width: 100%;
   height: 410px;
@@ -153,25 +167,10 @@ body {
     transparent 0
   );
   background-size: 200px 200px;
-  transform: skewY(-15deg);
+  transform: skewY(-10deg);
   z-index: -1;
   pointer-events: none;
 }
-
-/* 
-.about-page-section::before {
-  content: '';
-  position: absolute;
-  top: -400px;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 400px 100vw;
-  border-color: transparent transparent #8d9394 transparent;
-  z-index: -1;
-  pointer-events: none;
-} */
 
 .about-page-section {
   background-color: #00cfff;
@@ -179,7 +178,7 @@ body {
   position: relative;
   /* overflow: hidden; */
   z-index: 5;
-  padding-bottom: 1px;
+  padding-bottom: 100px;
 }
 
 .about-card {
@@ -187,11 +186,24 @@ body {
   background-color: #fff;
   border-radius: 2rem;
   padding: 2rem 2rem 5rem;
+  width: 90%;
   max-width: 1000px;
   height: auto;
   /* height: 700px; */
-  margin: 0px auto 55%;
+  margin: 0px auto;
+  margin-bottom: 760px;
   border: 5px solid #343434;
+}
+
+.about-box {
+  display: flex;
+  p {
+    width: 50%;
+  }
+}
+
+.ufo-bottom-text {
+  padding-top: 1.5rem;
 }
 
 .about-page-content {
@@ -220,15 +232,13 @@ body {
 /* profile picture */
 
 .about-profile-image-wrapper {
+  display: none;
   position: absolute;
-  width: 450px;
-  height: 550px;
   border-radius: 2rem;
   border: 5px solid #343434;
   overflow: hidden;
-  right: 12%;
-  top: -20%;
-  margin-right: 5rem;
+  right: 8%;
+  top: -23%;
 }
 
 /* 背景の桜画像 */
@@ -335,10 +345,10 @@ body {
 .skills-card.technical {
   background-color: #fff94c;
   bottom: -450px;
-  width: 550px;
+  max-width: 550px;
   padding: 20px;
   /* left: 516px; */
-  left: -150px;
+  left: -30px;
   z-index: 2;
 }
 
@@ -346,10 +356,14 @@ body {
   position: absolute;
   background-color: #ff62bc;
   width: 750px;
+  width: 80%;
+  max-width: 730px;
   bottom: -770px;
-  left: 316px;
+  left: 230px;
 
-  /* left: -130px; */
+  @media (min-width: 1024px){
+  bottom: -815px;
+  }
 }
 
 .skills-icons {
@@ -407,13 +421,17 @@ body {
   list-style: none;
   padding: 0;
   font-family: 'Fredoka', sans-serif;
-  font-size: 1.3rem;
+  font-size: clamp(8px, 1vw, 1.3rem);
   color: white;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
   z-index: 2;
+
+  @media (min-width: 1024px){
+  font-size:1rem;
+}
 }
 
 .extra-skills-list li {
@@ -422,21 +440,30 @@ body {
   padding: 0.5rem 1rem;
   border-radius: 1rem;
   border: 2px solid #ff62bc;
+  width: 47%;
+}
+
+
+
+.skills-card.extra.relative-version {
+  position: relative;
+  /* margin: 2rem auto; */
 }
 
 /* chameleon */
 .chameleon-wrapper {
   position: absolute;
-  left: 75%;
-  transform: translateX(-50%) scaleX(-1);
-  bottom: -323px;
-  z-index: 1; /* 最初は box より後ろに見せる */
-  pointer-events: none; /* カーソル干渉しないように */
+  left: 70%;
+  transform: translateX(-5%) scaleX(-1);
+  bottom: 390px;
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* アニメーション用クラス */
 .colorful-chameleon {
   width: 200px;
+  width: clamp(150px, 2vw, 200px);
   position: relative;
   opacity: 0;
   transform: translateY(40px);
@@ -472,8 +499,10 @@ body {
 }
 
 /* what my classmates say */
-
-
+.classmates-section {
+  width: 90%;
+  margin: 0 auto;
+}
 
 .say-title {
   display: inline-block;
@@ -487,6 +516,7 @@ body {
   text-align: center;
   flex-wrap: wrap;
   margin-bottom: 40px;
+  /* padding-top: 230px; */
 }
 
 .say-title-image-wrapper {
@@ -501,24 +531,25 @@ body {
 .subtitles.say {
   font-family: 'Bungee', sans-serif;
   font-size: 2.5rem;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
   color: #222222;
   border-bottom: 4px solid #ff4dc4;
   display: inline-block;
-  h2 {
+  /* h2 {
     font-size: clamp(24px, 3vw, 60px);
-  }
+  } */
 }
 
 .classmates-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
+
+  justify-content: space-between;
   margin-bottom: 10%;
 }
 
 .classmate-card {
-  flex: 1 1 300px; /* 最小300pxでリサイズ */
+  width: 31%;
   max-width: 450px;
   background: #fff;
   border: 5px solid #343434;
@@ -526,7 +557,7 @@ body {
   padding: 1.5rem;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin: 0 2rem;
+  /* margin: 0 2rem; */
 }
 
 .profile-photo {
@@ -547,9 +578,10 @@ body {
 .classmate-card p {
   font-family: 'Fredoka', sans-serif;
   font-size: 1rem;
+  font-size: clamp(10px, 1.2vw, 16px);
   color: #333;
   line-height: 1.6;
-  margin: 0; /* 余計な上下スペースを消す */
+  margin: 0;
 }
 
 /* about section end */
@@ -637,25 +669,12 @@ body {
   display: inline-block;
 }
 
-.made-by-me.about {
+.made-by-me-about {
   color: #ff62bc;
   font-size: 1.5rem;
+  margin-left: 40px;
+  margin-top: 70px;
 }
-
-/* .about-yellow-bg-bottom {
-  width: 100%;
-  position: relative;
-  margin-top: -400px;
-  z-index: 1;
-  right:0;
-  left:0;
-}
-
-.about-yellow-bg-bottom img {
-  width: 100%;
-  height: auto;
-  display: block;
-} */
 
 .about-yellow-bg-bottom {
   position: absolute;
@@ -717,39 +736,15 @@ body {
   top: -200px;
   z-index: 5;
 }
+
+.about-profile-image-wrapper {
+  display: none;
+}
 /* my look end */
 
 /* Responsive */
 
 @media (min-width: 1600px) {
-  .about-profile-image-wrapper {
-    position: absolute;
-    width: 450px;
-    height: 550px;
-    border-radius: 2rem;
-    border: 5px solid #343434;
-    overflow: hidden;
-    right: 20%;
-    top: -20%;
-    margin-right: 5rem;
-  }
-
-  .grid-overlay-about {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(
-        rgba(63, 176, 218, 0.7) 3px,
-        transparent 0
-      ),
-      linear-gradient(90deg, rgba(63, 176, 218, 0.7) 3px, transparent 0);
-    background-size: 200px 200px;
-    pointer-events: none;
-    z-index: -1;
-  }
-
   .diagonal-top-about {
     position: absolute;
     top: -200px;
@@ -768,46 +763,34 @@ body {
     pointer-events: none;
   }
 
-  .about-card {
-    position: relative;
-    background-color: #fff;
-    border-radius: 2rem;
-    padding: 2rem 2rem 5rem;
-    max-width: 1500px;
-    height: auto;
-    /* height: 700px; */
-    margin: 0px auto 950px;
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); */
-    border: 5px solid #343434;
-  }
-
-  .skills-card {
-    position: absolute;
-    background-color: #fff;
-    border-radius: 2rem;
-    padding: 2rem;
-    margin: 0 auto 3rem;
-    border: 5px solid #343434;
-  }
-
-  .skills-card.technical {
-    background-color: #fff94c;
-    width: 750px;
-    height: 400px;
-    padding: 10px;
-    bottom: -400px;
-    left: -150px;
-    z-index: 2;
-  }
-
   .skills-card.extra {
     position: absolute;
     background-color: #ff62bc;
     width: 850px;
     bottom: -770px;
     left: 430px;
+  }
 
-    /* left: -130px; */
+  .classmates-grid {
+    --gap: clamp(12px, 2vw, 24px);
+    --cols: 3;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gap);
+    margin-bottom: 10%;
+  }
+
+  .classmate-card {
+    width: 31%;
+    max-width: 450px;
+    background: #fff;
+    border: 5px solid #343434;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -820,11 +803,17 @@ body {
   .hello-section {
     position: relative;
     background: #ff62bc;
-    padding: 1.5rem 2rem 15rem;
+    padding: 1.5rem 3rem 15rem;
     display: flex;
     justify-content: center;
     align-items: center;
+
     z-index: 0;
+  }
+
+  .hello-text {
+    margin-inline: auto;
+    max-width: fit-content;
   }
 
   .about-page-section::before {
@@ -856,38 +845,51 @@ body {
     flex: 1;
     position: relative;
     height: 50px;
-    right: -200px;
-    top: 120px;
+    top: 0;
   }
 
   .ufo {
     position: absolute;
-    top: -184px;
+
     width: 40%;
     z-index: 2;
+    top: 0px;
+    left: -20%;
   }
 
   /* light animation */
   .light {
     position: absolute;
-    top: -99px;
-    left: 5%;
+    /* top: -99px; */
+    left: -15%;
     width: 30%;
     z-index: 0;
     opacity: 0;
     animation: lightBeamLoop 5s ease-in-out infinite;
+    top: 90%;
   }
 
   .girl {
     position: absolute;
-    top: -39px;
-    left: 20%;
-    width: 60px;
+    left: 0%;
+    width: 20%;
+    width: clamp(40px, 10vw, 80px);
     transform: translateX(-50%) translateY(20px) scaleX(-1);
     opacity: 0;
     z-index: 1;
     animation: girlLoop 5s ease-in-out infinite;
-    /* animation-delay: 1s; */
+    top: 70px;
+  }
+
+  .about-box {
+    display: flex;
+
+    p {
+      width: 50%;
+    }
+    .ufo-wrapper {
+      width: 50%;
+    }
   }
 
   .about-page-section {
@@ -897,25 +899,33 @@ body {
     /* overflow: hidden; */
     z-index: 5;
     padding-bottom: 50px;
-    padding-top: 2.5rem;
+    padding-top: 380px;
   }
 
   .about-section-title.skill {
     font-family: 'Bungee', sans-serif;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
     color: #02cffe;
     padding: 0.8rem 2rem;
     margin-bottom: 2rem;
+    padding: 0;
+  }
+
+  .extra-skills-list {
+    font-size: clamp (1.8rem, 8vw, 2.5rem);
+
   }
 
   .about-profile-image-wrapper {
     position: absolute;
     width: 100%;
-    max-width: 150px;
-    height: 150px;
+    max-width: 300px;
     margin: 2rem auto;
-    right: -20px;
+    /* absolute を真ん中にする */
+    left: 50%;
+    transform: translateX(-50%);
     top: -220px;
   }
 
@@ -929,13 +939,25 @@ body {
   .skills-card.technical,
   .skills-card.extra {
     position: static;
-    width: 90%;
+    width: 100%;
     margin: 2rem auto;
   }
 
   .skills-icons {
     grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+  }
+
+  .icon-with-label {
+    margin-inline: auto;
+
+    img {
+      width: 60%;
+    }
+
+    span.label {
+      font-size: clamp(12px, 1.2vw, 1rem);
+    }
   }
   .extra-skills-list li {
     background: #fff;
@@ -944,6 +966,9 @@ body {
     border-radius: 1rem;
     font-size: 1rem;
     border: 2px solid #ff62bc;
+        width: 100%;@media (min-width: 500px) {
+          width: 47%;
+        }
   }
   .about-card {
     height: auto;
@@ -955,7 +980,11 @@ body {
 
   .about-page-text {
     font-size: 1rem;
-    line-height: 1.8;
+    line-height: 2;
+
+    p {
+      font-size: clamp(10px, 2.5vw, 16px);
+    }
   }
 
   .chameleon-wrapper {
@@ -972,6 +1001,24 @@ body {
     position: relative;
     opacity: 0;
     transform: translateY(40px);
+  }
+  .classmates-section {
+    width: 90%;
+    margin-inline: auto;
+  }
+
+  .classmates-grid {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .classmate-card {
+    flex: none;
+    width: 100%;
+
+    p {
+      font-size: 1rem;
+    }
   }
 
   .my-looks-about-section::before {
@@ -1030,5 +1077,21 @@ body {
   .tomato.about,
   .thread.about {
     display: none;
+  }
+
+  .hello-content-wrapper {
+    about-profile-image-wrapper {
+      display: none;
+    }
+  }
+
+  .about-profile-image-wrapper {
+    display: block;
+  }
+}
+
+@media (min-width: 600px) {
+  .skills-icons {
+    grid-template-columns: repeat(6, 1fr);
   }
 }

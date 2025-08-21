@@ -121,9 +121,9 @@ body {
   /* overflow: hidden; */
 }
 
-.about-section__inner {
+.about-section-inner {
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .lollipop {
@@ -148,18 +148,7 @@ body {
   transform: scaleX(-1);
 }
 
-/* .lollipop, .jelly {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
 
-/* 表示されたらふわっと登場 */
-/* .lollipop.visible,
-.jelly.visible {
-  opacity: 1;
-  transform: translateY(0);
-} */
 
 .about-title {
   display: inline-block;
