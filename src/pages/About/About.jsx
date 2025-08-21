@@ -72,7 +72,28 @@ function About() {
               inspired by Japanese <br />
               kawaii culture ✨
             </p>
+
           </div>
+                <div className="about-profile-image-wrapper">
+          <img
+            src={profileBg}
+            alt="sakura background"
+            className="about-profile-bg"
+          />
+
+          <img
+            src={profile2}
+            alt="Candy profile picture hover"
+            className="about-profile-image side"
+          />
+
+          <img
+            src={profile1}
+            alt="Candy profile picture"
+            className="about-profile-image front"
+          />
+          <p className="about-profile-text">Hover me!</p>
+        </div>
         </div>
       </div>
 
@@ -124,30 +145,39 @@ function About() {
                 Harajuku fashion, and pixel art. I love bold colors, playful
                 aesthetics, and visuals that spark joy or curiosity.
                 <br />
-                <br />
-                I come from a fashion design background, where I made handmade
-                clothes and accessories. That experience taught me how to
-                express personality through design — something I now bring into
-                my digital projects.
-                <br />
-                <br />
-                I’m also a fan of Japanese comedy, and I enjoy creating work
-                that’s a little silly or chaotic — but always made with full
-                sincerity. Whether it’s an animation or a quirky interface, my
-                goal is to make people smile and enjoy the moment.
-                <br />I may be quiet and shy in person, but my imagination is
+                <br />I come from a fashion design background, where I made
+                handmade clothes and accessories. That experience taught me how
+                to express personality through design — something I now bring
+                into my digital projects.
+              </p>
+              <br />
+              <div className="about-box">
+                <p>
+                  I’m also a fan of Japanese comedy, and I enjoy creating work
+                  that’s a little silly or chaotic — but always made with full
+                  sincerity. Whether it’s an animation or a quirky interface, my
+                  goal is to make people smile and enjoy the moment.
+                </p>
+                <div className="ufo-wrapper">
+                  <img src={lightImage} alt="light" className="light" />
+                  <img src={ufoImage} alt="rabbit-ufo" className="ufo" />
+                  <img src={girlImage} alt="girl" className="girl" />
+                </div>
+              </div>
+
+              <p className='ufo-bottom-text'>
+      
+              I may be quiet and shy in person, but my imagination is
                 anything but. I’m always thinking of odd, funny ideas and
                 unexpected ways to tell a story. One of my creative mottos is:{' '}
                 <strong>“Make something silly, seriously.”</strong> I believe
                 humor, when treated with care, can be just as powerful as any
                 serious message.
-                {/* <div className="ufo-wrapper">
-                  <img src={lightImage} alt="light" className="light" />
-                  <img src={ufoImage} alt="rabbit-ufo" className="ufo" />
-                  <img src={girlImage} alt="girl" className="girl" />
-                </div> */}
-                <br />
-                <br />
+              </p>
+
+              <br />
+
+              <p>
                 I like working ahead and pushing myself beyond just meeting
                 deadlines because I truly want to improve, experiment, and keep
                 learning. Even when I struggle, I stay committed. My dedication
@@ -245,22 +275,23 @@ function About() {
           </div>
 
           {/* Extra Skills */}
-          <div className="chameleon-wrapper">
+      
+
+          <div className="skills-card extra">
+            <h2 className="about-section-title extra relative-version">EXTRA SKILLS</h2>
+                <div className="chameleon-wrapper">
             <img
               src={colorfulChameleon}
               alt="Colorful Chameleon Logo"
               className="colorful-chameleon"
             />
           </div>
-
-          <div className="skills-card extra">
-            <h2 className="about-section-title extra">EXTRA SKILLS</h2>
             <ul className="extra-skills-list">
-              <li>Content Creation for Social Media</li>
+              <li>Social Media Content Creation</li>
               <li>Flexible Creative Thinking</li>
               <li>Detail-Oriented & Reliable</li>
               <li>Storytelling with Humor</li>
-              <li>Fashion Coordination</li>
+              <li>Fashion Coordination & Creative Styling</li>
               <li>Garment Construction (Industrial Sewing)</li>
               <li>Voiceover / Narration</li>
               <li>Japanese Language Instruction</li>

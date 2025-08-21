@@ -1,8 +1,8 @@
 .works {
   background-color: #79ff4c;
   position: relative;
-padding-bottom: 150px;
-margin-bottom: 200px;
+  padding-bottom: 150px;
+  margin-bottom: 200px;
 }
 
 /* title */
@@ -60,16 +60,24 @@ margin-bottom: 200px;
 /* projects card */
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* ← 2列に固定 */
-  gap: 50px;
+  row-gap: 50px;
   padding: 20px 0;
-  max-width: 1200px; 
+  max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin-inline: auto;
+  justify-content: space-between;
+
+  a {
+    width: 48%;
+  }
 }
 
 .project-card {
   display: flex;
+
   flex-direction: column;
   align-items: center;
   background-color: #fff;
@@ -81,7 +89,7 @@ margin-bottom: 200px;
   min-height: 350px;
   /* max-width: none; */
   width: 100%;
-  height:100%;
+  height: 100%;
 }
 
 .project-image {
@@ -90,6 +98,7 @@ margin-bottom: 200px;
   /* padding: 60%; */
   object-fit: cover;
   height: 360px;
+  height: clamp(200px, 30vw, 360px);
   object-fit: cover;
 }
 
@@ -99,16 +108,23 @@ margin-bottom: 200px;
 }
 
 .project-title {
+  text-align: center;
   font-size: 1.5rem;
+  font-family: 'Bungee', sans-serif;
   font-weight: 500;
   margin-bottom: 8px;
 }
 
 .project-description {
   font-size: 1.4rem;
+  /* clampを使うと％のようになる */
+  font-size: clamp(12px, 2vw, 1.4rem);
   color: #555;
   margin-top: 4px;
   margin-bottom: 4px;
+  /* %で指定したときは必ずmax width がいる */
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 .project-tags {
@@ -131,18 +147,15 @@ margin-bottom: 200px;
   transition: transform 0.3s ease;
 }
 
-.project-description{
+.project-description {
   list-style: none;
   padding-left: 0;
 }
-.project-description li{
+.project-description li {
   margin: 2px 0;
 }
 
-
 /* projects card end */
-
-
 
 .all-projects-section::before {
   content: '';
@@ -158,66 +171,70 @@ margin-bottom: 200px;
   pointer-events: none;
 }
 
-@media (min-width:1600px) {
+/* @media (min-width: 1600px) { */
+/* .project-image {
+    width: 100%;
+    height: 100%;
+  
+    object-fit: cover;
 
-.project-image {
-  width:100%;
-  height: 100%;
-  /* padding: 60%; */
-  object-fit: cover;
-  /* height: 360px; */
-  object-fit: cover;
-}
-.project-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  margin: 20px auto;
-  /* max-width: 900px; */
-  min-height: 350px;
-  max-width: none; /* ← これを追加または上書き */
-  width: 100%;
-  height:100%;
-}
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* ← 2列に固定 */
-  gap: 50px;
-  padding: 20px 0;
-  max-width: none;
-  margin: 0 20rem;
-}
-.project-description{
-  list-style: none;
-  padding-left: 0;
-}
-.project-description li{
-  margin: 2px 0;
-}
-.project-description {
-  font-size: 1rem;
-  color: #555;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
+    object-fit: cover;
+  } */
 
-}
-@media (max-width: 600px) {
+/* .project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+   
+    min-height: 350px;
+    max-width: none;
+    width: 100%;
+    height: 100%;
+  } */
+/* .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 50px;
+    padding: 20px 0;
+    max-width: none;
+    margin: 0 20rem;
+  }
+  .project-description {
+    list-style: none;
+    padding-left: 0;
+  }
+  .project-description li {
+    margin: 2px 0;
+  }
+  .project-description {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+} */
+@media (max-width: 768px) {
   .works {
     padding-bottom: 100px;
-    margin-bottom: 120px;
   }
 
   .projects-grid {
-    grid-template-columns: 1fr; 
-
+    /* grid-template-columns: 1fr;  */
+    a {
+      width: 100%;
+    }
   }
 
-    .subtitles.all-projects {
+  .project-image {
+    height: auto;
+  }
+
+  .subtitles.all-projects {
     font-size: 28px;
     margin-left: 20px;
     border-bottom-width: 4px;
@@ -234,15 +251,10 @@ margin-bottom: 200px;
 
   .project-title {
     font-size: 1.2rem;
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
   }
 
   .project-description {
     font-size: 0.95rem;
   }
-
-  .project-card {
-  margin: 20px 20px; 
 }
-}
-
-

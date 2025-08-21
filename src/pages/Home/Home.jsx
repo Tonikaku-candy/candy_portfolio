@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import PhotoGallery from '../../components/PhotoGallery';
 import Footer from '../../components/Footer';
 import { useEffect, useState, useRef } from 'react';
+import { motion } from "framer-motion";
 
 //images
 import headerVideo from '../../assets/home/header/candy-fukaya-motion-design-portfolio.mp4';
@@ -35,6 +36,9 @@ function Home() {
   const jellyRef = useRef(null);
   const [lollipopVisible, setLollipopVisible] = useState(false);
   const [jellyVisible, setJellyVisible] = useState(false);
+
+  // fade 
+  
 
   useEffect(() => {
     const observer = new IntersectionObserver(

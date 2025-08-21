@@ -2,30 +2,19 @@
 
 .project-detail-page {
   background-color: #79ff4c;
-   font-family: 'Fredoka', 'sans-serif';
+  font-family: 'Fredoka', 'sans-serif';
   color: #000;
-  
 }
 
-
-
-/* .detail-box {
-  background: white;
-  border: 3px solid black;
-  border-radius: 20px;
-  padding: 20px;
-  margin-bottom: 30px;
-} */
 
 .detail-box {
   background: white;
   border: 3px solid black;
   border-radius: 20px;
   padding: 20px;
-  margin: 0 auto 30px; /* ← margin-bottom に auto を追加して中央寄せ！ */
-  max-width: 1400px;   /* ← 中の白ボックスの最大幅を制限 */
+  margin: 0 auto 30px; 
+  max-width: 1400px; 
 }
-
 
 /* .detail-box-wrapper {
   padding-left: 4rem;
@@ -37,19 +26,19 @@
   margin: 0 auto;
   padding: 0 2rem;
 }
-/* 
-.project-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8rem;
-} */
+
 
 .project-grid {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-}
+  margin-bottom: 50px;
+  row-gap: 50px;
 
+  .detail-box-content {
+    font-size: clamp(12px, 1.8vw, 20px);
+  }
+}
 
 /* .info-grid {
   display: flex;
@@ -60,25 +49,23 @@
 } */
 
 .project-grid .detail-box {
-  flex: 1 1 300px; 
+  width: 48%;
+
   max-width: 400px;
+  margin: 0;
+  @media (min-width: 900px) {
+    width: 31%;
+  }
 }
 
 .subtitles {
-  margin-bottom: 2rem;
-  
-}
-.project-title {
-  text-align: center;
-  font-size: 2.5rem;
-  font-family: 'Bungee', sans-serif;
   margin-bottom: 2rem;
 }
 
 .back-to-works {
   margin: 40px 0;
   text-align: center;
-    z-index: 2;
+  z-index: 2;
 }
 
 .back-to-works.top {
@@ -113,4 +100,26 @@
   border-color: transparent #7aff4c transparent transparent;
   z-index: -1;
   pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .project-detail-page {
+    .box-split {
+      display: block;
+      padding: 0;
+    }
+  }
+  .project-grid {
+    flex-direction: column;
+
+    .detail-box-content {
+      font-size: 20px;
+      padding: 0;
+    }
+  }
+  .project-grid .detail-box {
+    margin: 0 auto;
+    width: 100%;
+  }
+
 }
