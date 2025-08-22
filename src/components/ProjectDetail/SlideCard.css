@@ -29,8 +29,8 @@
   display: flex;
   justify-content: center;
   gap: 0.5rem;
-  margin-top: 1rem;
-  flex-wrap: wrap;
+  /* margin-top: 1rem; */
+  /* flex-wrap: wrap; */
 }
 
 .thumb-media {
@@ -69,7 +69,7 @@
   align-items: center;
   gap: 1rem;
   margin-top: 1rem;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
 
 .custom-arrow {
@@ -108,15 +108,30 @@
 
 
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
+
+  .thumbnail-slider-wrapper {
+
+  gap: 8px;
+
+}
+
+
   .thumb-media {
-    width: 60px;
-    height: 45px;
+    width: 20%;
+    height: auto;
+    /* height: 45px; */
   }
 
   .custom-arrow {
     width: 2rem;
-    height: 2rem;
+    height: auto;
+    padding: 2%;
     font-size: 1rem;
   }
+
+  /* .thumbnail-slider .thumb-media:nth-child(n + 3) {
+    display: none; 
+  } */
+
 }

@@ -1,0 +1,60 @@
+
+.detail-links {
+  position: fixed;
+  top: 100px;
+  left: -10px;
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+
+  opacity: 0;            /* 最初は見えない */
+  pointer-events: none;  /* クリック無効 */
+  transition: opacity 0.3s ease;
+}
+
+.detail-links.show {
+  opacity: 1;            /* スクロール後に表示 */
+  pointer-events: auto;  /* クリック有効 */
+}
+
+.detail-links li {
+  background-color: #ffc107;
+  color: #343434;
+  font-family: 'Bungee', sans-serif;
+  padding: 0.6rem 3px 0.6rem 1rem;
+   padding: clamp(0.6rem, 0.4vw, 1rem) clamp(1rem, 0.6vw + 0.4rem, 1.5rem);
+
+  border-radius: 0px 5px 5px 0px;
+  font-size: 0.85rem;
+    font-size: clamp(0.85rem, 0.5vw + 0.3rem, 1.5rem);
+
+  box-shadow: 2px 2px 0 #e58b00;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  min-width: 120px;
+
+  list-style: none;
+  text-align: right;
+    /* padding-left: 2rem; */
+    margin-bottom: 1rem;
+}
+
+
+.detail-links li:hover {
+  background-color: #ff9800;
+  transform: translateX(5px);
+}
+
+.detail-links li a {
+  color: inherit;
+  text-decoration: none;
+  display: block; /* ← a も li 全体に広がる */
+}
+
+@media (max-width: 1500px) {
+  .detail-links {
+    display: none; /* 1500px未満は非表示 */
+  }
+}

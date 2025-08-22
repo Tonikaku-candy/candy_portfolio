@@ -10,7 +10,7 @@ import BumperProject from './pages/Projects/Bumper/BumperProject';
 import ThreeDPackagingAd from './pages/Projects/ThreeDPackaging/ThreeDPackagingAd';
 import JapaneseInstagramProject from './pages/Projects/Instagram/JapaneseInstagramProject';
 import CanadaPromotionalVideo from './pages/Projects/Canada/CanadaPromotionalVideo';
-// import GoToTop from './components/GoToTop';
+import GoToTop from './components/GoToTop';
 
 import ScrollToTop from './components/ScrollToTop';
 
@@ -45,7 +45,7 @@ function App() {
           element={<CanadaPromotionalVideo />}
         />
       </Routes>
-          {/* <GoToTop /> */}
+          <GoToTop />
     </BrowserRouter>
   );
 }

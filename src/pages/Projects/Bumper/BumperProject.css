@@ -1,10 +1,14 @@
 /* BumperProject.css */
+
+html,body {
+  scroll-behavior: smooth;
+}
 .project-detail-page {
   position: relative;
 }
 .video-wrapper {
   width: 90%;
-  max-width: 1230px;
+  max-width: 1150px;
   margin: 0 auto 40px;
   position: relative;
   aspect-ratio: 16 / 9;

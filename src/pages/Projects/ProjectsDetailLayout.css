@@ -6,14 +6,13 @@
   color: #000;
 }
 
-
 .detail-box {
   background: white;
   border: 3px solid black;
   border-radius: 20px;
   padding: 20px;
-  margin: 0 auto 30px; 
-  max-width: 1400px; 
+  margin: 0 auto 30px;
+  max-width: 1400px;
 }
 
 /* .detail-box-wrapper {
@@ -22,11 +21,10 @@
 } */
 
 .detail-box-wrapper {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
-
 
 .project-grid {
   display: flex;
@@ -62,15 +60,27 @@
   margin-bottom: 2rem;
 }
 
-.back-to-works {
+/* .back-to-works {
   margin: 40px 0;
   text-align: center;
   z-index: 2;
+} */
+
+/* .back-to-works.top {
+  margin: 40px 20px;
+  text-align: left;
+} */
+
+.project-nav {
+  display: flex;
+  justify-content: center; /* ←中央揃え */
+  align-items: center;
+  gap: 20px; /* ボタンの間隔 */
+  margin: 40px auto;
 }
 
 .back-to-works.top {
-  margin: 40px 20px;
-  text-align: left;
+  margin-top: 2rem;
 }
 
 .back-button {
@@ -82,9 +92,22 @@
   border-radius: 30px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  margin: 0;
 }
 
-.back-button:hover {
+.nav-button {
+  font-family: 'Bungee', sans-serif;
+  font-size: 16px;
+  background-color: #ff6ea0;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover,
+.nav-button:hover {
   background-color: #e35b92;
 }
 
@@ -122,4 +145,7 @@
     width: 100%;
   }
 
+  .detail-box-wrapper {
+    padding: 0 20px;
+  }
 }

@@ -39,7 +39,7 @@ const Footer = () => {
       <div className="go-to-top" onClick={scrollToTop}>
         <img src={logo} alt="colorful chameleon logo for Candy Fukaya brand" />
       </div>
-      <p className="jump">Press Chameleon to jump to top</p>
+      {/* <p className="jump">Press Chameleon to jump to top</p> */}
     </footer>
   );
 };

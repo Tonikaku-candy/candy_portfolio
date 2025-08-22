@@ -348,7 +348,7 @@ body {
   max-width: 550px;
   padding: 20px;
   /* left: 516px; */
-  left: -30px;
+  left: -40px;
   z-index: 2;
 }
 
@@ -361,8 +361,8 @@ body {
   bottom: -770px;
   left: 230px;
 
-  @media (min-width: 1024px){
-  bottom: -815px;
+  @media (min-width: 1024px) {
+    bottom: -815px;
   }
 }
 
@@ -429,9 +429,9 @@ body {
   gap: 1rem;
   z-index: 2;
 
-  @media (min-width: 1024px){
-  font-size:1rem;
-}
+  @media (min-width: 1024px) {
+    font-size: 1rem;
+  }
 }
 
 .extra-skills-list li {
@@ -442,8 +442,6 @@ body {
   border: 2px solid #ff62bc;
   width: 47%;
 }
-
-
 
 .skills-card.extra.relative-version {
   position: relative;
@@ -502,6 +500,7 @@ body {
 .classmates-section {
   width: 90%;
   margin: 0 auto;
+  padding-top: 50px;
 }
 
 .say-title {
@@ -531,7 +530,7 @@ body {
 .subtitles.say {
   font-family: 'Bungee', sans-serif;
   font-size: 2.5rem;
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-size: clamp(1rem, 4vw, 2.5rem);
   color: #222222;
   border-bottom: 4px solid #ff4dc4;
   display: inline-block;
@@ -737,10 +736,17 @@ body {
   z-index: 5;
 }
 
-.about-profile-image-wrapper {
+/* .about-profile-image-wrapper {
+  display: none;
+} */
+/* my look end */
+
+/* .hello-section .about-profile-image-wrapper {
   display: none;
 }
-/* my look end */
+.about-page-section .about-profile-image-wrapper.mobile {
+  display: none;
+} */
 
 /* Responsive */
 
@@ -803,7 +809,7 @@ body {
   .hello-section {
     position: relative;
     background: #ff62bc;
-    padding: 1.5rem 3rem 15rem;
+    padding: 1.5rem 3rem 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -814,20 +820,6 @@ body {
   .hello-text {
     margin-inline: auto;
     max-width: fit-content;
-  }
-
-  .about-page-section::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 100px 100vw;
-    border-color: transparent transparent #03cfff transparent;
-    z-index: -1;
-    pointer-events: none;
   }
 
   .hello-title-top {
@@ -841,6 +833,7 @@ body {
   .hello-subtitle {
     font-size: 1.5rem;
   }
+
   .ufo-wrapper {
     flex: 1;
     position: relative;
@@ -899,7 +892,7 @@ body {
     /* overflow: hidden; */
     z-index: 5;
     padding-bottom: 50px;
-    padding-top: 380px;
+    /* padding-top: 380px; */
   }
 
   .about-section-title.skill {
@@ -915,25 +908,6 @@ body {
 
   .extra-skills-list {
     font-size: clamp (1.8rem, 8vw, 2.5rem);
-
-  }
-
-  .about-profile-image-wrapper {
-    position: absolute;
-    width: 100%;
-    max-width: 300px;
-    margin: 2rem auto;
-    /* absolute を真ん中にする */
-    left: 50%;
-    transform: translateX(-50%);
-    top: -220px;
-  }
-
-  .about-profile-image {
-    position: static;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
   }
 
   .skills-card.technical,
@@ -966,9 +940,10 @@ body {
     border-radius: 1rem;
     font-size: 1rem;
     border: 2px solid #ff62bc;
-        width: 100%;@media (min-width: 500px) {
-          width: 47%;
-        }
+    width: 100%;
+    @media (min-width: 500px) {
+      width: 47%;
+    }
   }
   .about-card {
     height: auto;
@@ -1005,6 +980,7 @@ body {
   .classmates-section {
     width: 90%;
     margin-inline: auto;
+    padding-top: 0;
   }
 
   .classmates-grid {
@@ -1078,16 +1054,6 @@ body {
   .thread.about {
     display: none;
   }
-
-  .hello-content-wrapper {
-    about-profile-image-wrapper {
-      display: none;
-    }
-  }
-
-  .about-profile-image-wrapper {
-    display: block;
-  }
 }
 
 @media (min-width: 600px) {
@@ -1095,3 +1061,41 @@ body {
     grid-template-columns: repeat(6, 1fr);
   }
 }
+
+@media (min-width: 769px) {
+  .hello-section .about-profile-image-wrapper {
+    display: block;
+  }
+  .about-page-section .about-profile-image-wrapper.mobile {
+    display: none;
+  }
+}
+
+/* モバイルのとき → about-section だけ表示 */
+@media (max-width: 768px) {
+  .hello-section .about-profile-image-wrapper {
+    display: none;
+  }
+  .about-profile-image-wrapper.mobile {
+    display: block; /* ←ここで表示 */
+    position: relative;
+    max-width: 280px;
+    min-width: 250px;
+    height: auto;
+    aspect-ratio: 1/1.3;
+    width: 35%;
+    margin: 0 auto;
+    top: -80px;
+  }
+  .about-profile-image-wrapper {
+  display: none;
+  position: absolute;
+  border-radius: 2rem;
+  border: 5px solid #343434;
+  overflow: hidden;
+  right: 0;
+  top: 0;
+}
+}
+
+

@@ -52,3 +52,10 @@
 }
 
 
+@media (max-width: 768px) {
+/* ラッパー全体 */
+.process-card-wrapper {
+padding: 0;
+}
+
+}

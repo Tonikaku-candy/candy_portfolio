@@ -1,5 +1,7 @@
 // src/components/SlideCard.jsx
 
+// photo slide for project detail page 
+
 import React, { useRef, useState } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';

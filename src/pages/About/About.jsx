@@ -103,25 +103,25 @@ function About() {
       <div className="about-page-section">
         <div className="diagonal-top-about"></div>
         <div className="grid-overlay-about"></div>
-        <div className="about-profile-image-wrapper">
+        <div className="about-profile-image-wrapper mobile">
           <img
             src={profileBg}
             alt="sakura background"
-            className="about-profile-bg"
+            className="about-profile-bg mobile"
           />
 
           <img
             src={profile2}
             alt="Candy profile picture hover"
-            className="about-profile-image side"
+            className="about-profile-image side mobile"
           />
 
           <img
             src={profile1}
             alt="Candy profile picture"
-            className="about-profile-image front"
+            className="about-profile-image front mobile"
           />
-          <p className="about-profile-text">Hover me!</p>
+          <p className="about-profile-text mobile">Hover me!</p>
         </div>
 
         {/* Section Title & Text Box */}

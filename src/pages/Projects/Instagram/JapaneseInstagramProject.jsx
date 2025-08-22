@@ -13,6 +13,8 @@ import '../../../components/ProjectDetail/ScrollingTagBar.css';
 import ProjectTitle from '../../../components/ProjectDetail/ProjectTitle';
 import ProcessSteps from '../../../components/ProjectDetail/ProcessSteps';
 import SlideCard from '../../../components/ProjectDetail/SlideCard';
+import DetailLinks from '../../../components/ProjectDetail/DetailLinks.jsx';
+
 
 
 import SlideData from './InstagramSlideData.js';
@@ -50,6 +52,16 @@ function JapaneseInstagramProject() {
 
      <img src={instagramImage} alt="Sample layout of Instagram content posts for Japanese learning project" className='instagram-image' />
 
+
+             <DetailLinks
+          links={[
+  { id: 'overview', label: 'OVERVIEW' },
+            { id: 'concept', label: 'concept' },
+            { id: 'strategy', label: 'strategy' },
+            { id: 'engagement', label: 'engagement' },
+    
+          ]}
+        />
         <div className="detail-box-wrapper">
           <div className="project-grid">
             <DetailBox size="S" title="SOFTWARE" colorClass="blue">
@@ -77,7 +89,8 @@ function JapaneseInstagramProject() {
                         <p className="tight-paragraph">Feb – June, 2025</p>
                       </DetailBox>
           </div>
-
+           
+          <div id="overview">
           <DetailBox title="Overview" colorClass="pink">
             <p>
               This Instagram project began as a group assignment for our Social
@@ -87,7 +100,9 @@ function JapaneseInstagramProject() {
               stylish — something that doesn’t feel like a textbook.
             </p>
           </DetailBox>
+          </div>
 
+          <div id="concept"></div>
           <DetailBox title="CONCEPT & INSPIRATION" colorClass="green">
             <p>
               The idea came from my past experience as a Japanese tutor — I
@@ -101,6 +116,7 @@ function JapaneseInstagramProject() {
             </p>
           </DetailBox>
 
+    <div id="strategy"></div>
           <DetailBox title="CONTENT MARKETING STRATEGY" colorClass="purple">
             <div
               style={{
@@ -163,6 +179,7 @@ function JapaneseInstagramProject() {
               </div>
             </div>
           </DetailBox>
+              <div id="engagement"></div>
 <DetailBox title="ENGAGEMENT HIGHLIGHTS" colorClass="orange">
   <p>
     Even with only a few followers, our Reels managed to reach large audiences—proving that humor, cultural references, and unexpected twists can be powerful tools for engagement.
