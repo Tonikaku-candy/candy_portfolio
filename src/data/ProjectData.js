@@ -12,6 +12,7 @@ import image5 from '../assets/ProjectDetails/Canada/Promotional-Short-Video.webp
 
 const projects = [
   {
+    id: 'bumper',
     title: 'Bumper Opener Video ',
     description:  ['- Motion Graphics, After Effects Animation, Visual Identity',
   '- Energetic opener with playful transitions'],
@@ -20,6 +21,7 @@ const projects = [
     link: '/projects/bumper',
   },
   {
+    id: '3d-packaging-ad',
     title: '3D Packaging AD',
     category: ['Graphic Design', 'Fashion', 'Motion Graphics'],
     description:[
@@ -30,6 +32,7 @@ const projects = [
     link: '/projects/3d-packaging-ad',
   },
  {
+     id: 'japanese-instagram-project',
     title: 'Instagram Contents',
     category: ['Branding', 'Social Media', 'Content Creation', 'MARKETING'],
     description: [
@@ -41,17 +44,19 @@ const projects = [
   },
   
   {
+    id: 'fashion-zine',
     title: 'Fashion Zine',
     category: ['Branding', 'Fashion'],
     description: [
-      'coming soon',
       '- Magazine Design, Event Planning, Fashion & Web Integration',
       '- Harajuku fashion event zine combining photos & layout'
     ],
     image: image3,
+    link: '/projects/fashion-zine',
   },
 
     {
+      id: 'canada-promotional-video',
     title: 'Travel Campaign Film',
     category: ['Branding', 'Content Creation', 'MARKETING'],
     description: [

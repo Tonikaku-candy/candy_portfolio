@@ -1,6 +1,8 @@
 .subtitles.all-projects {
   font-family: 'Bungee', sans-serif;
   font-size: 38px;
+  font-size: clamp(18px, 4vw, 38px);
+  margin: 0 auto;
   border-bottom: 8px solid #00cfff;
   display: inline-block;
   max-width: 100%; /* ✅ 親の90%までに制限 */
@@ -35,13 +37,13 @@
 
 @media (max-width: 768px) {
   .subtitles.all-projects {
-    font-size: 26px;
+    /* font-size: 26px; */
   }
   
 }
 
 @media (max-width: 480px) {
   .subtitles.all-projects {
-    font-size: 18px;
+    /* font-size: 18px; */
   }
 }

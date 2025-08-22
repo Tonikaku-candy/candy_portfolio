@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../../../components/TagBar.css';
 import DetailBox from '../../../components/ProjectDetail/DetailBox';
 import '../../../components/ProjectDetail/DetailBox.css';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import Footer from '../../../components/Footer';
 import '../ProjectsDetailLayout.css';
 import ScrollingTagBar from '../../../components/ProjectDetail/ScrollingTagBar';
@@ -10,6 +10,8 @@ import '../../../components/ProjectDetail/ScrollingTagBar.css';
 import './ThreeDPackagingAd.css';
 import ProjectTitle from '../../../components/ProjectDetail/ProjectTitle';
 import ProcessSteps from '../../../components/ProjectDetail/ProcessSteps.jsx';
+import projects from '../../../data/ProjectData.js';
+import DetailLinks from '../../../components/ProjectDetail/DetailLinks.jsx';
 
 // slide
 import SlideCard from '../../../components/ProjectDetail/SlideCard';
@@ -33,7 +35,14 @@ const baseTags = [
 const tags = [...baseTags, ...baseTags, ...baseTags];
 
 function ThreeDPackagingAd() {
+  const { id } = useParams();
   const [selectedTag, setSelectedTag] = useState('');
+  const currentIndex = projects.findIndex((p) => p.id === id);
+  const prevProject = projects[currentIndex - 1] || null;
+  const nextProject = projects[currentIndex + 1] || null;
+
+
+
   return (
     <>
       <div className="project-detail-page">
@@ -58,6 +67,16 @@ function ThreeDPackagingAd() {
             allowFullScreen
           ></iframe>
         </div>
+
+             <DetailLinks
+          links={[
+  { id: 'overview', label: 'OVERVIEW' },
+            { id: 'inspiration', label: 'Inspiration' },
+            { id: 'brainstorming', label: 'Brainstorming' },
+            { id: 'process', label: 'Process' },
+            { id: 'challenges', label: 'Challenges' },
+          ]}
+        />
         <div className="detail-box-wrapper">
           <div className="project-grid">
             <DetailBox size="S" title="SOFTWARE" colorClass="blue">
@@ -91,7 +110,9 @@ function ThreeDPackagingAd() {
               </p>
             </DetailBox>
           </div>
-          <DetailBox title="PROJECT PURPOSE" colorClass="pink">
+
+               <div id="overview">
+          <DetailBox title="OVERVIEW" colorClass="pink">
             <p>
               This project was originally created for my own apparel brand,
               Candelicious, to showcase pixel-style food illustrations as part
@@ -107,7 +128,9 @@ function ThreeDPackagingAd() {
               digital concept into the real world as a tangible product.
             </p>
           </DetailBox>
+          </div>
 
+     <div id="inspiration">
           <DetailBox title="INSPIRATION" colorClass="green">
             <p>
               I’ve always loved being creative, but instead of traditional
@@ -125,7 +148,9 @@ function ThreeDPackagingAd() {
               and bold, fun visuals.
             </p>
           </DetailBox>
+          </div>
 
+     <div id="brainstorming">
           <DetailBox title="BRAINSTORMING" colorClass="purple">
             <div className="box-split">
               <div className="box-text">
@@ -162,7 +187,9 @@ function ThreeDPackagingAd() {
               </div>
             </div>
           </DetailBox>
+          </div>
 
+     <div id="process">
           <DetailBox title="PROCESS" colorClass="orange">
             <ProcessSteps
               steps={[
@@ -179,7 +206,9 @@ function ThreeDPackagingAd() {
               <SlideCard slideData={SlideData} />
             </div>
           </DetailBox>
+          </div>
 
+     <div id="challenges">
           <DetailBox title="CHALLENGES" colorClass="blue">
             <p>
               Since I’m not confident in drawing detailed illustrations, I
@@ -217,11 +246,24 @@ function ThreeDPackagingAd() {
               <br />
             </p>
           </DetailBox>
+          </div>
         </div>
-        <div className="back-to-works">
-          <Link to="/works" className="back-button">
-            ← Back to Projects
+        <div className="project-nav">
+          {prevProject && prevProject.link && (
+            <Link to={prevProject.link} className="nav-button prev">
+              ← Prev
+            </Link>
+          )}
+
+          <Link to="/works" className="back-button center">
+            Back to Projects
           </Link>
+
+          {nextProject && nextProject.link && (
+            <Link to={nextProject.link} className="nav-button next">
+              Next →
+            </Link>
+          )}
         </div>
       </div>
       <div className="footer-detail">
