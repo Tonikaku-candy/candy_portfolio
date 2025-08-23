@@ -868,8 +868,8 @@ body {
   }
   .candy-text-wrapper {
     overflow: hidden;
-    /* padding: 35px; */
-    padding: 40px;
+    padding: 35px;
+    /* padding: 40px; */
   }
 
   .intro-outline-wrapper {
@@ -1198,5 +1198,11 @@ body {
   .tomato,
   .thread {
     display: none;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  .candy-text-wrapper {
+    padding: 40px; 
   }
 }
