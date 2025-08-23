@@ -868,6 +868,7 @@ body {
   }
   .candy-text-wrapper {
     overflow: hidden;
+    /* padding: 35px; */
     padding: 40px;
   }
 
