@@ -545,6 +545,7 @@ body {
 .my-look-title {
   display: inline-block;
   margin-left: 40px;
+    z-index: 1;
 }
 
 .my-look-title-wrapper {
@@ -593,6 +594,7 @@ body {
     margin: 0;
     display: none;
     text-align: center;
+
   }
 }
 
