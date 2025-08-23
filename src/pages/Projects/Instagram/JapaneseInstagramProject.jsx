@@ -15,14 +15,10 @@ import ProcessSteps from '../../../components/ProjectDetail/ProcessSteps';
 import SlideCard from '../../../components/ProjectDetail/SlideCard';
 import DetailLinks from '../../../components/ProjectDetail/DetailLinks.jsx';
 
-
-
 import SlideData from './InstagramSlideData.js';
 
 // image
 import instagramImage from '../../../components/assets/japanese-instagram-content-posts.webp';
-
-
 
 const baseTags = [
   'CONTENT CREATION',
@@ -50,16 +46,18 @@ function JapaneseInstagramProject() {
 
         <ProjectTitle title="INSTAGRAM CONTENT CREATION" />
 
-     <img src={instagramImage} alt="Sample layout of Instagram content posts for Japanese learning project" className='instagram-image' />
+        <img
+          src={instagramImage}
+          alt="Sample layout of Instagram content posts for Japanese learning project"
+          className="instagram-image"
+        />
 
-
-             <DetailLinks
+        <DetailLinks
           links={[
-  { id: 'overview', label: 'OVERVIEW' },
+            { id: 'overview', label: 'OVERVIEW' },
             { id: 'concept', label: 'concept' },
             { id: 'strategy', label: 'strategy' },
             { id: 'engagement', label: 'engagement' },
-    
           ]}
         />
         <div className="detail-box-wrapper">
@@ -81,25 +79,26 @@ function JapaneseInstagramProject() {
             </DetailBox>
 
             <DetailBox
-                        size="S"
-                        title="DURATION"
-                        colorClass="yellow"
-                        extraClass="small-padding-box"
-                      >
-                        <p className="tight-paragraph">Feb – June, 2025</p>
-                      </DetailBox>
+              size="S"
+              title="DURATION"
+              colorClass="yellow"
+              extraClass="small-padding-box"
+            >
+              <p className="tight-paragraph">Feb – June, 2025</p>
+            </DetailBox>
           </div>
-           
+
           <div id="overview">
-          <DetailBox title="Overview" colorClass="pink">
-            <p>
-              This Instagram project began as a group assignment for our Social
-              Media class. I led the content creation and account strategy to
-              build a playful, emotional learning experience using Japanese
-              phrases. The aim was to make Japanese learning fun, shareable, and
-              stylish — something that doesn’t feel like a textbook.
-            </p>
-          </DetailBox>
+            <DetailBox title="Overview" colorClass="pink">
+              <p>
+                This Instagram project began as a group assignment for our
+                Social Media class. I led the content creation and account
+                strategy to build a playful, emotional learning experience using
+                Japanese phrases. The aim was to make Japanese learning fun,
+                shareable, and stylish — something that doesn’t feel like a
+                textbook.
+              </p>
+            </DetailBox>
           </div>
 
           <div id="concept"></div>
@@ -116,7 +115,7 @@ function JapaneseInstagramProject() {
             </p>
           </DetailBox>
 
-    <div id="strategy"></div>
+          <div id="strategy"></div>
           <DetailBox title="CONTENT MARKETING STRATEGY" colorClass="purple">
             <div
               style={{
@@ -179,56 +178,76 @@ function JapaneseInstagramProject() {
               </div>
             </div>
           </DetailBox>
-              <div id="engagement"></div>
-<DetailBox title="ENGAGEMENT HIGHLIGHTS" colorClass="orange">
-  <p>
-    Even with only a few followers, our Reels managed to reach large audiences—proving that humor, cultural references, and unexpected twists can be powerful tools for engagement.
-    <br /><br />
-    One of our most popular Reels was a parody of the viral “PPAP” song. We turned it into a silly Japanese pun: “I have a Negi” + “I have a Toro” = *Negitoro* (a type of sushi). 
-    <br />
-
-  </p>
-<ul>
-  <li><strong>2,432 views</strong> on one Reel (96.1% from non-followers)</li>
-  <li><strong>99 interactions</strong> total</li>
-  <li><strong>79 likes, 13 shares, and 5 saves</strong></li>
-  <li><strong>11h 33m</strong> of total watch time</li>
-</ul>
-        <br />
-    Another featured a word game battle presented with intense, mock-serious visuals.
-        <br />
-<ul>
-  <li><strong>2,019 views</strong> on one Reel (95.7% from non-followers)</li>
-  <li><strong>122 interactions</strong> total</li>
-  <li><strong>80 likes, 29 shares, and 9 saves</strong></li>
-  <li><strong>6h 17m</strong> of total watch time</li>
-  <li>Top discovery source: <strong>Reels tab (70.2%)</strong></li>
-</ul>
-
-
-  <p>
-    These results confirmed that short-form content blending Japanese culture with internet humor resonates well—even with users who aren't actively studying Japanese.
-  </p>
-
-  <div className="project-slider-detail">
-    <SlideCard slideData={SlideData} />
-  </div>
-
-<div className="text-center">
-  <a
-    href="https://www.instagram.com/atarashiivancouver/"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="visit-instagram-button"
-  >
-    Visit our Instagram
-  </a>
-</div>
-
-</DetailBox>
-</div>
-
-
+          <div id="engagement"></div>
+          <DetailBox title="ENGAGEMENT HIGHLIGHTS" colorClass="orange">
+            <p>
+              Even with only a few followers, our Reels managed to reach large
+              audiences—proving that humor, cultural references, and unexpected
+              twists can be powerful tools for engagement.
+              <br />
+              <br />
+              One of our most popular Reels was a parody of the viral “PPAP”
+              song. We turned it into a silly Japanese pun: “I have a Negi” + “I
+              have a Toro” = *Negitoro* (a type of sushi).
+              <br />
+            </p>
+            <ul>
+              <li>
+                <strong>2,432 views</strong> on one Reel (96.1% from
+                non-followers)
+              </li>
+              <li>
+                <strong>99 interactions</strong> total
+              </li>
+              <li>
+                <strong>79 likes, 13 shares, and 5 saves</strong>
+              </li>
+              <li>
+                <strong>11h 33m</strong> of total watch time
+              </li>
+            </ul>
+            <br />
+            Another featured a word game battle presented with intense,
+            mock-serious visuals.
+            <br />
+            <ul>
+              <li>
+                <strong>2,019 views</strong> on one Reel (95.7% from
+                non-followers)
+              </li>
+              <li>
+                <strong>122 interactions</strong> total
+              </li>
+              <li>
+                <strong>80 likes, 29 shares, and 9 saves</strong>
+              </li>
+              <li>
+                <strong>6h 17m</strong> of total watch time
+              </li>
+              <li>
+                Top discovery source: <strong>Reels tab (70.2%)</strong>
+              </li>
+            </ul>
+            <p>
+              These results confirmed that short-form content blending Japanese
+              culture with internet humor resonates well—even with users who
+              aren't actively studying Japanese.
+            </p>
+            <div className="project-slider-detail">
+              <SlideCard slideData={SlideData} />
+            </div>
+            <div className="text-center">
+              <a
+                href="https://www.instagram.com/atarashiivancouver/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="visit-instagram-button"
+              >
+                Visit our Instagram
+              </a>
+            </div>
+          </DetailBox>
+        </div>
 
         <div className="back-to-works">
           <Link to="/works" className="back-button">
