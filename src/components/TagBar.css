@@ -48,3 +48,13 @@
   flex-shrink: 0;
   margin: 0 4px;
 }
+
+
+@media (max-width: 768px) {
+.tag-bar-scroll-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  padding-top: 50px;
+}
+}

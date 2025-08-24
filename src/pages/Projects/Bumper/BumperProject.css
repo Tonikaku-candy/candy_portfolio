@@ -1,10 +1,11 @@
 /* BumperProject.css */
 
-html,body {
+/* html,body {
   scroll-behavior: smooth;
-}
+} */
 .project-detail-page {
   position: relative;
+    scroll-behavior: smooth;
 }
 .video-wrapper {
   width: 90%;
@@ -49,8 +50,8 @@ html,body {
   flex: 1 1 36%;
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* ← 画像を上寄せ！ */
-  align-self: flex-start; /* ← 全体も上寄せ！←これがけっこう効く！ */
+  align-items: flex-start; 
+  align-self: flex-start; 
   max-width: 700px;
 }
 

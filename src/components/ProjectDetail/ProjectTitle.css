@@ -10,6 +10,7 @@
   word-break: break-word; /* ✅ 長い単語でも折り返す */
   text-align: center;
   position: relative;
+  white-space: pre-line;
 }
 
 .subtitles.all-projects::after {
@@ -22,7 +23,6 @@
   background-color: #00cfff;
   z-index: -1;
 }
-
 
 .all-projects-title {
   display: inline-block;
@@ -37,9 +37,8 @@
 
 @media (max-width: 768px) {
   .subtitles.all-projects {
-    /* font-size: 26px; */
+    font-size: clamp(14px, 4vw, 20px);
   }
-  
 }
 
 @media (max-width: 480px) {

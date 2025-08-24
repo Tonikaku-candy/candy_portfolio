@@ -58,7 +58,7 @@ const projects = [
     {
       id: 'canada-promotional-video',
     title: 'Travel Campaign Film',
-    category: ['Branding', 'Content Creation', 'MARKETING'],
+    category: ['Branding', 'Content Creation', 'Marketing'],
     description: [
   '- Musical-style promotional video for a Canadian travel company',
   '- Narrative edit with custom music cues and storytelling with humor'

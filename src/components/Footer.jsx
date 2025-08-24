@@ -1,4 +1,4 @@
-import { FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
 import logo from './assets/candy-fukaya-pixel-chameleon-logo.png';
 import './Footer.css';
 import { Link } from 'react-router-dom';
@@ -33,6 +33,14 @@ const Footer = () => {
         </a>
         <a href="mailto:candyfukaya@gmail.com">
           <FaEnvelope />
+        </a>
+
+        <a
+          href="https://github.com/Tonikaku-candy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub />
         </a>
       </div>
       <p className="copyright">Candy Fukaya 2025</p>

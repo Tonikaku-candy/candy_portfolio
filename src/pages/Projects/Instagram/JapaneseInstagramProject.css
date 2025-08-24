@@ -85,3 +85,27 @@
   transform: scale(1.05);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
+
+
+@media (max-width: 768px) {
+  .instagram {
+    max-width: 250px;
+  }
+
+  .visit-instagram-button {
+  font-family: 'Bungee', sans-serif;
+  display: inline-block;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(to right, #ff6ec4, #7873f5); 
+/* outline: 4px solid rgb(0, 0, 0); */
+  color: white;
+
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 9999px; 
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+  }

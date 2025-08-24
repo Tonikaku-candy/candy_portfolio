@@ -5,7 +5,8 @@
 
 
 .video-wrapper.canada {
-  max-width: 1230px;
+  width: 90%;
+  max-width: 1150px;
   margin: 0 auto 40px;
   position: relative;
   aspect-ratio: 16 / 9;
@@ -40,7 +41,24 @@
   margin-top: 1rem;
 }
 
+.suno-link {
+  color: #FF61BC;
+  font-size: 1.5rem;
+}
 
+
+
+.ae-screenshot {
+  width: 100%;       
+  margin: 2rem 0; 
+}
+
+.ae-screenshot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
 
 
 
@@ -60,3 +78,19 @@
   padding-top: 130px;
 }
 
+
+
+.canada-slide .slide-wrapper {
+  margin-top: 2rem;
+      width: 66%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.canada-slide .splide__slide img {
+    vertical-align: bottom;
+    border:2px solid #000000;
+}
