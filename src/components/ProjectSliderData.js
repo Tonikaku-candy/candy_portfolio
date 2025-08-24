@@ -1,9 +1,10 @@
 // this is for project slider
 
-import img1 from './assets/japanese-instagram-content-posts.webp';
-import img2 from './assets/3d-sushi-packaging-ad.webp';
-import img3 from './assets/vancouver-jfashion-zine-cover.webp';
-import img4 from './assets/bumper-animation.webp';
+import instagram from './assets/japanese-instagram-content-posts.webp';
+import sushi from './assets/3d-sushi-packaging-ad.webp';
+import zine from './assets/vancouver-jfashion-zine-cover.webp';
+import bumper from './assets/bumper-animation.webp';
+import rhythmGame from '../assets/ProjectDetails/RhythmGame/rhythm-game-cover.webp';
 
 const projectData = [
   {
@@ -11,7 +12,7 @@ const projectData = [
     title: 'INSTAGRAM CONTENTS',
     subtitle: 'PHOTOSHOP / CAPCUT',
     description: 'Posts & Reels for Japanese Teaching Instagram Account',
-    image: img1,
+    image: instagram,
     link: '/projects/japanese-instagram-project',
   },
   {
@@ -19,26 +20,28 @@ const projectData = [
     title: '3D PACKAGING AD',
     subtitle: 'ADOBE DIMENSION',
     description: 'A 3D ad featuring apparel and my original pixel art',
-    image: img2,
+    image: sushi,
     link: '/projects/3d-packaging-ad',
   },
-  {
-    id: 3,
-    title: 'FASHION ZINE',
-    subtitle: 'ILLUSTRATOR / PHOTOSHOP / INDESIGN',
-    description: "A zine spotlighting Vancouver's J-fashion community",
-    image: img3,
-      link: '/projects/fashion-zine',
-  },
+
 
   {
-    id: 4,
+    id: 3,
     title: 'Bumper Opener Video',
     subtitle: 'Motion Graphics',
     description:
       'Animated bumper showcasing brand identity in After Effects.',
-    image: img4,
+    image: bumper,
     link: '/projects/bumper',
+  },
+
+    {
+    id: 4,
+    title: 'Rhythm Game Motion',
+    subtitle: 'Motion Graphics',
+    description: "Beat-synced rhythm game animation with playful visuals in After Effects.",
+    image: rhythmGame,
+      link: '/projects/rhythm-game',
   },
 ];
 

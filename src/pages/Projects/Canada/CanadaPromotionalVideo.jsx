@@ -14,6 +14,7 @@ import ProjectTitle from '../../../components/ProjectDetail/ProjectTitle.jsx';
 import projects from '../../../data/ProjectData.js';
 import screenShot from '../../../assets/ProjectDetails/Canada/canada_video_editing_what_scene.webp';
 import wall from '../../../assets/ProjectDetails/Canada/canada_awesome_wall.webp';
+import DetailLinks from '../../../components/ProjectDetail/DetailLinks.jsx';
 // slide
 import SlideData from './CanadaSlideData.js';
 import SlideCard from '../../../components/ProjectDetail/SlideCard';
@@ -123,6 +124,17 @@ function CanadaPromotionalVideo() {
           />
         </div>
 
+             {/* ページ内リンク */}
+                <DetailLinks
+                  links={[
+                    { id: 'overview', label: 'Overview' },
+                    { id: 'concept', label: 'Concept' },
+                    { id: 'approach', label: 'Approach' },
+                    { id: 'music', label: 'Music' },
+                    { id: 'production', label: 'Production' },
+                  ]}
+                />
+
         <div className="detail-box-wrapper">
           <div className="project-grid">
             <DetailBox size="S" title="SOFTWARE" colorClass="blue">
@@ -153,7 +165,7 @@ function CanadaPromotionalVideo() {
               </ul>
             </DetailBox>
           </div>
-
+    <div id="overview"></div>
           <DetailBox title="Overview" colorClass="pink">
             <p>
               This project was a promotional video created for a fictional
@@ -163,7 +175,7 @@ function CanadaPromotionalVideo() {
               previous term.
             </p>
           </DetailBox>
-
+    <div id="concept"></div>
           <DetailBox title="CONCEPT & DIRECTION" colorClass="green">
             <p>
               At first, we planned a typical story of an international student
@@ -176,6 +188,7 @@ function CanadaPromotionalVideo() {
             </p>
           </DetailBox>
 
+    <div id="approach"></div>
           <DetailBox title="NEW APPROACH & INSPIRATION" colorClass="purple">
             <p>
               Rather than making a sugar-coated promotional video, I wanted to
@@ -200,6 +213,7 @@ function CanadaPromotionalVideo() {
             </div>
           </DetailBox>
 
+    <div id="music"></div>
           <DetailBox title="MUSIC & EDITING" colorClass="orange">
             <p>
               I wrote the lyrics in Japanese and generated the song using the AI
@@ -221,6 +235,7 @@ function CanadaPromotionalVideo() {
             </div>
           </DetailBox>
 
+    <div id="production"></div>
           <DetailBox title="PRODUCTION HIGHLIGHTS" colorClass="pink">
             <p>
               The video features a mix of scripted acting, vlog-style dialogue,

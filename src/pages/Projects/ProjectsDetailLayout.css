@@ -126,6 +126,48 @@
   pointer-events: none;
 }
 
+/* video */
+.video-wrapper {
+  width: 90%;
+  max-width: 1150px;
+  margin: 0 auto 40px;
+  position: relative;
+  aspect-ratio: 16 / 9;
+}
+
+.video-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+/* image */
+.image-wrapper {
+  width: 100%;       
+  margin: 2rem 0; 
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+/* gif */
+
+.gif-wrapper {
+  width: 100%;       
+  margin: 2rem 0; 
+}
+
+.gif-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 20px;
+}
+
 @media (max-width: 768px) {
   .project-detail-page {
     .box-split {
