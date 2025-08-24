@@ -34,7 +34,7 @@ body {
 .hello-text {
   flex: 1;
   min-width: 280px;
-  margin-left: 8%;
+  margin-left: 4%;
   width: 48%;
 }
 
@@ -989,6 +989,7 @@ body {
   .classmates-grid {
     gap: 20px;
     justify-content: center;
+    margin-bottom: 6rem;
   }
 
   .classmate-card {

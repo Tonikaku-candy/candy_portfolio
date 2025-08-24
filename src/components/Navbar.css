@@ -114,12 +114,19 @@
   /* background: #02ff44; */
   background: linear-gradient(to bottom, #02ff44 0%, #00c938 100%);
   border: 2px solid #343434;
-  margin-right: 80px;
+
+}
+
+.funworks-button {
+  background: linear-gradient(to bottom, #C86CFF 0%, #8A3DFF 100%);
+  border: 2px solid #343434;
+    margin-right: 80px;
 }
 
 .home-button.active .text,
 .about-button.active .text,
-.works-button.active .text {
+.works-button.active .text,
+.funworks-button.active .text {
   color: #343434;
 }
 
@@ -133,7 +140,8 @@
 /* ボタン内でテキストとロゴを横並びに */
 .home-button,
 .about-button,
-.works-button {
+.works-button,
+.funworks-button {
   display: inline-flex;
   align-items: center;
   gap: 8px; /* 余白 */

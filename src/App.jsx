@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import About from './pages/About/About';
 import Works from './pages/Works/Works';
 import Home from './pages/Home/Home';
+import Funworks from './pages/Funworks/Funworks';
 import '../src/styles/global.css';
 import BumperProject from './pages/Projects/Bumper/BumperProject';
 import ThreeDPackagingAd from './pages/Projects/ThreeDPackaging/ThreeDPackagingAd';
@@ -22,13 +23,14 @@ function App() {
       <ScrollToTop />
       {/* to show menu */}
       <Navbar />
-  
+
       {/* rule to change url */}
 
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/works" element={<Works />} />
+        <Route path="/funworks" element={<Funworks />} />
 
         {/* 他のルート */}
         <Route path="/projects/bumper" element={<BumperProject />} />
@@ -45,7 +47,7 @@ function App() {
           element={<CanadaPromotionalVideo />}
         />
       </Routes>
-          <GoToTop />
+      <GoToTop />
     </BrowserRouter>
   );
 }
