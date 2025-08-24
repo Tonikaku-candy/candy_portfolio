@@ -425,12 +425,12 @@ function About() {
               />
             </div>
 
-            <div className="subtitles look">
+             <div className="subtitles look">
               <h2>MY SEWING WORKS</h2>
             </div>
-            <h3 className="made-by-me">🩷#MadeByMe🩷</h3>
+            <h3 className="made-by-me about">🩷#MadeByMe🩷</h3>
           </div>
-          <h3 className="made-by-me about">🩷#MadeByMe🩷</h3>
+          <h3 className="made-by-me about mobile">🩷#MadeByMe🩷</h3>
         </div>
         <PhotoGallery />
       </div>

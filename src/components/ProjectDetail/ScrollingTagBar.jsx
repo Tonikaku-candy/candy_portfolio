@@ -1,7 +1,7 @@
 // ScrollingTagBar.jsx
 import React from 'react';
 import './ScrollingTagBar.css';
-import PixelHeart from '../assets/pixel-heart.png';
+import PixelHeart from '../assets/pixel-heart-red.png';
 
 function ScrollingTagBar({ tags }) {
   return (

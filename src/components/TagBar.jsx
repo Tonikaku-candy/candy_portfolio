@@ -1,6 +1,6 @@
 import './TagBar.css';
 import React from 'react';
-import PixelHeart from './assets/pixel-heart.png';
+import PixelHeart from './assets/pixel-heart-red.png';
 
 function TagBar({ tags, activeTag, onTagClick }) {
   return (

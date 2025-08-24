@@ -81,6 +81,7 @@
 
 .back-to-works.top {
   margin-top: 2rem;
+  margin-left: 2rem;
 }
 
 .back-button {
@@ -147,5 +148,16 @@
 
   .detail-box-wrapper {
     padding: 0 20px;
+  }
+ 
+
+  .nav-button,
+  .back-button {
+    font-size: 10px;   /* ちょっと大きめ */
+  }
+
+  .back-to-works.top {
+    margin-left: 1rem;
+    text-align: left;
   }
 }
