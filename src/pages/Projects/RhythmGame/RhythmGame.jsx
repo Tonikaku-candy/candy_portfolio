@@ -1,30 +1,105 @@
 // src/pages/Projects/RhythmGame/RhythmGame.jsx
 
-import React, { useState } from 'react';
+import { useParams, useLocation, Link } from 'react-router-dom';
+import React, { useState, useMemo } from 'react';
+
 import '../../../components/TagBar.css';
 import DetailBox from '../../../components/ProjectDetail/DetailBox.jsx';
 import '../../../components/ProjectDetail/DetailBox.css';
-import { Link } from 'react-router-dom';
+
 import Footer from '../../../components/Footer.jsx';
 import '../ProjectsDetailLayout.css';
-import '../../Projects/Canada/CanadaPromotionalVideo.css';
+import '../../Projects/RhythmGame/RhythmGame.css';
 import ScrollingTagBar from '../../../components/ProjectDetail/ScrollingTagBar.jsx';
 import '../../../components/ProjectDetail/ScrollingTagBar.css';
 import ProjectTitle from '../../../components/ProjectDetail/ProjectTitle.jsx';
+import projects from '../../../data/ProjectData.js';
+import DetailLinks from '../../../components/ProjectDetail/DetailLinks.jsx';
 
 // image
+import gardenEelBubbles from '../../../assets/ProjectDetails/RhythmGame/garden-eel-bubbles.gif';
+import ending from '../../../assets/ProjectDetails/RhythmGame/ending.gif';
+import gameCover from '../../../assets/ProjectDetails/RhythmGame/rhythm-heaven-game-cover.webp';
 
-const baseTags = [
-  'CONTENT CREATION',
-  'MOTION GRAPHICS',
-  'AFTER EFFECTS',
-  'MUSIC SYNC',
-  'STORYTELLING',
-];
-const tags = [...baseTags, ...baseTags];
+/* -----------------------
+   resolveProjectIndex 関数（高機能版）
+------------------------- */
+function resolveProjectIndex(projects, location, params) {
+  const norm = (v) =>
+    String(v ?? '')
+      .replace(/\/+$/, '')
+      .toLowerCase();
 
-function CanadaPromotionalVideo() {
+  const paramCandidates = Object.values(params || {})
+    .filter(Boolean)
+    .map((v) => norm(v));
+  const lastSeg = norm(location?.pathname?.split('/').filter(Boolean).pop());
+  const candidates = [...paramCandidates, lastSeg].filter(Boolean);
+
+  const pickKeys = (p) => {
+    const keys = new Set();
+    keys.add(norm(p.id));
+    keys.add(norm(p.slug));
+    keys.add(norm(p.link));
+    const linkLast = norm((p.link || '').split('/').filter(Boolean).pop());
+    keys.add(linkLast);
+    return keys;
+  };
+
+  for (let i = 0; i < projects.length; i++) {
+    const keys = pickKeys(projects[i]);
+    if (candidates.some((c) => keys.has(c))) return i;
+  }
+
+  const path = norm(location?.pathname || '');
+  return projects.findIndex((p) => norm(p.link) === path);
+}
+
+/* -----------------------
+   buildProjectLink 関数
+------------------------- */
+function buildProjectLink(proj) {
+  if (!proj) return '/works';
+  if (proj.link) return proj.link.replace(/\/+$/, '');
+  const idOrSlug = proj.slug ?? proj.id;
+  return `/projects/${idOrSlug}`;
+}
+
+/* -----------------------
+    コンポーネント
+------------------------- */
+function RhythmGame() {
+  const params = useParams();
+  const location = useLocation();
   const [selectedTag, setSelectedTag] = useState('');
+
+  const currentIndex = useMemo(
+    () => resolveProjectIndex(projects, location, params),
+    [location, params, projects]
+  );
+
+  const { prevProject, nextProject, notFound } = useMemo(() => {
+    const total = projects.length;
+    if (total === 0 || currentIndex == null || currentIndex < 0) {
+      return { prevProject: null, nextProject: null, notFound: true };
+    }
+    const prevIndex = (currentIndex - 1 + total) % total;
+    const nextIndex = (currentIndex + 1) % total;
+    return {
+      prevProject: projects[prevIndex] || null,
+      nextProject: projects[nextIndex] || null,
+      notFound: false,
+    };
+  }, [currentIndex, projects]);
+
+  const baseTags = [
+    'CONTENT CREATION',
+    'MOTION GRAPHICS',
+    'AFTER EFFECTS',
+    'MUSIC SYNC',
+    'STORYTELLING',
+  ];
+  const tags = [...baseTags, ...baseTags];
 
   return (
     <>
@@ -38,17 +113,28 @@ function CanadaPromotionalVideo() {
         </div>
 
         <ProjectTitle title="Rhythm Game Animation in After Effects" />
-        <div className="video-wrapper canada">
+        <div className="video-wrapper rhythm-video">
           <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/o0zuYan30wI?si=G6HFcPcZ5pCGQiz3"
+       
+            src="https://www.youtube.com/embed/FirjiKAvp8U?si=U27l5qBcxGKhgS_I"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
             allowFullScreen
           />
         </div>
+
+        {/* ページ内リンク */}
+        <DetailLinks
+          links={[
+            { id: 'overview', label: 'Overview' },
+            { id: 'inspiration', label: 'Inspiration' },
+            { id: 'story', label: 'Storytelling' },
+            { id: 'production', label: 'Production' },
+            { id: 'feedback', label: 'Feedback' },
+            { id: 'video', label: 'full video' },
+          ]}
+        />
 
         <div className="detail-box-wrapper">
           <div className="project-grid">
@@ -74,40 +160,56 @@ function CanadaPromotionalVideo() {
               colorClass="yellow"
               extraClass="small-padding-box"
             >
-              <p className="tight-paragraph canada">
-                {' '}
-                <ul>
-                  <li>March 20th – April 11th, 2025</li>
-                </ul>
-              </p>
+              <ul>
+                <li className="game">June 15th – July 2nd, 2025</li>
+              </ul>
             </DetailBox>
           </div>
 
+          <div id="overview"></div>
           <DetailBox title="Overview" colorClass="pink">
             <p>
-              This is a rhythm game–style animation created in After Effects. It
-              focuses on precise beat synchronization and visual effects,
-              capturing the quick and satisfying feel of hitting the beat.
-              Elements move in sync with the music’s rhythm, resulting in a
-              simple yet enjoyable piece to watch. <br></br>A small video in the top
-              right corner simulates actual gameplay, visually reinforcing that
-              this is a rhythm game.
+              This project was originally assigned as a “Mythbusters-style 2D
+              animation”, requiring music, narration, sound effects, and motion
+              graphics.
             </p>
-          </DetailBox>
-
-          <DetailBox title="CONCEPT & DIRECTION" colorClass="green">
             <p>
-              At first, we planned a typical story of an international student
-              who feels lonely after arriving in Canada but eventually finds joy
-              through online friendships during the pandemic. <br /> <br />
-              However, I was in charge of directing and editing, and I asked
-              myself "Do I really want to make this story?" I noticed that the
-              team wasn’t very enthusiastic either, so I proposed something more
-              fun to create, something that would reflect our real experiences.
+              Instead of a typical myth animation, I created a rhythm game–style
+              animation in After Effects. It focuses on precise beat
+              synchronization and visual effects, capturing the quick and
+              satisfying feel of hitting the beat.
+            </p>
+            <p>
+              A small video in the top right corner simulates actual gameplay,
+              visually reinforcing the concept that this is a rhythm game.
             </p>
           </DetailBox>
 
-          <DetailBox title="NEW APPROACH &  INSPIRATION" colorClass="purple">
+          <div id="inspiration"></div>
+          <DetailBox title="INSPIRATION" colorClass="green">
+            <p>
+              Since I wasn’t very familiar with Mythbusters, <br />I decided to
+              create something that I would genuinely enjoy making. <br />
+              Because timing was an important skill to practice, <br />
+              I chose a rhythm-game style animation. <br />
+              <br />
+              I referenced the game “Rhythm Heaven,” <br />
+              but I’ve actually never played it and I don’t usually play games.{' '}
+              <br />
+              Instead, I studied gameplay videos and reimagined <br />
+              what a rhythm game could look like in my own style.
+            </p>
+            <div className="image-wrapper">
+              <img
+                src={gameCover}
+                alt="Rhythm Heaven game cover"
+                className="game-cover"
+              />
+            </div>
+          </DetailBox>
+
+          <div id="story"></div>
+          <DetailBox title="Humor & Storytelling" colorClass="purple">
             <div
               style={{
                 display: 'flex',
@@ -118,47 +220,102 @@ function CanadaPromotionalVideo() {
             >
               {/* Left: Text */}
               <p>
-                Rather than making a sugar-coated promotional video, I wanted to
-                start with the reality: “Canada wasn’t exactly what I expected.”
-                I had high expectations before coming here, but faced many
-                surprises like being placed in a language school full of people
-                from my own country, or realizing how different the environment
-                was from what the travel agents told me.
+                The original brief was to create a Mythbusters-style animation.
+                <br />
+                Instead of a traditional myth story, I turned the assignment
+                itself into the “myth” — imagining what would happen if I
+                ignored the teacher’s project and played a rhythm game instead.
                 <br />
                 <br />
-                Over time, though, I found joy in multicultural life, especially
-                the shared food and culture, and eventually came to love living
-                in Canada. This personal experience shaped the new storyline: a
-                humorous musical-style journey from disappointment to
-                appreciation.
+                To keep the tone playful, I ended the video with the line{' '}
+                <i>
+                  “Candy’s grade to be decided… no one knows what happened to
+                  her after.”
+                </i>
+                <br />
+                The whole piece is designed to be humorous, energetic, and
+                self-aware.
               </p>
+              <div className="gif-wrapper">
+                <img src={ending} alt="Ending screen" />
+              </div>
             </div>
           </DetailBox>
-          <DetailBox title="MUSIC & EDITING" colorClass="orange">
+
+          <div id="production"></div>
+          <DetailBox title="PRODUCTION HIGHLIGHTS" colorClass="orange">
             <p>
-              I wrote the lyrics in Japanese and generated the song using the AI
-              music tool Suno. Since AI outcomes vary each time, I generated
-              several tracks and chose the one with the most catchy, upbeat, and
-              memorable melody. I also structured the video to include dramatic
-              cutscenes between musical sections, making it more engaging and
-              not just a simple music video.
+              In my previous project, the
+              <Link to="/projects/bumper" className="bumper-link">
+                “Bumper Opener”
+              </Link>
+              , my main goal was simply to get comfortable with After Effects by
+              adding lots of motion and experimenting with timing. <br />
+              <br />
+              This time, I wanted to challenge myself further by creating custom
+              assets such as particles. For example, in the garden eel scene, I
+              designed bubbles and waves using particle effects, which added a
+              greater sense of depth and atmosphere to the animation.
+            </p>
+            <div className="gif-wrapper">
+              <img
+                src={gardenEelBubbles}
+                alt="Garden eel scene with particles"
+              />
+            </div>
+          </DetailBox>
+
+          <div id="feedback"></div>
+          <DetailBox title="FEEDBACK" colorClass="pink">
+            <p>
+              At first, my teacher pointed out that my rhythm game animation
+              seemed far from the original “Mythbusters-style” assignment.
+              However, once I reframed the project by turning the teacher
+              himself into the “myth,” the class reacted with laughter, and even
+              my teacher admitted, “Now this is a myth.” <br />
+              <br />
+              My classmates also enjoyed the unexpected flow — starting serious,
+              suddenly switching into a game screen, and ending with an
+              ambiguous conclusion. They said the unpredictability made it
+              entertaining and memorable.
             </p>
           </DetailBox>
 
-          <DetailBox title="PRODUCTION HIGHLIGHTS" colorClass="pink">
-            <p>
-              The video features a mix of scripted acting, vlog-style dialogue,
-              original music, and comedic exaggeration. We wanted it to feel
-              like a musical, but with a twist showing the honest experience of
-              an international student, with both the ups and downs.
-            </p>
-          </DetailBox>
+   
         </div>
+               <div id="video"></div>
+          <div className="video-wrapper rhythm-video">
+            <iframe
+          
+              src="https://www.youtube.com/embed/p9sW7Ym1-bU?si=g0LenSje5iPrbO5s"
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </div>
 
-        <div className="back-to-works">
-          <Link to="/works" className="back-button">
-            ← Back to Projects
+        {/* --- Prev / Next --- */}
+        <div className="project-nav">
+          {prevProject && (
+            <Link
+              to={buildProjectLink(prevProject)}
+              className="nav-button prev"
+            >
+              ← Prev
+            </Link>
+          )}
+          <Link to="/works" className="back-button center">
+            Back to Projects
           </Link>
+          {nextProject && (
+            <Link
+              to={buildProjectLink(nextProject)}
+              className="nav-button next"
+            >
+              Next →
+            </Link>
+          )}
         </div>
       </div>
 
@@ -169,4 +326,4 @@ function CanadaPromotionalVideo() {
   );
 }
 
-export default CanadaPromotionalVideo;
+export default RhythmGame;

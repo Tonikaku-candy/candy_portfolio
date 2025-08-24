@@ -7,10 +7,14 @@ import Works from './pages/Works/Works';
 import Home from './pages/Home/Home';
 import Funworks from './pages/Funworks/Funworks';
 import '../src/styles/global.css';
+
+// projects
 import BumperProject from './pages/Projects/Bumper/BumperProject';
 import ThreeDPackagingAd from './pages/Projects/ThreeDPackaging/ThreeDPackagingAd';
 import JapaneseInstagramProject from './pages/Projects/Instagram/JapaneseInstagramProject';
 import CanadaPromotionalVideo from './pages/Projects/Canada/CanadaPromotionalVideo';
+import RhythmGame from './pages/Projects/RhythmGame/RhythmGame';
+
 import GoToTop from './components/GoToTop';
 
 import ScrollToTop from './components/ScrollToTop';
@@ -46,6 +50,8 @@ function App() {
           path="/projects/canada-promotional-video"
           element={<CanadaPromotionalVideo />}
         />
+
+        <Route path="/projects/rhythm-game" element={<RhythmGame />} />
       </Routes>
       <GoToTop />
     </BrowserRouter>
