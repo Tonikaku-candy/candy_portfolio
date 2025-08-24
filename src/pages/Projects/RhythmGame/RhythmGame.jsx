@@ -149,7 +149,7 @@ function RhythmGame() {
             <DetailBox size="S" title="ROLE" colorClass="red">
               <ul>
                 <li>Motion Designer</li>
-                <li>UI Animator</li>
+                <li>Visual Storyteller</li>
                 <li>Editor</li>
               </ul>
             </DetailBox>
