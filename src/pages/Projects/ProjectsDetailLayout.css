@@ -168,6 +168,16 @@
   border-radius: 20px;
 }
 
+/* gif small */
+
+
+.gif-wrapper.small {
+  width: 70%;       
+  margin: 2rem auto; 
+}
+
+
+
 @media (max-width: 768px) {
   .project-detail-page {
     .box-split {
