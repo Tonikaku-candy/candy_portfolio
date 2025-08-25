@@ -107,19 +107,19 @@ function Navbar() {
             </NavLink>
           </li>
 
-          {/* Funworks */}
+          {/* playground */}
           <li>
             <NavLink
-              to="/funworks"
+              to="/playground"
               onClick={handleNavClick}
               className={({ isActive }) =>
-                isActive ? 'funworks-button active' : 'funworks-button'
+                isActive ? 'playground-button active' : 'playground-button'
               }
             >
               {({ isActive }) => (
                 <span className="text-with-hearts">
                   {isActive && <img src={heart} alt="" className="active-heart left" />}
-                  <span className="text">Funworks</span>
+                  <span className="text">Playground</span>
                   {isActive && <img src={heart} alt="" className="active-heart right" />}
                 </span>
               )}

@@ -1,25 +1,25 @@
-.funworks {
+.playground {
   background-color: #806BFF;
   position: relative;
   padding-bottom: 150px;
   margin-bottom: 200px;
 
   h1 {
-    font-size: 100rem;
+    font-size: 10rem;
     text-align: center;
 
 }
 
 p {
   text-align: center;
-  font-size: 30rem;
+  font-size: 3rem;
 }
 }
 
 
 
 
-.funworks-section::before {
+.playground-section::before {
   content: '';
   position: absolute;
   bottom: -146px;
