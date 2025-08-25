@@ -14,6 +14,7 @@ import ThreeDPackagingAd from './pages/Projects/ThreeDPackaging/ThreeDPackagingA
 import JapaneseInstagramProject from './pages/Projects/Instagram/JapaneseInstagramProject';
 import CanadaPromotionalVideo from './pages/Projects/Canada/CanadaPromotionalVideo';
 import RhythmGame from './pages/Projects/RhythmGame/RhythmGame';
+import MagicMusicMv from './pages/Projects/MagicMusicMv/MagicMusicMv';
 
 import GoToTop from './components/GoToTop';
 
@@ -52,6 +53,8 @@ function App() {
         />
 
         <Route path="/projects/rhythm-game" element={<RhythmGame />} />
+
+        <Route path="/projects/magic-music-mv" element={<MagicMusicMv />} />
       </Routes>
       <GoToTop />
     </BrowserRouter>

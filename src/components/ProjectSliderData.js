@@ -5,6 +5,7 @@ import sushi from './assets/3d-sushi-packaging-ad.webp';
 import zine from './assets/vancouver-jfashion-zine-cover.webp';
 import bumper from './assets/bumper-animation.webp';
 import rhythmGame from '../assets/ProjectDetails/RhythmGame/rhythm-game-cover.webp';
+import magicMusic from '../assets/ProjectDetails/MagicMusicMv/magic-music-mv-cover.webp';
 
 const projectData = [
   {
@@ -42,6 +43,15 @@ const projectData = [
     description: "Beat-synced rhythm game animation with playful visuals in After Effects.",
     image: rhythmGame,
       link: '/projects/rhythm-game',
+  },
+
+     {
+    id: 5,
+    title: 'After Effects MV',
+    subtitle: 'Motion Graphics',
+    description: "Fan-made music video in After Effects with handmade costumes and playful visuals.",
+    image: magicMusic,
+      link: '/projects/magic-music-mv',
   },
 ];
 
