@@ -1,14 +1,14 @@
 import Footer from '../../components/Footer';
-import './Funworks.css';
+import './Playground.css';
 
 
-function Funworks() {
+function Playground() {
   return (
     <>
-    <div className='funworks'>
-    <section className='funworks-section'>
+    <div className='playground'>
+    <section className='playground-section'>
     <div>
-      <h1>Funworks Page</h1>
+      <h1>Playground Page</h1>
       <p>coming soon</p>
         <div className="footer-detail">
    
@@ -25,4 +25,4 @@ function Funworks() {
   );
 }
 
-export default Funworks;
+export default Playground;

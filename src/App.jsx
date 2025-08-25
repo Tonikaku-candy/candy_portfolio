@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import About from './pages/About/About';
 import Works from './pages/Works/Works';
 import Home from './pages/Home/Home';
-import Funworks from './pages/Funworks/Funworks';
+import Playground from './pages/Playground/Playground';
 import '../src/styles/global.css';
 
 // projects
@@ -35,7 +35,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/works" element={<Works />} />
-        <Route path="/funworks" element={<Funworks />} />
+        <Route path="/playground" element={<Playground />} />
 
         {/* 他のルート */}
         <Route path="/projects/bumper" element={<BumperProject />} />

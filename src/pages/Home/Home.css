@@ -594,6 +594,7 @@ body {
 
 .my-look-title {
   .made-by-me {
+     font-family: 'Fredoka One', sans-serif;
     margin: 0;
     display: none;
     text-align: center;
@@ -795,11 +796,13 @@ body {
     width: 100vw;
   }
   .made-by-me {
+     font-family: 'Fredoka One', sans-serif;
     display: none;
   }
 
   .my-look-title {
     .made-by-me {
+       font-family: 'Fredoka One', sans-serif;
       margin: 0;
       display: block;
       text-align: center;
@@ -807,6 +810,7 @@ body {
   }
 
   .made-by-me {
+     font-family: 'Fredoka One', sans-serif;
     font-size: 1rem;
     margin: 0 auto;
   }
