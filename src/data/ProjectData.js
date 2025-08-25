@@ -8,22 +8,9 @@ import zine from '../components/assets/vancouver-jfashion-zine-cover.webp';
 import instagram from '../components/assets/japanese-instagram-content-posts.webp';
 import canada from '../assets/ProjectDetails/Canada/Promotional-Short-Video.webp';
 import rhythmGame from '../assets/ProjectDetails/RhythmGame/rhythm-game-cover.webp';
-import magicMusic from'../assets/ProjectDetails/MagicMusicMv/magic-music-mv-cover.webp';
+import magicMusic from '../assets/ProjectDetails/MagicMusicMv/magic-music-mv-cover.webp';
 
 const projects = [
-
-{
-  id: 'musicvideo',
-  title: 'Magic Music – Music Video',
-  description: [
-    '- Motion Graphics & After Effects Project',
-    '- Fan-made music video with handmade costumes and playful visuals',
-  ],
-  category: ['Motion Graphics', 'Video Production'],
-  image: magicMusic, 
-  link: '/projects/magic-music-mv',
-},
-
   {
     id: 'bumper',
     title: 'Bumper Opener Video',
@@ -58,6 +45,18 @@ const projects = [
     ],
     image: sushi,
     link: '/projects/3d-packaging-ad',
+  },
+
+  {
+    id: 'musicvideo',
+    title: 'Magic Music – Music Video',
+    description: [
+      '- Motion Graphics & After Effects Project',
+      '- Fan-made music video with handmade costumes and playful visuals',
+    ],
+    category: ['Motion Graphics', 'Video Production'],
+    image: magicMusic,
+    link: '/projects/magic-music-mv',
   },
   {
     id: 'japanese-instagram-project',
