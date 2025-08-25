@@ -25,33 +25,32 @@ const projectData = [
     link: '/projects/3d-packaging-ad',
   },
 
-
   {
     id: 3,
     title: 'Bumper Opener Video',
     subtitle: 'Motion Graphics',
-    description:
-      'Animated bumper showcasing brand identity in After Effects.',
+    description: 'Animated bumper showcasing brand identity in After Effects.',
     image: bumper,
     link: '/projects/bumper',
   },
 
-    {
+  {
     id: 4,
-    title: 'Rhythm Game Motion',
-    subtitle: 'Motion Graphics',
-    description: "Beat-synced rhythm game animation with playful visuals in After Effects.",
-    image: rhythmGame,
-      link: '/projects/rhythm-game',
-  },
-
-     {
-    id: 5,
     title: 'After Effects MV',
     subtitle: 'Motion Graphics',
-    description: "Fan-made music video in After Effects with handmade costumes and playful visuals.",
+    description:
+      'Fan-made music video in After Effects with handmade costumes and playful visuals.',
     image: magicMusic,
-      link: '/projects/magic-music-mv',
+    link: '/projects/magic-music-mv',
+  },
+  {
+    id: 5,
+    title: 'Rhythm Game Motion',
+    subtitle: 'Motion Graphics',
+    description:
+      'Beat-synced rhythm game animation with playful visuals in After Effects.',
+    image: rhythmGame,
+    link: '/projects/rhythm-game',
   },
 ];
 
