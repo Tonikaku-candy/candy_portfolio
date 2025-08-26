@@ -69,59 +69,6 @@
     <script type="module" src="/src/main.jsx"></script>
     <script async src="//www.instagram.com/embed.js"></script>
 
-    <!-- React外のスクリプト -->
-      <script type="module">
-    window.addEventListener("DOMContentLoaded", () => {
-      document.addEventListener("click", (e) => {
-        // .burger-icon 自体またはその内側の要素がクリックされたら反応
-        if (e.target.closest(".burger-icon")) {
-          document.body.classList.toggle("mobile-open");
-
-          // アイコン切り替え
-          const burger = document.querySelector(".burger-icon");
-          if (document.body.classList.contains("mobile-open")) {
-            // 開いたときはXに
-            burger.outerHTML = `<span class="burger-icon close-icon">X</span>`;
-          } else {
-            // 閉じたときはハンバーガーに戻す
-            burger.outerHTML = `<img id="burger-icon" class="burger-icon" alt="menu" src="/src/components/assets/humburger.png">`;
-          }
-        }
-
-        // .mobile-cover をクリックしたら mobile-open を削除
-        if (e.target.closest(".mobile-cover")) {
-          document.body.classList.remove("mobile-open");
-
-          // ハンバーガーアイコンに戻す
-          const closeIcon = document.querySelector(".burger-icon.close-icon");
-          if (closeIcon) {
-            closeIcon.outerHTML = `<img id="burger-icon" class="burger-icon" alt="menu" src="/src/components/assets/humburger.png">`;
-          }
-        }
-      });
-    });
-  </script>
-
-  <script type="module">
-    window.addEventListener("DOMContentLoaded", () => {
-      // 生成タイミングに依らず .nav-links 内の a クリックを拾う
-      document.addEventListener("click", (e) => {
-        const link = e.target.closest(".nav-links li a");
-        if (!link) return;
-
-        if (document.body.classList.contains("mobile-open")) {
-          document.body.classList.remove("mobile-open");
-        }
-
-        // （任意）Xアイコンからハンバーガーに戻す処理を使っている場合
-        const burger = document.querySelector(".burger-icon.close-icon");
-        if (burger) {
-          burger.outerHTML =
-            `<img id="burger-icon" class="burger-icon" alt="menu" src="/src/components/assets/humburger.png">`;
-        }
-      });
-    });
-  </script>
 </body>
 
 </html>

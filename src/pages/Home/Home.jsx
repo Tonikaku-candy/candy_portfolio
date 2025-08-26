@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import PhotoGallery from '../../components/PhotoGallery';
 import Footer from '../../components/Footer';
 import { useEffect, useState, useRef } from 'react';
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
 //images
 import headerVideo from '../../assets/home/header/candy-fukaya-motion-design-portfolio.mp4';
@@ -37,8 +37,7 @@ function Home() {
   const [lollipopVisible, setLollipopVisible] = useState(false);
   const [jellyVisible, setJellyVisible] = useState(false);
 
-  // fade 
-  
+  // fade
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -230,7 +229,7 @@ function Home() {
         </div>
         <img
           src={letsConnectTitleImage}
-          className="lets-connect-title-image"
+          className="lets-connect-title-image shiny"
           alt="mail icon"
         />
         <div className="subtitles connect">
@@ -238,6 +237,7 @@ function Home() {
         </div>
         <div className="social-links">
           <a
+            className="shiny"
             href="mailto:candyfukaya@gmail.com"
             target="_blank"
             rel="noopener noreferrer"
@@ -248,10 +248,12 @@ function Home() {
             href="https://www.linkedin.com/in/candy-f-7207a0356/"
             target="_blank"
             rel="noopener noreferrer"
+            className="shiny"
           >
             <img src={linkedinIcon} alt="LinkedIn Icon" />
           </a>
           <a
+            className="shiny"
             href="https://www.instagram.com/candy_ramune/"
             target="_blank"
             rel="noopener noreferrer"

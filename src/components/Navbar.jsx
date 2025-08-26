@@ -1,26 +1,113 @@
 import { NavLink } from 'react-router-dom';
 import logo from './assets/candy-fukaya-pixel-chameleon-logo.png';
 import './Navbar.css';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import heart from './assets/pixel-heart.png';
-import humburger from './assets/humburger.png';
+import { bubble as Menu } from 'react-burger-menu';
+import burger from './assets/humburger.png';
+import ufo from '../assets/About/rabbit-ufo.svg';
 
-function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+function Navbar({ menuOpen, setMenuOpen }) {
+  const [isMobile, setIsMobile] = useState(false);
 
-  // 追加：リンク押下でメニューを閉じる
-  const handleNavClick = () => setIsOpen(false);
+  // 画面幅でモバイル判定
+  useEffect(() => {
+    const checkWidth = () => setIsMobile(window.innerWidth <= 768);
+    checkWidth();
+    window.addEventListener('resize', checkWidth);
+    return () => window.removeEventListener('resize', checkWidth);
+  }, []);
+
+  // 共通のリンク描画
+  const renderLinks = () => (
+    <>
+      <NavLink
+        to="/"
+        onClick={() => setMenuOpen(false)} // ← クリックで閉じる
+        className={({ isActive }) =>
+          isActive ? 'home-button active' : 'home-button'
+        }
+      >
+        {({ isActive }) => (
+          <span className="text-with-hearts">
+            {isActive && (
+              <img src={heart} alt="" className="active-heart left" />
+            )}
+            <span className="text">Home</span>
+            {isActive && (
+              <img src={heart} alt="" className="active-heart right" />
+            )}
+          </span>
+        )}
+      </NavLink>
+
+      <NavLink
+        to="/about"
+        onClick={() => setMenuOpen(false)}
+        className={({ isActive }) =>
+          isActive ? 'about-button active' : 'about-button'
+        }
+      >
+        {({ isActive }) => (
+          <span className="text-with-hearts">
+            {isActive && (
+              <img src={heart} alt="" className="active-heart left" />
+            )}
+            <span className="text">About</span>
+            {isActive && (
+              <img src={heart} alt="" className="active-heart right" />
+            )}
+          </span>
+        )}
+      </NavLink>
+
+      <NavLink
+        to="/works"
+        onClick={() => setMenuOpen(false)}
+        className={({ isActive }) =>
+          isActive ? 'works-button active' : 'works-button'
+        }
+      >
+        {({ isActive }) => (
+          <span className="text-with-hearts">
+            {isActive && (
+              <img src={heart} alt="" className="active-heart left" />
+            )}
+            <span className="text">Projects</span>
+            {isActive && (
+              <img src={heart} alt="" className="active-heart right" />
+            )}
+          </span>
+        )}
+      </NavLink>
+
+      <NavLink
+        to="/playground"
+        onClick={() => setMenuOpen(false)}
+        className={({ isActive }) =>
+          isActive ? 'playground-button active' : 'playground-button'
+        }
+      >
+        {({ isActive }) => (
+          <span className="text-with-hearts">
+            {isActive && (
+              <img src={heart} alt="" className="active-heart left" />
+            )}
+            <span className="text">Playground</span>
+            {isActive && (
+              <img src={heart} alt="" className="active-heart right" />
+            )}
+          </span>
+        )}
+      </NavLink>
+    </>
+  );
 
   return (
     <header className="header-bar">
       <nav className="navbar">
-        {/* モバイル時に背景クリックで閉じる */}
-        <div
-          className={`mobile-cover ${isOpen ? 'show' : ''}`}
-          onClick={() => setIsOpen(false)}
-        ></div>
-
-        <NavLink to="/" className="logo-wrapper" onClick={handleNavClick}>
+        {/* ロゴ */}
+        <NavLink to="/" className="logo-wrapper">
           <div className="logo-tab-box">
             <img
               src={logo}
@@ -30,102 +117,32 @@ function Navbar() {
           </div>
         </NavLink>
 
-        {/* burger */}
-        {isOpen ? (
-          <button
-            className="burger-icon close-icon"
-            onClick={() => setIsOpen(false)}
-            aria-label="close menu"
-            aria-expanded="true"
-          >
-            X
-          </button>
-        ) : (
-          <button
-            className="burger-icon"
-            id="burger-icon"
-            onClick={() => setIsOpen(true)}
-            aria-label="open menu"
-            aria-expanded="false"
-          >
-            <img src={humburger} alt="menu" />
-          </button>
+        {/* PC時：横並び */}
+        {!isMobile && (
+          <ul className="nav-links">
+            <li>{renderLinks()}</li>
+          </ul>
         )}
 
-        <ul className={`nav-links ${isOpen ? 'open' : ''}`}>
-          <li>
-            <NavLink
-              to="/"
-              onClick={handleNavClick}
-              className={({ isActive }) =>
-                isActive ? 'home-button active' : 'home-button'
-              }
-            >
-              {({ isActive }) => (
-                <span className="text-with-hearts">
-                  {isActive && <img src={heart} alt="" className="active-heart left" />}
-                  <span className="text">Home</span>
-                  {isActive && <img src={heart} alt="" className="active-heart right" />}
-                </span>
-              )}
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink
-              to="/about"
-              onClick={handleNavClick}
-              className={({ isActive }) =>
-                isActive ? 'about-button active' : 'about-button'
-              }
-            >
-              {({ isActive }) => (
-                <span className="text-with-hearts">
-                  {isActive && <img src={heart} alt="" className="active-heart left" />}
-                  <span className="text">About</span>
-                  {isActive && <img src={heart} alt="" className="active-heart right" />}
-                </span>
-              )}
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink
-              to="/works"
-              onClick={handleNavClick}
-              className={({ isActive }) =>
-                isActive ? 'works-button active' : 'works-button'
-              }
-            >
-              {({ isActive }) => (
-                <span className="text-with-hearts">
-                  {isActive && <img src={heart} alt="" className="active-heart left" />}
-                  <span className="text">Projects</span>
-                  {isActive && <img src={heart} alt="" className="active-heart right" />}
-                </span>
-              )}
-            </NavLink>
-          </li>
-
-          {/* playground */}
-          <li>
-            <NavLink
-              to="/playground"
-              onClick={handleNavClick}
-              className={({ isActive }) =>
-                isActive ? 'playground-button active' : 'playground-button'
-              }
-            >
-              {({ isActive }) => (
-                <span className="text-with-hearts">
-                  {isActive && <img src={heart} alt="" className="active-heart left" />}
-                  <span className="text">Playground</span>
-                  {isActive && <img src={heart} alt="" className="active-heart right" />}
-                </span>
-              )}
-            </NavLink>
-          </li>
-        </ul>
+        {/* モバイル時：bubbleメニュー */}
+        {isMobile && (
+          <Menu
+            right
+            isOpen={menuOpen} // ← 状態で制御
+            onStateChange={(state) => setMenuOpen(state.isOpen)} // ← 自動同期
+            customBurgerIcon={<img src={burger} alt="menu" />}
+            styles={{
+              bmMorphShape: {
+                fill: '#fff94d',
+              },
+            }}
+          >
+            {renderLinks()}
+            <div className="menu-footer-images">
+              <img src={ufo} alt="ufo rabbit" className="ufo" />
+            </div>
+          </Menu>
+        )}
       </nav>
     </header>
   );
