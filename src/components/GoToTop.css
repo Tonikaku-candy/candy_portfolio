@@ -28,5 +28,6 @@
 @media (max-width: 768px) {
   .go-to-top-icon {
     width: 90px;
+      z-index: 9999;
   }
 }

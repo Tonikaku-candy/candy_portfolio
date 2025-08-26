@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { useState } from 'react';  
 //components
 import Navbar from './components/Navbar';
 //pages
@@ -17,19 +18,18 @@ import RhythmGame from './pages/Projects/RhythmGame/RhythmGame';
 import MagicMusicMv from './pages/Projects/MagicMusicMv/MagicMusicMv';
 
 import GoToTop from './components/GoToTop';
-
 import ScrollToTop from './components/ScrollToTop';
 
-// to show inside app
 function App() {
+  // ← ここで state を定義！
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    //to change pages
     <BrowserRouter>
       <ScrollToTop />
-      {/* to show menu */}
-      <Navbar />
+      {/* Navbar に setMenuOpen を渡す */}
+   <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
 
-      {/* rule to change url */}
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -39,24 +39,15 @@ function App() {
 
         {/* 他のルート */}
         <Route path="/projects/bumper" element={<BumperProject />} />
-        <Route
-          path="/projects/3d-packaging-ad"
-          element={<ThreeDPackagingAd />}
-        />
-        <Route
-          path="/projects/japanese-instagram-project"
-          element={<JapaneseInstagramProject />}
-        />
-        <Route
-          path="/projects/canada-promotional-video"
-          element={<CanadaPromotionalVideo />}
-        />
-
+        <Route path="/projects/3d-packaging-ad" element={<ThreeDPackagingAd />} />
+        <Route path="/projects/japanese-instagram-project" element={<JapaneseInstagramProject />} />
+        <Route path="/projects/canada-promotional-video" element={<CanadaPromotionalVideo />} />
         <Route path="/projects/rhythm-game" element={<RhythmGame />} />
-
         <Route path="/projects/magic-music-mv" element={<MagicMusicMv />} />
       </Routes>
-      <GoToTop />
+
+      {/* メニュー開いてる時は GoToTop を非表示 */}
+      {!menuOpen && <GoToTop />}
     </BrowserRouter>
   );
 }

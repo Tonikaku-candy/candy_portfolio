@@ -1,8 +1,6 @@
-/* ss and jsx files are always same folder */
-
 /* logo */
 .logo {
-  width: 120px;
+  max-width: 120px;
   height: auto;
 
   margin-top: 4rem;
@@ -15,15 +13,16 @@
 .logo-wrapper {
   position: relative;
   display: inline-block;
+  width: 20%;
 }
 
 /* ロゴの上にちょっと飛び出すボックス */
 .logo-tab-box {
-  display: flex; /* ←中央揃えのキモ！ */
+  display: flex;
   justify-content: center; /* 横方向に中央 */
   align-items: center; /* 縦方向に中央 */
   position: relative;
-  margin-left: 80px;
+  /* margin-left: 80px; */
   width: 150px;
   height: 190px;
   background-color: #ff44b7;
@@ -51,28 +50,38 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 95%;
   height: 80px;
   margin: 0 auto;
-  max-width: none;
+  max-width: 1440px;
   padding: 0 0px;
 }
 
-.nav-links {
-  display: none;
-  gap: 20px;
+/* PC用ナビリンク */
+
+.nav-links li {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
 }
 
+.nav-links {
+  width: 70%;
+  display: block;
+  max-width: 700px;
+}
+
 .nav-links li a {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   font-family: 'Bungee', sans-serif;
-  width: 150px;
-  height: 45px;
+  width: 120px;
+  width: clamp(120px, 15vw, 150px);
 
-  font-size: 20px;
+  height: 45px;
+  /* font-size: 20px; */
+  font-size: clamp(12px, 1.5vw, 20px);
   text-decoration: none;
   text-align: center;
   border-radius: 50px;
@@ -93,48 +102,28 @@
 }
 
 .home-button {
-  /* background: linear-gradient(to bottom, #ef438d 0%, #d00b5d 100%); */
-  /* background: #ef438d; */
-  /* background: #ef438d;
-  box-shadow: 0 0 6px 2px rgba(255, 255, 255, 0.4);
-  
-  border: 2px solid #343434; */
   background: linear-gradient(to bottom, #ff5e9d 0%, #ff0059 100%);
   border: 2px solid #343434;
 }
-
 .about-button {
-  /* background: linear-gradient(to bottom, #00cfff 0%, #00b4ef 89%, #007edc 100%); */
   background: linear-gradient(to bottom, #00dfff 0%, #039cef 100%);
-  /* background: linear-gradient(to bottom, #00ceff 0%, #007ee5 100%); */
   border: 2px solid #343434;
 }
-
 .works-button {
-  /* background: #02ff44; */
   background: linear-gradient(to bottom, #02ff44 0%, #00c938 100%);
   border: 2px solid #343434;
-
 }
-
 .playground-button {
-  background: linear-gradient(to bottom, #C86CFF 0%, #8A3DFF 100%);
+  background: linear-gradient(to bottom, #c86cff 0%, #8a3dff 100%);
   border: 2px solid #343434;
-    margin-right: 80px;
 }
 
+/* アクティブ時の色 */
 .home-button.active .text,
 .about-button.active .text,
 .works-button.active .text,
 .playground-button.active .text {
   color: #343434;
-}
-
-.home-button.active,
-.about-button.active,
-.works-button.active {
-  /* box-shadow: 0 0 10px rgb(138, 152, 54); */
-  /* outline: 4px solid rgb(255, 255, 255); */
 }
 
 /* ボタン内でテキストとロゴを横並びに */
@@ -165,68 +154,132 @@
   image-rendering: pixelated;
 }
 
-.mobile-cover {
-  display: none;
+/* --- react-burger-menu 用 --- */
+.bm-burger-button {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  right: 10px;
+  top: -8px;
+  /* background-color: #ff62bc;
+  border-radius: 5px; */
 }
 
-.mobile-open {
-  .mobile-cover {
-    display: block;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #343434;
-    opacity: 0.5;
-  }
-  .nav-links {
-    display: flex !important;
-    visibility: visible;
-    opacity: 1;
-  }
+.bm-cross {
+  background: #ff62bc;
+  height: 10px !important;   /* 太さ */
+  width: 50px !important;   /* ← 長さを追加（ここを大きくしないと小さいまま） */
+  right: 0px;
+  top: 20px;
+}
+.bm-cross-button {
+  width: 60px !important;    /* 全体のクリック領域 */
+  height: 60px !important;
+  right: 20px !important;    /* 位置調整 */
+  top: 20px !important;
 }
 
-/* nav end */
 
-@media (min-width: 769px) {
-  .nav-links {
-    display: none;
-    display: flex;
-  }
-
-  .burger-icon {
-    display: none;
-  }
+.bm-item-list {
+  display: flex;
+  align-items: center;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.5rem;
 }
 
-/* mobile */
-
-/* burger icon style */
-.burger-icon {
-  width: 80px;
-  height: 80px;
-  cursor: pointer;
-  margin-right: 20px;
-  z-index: 1;
-}
-
-/* close icon */
-.close-icon {
-  font-size: 70px;
-  /* font-weight: bold; */
+.bm-item-list a {
+  font-family: 'Bungee', sans-serif;
+  margin-bottom: 1rem;
+  color: #343434;
+  border-radius: 50px;
   color: #fff;
+  text-decoration: none;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+  align-items: left;
+  padding: 10px;
 }
 
-@media (max-width: 768px) {
-  .close-icon {
-    font-size: 2rem;
-    /* font-weight: bold; */
-    color: #fff;
-    text-align: center;
-  }
+.bm-item-list button {
+  align-items: left;
+  padding: 10px;
+}
 
+.bm-item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.bm-item-list .home-button,
+.bm-item-list .about-button,
+.bm-item-list .works-button,
+.bm-item-list .playground-button {
+  gap: 8px; /* 余白 */
+  white-space: nowrap; /* 折り返し防止 */
+  line-height: 1; /* 上下のクリップ防止 */
+  width: auto; /* 固定幅があれば解除 */
+  min-width: max-content; /* 中身に合わせて広がる */
+  padding-inline: 12px; /* 内側余白 */
+}
+
+
+
+.bm-menu-wrap {
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  position: fixed !important;
+  z-index: 9999 !important; /* ← header-bar より上に */
+}
+.bm-menu {
+  background: #fff94d !important;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 2.5em 1.5em 0;
+  box-sizing: border-box;
+  
+}
+
+.menu-footer-images {        
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+
+}
+
+.menu-footer-images img.ufo {
+  width: 200px;               /* UFO の大きさ調整 */
+  height: auto;
+  top:0;
+  margin: 0 auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* 上に少し移動 */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+
+/* --- メディアクエリで制御 --- */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* モバイルでは横並び非表示 */
+  }
   .navbar {
     height: 40px;
   }
@@ -272,56 +325,17 @@
     z-index: 1;
   }
 
-  .burger-icon {
+  /* .burger-icon {
     display: block;
     background-color: #ff62bc;
     border-radius: 5px;
     width: 40px;
     height: 40px;
-  }
-
-  /* .logo {
-    width: 50px;
-    height: auto;
-    margin-left: 10px;
   } */
+}
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 45px;
-    right: 0px;
-    background-color: #fff94d;
-    padding: 20px;
-    z-index: 10;
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .nav-links {
-    /* display: none !important; */
-    visibility: hidden;
-    transition: 0.5s;
-    opacity: 0;
-  }
-
-  .nav-links li {
-    margin: 10px 0;
-  }
-
-  .nav-links li a {
-    font-size: 24px;
-    padding: 10px 20px;
-    margin: 0;
-  }
-
-  .active-heart,
-  .active-logo {
-    width: 12px;
-    height: 12px;
+@media (min-width: 769px) {
+  .bm-burger-button {
+    display: none; /* PCではバーガーメニュー非表示 */
   }
 }
