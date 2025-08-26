@@ -6,6 +6,7 @@ function Playground() {
   return (
     <>
     <div className='playground'>
+      <div className='grid-overlay-play'></div>
     <section className='playground-section'>
     <div>
       <h1>Playground Page</h1>
@@ -15,6 +16,7 @@ function Playground() {
       </div>
     </div>
     </section>
+     <div className="diagonal-bottom-play"></div>
     </div>
 
       <div className="footer-detail">
