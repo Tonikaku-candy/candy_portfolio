@@ -29,6 +29,8 @@ function Works() {
   return (
     <>
       <div className="works">
+           <div className="grid-overlay-works"></div>
+
         {/* タグバー */}
         <div className="work-section">
           <TagBar
@@ -40,7 +42,9 @@ function Works() {
 
         {/* プロジェクト一覧セクション */}
         <section className="all-projects-section">
+              
           <div className="all-projects-title-wrapper">
+               
             <div className="all-projects-title">
               <div className="all-projects-title-image-wrapper">
                 <img
@@ -81,6 +85,7 @@ function Works() {
 
           {/* プロジェクトカード表示 */}
           <div className="projects-grid">
+              
             {projects
               .filter(
                 (project) =>
@@ -117,6 +122,7 @@ function Works() {
               ))}
           </div>
         </section>
+          <div className="diagonal-bottom-works"></div>
       </div>
 
       <Footer />
