@@ -6,7 +6,7 @@ import heart from './assets/pixel-heart.png';
 import { bubble as Menu } from 'react-burger-menu';
 import burger from './assets/humburger.png';
 import ufo from '../assets/About/rabbit-ufo.svg';
-import close from '../components/assets/clossing-hands.webp';
+import close from '../components/assets/crossing-hands.webp';
 
 function Navbar({ menuOpen, setMenuOpen }) {
   const [isMobile, setIsMobile] = useState(false);
