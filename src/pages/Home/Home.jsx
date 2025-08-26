@@ -229,7 +229,7 @@ function Home() {
         </div>
         <img
           src={letsConnectTitleImage}
-          className="lets-connect-title-image shiny"
+          className="lets-connect-title-image"
           alt="mail icon"
         />
         <div className="subtitles connect">

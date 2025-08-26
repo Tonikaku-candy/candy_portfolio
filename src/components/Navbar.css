@@ -251,11 +251,10 @@
 
 }
 
-.menu-footer-images img.ufo {
-  width: 200px;               /* UFO の大きさ調整 */
+.menu-footer-images img.ufo-nav {
+  width: 200px;         
   height: auto;
-  top:0;
-  margin: 0 auto;
+  margin: 2rem auto;
   animation: float 3s ease-in-out infinite;
 }
 

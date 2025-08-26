@@ -2,6 +2,8 @@ import './About.css';
 import PhotoGallery from '../../components/PhotoGallery';
 import Footer from '../../components/Footer';
 import { useEffect } from 'react';
+import RabbitUfoAll from "../../components/RabbitUfoAll.jsx";
+
 
 // images
 import ufoImage from '../../assets/About/rabbit-ufo.svg';
@@ -72,28 +74,27 @@ function About() {
               inspired by Japanese <br />
               kawaii culture ✨
             </p>
-
           </div>
-                <div className="about-profile-image-wrapper">
-          <img
-            src={profileBg}
-            alt="sakura background"
-            className="about-profile-bg"
-          />
+          <div className="about-profile-image-wrapper">
+            <img
+              src={profileBg}
+              alt="sakura background"
+              className="about-profile-bg"
+            />
 
-          <img
-            src={profile2}
-            alt="Candy profile picture hover"
-            className="about-profile-image side"
-          />
+            <img
+              src={profile2}
+              alt="Candy profile picture hover"
+              className="about-profile-image side"
+            />
 
-          <img
-            src={profile1}
-            alt="Candy profile picture"
-            className="about-profile-image front"
-          />
-          <p className="about-profile-text">Hover me!</p>
-        </div>
+            <img
+              src={profile1}
+              alt="Candy profile picture"
+              className="about-profile-image front"
+            />
+            <p className="about-profile-text">Hover me!</p>
+          </div>
         </div>
       </div>
 
@@ -121,7 +122,7 @@ function About() {
             alt="Candy profile picture"
             className="about-profile-image front mobile"
           />
-          <p className="about-profile-text mobile">Hover me!</p>
+          <p className="about-profile-text mobile">Top me!</p>
         </div>
 
         {/* Section Title & Text Box */}
@@ -159,17 +160,19 @@ function About() {
                   goal is to make people smile and enjoy the moment.
                 </p>
                 <div className="ufo-wrapper">
+                  <RabbitUfoAll className="ufo" />
+                </div>
+                {/* <div className="ufo-wrapper">
                   <img src={lightImage} alt="light" className="light" />
                   <img src={ufoImage} alt="rabbit-ufo" className="ufo" />
                   <img src={girlImage} alt="girl" className="girl" />
-                </div>
+                </div> */}
               </div>
 
-              <p className='ufo-bottom-text'>
-      
-              I may be quiet and shy in person, but my imagination is
-                anything but. I’m always thinking of odd, funny ideas and
-                unexpected ways to tell a story. One of my creative mottos is:{' '}
+              <p className="ufo-bottom-text">
+                I may be quiet and shy in person, but my imagination is anything
+                but. I’m always thinking of odd, funny ideas and unexpected ways
+                to tell a story. One of my creative mottos is:{' '}
                 <strong>“Make something silly, seriously.”</strong> I believe
                 humor, when treated with care, can be just as powerful as any
                 serious message.
@@ -275,17 +278,18 @@ function About() {
           </div>
 
           {/* Extra Skills */}
-      
 
           <div className="skills-card extra">
-            <h2 className="about-section-title extra relative-version">EXTRA SKILLS</h2>
-                <div className="chameleon-wrapper">
-            <img
-              src={colorfulChameleon}
-              alt="Colorful Chameleon Logo"
-              className="colorful-chameleon"
-            />
-          </div>
+            <h2 className="about-section-title extra relative-version">
+              EXTRA SKILLS
+            </h2>
+            <div className="chameleon-wrapper">
+              <img
+                src={colorfulChameleon}
+                alt="Colorful Chameleon Logo"
+                className="colorful-chameleon"
+              />
+            </div>
             <ul className="extra-skills-list">
               <li>Social Media Content Creation</li>
               <li>Flexible Creative Thinking</li>
@@ -425,7 +429,7 @@ function About() {
               />
             </div>
 
-             <div className="subtitles look">
+            <div className="subtitles look">
               <h2>MY SEWING WORKS</h2>
             </div>
             <h3 className="made-by-me about">🩷#MadeByMe🩷</h3>
