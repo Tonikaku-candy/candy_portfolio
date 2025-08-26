@@ -139,7 +139,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
           >
             {renderLinks()}
             <div className="menu-footer-images">
-              <img src={ufo} alt="ufo rabbit" className="ufo" />
+              <img src={ufo} alt="ufo rabbit" className="ufo-nav" />
             </div>
           </Menu>
         )}
