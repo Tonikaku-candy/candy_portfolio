@@ -380,6 +380,10 @@ body {
   pointer-events: none;
 }
 
+.rainbow img {
+  width: 2730px;
+}
+
 .lets-connect-title-image {
   width: 60px;
   padding-top: 20px;

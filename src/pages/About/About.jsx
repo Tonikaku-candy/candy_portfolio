@@ -6,9 +6,7 @@ import RabbitUfoAll from "../../components/RabbitUfoAll.jsx";
 
 
 // images
-import ufoImage from '../../assets/About/rabbit-ufo.svg';
-import lightImage from '../../assets/About/light.svg';
-import girlImage from '../../assets/About/girl.png';
+
 import myLookTitleImage from '../../assets/home/my-look/dress-icon.png';
 
 //icons
@@ -27,12 +25,12 @@ import reactIcon from '../../assets/About/icons/react-icon.png';
 import tailwindIcon from '../../assets/About/icons/tailwind-icon.png';
 import wordpressIcon from '../../assets/About/icons/wordpress-icon.png';
 import profileBg from '../../assets/About/sakura-bg.webp';
-import profile1 from '../../assets/About/candy-profile1.png';
-import profile2 from '../../assets/About/candy-profile2.png';
-import colorfulChameleon from '../../assets/About/colorful-chameleon.png';
-import sewingMachine from '../../assets/home/my-look/sewing-machine.png';
-import tomato from '../../assets/home/my-look/tomato-pin-cushion.png';
-import thread from '../../assets/home/my-look/colorful-thread.png';
+import profile1 from '../../assets/About/candy-profile1.webp';
+import profile2 from '../../assets/About/candy-profile2.webp';
+import colorfulChameleon from '../../assets/About/colorful-chameleon.webp';
+import sewingMachine from '../../assets/home/my-look/sewing-machine.webp';
+import tomato from '../../assets/home/my-look/tomato-pin-cushion.webp';
+import thread from '../../assets/home/my-look/colorful-thread.webp';
 import speechBubble from '../../assets/About/speech-bubble.png';
 import jordan from '../../assets/About/jordan-profile-photo.png';
 import sunny from '../../assets/About/sunny-profile-photo.png';
