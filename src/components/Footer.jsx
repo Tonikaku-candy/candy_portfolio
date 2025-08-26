@@ -1,5 +1,5 @@
 import { FaInstagram, FaLinkedin, FaEnvelope, FaGithub } from 'react-icons/fa';
-import logo from './assets/candy-fukaya-pixel-chameleon-logo.png';
+import logo from './assets/candy-fukaya-pixel-chameleon-logo.webp';
 import './Footer.css';
 import { Link } from 'react-router-dom';
 

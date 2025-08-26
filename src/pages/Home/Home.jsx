@@ -11,20 +11,20 @@ import headerVideo from '../../assets/home/header/candy-fukaya-motion-design-por
 import featuredProjectsTitleImage from '../../assets/home/featured-projects/eye.png';
 import aboutMeTitleImage from '../../assets/home/about-me/candy.png';
 import aboutMeVideo from '../../assets/home/about-me/kawaii-intro-candy-fukaya.mp4';
-import lollipop from '../../assets/home/about-me/heart-lollipop.png';
-import jellyBeans from '../../assets/home/about-me/jelly-beans.png';
+import lollipop from '../../assets/home/about-me/heart-lollipop.webp';
+import jellyBeans from '../../assets/home/about-me/jelly-beans.webp';
 
 import letsConnectTitleImage from '../../assets/home/connect/mail.png';
 import rainbow from '../../assets/home/connect/rainbow-stripe.webp';
 import mailIcon from '../../assets/home/connect/mail-icon.png';
 import instagramIcon from '../../assets/home/connect/instagram-icon.png';
 import linkedinIcon from '../../assets/home/connect/linkedin-icon.png';
-import girl from '../../assets/home/connect/girl.png';
+import girl from '../../assets/home/connect/girl.webp';
 
 import myLookTitleImage from '../../assets/home/my-look/dress-icon.png';
-import sewingMachine from '../../assets/home/my-look/sewing-machine.png';
-import tomato from '../../assets/home/my-look/tomato-pin-cushion.png';
-import thread from '../../assets/home/my-look/colorful-thread.png';
+import sewingMachine from '../../assets/home/my-look/sewing-machine.webp';
+import tomato from '../../assets/home/my-look/tomato-pin-cushion.webp';
+import thread from '../../assets/home/my-look/colorful-thread.webp';
 
 function Home() {
   // time

@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import logo from './assets/candy-fukaya-pixel-chameleon-logo.png';
+import logo from './assets/candy-fukaya-pixel-chameleon-logo.webp';
 import './Navbar.css';
 import { useState, useEffect } from 'react';
 import heart from './assets/pixel-heart.png';
