@@ -14,6 +14,7 @@ import ProjectTitle from '../../../components/ProjectDetail/ProjectTitle.jsx';
 import projects from '../../../data/ProjectData.js';
 import screenShot from '../../../assets/ProjectDetails/Canada/canada_video_editing_what_scene.webp';
 import wall from '../../../assets/ProjectDetails/Canada/canada_awesome_wall.webp';
+import FadeInOnScroll from '../../../components/FadeInOnScroll.jsx';
 import DetailLinks from '../../../components/ProjectDetail/DetailLinks.jsx';
 // slide
 import SlideData from './CanadaSlideData.js';
@@ -112,7 +113,9 @@ function CanadaPromotionalVideo() {
 
         <ProjectTitle   title={`“Canada Ain’t What I Thought!”\nPlayful Travel Campaign Film`}  />
 
+         <FadeInOnScroll>
         <div className="video-wrapper canada">
+            
           <iframe
             width="560"
             height="315"
@@ -123,6 +126,7 @@ function CanadaPromotionalVideo() {
             allowFullScreen
           />
         </div>
+                   </FadeInOnScroll>
 
              {/* ページ内リンク */}
                 <DetailLinks
@@ -137,6 +141,7 @@ function CanadaPromotionalVideo() {
 
         <div className="detail-box-wrapper">
           <div className="project-grid">
+            <FadeInOnScroll>
             <DetailBox size="S" title="SOFTWARE" colorClass="blue">
               <ul>
                 <li>Photoshop</li>
@@ -144,7 +149,9 @@ function CanadaPromotionalVideo() {
                 <li>After Effects</li>
               </ul>
             </DetailBox>
+            </FadeInOnScroll>
 
+<FadeInOnScroll>
             <DetailBox size="S" title="ROLE" colorClass="red">
               <ul>
                 <li>Creative Director</li>
@@ -152,7 +159,9 @@ function CanadaPromotionalVideo() {
                 <li>Lyric Writer</li>
               </ul>
             </DetailBox>
+            </FadeInOnScroll>
 
+<FadeInOnScroll>
             <DetailBox
               size="S"
               title="DURATION"
@@ -164,8 +173,10 @@ function CanadaPromotionalVideo() {
                 <li>Re-edited August 4th, 2025</li>
               </ul>
             </DetailBox>
+            </FadeInOnScroll>
           </div>
     <div id="overview"></div>
+    <FadeInOnScroll>
           <DetailBox title="Overview" colorClass="pink">
             <p>
               This project was a promotional video created for a fictional
@@ -175,7 +186,9 @@ function CanadaPromotionalVideo() {
               previous term.
             </p>
           </DetailBox>
+          </FadeInOnScroll>
     <div id="concept"></div>
+    <FadeInOnScroll>
           <DetailBox title="CONCEPT & DIRECTION" colorClass="green">
             <p>
               At first, we planned a typical story of an international student
@@ -187,8 +200,10 @@ function CanadaPromotionalVideo() {
               fun to create, something that would reflect our real experiences.
             </p>
           </DetailBox>
+          </FadeInOnScroll>
 
     <div id="approach"></div>
+    <FadeInOnScroll>
           <DetailBox title="NEW APPROACH & INSPIRATION" colorClass="purple">
             <p>
               Rather than making a sugar-coated promotional video, I wanted to
@@ -212,8 +227,10 @@ function CanadaPromotionalVideo() {
               <SlideCard slideData={SlideData} />
             </div>
           </DetailBox>
+          </FadeInOnScroll>
 
     <div id="music"></div>
+    <FadeInOnScroll>
           <DetailBox title="MUSIC & EDITING" colorClass="orange">
             <p>
               I wrote the lyrics in Japanese and generated the song using the AI
@@ -234,8 +251,10 @@ function CanadaPromotionalVideo() {
               </a>
             </div>
           </DetailBox>
+          </FadeInOnScroll>
 
     <div id="production"></div>
+    <FadeInOnScroll>
           <DetailBox title="PRODUCTION HIGHLIGHTS" colorClass="pink">
             <p>
               The video features a mix of scripted acting, vlog-style dialogue,
@@ -278,6 +297,7 @@ function CanadaPromotionalVideo() {
               />
             </div>
           </DetailBox>
+          </FadeInOnScroll>
         </div>
 
         {/* --- Prev / Next --- */}

@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import PhotoGallery from '../../components/PhotoGallery';
 import Footer from '../../components/Footer';
 import { useEffect, useState, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import AnimatedTitle from '../../components/AnimatedTitle'; // 新しいコンポーネントを使用
 
-//images
+// images
 import headerVideo from '../../assets/home/header/candy-fukaya-motion-design-portfolio.mp4';
 import featuredProjectsTitleImage from '../../assets/home/featured-projects/eye.png';
 import aboutMeTitleImage from '../../assets/home/about-me/candy.png';
@@ -26,47 +28,18 @@ import sewingMachine from '../../assets/home/my-look/sewing-machine.webp';
 import tomato from '../../assets/home/my-look/tomato-pin-cushion.webp';
 import thread from '../../assets/home/my-look/colorful-thread.webp';
 
+gsap.registerPlugin(ScrollTrigger);
+
 function Home() {
   // time
-  const [currentTime, setCurrentTime] = useState('');
+  const [currentTime, setCurrentTime] = useState(() => {
+    const now = new Date();
+    const hours = now.getHours().toString().padStart(2, '0');
+    const minutes = now.getMinutes().toString().padStart(2, '0');
+    const seconds = now.getSeconds().toString().padStart(2, '0');
+    return `${hours}:${minutes}:${seconds}`;
+  });
 
-  // about image animation
-  // 追加
-  const lollipopRef = useRef(null);
-  const jellyRef = useRef(null);
-  const [lollipopVisible, setLollipopVisible] = useState(false);
-  const [jellyVisible, setJellyVisible] = useState(false);
-
-  // fade
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.target === lollipopRef.current && entry.isIntersecting) {
-            setLollipopVisible(true);
-            observer.unobserve(entry.target);
-          }
-          // if (entry.target === jellyRef.current && entry.isIntersecting) {
-          //   setJellyVisible(true);
-          //   observer.unobserve(entry.target);
-          // }
-        });
-      },
-      { threshold: 0.3 }
-    );
-
-    if (lollipopRef.current) observer.observe(lollipopRef.current);
-    if (jellyRef.current) observer.observe(jellyRef.current);
-
-    return () => {
-      if (lollipopRef.current) observer.unobserve(lollipopRef.current);
-      if (jellyRef.current) observer.unobserve(jellyRef.current);
-    };
-  }, []);
-
-  // girl comment
-  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const interval = setInterval(() => {
       const now = new Date();
@@ -79,8 +52,17 @@ function Home() {
     return () => clearInterval(interval);
   }, []);
 
+
+  // slider animation
+    const sliderRef = useRef(null);
+
+
+
+  // girl comment
+  const [isVisible, setIsVisible] = useState(false);
   useEffect(() => {
     const comment = document.querySelector('.girl-comment');
+    if (!comment) return;
 
     function handleScroll() {
       const rect = comment.getBoundingClientRect();
@@ -98,8 +80,6 @@ function Home() {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  //girl comment end
 
   return (
     <div>
@@ -121,10 +101,8 @@ function Home() {
       </div>
       {/* header end */}
 
-      {/* feature products */}
+      {/* feature projects */}
       <section className="featured-projects">
-        {/* div inside section add max-width 1400 margin 0 auto */}
-
         <div className="featured-title-wrapper">
           <div className="featured-title">
             <div className="featured-title-image-wrapper">
@@ -134,23 +112,23 @@ function Home() {
                 alt="eye emoji"
               />
             </div>
-            <div className="subtitles featured">
-              <h2>FEATURED PROJECTS</h2>
-            </div>
+            {/* タイトルだけ AnimatedTitle で一文字ずつアニメーション */}
+            <AnimatedTitle
+              text={'FEATURED PROJECTS'}
+              trigger=".featured-projects"
+              className="subtitles featured"
+            />
           </div>
         </div>
         <ProjectSlider />
       </section>
-      {/* featured products end */}
+      {/* feature projects end */}
 
       {/* about me */}
-
       <section className="about-section">
         <div className="diagonal-top"></div>
         <div className="grid-overlay"></div>
         <div className="about-section-inner">
-          {/* bg */}
-
           <div className="about-title-wrapper">
             <div className="about-title">
               <div className="about-title-image-wrapper">
@@ -160,19 +138,17 @@ function Home() {
                   alt="candy emoji"
                 />
               </div>
-              <div className="subtitles about">
-                <h2>ABOUT ME</h2>
-              </div>
+              {/* タイトルだけ AnimatedTitle */}
+              <AnimatedTitle
+                text={'ABOUT ME'}
+                trigger=".about-section"
+                className="subtitles about"
+              />
             </div>
           </div>
 
           <div className="intro-outline-wrapper">
-            <img
-              ref={lollipopRef}
-              src={lollipop}
-              className={`lollipop ${lollipopVisible ? 'visible' : ''}`}
-              alt="heart lollipop"
-            />
+      <img src={lollipop} className="lollipop" alt="heart lollipop" />
 
             <div className="candy-text-wrapper">
               <div className="candy-outline-text-top">
@@ -210,19 +186,12 @@ function Home() {
             </div>
           </div>
         </div>
-        <img
-          ref={jellyRef}
-          src={jellyBeans}
-          className={`jelly ${jellyVisible ? 'visible' : ''}`}
-          alt="jelly beans"
-        />
+     <img src={jellyBeans} className="jelly" alt="jelly beans" />
         <div className="diagonal-bottom"></div>
       </section>
-
       {/* about me end */}
 
       {/* connect */}
-
       <section className="connect-section">
         <div className="rainbow">
           <img src={rainbow} alt="rainbow-stripe" />
@@ -232,9 +201,12 @@ function Home() {
           className="lets-connect-title-image"
           alt="mail icon"
         />
-        <div className="subtitles connect">
-          <h2>LET'S CONNECT</h2>
-        </div>
+        {/* タイトルだけ AnimatedTitle */}
+        <AnimatedTitle
+          text={"LET'S CONNECT"}
+          trigger=".connect-section"
+          className="subtitles connect"
+        />
         <div className="social-links">
           <a
             className="shiny"
@@ -276,7 +248,6 @@ function Home() {
           </p>
         </div>
       </section>
-
       {/* connect end */}
 
       {/* my looks */}
@@ -304,15 +275,15 @@ function Home() {
                 alt="dress icon"
               />
             </div>
-
-            <div className="subtitles look">
-              <h2>MY SEWING WORKS</h2>
-            </div>
+            {/* タイトルだけ AnimatedTitle */}
+            <AnimatedTitle
+              text={'MY SEWING WORKS'}
+              trigger=".my-looks-section"
+              className="subtitles look"
+            />
             <h3 className="made-by-me">🩷#MadeByMe🩷</h3>
           </div>
-          <h3 className="made-by-me">🩷#MadeByMe🩷</h3>
         </div>
-
         <PhotoGallery />
         <div className="diagonal-bottom-mylooks"></div>
       </section>
@@ -321,4 +292,5 @@ function Home() {
     </div>
   );
 }
+
 export default Home;

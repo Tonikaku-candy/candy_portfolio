@@ -76,6 +76,7 @@ body {
 
 .slide-card h3 {
   font-size: 35px;
+    font-size:clamp(20px, 2vw, 35px);
   /* height: 2em; */
    /* max-width: 600px; */
 
@@ -89,6 +90,7 @@ body {
 .slide-card h4 {
   font-family: 'Bungee', sans-serif;
   font-size: 18px;
+    font-size: clamp(12px, 1vw, 18px);
   color: #555;
   font-weight: bold;
   padding: 2rem;
@@ -99,6 +101,7 @@ body {
 .slide-card p {
   font-family: 'Fredoka', 'sans-serif';
   font-size: 23px;
+  font-size:clamp(12px, 2vw, 23px);
   color: #666;
   padding-left: 15px;
   padding-right: 15px;

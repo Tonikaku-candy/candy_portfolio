@@ -1,11 +1,56 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import TagBar from '../../components/TagBar';
 import Footer from '../../components/Footer';
 import projects from '../../data/ProjectData';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import '../../components/TagBar.css';
 import './Works.css';
+
+// GSAPプラグインを登録
+gsap.registerPlugin(ScrollTrigger);
+
+// AnimatedTitleコンポーネントを統合
+const AnimatedTitle = ({ text, trigger, className }) => {
+  const titleRef = useRef(null);
+
+  useEffect(() => {
+    if (titleRef.current && trigger.current) {
+      const chars = titleRef.current.querySelectorAll('.char');
+      gsap.fromTo(
+        chars,
+        { y: 40, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.5,
+          stagger: 0.08,
+          ease: 'back.out(1.7)',
+          scrollTrigger: {
+            trigger: trigger.current,
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+            once: true,
+          },
+        }
+      );
+    }
+  }, [trigger]);
+
+  return (
+    <div ref={titleRef} className={className}>
+      <h2>
+        {text.split('').map((char, i) => (
+          <span key={i} className="char">
+            {char === ' ' ? '\u00A0' : char}
+          </span>
+        ))}
+      </h2>
+    </div>
+  );
+};
 
 // images
 import eyeIcon from '../../assets/home/featured-projects/eye.png';
@@ -25,11 +70,47 @@ const tags = [...baseTags, ...baseTags, ...baseTags]; // タグを繰り返し�
 
 function Works() {
   const [selectedTag, setSelectedTag] = useState('');
+  const allProjectsTitleTriggerRef = useRef(null);
+  const projectsGridRef = useRef(null);
+  const sectionCenterRef = useRef(null);
+
+  // 新しいuseEffectフックを追加してセクションのフェードインを管理
+
+  // プロジェクトグリッドのフェードインアニメーション
+  useEffect(() => {
+    if (projectsGridRef.current) {
+      const cards = projectsGridRef.current.querySelectorAll('.project-card');
+
+      cards.forEach((card, i) => {
+        gsap.fromTo(
+          card,
+          { opacity: 0, y: 40 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: card,
+              start: 'top 70%',
+              toggleActions: 'play none none none',
+              once: true,
+            },
+          }
+        );
+      });
+    }
+
+    // cleanup
+    return () => {
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+    };
+  }, []);
 
   return (
     <>
       <div className="works">
-           <div className="grid-overlay-works"></div>
+        <div className="grid-overlay-works"></div>
 
         {/* タグバー */}
         <div className="work-section">
@@ -42,9 +123,10 @@ function Works() {
 
         {/* プロジェクト一覧セクション */}
         <section className="all-projects-section">
-              
-          <div className="all-projects-title-wrapper">
-               
+          <div
+            className="all-projects-title-wrapper"
+            ref={allProjectsTitleTriggerRef}
+          >
             <div className="all-projects-title">
               <div className="all-projects-title-image-wrapper">
                 <img
@@ -53,14 +135,17 @@ function Works() {
                   alt="eye icon"
                 />
               </div>
-              <div className="subtitles all-projects">
-                <h2>ALL PROJECTS</h2>
-              </div>
+              {/* AnimatedTitleコンポーネントを適用 */}
+              <AnimatedTitle
+                text="ALL PROJECTS"
+                trigger={allProjectsTitleTriggerRef}
+                className="subtitles all-projects"
+              />
             </div>
           </div>
 
           {/* カテゴリーフィルター */}
-          <div className="section-center">
+          <div className="section-center" ref={sectionCenterRef}>
             {[
               'All',
               'Content Creation',
@@ -84,8 +169,7 @@ function Works() {
           </div>
 
           {/* プロジェクトカード表示 */}
-          <div className="projects-grid">
-              
+          <div className="projects-grid" ref={projectsGridRef}>
             {projects
               .filter(
                 (project) =>
@@ -122,7 +206,7 @@ function Works() {
               ))}
           </div>
         </section>
-          <div className="diagonal-bottom-works"></div>
+        <div className="diagonal-bottom-works"></div>
       </div>
 
       <Footer />

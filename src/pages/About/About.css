@@ -67,7 +67,7 @@ body {
   flex: 1;
   position: relative;
   /* height: 300px; */
-  right: -100px;
+  right: -30px;
   /* width: 60%; */
   /* top: 10%; */
 }
@@ -76,28 +76,32 @@ body {
   position: absolute;
   top: -10%;
   top: clamp(-60px, -5vw, 0px);
-    width: 50%;
+  width: 50%;
   width: clamp(220px, 20vw, 240px);
 
   z-index: 2;
 }
 
-
-#rabbit-ufo-all_svg__ufo {
+/* #rabbit-ufo-all_svg__ufo {
   animation: floatUfo 4s ease-in-out infinite;
-}
+} */
 
-@keyframes floatUfo {
-  0%, 100% { transform: translateY(10px); }
-  50% { transform: translateY(55px); }
-}
-
+/* @keyframes floatUfo {
+  0%,
+  100% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(55px);
+  }
+} */
 
 /* light animation */
-.light {
- z-index: 0;
+/* .light {
+  z-index: 0;
   opacity: 0;
   animation: lightBeamLoop 5s ease-in-out infinite;
+
 }
 
 @keyframes lightBeamLoop {
@@ -113,20 +117,27 @@ body {
   100% {
     opacity: 0;
   }
-}
+} */
 
-/* girl animation */
-.girl {
-opacity: 0;
+/* girl animation */ 
+/* .girl {
+  opacity: 0;
   animation: girlLoop 5s ease-in-out infinite;
-}
 
-@keyframes girlLoop {
+} */
+
+/* .ufo-wrapper.active {
+  opacity: 1;
+  transform: translateY(0);
+} */
+
+ /* @keyframes girlLoop {
   0% {
     opacity: 0;
     transform: translateY(-20px);
   }
-  22%, 40% {
+  22%,
+  40% {
     opacity: 1;
     transform: translateY(0);
   }
@@ -134,7 +145,8 @@ opacity: 0;
     opacity: 0;
     transform: translateY(-20px);
   }
-} */
+}  */
+
 
 /* hello end */
 
@@ -191,7 +203,6 @@ opacity: 0;
   /* overflow: hidden; */
   z-index: 5;
   padding-bottom: 100px;
-  
 }
 
 .about-card {
@@ -303,7 +314,7 @@ opacity: 0;
 }
 
 .about-profile-text {
-   font-family: 'Fredoka', sans-serif;
+  font-family: 'Fredoka', sans-serif;
   position: absolute;
   z-index: 3;
   left: 50%;
@@ -682,10 +693,8 @@ opacity: 0;
   display: inline-block;
 }
 
-
-
 .made-by-me.about {
-    font-family: 'Fredoka', sans-serif;
+  font-family: 'Fredoka', sans-serif;
   color: #ff4dc4;
   font-size: 1.5rem;
   margin-left: 40px;
@@ -697,10 +706,8 @@ opacity: 0;
     margin: 0;
     display: none;
     text-align: center;
-
   }
 }
-
 
 .about-yellow-bg-bottom {
   position: absolute;
@@ -762,6 +769,10 @@ opacity: 0;
   top: -200px;
   z-index: 5;
 }
+
+
+
+
 
 
 
@@ -855,7 +866,7 @@ opacity: 0;
     flex: 1;
     position: relative;
     height: 50px;
-    top: 10px;
+    top: 0px;
     /* transform: scale(1.5); */
   }
 
@@ -863,10 +874,10 @@ opacity: 0;
     position: absolute;
 
     width: 70%;
-      width: clamp(150px, 20vw, 200px);
+    width: clamp(150px, 20vw, 200px);
     z-index: 2;
     top: -70%;
-    right: 50%;
+
     transform: translateX(-0%);
   }
 
@@ -1109,21 +1120,59 @@ opacity: 0;
     top: -80px;
   }
   .about-profile-image-wrapper {
-  display: none;
-  position: absolute;
-  border-radius: 2rem;
-  border: 5px solid #343434;
-  overflow: hidden;
-  right: 0;
-  top: 0;
-}
+    display: none;
+    position: absolute;
+    border-radius: 2rem;
+    border: 5px solid #343434;
+    overflow: hidden;
+    right: 0;
+    top: 0;
+  }
+
+    @keyframes floatUfoMobile {
+    0%, 100% {
+      transform: translateY(5px);
+    }
+    50% {
+      transform: translateY(20px);
+    }
+  }
+
+  .ufo {
+    animation: floatUfoMobile 4s ease-in-out infinite;
+  }
+
+    /* light animation */
+   /* .light {
+    position: absolute;
+
+    left: -15%;
+    width: 35%;
+    z-index: 0;
+    opacity: 0;
+    animation: lightBeamLoop 5s ease-in-out infinite;
+    top: 90%;
+  }  */
+
+  /* .girl {
+    position: absolute;
+    left: 2%;
+    width: 20%;
+    width: clamp(40px, 10vw, 80px);
+    transform: translateX(-50%) translateY(20px) scaleX(-1);
+    opacity: 0;
+    z-index: 1;
+    animation: girlLoop 5s ease-in-out infinite;
+    top: 80px;
+  }  */
 }
 
 @media (max-width: 480px) {
-  .ufo {
-    width: clamp(150px, 40vw, 200px);
-    top: 20%;
-    right: 90px;
+  .ufo-wrapper {
+    position: relative;
+    width: clamp(100px, 40vw, 200px);
+    top: 40%;
+    right: 0px;
     transform: translateX(0%);
   }
 }

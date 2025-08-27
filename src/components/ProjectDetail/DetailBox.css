@@ -7,7 +7,7 @@
   border-radius: 20px;
 
   max-width: 1800px;
-  width: 100%; /* レスポンシブ対応 */
+  width: 100%;
 }
 
 /* タイトル部分の共通スタイル */
@@ -27,8 +27,7 @@
 
 /* list */
 .detail-box-content ul {
-  padding-left: 1.2rem; /* 左のインデント少しだけ残す */
-  margin: 0; /* 上下の余白をなくす */
+  margin: 0;
 }
 
 .detail-box-content li {
