@@ -1,6 +1,8 @@
-import * as React from "react";
-const SvgRabbitUfoAll = (props) => (
+import * as React from 'react';
+
+const SvgRabbitUfoAll = React.forwardRef((props, ref) => (
   <svg
+    ref={ref} // refをSVG要素に転送
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
     viewBox="0 0 838.51 1370.06"
@@ -82,7 +84,7 @@ const SvgRabbitUfoAll = (props) => (
       </clipPath>
       <style>
         {
-          ".rabbit-ufo-all_svg__cls-1,.rabbit-ufo-all_svg__cls-10,.rabbit-ufo-all_svg__cls-12,.rabbit-ufo-all_svg__cls-13,.rabbit-ufo-all_svg__cls-14,.rabbit-ufo-all_svg__cls-15,.rabbit-ufo-all_svg__cls-17,.rabbit-ufo-all_svg__cls-18,.rabbit-ufo-all_svg__cls-19,.rabbit-ufo-all_svg__cls-2,.rabbit-ufo-all_svg__cls-21,.rabbit-ufo-all_svg__cls-22,.rabbit-ufo-all_svg__cls-23,.rabbit-ufo-all_svg__cls-24,.rabbit-ufo-all_svg__cls-25,.rabbit-ufo-all_svg__cls-26,.rabbit-ufo-all_svg__cls-27,.rabbit-ufo-all_svg__cls-28,.rabbit-ufo-all_svg__cls-29,.rabbit-ufo-all_svg__cls-3,.rabbit-ufo-all_svg__cls-30,.rabbit-ufo-all_svg__cls-31,.rabbit-ufo-all_svg__cls-33,.rabbit-ufo-all_svg__cls-34,.rabbit-ufo-all_svg__cls-35,.rabbit-ufo-all_svg__cls-36,.rabbit-ufo-all_svg__cls-37,.rabbit-ufo-all_svg__cls-38,.rabbit-ufo-all_svg__cls-6,.rabbit-ufo-all_svg__cls-8{stroke-miterlimit:10}.rabbit-ufo-all_svg__cls-1,.rabbit-ufo-all_svg__cls-10,.rabbit-ufo-all_svg__cls-12,.rabbit-ufo-all_svg__cls-13,.rabbit-ufo-all_svg__cls-15,.rabbit-ufo-all_svg__cls-17,.rabbit-ufo-all_svg__cls-2,.rabbit-ufo-all_svg__cls-21,.rabbit-ufo-all_svg__cls-22,.rabbit-ufo-all_svg__cls-23,.rabbit-ufo-all_svg__cls-24,.rabbit-ufo-all_svg__cls-25,.rabbit-ufo-all_svg__cls-26,.rabbit-ufo-all_svg__cls-27,.rabbit-ufo-all_svg__cls-28,.rabbit-ufo-all_svg__cls-29,.rabbit-ufo-all_svg__cls-3,.rabbit-ufo-all_svg__cls-30,.rabbit-ufo-all_svg__cls-34,.rabbit-ufo-all_svg__cls-37,.rabbit-ufo-all_svg__cls-38,.rabbit-ufo-all_svg__cls-8{stroke:#231815}.rabbit-ufo-all_svg__cls-1,.rabbit-ufo-all_svg__cls-13,.rabbit-ufo-all_svg__cls-22,.rabbit-ufo-all_svg__cls-26,.rabbit-ufo-all_svg__cls-34,.rabbit-ufo-all_svg__cls-35,.rabbit-ufo-all_svg__cls-8{stroke-width:2px}.rabbit-ufo-all_svg__cls-1,.rabbit-ufo-all_svg__cls-37{fill:#282828}.rabbit-ufo-all_svg__cls-15,.rabbit-ufo-all_svg__cls-2,.rabbit-ufo-all_svg__cls-26,.rabbit-ufo-all_svg__cls-3,.rabbit-ufo-all_svg__cls-35,.rabbit-ufo-all_svg__cls-36{fill:none}.rabbit-ufo-all_svg__cls-10,.rabbit-ufo-all_svg__cls-17,.rabbit-ufo-all_svg__cls-18,.rabbit-ufo-all_svg__cls-2,.rabbit-ufo-all_svg__cls-21,.rabbit-ufo-all_svg__cls-25,.rabbit-ufo-all_svg__cls-27,.rabbit-ufo-all_svg__cls-28,.rabbit-ufo-all_svg__cls-33,.rabbit-ufo-all_svg__cls-36,.rabbit-ufo-all_svg__cls-37,.rabbit-ufo-all_svg__cls-38{stroke-width:7px}.rabbit-ufo-all_svg__cls-3{stroke-width:8px}.rabbit-ufo-all_svg__cls-40{fill:#ffc5ea}.rabbit-ufo-all_svg__cls-14,.rabbit-ufo-all_svg__cls-19,.rabbit-ufo-all_svg__cls-6{stroke:#312974;stroke-width:11px}.rabbit-ufo-all_svg__cls-6{fill:#ff88e9}.rabbit-ufo-all_svg__cls-27,.rabbit-ufo-all_svg__cls-8{fill:#3f3f3f}.rabbit-ufo-all_svg__cls-10,.rabbit-ufo-all_svg__cls-12,.rabbit-ufo-all_svg__cls-22,.rabbit-ufo-all_svg__cls-42{fill:#ffefe9}.rabbit-ufo-all_svg__cls-12,.rabbit-ufo-all_svg__cls-15,.rabbit-ufo-all_svg__cls-23,.rabbit-ufo-all_svg__cls-30{stroke-width:3px}.rabbit-ufo-all_svg__cls-13,.rabbit-ufo-all_svg__cls-21,.rabbit-ufo-all_svg__cls-43{fill:#fff}.rabbit-ufo-all_svg__cls-14{fill:#e7ff80}.rabbit-ufo-all_svg__cls-17,.rabbit-ufo-all_svg__cls-18,.rabbit-ufo-all_svg__cls-23,.rabbit-ufo-all_svg__cls-44{fill:#b08db5}.rabbit-ufo-all_svg__cls-18,.rabbit-ufo-all_svg__cls-31,.rabbit-ufo-all_svg__cls-33,.rabbit-ufo-all_svg__cls-35,.rabbit-ufo-all_svg__cls-36{stroke:#000}.rabbit-ufo-all_svg__cls-19{fill:#ffc7f7}.rabbit-ufo-all_svg__cls-24,.rabbit-ufo-all_svg__cls-25,.rabbit-ufo-all_svg__cls-30,.rabbit-ufo-all_svg__cls-48{fill:#231815}.rabbit-ufo-all_svg__cls-28,.rabbit-ufo-all_svg__cls-29{fill:#e5aeff}.rabbit-ufo-all_svg__cls-31,.rabbit-ufo-all_svg__cls-33{fill:#6f5e72}.rabbit-ufo-all_svg__cls-34,.rabbit-ufo-all_svg__cls-38{fill:#444}.rabbit-ufo-all_svg__cls-49{fill:#bbb3bc}.rabbit-ufo-all_svg__cls-50{fill:#232526}.rabbit-ufo-all_svg__cls-51{fill:#312974}"
+          '.rabbit-ufo-all_svg__cls-1,.rabbit-ufo-all_svg__cls-10,.rabbit-ufo-all_svg__cls-12,.rabbit-ufo-all_svg__cls-13,.rabbit-ufo-all_svg__cls-14,.rabbit-ufo-all_svg__cls-15,.rabbit-ufo-all_svg__cls-17,.rabbit-ufo-all_svg__cls-18,.rabbit-ufo-all_svg__cls-19,.rabbit-ufo-all_svg__cls-2,.rabbit-ufo-all_svg__cls-21,.rabbit-ufo-all_svg__cls-22,.rabbit-ufo-all_svg__cls-23,.rabbit-ufo-all_svg__cls-24,.rabbit-ufo-all_svg__cls-25,.rabbit-ufo-all_svg__cls-26,.rabbit-ufo-all_svg__cls-27,.rabbit-ufo-all_svg__cls-28,.rabbit-ufo-all_svg__cls-29,.rabbit-ufo-all_svg__cls-3,.rabbit-ufo-all_svg__cls-30,.rabbit-ufo-all_svg__cls-31,.rabbit-ufo-all_svg__cls-33,.rabbit-ufo-all_svg__cls-34,.rabbit-ufo-all_svg__cls-35,.rabbit-ufo-all_svg__cls-36,.rabbit-ufo-all_svg__cls-37,.rabbit-ufo-all_svg__cls-38,.rabbit-ufo-all_svg__cls-6,.rabbit-ufo-all_svg__cls-8{stroke-miterlimit:10}.rabbit-ufo-all_svg__cls-1,.rabbit-ufo-all_svg__cls-10,.rabbit-ufo-all_svg__cls-12,.rabbit-ufo-all_svg__cls-13,.rabbit-ufo-all_svg__cls-15,.rabbit-ufo-all_svg__cls-17,.rabbit-ufo-all_svg__cls-2,.rabbit-ufo-all_svg__cls-21,.rabbit-ufo-all_svg__cls-22,.rabbit-ufo-all_svg__cls-23,.rabbit-ufo-all_svg__cls-24,.rabbit-ufo-all_svg__cls-25,.rabbit-ufo-all_svg__cls-26,.rabbit-ufo-all_svg__cls-27,.rabbit-ufo-all_svg__cls-28,.rabbit-ufo-all_svg__cls-29,.rabbit-ufo-all_svg__cls-3,.rabbit-ufo-all_svg__cls-30,.rabbit-ufo-all_svg__cls-34,.rabbit-ufo-all_svg__cls-37,.rabbit-ufo-all_svg__cls-38,.rabbit-ufo-all_svg__cls-8{stroke:#231815}.rabbit-ufo-all_svg__cls-1,.rabbit-ufo-all_svg__cls-13,.rabbit-ufo-all_svg__cls-22,.rabbit-ufo-all_svg__cls-26,.rabbit-ufo-all_svg__cls-34,.rabbit-ufo-all_svg__cls-35,.rabbit-ufo-all_svg__cls-8{stroke-width:2px}.rabbit-ufo-all_svg__cls-1,.rabbit-ufo-all_svg__cls-37{fill:#282828}.rabbit-ufo-all_svg__cls-15,.rabbit-ufo-all_svg__cls-2,.rabbit-ufo-all_svg__cls-26,.rabbit-ufo-all_svg__cls-3,.rabbit-ufo-all_svg__cls-35,.rabbit-ufo-all_svg__cls-36{fill:none}.rabbit-ufo-all_svg__cls-10,.rabbit-ufo-all_svg__cls-17,.rabbit-ufo-all_svg__cls-18,.rabbit-ufo-all_svg__cls-2,.rabbit-ufo-all_svg__cls-21,.rabbit-ufo-all_svg__cls-25,.rabbit-ufo-all_svg__cls-27,.rabbit-ufo-all_svg__cls-28,.rabbit-ufo-all_svg__cls-33,.rabbit-ufo-all_svg__cls-36,.rabbit-ufo-all_svg__cls-37,.rabbit-ufo-all_svg__cls-38{stroke-width:7px}.rabbit-ufo-all_svg__cls-3{stroke-width:8px}.rabbit-ufo-all_svg__cls-40{fill:#ffc5ea}.rabbit-ufo-all_svg__cls-14,.rabbit-ufo-all_svg__cls-19,.rabbit-ufo-all_svg__cls-6{stroke:#312974;stroke-width:11px}.rabbit-ufo-all_svg__cls-6{fill:#ff88e9}.rabbit-ufo-all_svg__cls-27,.rabbit-ufo-all_svg__cls-8{fill:#3f3f3f}.rabbit-ufo-all_svg__cls-10,.rabbit-ufo-all_svg__cls-12,.rabbit-ufo-all_svg__cls-22,.rabbit-ufo-all_svg__cls-42{fill:#ffefe9}.rabbit-ufo-all_svg__cls-12,.rabbit-ufo-all_svg__cls-15,.rabbit-ufo-all_svg__cls-23,.rabbit-ufo-all_svg__cls-30{stroke-width:3px}.rabbit-ufo-all_svg__cls-13,.rabbit-ufo-all_svg__cls-21,.rabbit-ufo-all_svg__cls-43{fill:#fff}.rabbit-ufo-all_svg__cls-14{fill:#e7ff80}.rabbit-ufo-all_svg__cls-17,.rabbit-ufo-all_svg__cls-18,.rabbit-ufo-all_svg__cls-23,.rabbit-ufo-all_svg__cls-44{fill:#b08db5}.rabbit-ufo-all_svg__cls-18,.rabbit-ufo-all_svg__cls-31,.rabbit-ufo-all_svg__cls-33,.rabbit-ufo-all_svg__cls-35,.rabbit-ufo-all_svg__cls-36{stroke:#000}.rabbit-ufo-all_svg__cls-19{fill:#ffc7f7}.rabbit-ufo-all_svg__cls-24,.rabbit-ufo-all_svg__cls-25,.rabbit-ufo-all_svg__cls-30,.rabbit-ufo-all_svg__cls-48{fill:#231815}.rabbit-ufo-all_svg__cls-28,.rabbit-ufo-all_svg__cls-29{fill:#e5aeff}.rabbit-ufo-all_svg__cls-31,.rabbit-ufo-all_svg__cls-33{fill:#6f5e72}.rabbit-ufo-all_svg__cls-34,.rabbit-ufo-all_svg__cls-38{fill:#444}.rabbit-ufo-all_svg__cls-49{fill:#bbb3bc}.rabbit-ufo-all_svg__cls-50{fill:#232526}.rabbit-ufo-all_svg__cls-51{fill:#312974}'
         }
       </style>
       <image
@@ -101,9 +103,9 @@ const SvgRabbitUfoAll = (props) => (
           d="m416.13 289.91-321.32 843.7 318.9 39.98 315.13-48.58z"
           style={{
             strokeMiterlimit: 10,
-            stroke: "#312974",
+            stroke: '#312974',
             strokeWidth: 11,
-            fill: "#fffad9",
+            fill: '#fffad9',
           }}
         />
         <ellipse
@@ -113,9 +115,9 @@ const SvgRabbitUfoAll = (props) => (
           ry={161.91}
           style={{
             strokeMiterlimit: 10,
-            stroke: "#312974",
+            stroke: '#312974',
             strokeWidth: 11,
-            fill: "#fff7b0",
+            fill: '#fff7b0',
           }}
         />
       </g>
@@ -146,7 +148,7 @@ const SvgRabbitUfoAll = (props) => (
         <path
           d="M419.25 577.84c-111.53 0-216.32-11.4-295.06-32.09C48.76 525.93 5.5 499.47 5.5 473.17s43.26-52.76 118.69-72.59c78.74-20.69 183.53-32.09 295.06-32.09s216.32 11.4 295.06 32.09C789.74 420.4 833 446.86 833 473.17s-43.26 52.76-118.69 72.58c-78.74 20.69-183.53 32.09-295.06 32.09"
           style={{
-            fill: "#ff88e9",
+            fill: '#ff88e9',
           }}
         />
         <path
@@ -172,7 +174,7 @@ const SvgRabbitUfoAll = (props) => (
         <path
           d="M419.25 461.01c-133.16 0-227.42-7.03-227.42-98.02s102.02-171.96 227.42-171.96 227.42 77.14 227.42 171.96-94.26 98.02-227.42 98.02"
           style={{
-            fill: "#aee6ff",
+            fill: '#aee6ff',
           }}
         />
         <path
@@ -385,7 +387,7 @@ const SvgRabbitUfoAll = (props) => (
       />
       <g
         style={{
-          clipPath: "url(#rabbit-ufo-all_svg__clippath)",
+          clipPath: 'url(#rabbit-ufo-all_svg__clippath)',
         }}
       >
         <path
@@ -395,7 +397,7 @@ const SvgRabbitUfoAll = (props) => (
         <use
           xlinkHref="#rabbit-ufo-all_svg__image"
           style={{
-            clipPath: "url(#rabbit-ufo-all_svg__clippath-1)",
+            clipPath: 'url(#rabbit-ufo-all_svg__clippath-1)',
           }}
           transform="matrix(-.02 0 0 .02 421.79 1016.69)"
         />
@@ -427,7 +429,7 @@ const SvgRabbitUfoAll = (props) => (
       <use
         xlinkHref="#rabbit-ufo-all_svg__image"
         style={{
-          clipPath: "url(#rabbit-ufo-all_svg__clippath-2)",
+          clipPath: 'url(#rabbit-ufo-all_svg__clippath-2)',
         }}
         transform="matrix(-.02 0 0 .02 435.56 1043.08)"
       />
@@ -446,7 +448,7 @@ const SvgRabbitUfoAll = (props) => (
       <use
         xlinkHref="#rabbit-ufo-all_svg__image"
         style={{
-          clipPath: "url(#rabbit-ufo-all_svg__clippath-3)",
+          clipPath: 'url(#rabbit-ufo-all_svg__clippath-3)',
         }}
         transform="rotate(18.96 -2898.524 1442.586)scale(.02)"
       />
@@ -478,18 +480,18 @@ const SvgRabbitUfoAll = (props) => (
         d="M557.25 910.93c17.24 7.63 76.16 76.65 60.59 117.75s.71 46.67 3.68 56.72c3.22 10.91-6.51 23.48-21.58 30.04-12.98 5.65-4.36 27.48 9.56 29.28 0 0-22.65 15.63-46.94-14.44-9.09-11.26 20.59-22.04 19.7-39.51s-31.09-55.91-26.72-84.06.89-50.78-10.84-57.67"
         style={{
           strokeMiterlimit: 10,
-          stroke: "#231815",
+          stroke: '#231815',
           strokeWidth: 7,
-          fill: "url(#rabbit-ufo-all_svg___\u540D\u79F0\u672A\u8A2D\u5B9A\u30B0\u30E9\u30C7\u30FC\u30B7\u30E7\u30F3_8)",
+          fill: 'url(#rabbit-ufo-all_svg___\u540D\u79F0\u672A\u8A2D\u5B9A\u30B0\u30E9\u30C7\u30FC\u30B7\u30E7\u30F3_8)',
         }}
       />
       <path
         d="M273.64 895.15c-17.24 7.63-76.16 76.65-60.59 117.75s-.71 46.67-3.68 56.72c-3.22 10.91 6.51 23.48 21.58 30.04 12.98 5.65-.37 26.25-14.3 28.05 0 0 40.98 23.94 51.68-13.21 5.22-18.12-20.59-22.04-19.7-39.51s31.09-55.91 26.72-84.06-.89-50.78 10.84-57.67"
         style={{
           strokeMiterlimit: 10,
-          stroke: "#231815",
+          stroke: '#231815',
           strokeWidth: 7,
-          fill: "url(#rabbit-ufo-all_svg___\u540D\u79F0\u672A\u8A2D\u5B9A\u30B0\u30E9\u30C7\u30FC\u30B7\u30E7\u30F3_7)",
+          fill: 'url(#rabbit-ufo-all_svg___\u540D\u79F0\u672A\u8A2D\u5B9A\u30B0\u30E9\u30C7\u30FC\u30B7\u30E7\u30F3_7)',
         }}
       />
       <path
@@ -504,9 +506,9 @@ const SvgRabbitUfoAll = (props) => (
         d="M518.15 962.8s3.23 5.65-10.08 24.84c-13.31 19.2-22.08 40.36-20.98 52.57s-17.31 19.59-17.31 19.59 9.38-12.17 7.68-26.15 4.2-50.51 13.6-66.28 5.12-47.9 2.58-57.48l-3.43 28.57-9.96-6.43s9.1-41.3 2.42-51.3l-10 46.51s-28.23-17.83-42.88-16.26l4.66-51.17s-9.61 35.68-13.15 49.49c0 0-12.95-1.83-20.24-1.51-5.35.24 5.82-56.17 7.14-64.35s-36.36 51.65-38.43 62.56c0 0-43.39-7.81-56.27-1.44 0 0 10.4-53.09 19.85-79.35l-29.61 77.47-5.67 1.4 1.66-48.44c-10.49.15-12.46 105.52-18.86 116.07-7.9 13.02-6.46 50.65 1.92 59.95 8.39 9.3 0 22.63 0 22.63s.63-13.19-9.41-16.02c-10.03-2.84-20.06-40.9-18.35-66.89 1.48-22.53 19.34-71.45 27.3-108.59 0 0 2.57-58.98 69.39-79.79 55.72-17.35 106.74-23.62 156.36 23.82 30.71 29.35 49.47 82.06 44.89 114.36-.41 2.92-.95 5.86-1.58 8.78-6.36 29.42-18.75 49.6-18.75 49.6l-14.48-16.74Z"
         style={{
           strokeMiterlimit: 10,
-          stroke: "#231815",
+          stroke: '#231815',
           strokeWidth: 7,
-          fill: "#3a3a3a",
+          fill: '#3a3a3a',
         }}
       />
       <circle
@@ -740,9 +742,9 @@ const SvgRabbitUfoAll = (props) => (
         d="M403.28 1070.49c-2.65.44-5.46.51-8.45.12l-3.54 30.4s40.83 13.19 59.94 6.69c19.1-6.5 31.49-32.61 31.49-32.61s-.41.59 0 0c9.42-31.03-8.67-40.82-9.25-41.15.55-.6-18.67-10.98-31.18.84-8.15 7.7-18.86 32.38-39 35.71"
         style={{
           strokeMiterlimit: 10,
-          stroke: "#231815",
+          stroke: '#231815',
           strokeWidth: 2,
-          fill: "#b08db5",
+          fill: '#b08db5',
         }}
       />
       <path
@@ -797,18 +799,18 @@ const SvgRabbitUfoAll = (props) => (
         d="M557.25 910.93c17.24 7.63 76.16 76.65 60.59 117.75s.71 46.67 3.68 56.72c3.22 10.91-6.51 23.48-21.58 30.04-12.98 5.65-4.36 27.48 9.56 29.28 0 0-22.65 15.63-46.94-14.44-9.09-11.26 20.59-22.04 19.7-39.51s-31.09-55.91-26.72-84.06.89-50.78-10.84-57.67"
         style={{
           strokeMiterlimit: 10,
-          stroke: "#231815",
+          stroke: '#231815',
           strokeWidth: 2,
-          fill: "url(#rabbit-ufo-all_svg__hairGradientBrown)",
+          fill: 'url(#rabbit-ufo-all_svg__hairGradientBrown)',
         }}
       />
       <path
         d="M273.64 895.15c-17.24 7.63-76.16 76.65-60.59 117.75s-.71 46.67-3.68 56.72c-3.22 10.91 6.51 23.48 21.58 30.04 12.98 5.65-.37 26.25-14.3 28.05 0 0 40.98 23.94 51.68-13.21 5.22-18.12-20.59-22.04-19.7-39.51s31.09-55.91 26.72-84.06-.89-50.78 10.84-57.67"
         style={{
           strokeMiterlimit: 10,
-          stroke: "#231815",
+          stroke: '#231815',
           strokeWidth: 2,
-          fill: "url(#rabbit-ufo-all_svg__hairGradientBrown-2)",
+          fill: 'url(#rabbit-ufo-all_svg__hairGradientBrown-2)',
         }}
       />
       <path
@@ -823,9 +825,9 @@ const SvgRabbitUfoAll = (props) => (
         d="M518.15 962.8s3.23 5.65-10.08 24.84c-13.31 19.2-22.08 40.36-20.98 52.57s-17.31 19.59-17.31 19.59 9.38-12.17 7.68-26.15 4.2-50.51 13.6-66.28 5.12-47.9 2.58-57.48l-3.43 28.57-9.96-6.43s9.1-41.3 2.42-51.3l-10 46.51s-28.23-17.83-42.88-16.26l4.66-51.17s-9.61 35.68-13.15 49.49c0 0-12.95-1.83-20.24-1.51-5.35.24 5.82-56.17 7.14-64.35s-36.36 51.65-38.43 62.56c0 0-43.39-7.81-56.27-1.44 0 0 10.4-53.09 19.85-79.35l-29.61 77.47-5.67 1.4 1.66-48.44c-10.49.15-12.46 105.52-18.86 116.07-7.9 13.02-6.46 50.65 1.92 59.95 8.39 9.3 0 22.63 0 22.63s.63-13.19-9.41-16.02c-10.03-2.84-20.06-40.9-18.35-66.89 1.48-22.53 19.34-71.45 27.3-108.59 0 0 2.57-58.98 69.39-79.79 55.72-17.35 106.74-23.62 156.36 23.82 30.71 29.35 49.47 82.06 44.89 114.36-.41 2.92-.95 5.86-1.58 8.78-6.36 29.42-18.75 49.6-18.75 49.6l-14.48-16.74Z"
         style={{
           strokeMiterlimit: 10,
-          stroke: "#231815",
+          stroke: '#231815',
           strokeWidth: 2,
-          fill: "#3a3a3a",
+          fill: '#3a3a3a',
         }}
       />
       <circle
@@ -844,5 +846,5 @@ const SvgRabbitUfoAll = (props) => (
       />
     </g>
   </svg>
-);
+));
 export default SvgRabbitUfoAll;

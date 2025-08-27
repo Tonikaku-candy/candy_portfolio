@@ -105,6 +105,10 @@
   border-radius: 16px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
+.modal-content {
+  text-align: center;
+}
+
 
 @media (max-width: 600px) {
   .thumbnail-slider-wrapper {
@@ -124,6 +128,15 @@
     font-size: 1rem;
   }
 
+  .modal-content img {
+  max-width: 90%;
+  aspect-ratio: 1/0.8;
+  max-height: 90vh;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transition: translate
+}
   /* .thumbnail-slider .thumb-media:nth-child(n + 3) {
     display: none; 
   } */

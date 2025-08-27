@@ -1,5 +1,5 @@
 {
-  "name": "assignment2",
+  "name": "candy-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,6 +12,7 @@
   "dependencies": {
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide-extension-auto-scroll": "^0.5.3",
+    "gsap": "^3.13.0",
     "motion": "^12.23.12",
     "react": "^19.1.0",
     "react-burger-menu": "^3.1.0",

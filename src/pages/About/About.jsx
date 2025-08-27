@@ -1,15 +1,15 @@
+// src/pages/About/About.jsx
 import './About.css';
 import PhotoGallery from '../../components/PhotoGallery';
 import Footer from '../../components/Footer';
-import { useEffect } from 'react';
-import RabbitUfoAll from "../../components/RabbitUfoAll.jsx";
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import AnimatedTitle from '../../components/AnimatedTitle';
+import UfoAnimation from '../../components/Gsap/UfoAnimation';
 
-
-// images
-
+// images & icons
 import myLookTitleImage from '../../assets/home/my-look/dress-icon.png';
-
-//icons
 import illustratorIcon from '../../assets/About/icons/illustrator-icon.png';
 import aftereffectsIcon from '../../assets/About/icons/aftereffects-icon.png';
 import canvaIcon from '../../assets/About/icons/canva-icon.png';
@@ -36,56 +36,142 @@ import jordan from '../../assets/About/jordan-profile-photo.png';
 import sunny from '../../assets/About/sunny-profile-photo.png';
 import branden from '../../assets/About/branden-profile-photo.png';
 
+gsap.registerPlugin(ScrollTrigger);
+
 function About() {
+  // HELLO section refs
+  const helloWrapRef = useRef(null);
+  const helloTitleRef = useRef(null);
+  const helloSubRef = useRef(null);
+  const helloPhotoRef = useRef(null);
+
+  // Section refs for AnimatedTitle
+  const aboutCardRef = useRef(null);
+  const classmatesGridRef = useRef(null);
+
+  const sayTitleRef = useRef(null);
+  const myLooksRef = useRef(null);
+
+  // ---- 1) HELLOセクション：スクロールで順番フェードイン ----
   useEffect(() => {
+    if (!helloWrapRef.current) return;
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: helloWrapRef.current,
+        start: 'top 75%',
+        toggleActions: 'play none none none',
+        once: true,
+      },
+    });
+
+    tl.fromTo(
+      helloTitleRef.current,
+      { y: 30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }
+    )
+      .fromTo(
+        helloSubRef.current,
+        { y: 20, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' },
+        '-=0.2'
+      )
+      .fromTo(
+        helloPhotoRef.current,
+        { y: 40, opacity: 0 },
+        { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out' },
+        '-=0.1'
+      );
+
+    return () => {
+      tl.kill();
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+    };
+  }, []);
+
+  // ---- 2) カメレオン：IntersectionObserver ----
+  useEffect(() => {
+    const target = document.querySelector('.chameleon-wrapper');
+    if (!target) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         const chameleon = document.querySelector('.colorful-chameleon');
+        if (!chameleon) return;
         if (entry.isIntersecting) {
           chameleon.classList.remove('animate');
-          void chameleon.offsetWidth;
+          void chameleon.offsetWidth; // restart CSS animation
           chameleon.classList.add('animate');
         }
       },
       { threshold: 0.5 }
     );
 
-    const target = document.querySelector('.chameleon-wrapper');
-    if (target) observer.observe(target);
-
+    observer.observe(target);
     return () => observer.disconnect();
+  }, []);
+
+  // ---- 3) Classmate Cards fade in ----
+  useEffect(() => {
+    if (!classmatesGridRef.current) return;
+
+    const cards = classmatesGridRef.current.querySelectorAll('.classmate-card');
+
+    cards.forEach((card, i) => {
+  gsap.fromTo(
+    card,
+    { autoAlpha: 0, y: 24, scale: 0.9 },
+    {
+      autoAlpha: 1,
+      y: 0,
+      scale: 1,
+      duration: 0.6,
+      ease: 'back.out(1.8)',   // ちょい弾む
+      delay: i * 0.12,
+      transformOrigin: '50% 50%',
+      scrollTrigger: {
+        trigger: card,
+        start: 'top 80%',
+        toggleActions: 'play none none none',
+        once: true,
+      },
+    }
+  );
+});
+
+    return () => {
+      ScrollTrigger.getAll().forEach((st) => st.kill());
+    };
   }, []);
 
   return (
     <>
       {/* hello section */}
-      <div className="hello-section">
+      <div className="hello-section" ref={helloWrapRef}>
         <div className="hello-content-wrapper">
           <div className="hello-text">
-            <h1>
+            <h1 ref={helloTitleRef}>
               <span className="hello-title-top">HELLO, I'M</span>
               <br />
               <span className="hello-title-bottom">CANDY!</span>
             </h1>
-            <p className="hello-subtitle">
+            <p className="hello-subtitle" ref={helloSubRef}>
               Creating a colorful world <br />
               inspired by Japanese <br />
               kawaii culture ✨
             </p>
           </div>
-          <div className="about-profile-image-wrapper">
+          <div className="about-profile-image-wrapper" ref={helloPhotoRef}>
             <img
               src={profileBg}
               alt="sakura background"
               className="about-profile-bg"
             />
-
             <img
               src={profile2}
               alt="Candy profile picture hover"
               className="about-profile-image side"
             />
-
             <img
               src={profile1}
               alt="Candy profile picture"
@@ -96,25 +182,22 @@ function About() {
         </div>
       </div>
 
-      {/* hello section end */}
-
       {/* about section */}
       <div className="about-page-section">
         <div className="diagonal-top-about"></div>
         <div className="grid-overlay-about"></div>
+
         <div className="about-profile-image-wrapper mobile">
           <img
             src={profileBg}
             alt="sakura background"
             className="about-profile-bg mobile"
           />
-
           <img
             src={profile2}
             alt="Candy profile picture hover"
             className="about-profile-image side mobile"
           />
-
           <img
             src={profile1}
             alt="Candy profile picture"
@@ -124,9 +207,14 @@ function About() {
         </div>
 
         {/* Section Title & Text Box */}
-        <div className="about-card">
+        <div className="about-card" ref={aboutCardRef}>
           <div className="about-card-inner"></div>
-          <h2 className="about-section-title">ABOUT</h2>
+          <AnimatedTitle
+            text="ABOUT"
+            trigger={aboutCardRef}
+            className="about-section-title"
+          />
+
           <div className="about-page-content">
             <div className="about-page-text">
               <h3>I’m Candy!</h3>
@@ -158,20 +246,15 @@ function About() {
                   goal is to make people smile and enjoy the moment.
                 </p>
                 <div className="ufo-wrapper">
-                  <RabbitUfoAll className="ufo" />
+                  <UfoAnimation />
                 </div>
-                {/* <div className="ufo-wrapper">
-                  <img src={lightImage} alt="light" className="light" />
-                  <img src={ufoImage} alt="rabbit-ufo" className="ufo" />
-                  <img src={girlImage} alt="girl" className="girl" />
-                </div> */}
               </div>
 
               <p className="ufo-bottom-text">
                 I may be quiet and shy in person, but my imagination is anything
                 but. I’m always thinking of odd, funny ideas and unexpected ways
                 to tell a story. One of my creative mottos is:{' '}
-                <strong>“Make something silly, seriously.”</strong> I believe
+                <strong>“Make something silly, seriously.”</strong>I believe
                 humor, when treated with care, can be just as powerful as any
                 serious message.
               </p>
@@ -208,12 +291,10 @@ function About() {
                 <img src={photoshopIcon} alt="Photoshop" />
                 <span className="label">Photoshop</span>
               </div>
-
               <div className="icon-with-label">
                 <img src={illustratorIcon} alt="Illustrator" />
                 <span className="label">Illustrator</span>
               </div>
-
               <div className="icon-with-label">
                 <img src={indesignIcon} alt="InDesign" />
                 <span className="label">InDesign</span>
@@ -222,52 +303,42 @@ function About() {
                 <img src={aftereffectsIcon} alt="After Effects" />
                 <span className="label">After Effects</span>
               </div>
-
               <div className="icon-with-label">
                 <img src={premiereproIcon} alt="Premiere Pro" />
                 <span className="label">Premiere Pro</span>
               </div>
-
               <div className="icon-with-label">
                 <img src={figmaIcon} alt="Figma" />
                 <span className="label">Figma</span>
               </div>
-
               <div className="icon-with-label">
                 <img src={canvaIcon} alt="Canva" />
                 <span className="label">Canva</span>
               </div>
-
               <div className="icon-with-label">
                 <img src={htmlIcon} alt="HTML" />
                 <span className="label">HTML</span>
               </div>
-
               <div className="icon-with-label">
                 <img src={cssIcon} alt="CSS" />
                 <span className="label">CSS</span>
               </div>
-
               <div className="icon-with-label">
                 <img src={javascriptIcon} alt="JavaScript" />
                 <span className="label">JavaScript</span>
               </div>
-
               <div className="icon-with-label">
                 <img src={reactIcon} alt="React" />
                 <span className="label">React</span>
               </div>
-
               <div className="icon-with-label">
                 <img src={tailwindIcon} alt="Tailwind CSS" />
                 <span className="label">Tailwind</span>
               </div>
-
               <div className="icon-with-label">
                 <img src={wordpressIcon} alt="WordPress" />
                 <span className="label">WordPress</span>
               </div>
-
               <div className="icon-with-label">
                 <img src={capcutIcon} alt="CapCut" />
                 <span className="label">CapCut</span>
@@ -276,7 +347,6 @@ function About() {
           </div>
 
           {/* Extra Skills */}
-
           <div className="skills-card extra">
             <h2 className="about-section-title extra relative-version">
               EXTRA SKILLS
@@ -300,9 +370,10 @@ function About() {
             </ul>
           </div>
         </div>
+
         <div className="classmates-section">
           <div className="say-title-wrapper">
-            <div className="say-title">
+            <div className="say-title" ref={sayTitleRef}>
               <div className="say-title-image-wrapper">
                 <img
                   src={speechBubble}
@@ -310,14 +381,15 @@ function About() {
                   alt="speech bubble icon"
                 />
               </div>
-
-              <div className="subtitles say">
-                <h2>WHAT MY CLASSMATES SAY</h2>
-              </div>
+              <AnimatedTitle
+                text="WHAT MY CLASSMATES SAY"
+                trigger={sayTitleRef}
+                className="subtitles say"
+              />
             </div>
           </div>
-          {/* jordan */}
-          <div className="classmates-grid">
+
+          <div className="classmates-grid" ref={classmatesGridRef}>
             <div className="classmate-card">
               <img
                 src={jordan}
@@ -399,8 +471,7 @@ function About() {
       </div>
 
       {/* my looks */}
-
-      <div className="my-looks-about-section">
+      <div className="my-looks-about-section" ref={myLooksRef}>
         <img
           src={sewingMachine}
           alt="pink sewing machine image"
@@ -426,16 +497,19 @@ function About() {
                 alt="dress icon"
               />
             </div>
-
-            <div className="subtitles look">
-              <h2>MY SEWING WORKS</h2>
-            </div>
+            <AnimatedTitle
+              text="MY SEWING WORKS"
+              trigger={myLooksRef}
+              className="subtitles look"
+            />
             <h3 className="made-by-me about">🩷#MadeByMe🩷</h3>
           </div>
           <h3 className="made-by-me about mobile">🩷#MadeByMe🩷</h3>
         </div>
+
         <PhotoGallery />
       </div>
+
       <div className="footer-about">
         <Footer />
       </div>

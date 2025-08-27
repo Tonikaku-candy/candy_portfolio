@@ -12,12 +12,29 @@ export default function DetailLinks({ links }) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // ✨ スムーズスクロール関数
+  const handleSmoothScroll = (id) => (e) => {
+    e.preventDefault();
+    const target = document.getElementById(id);
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
   return (
     <div className={`detail-links ${show ? 'show' : ''}`}>
       <ul>
         {links.map((link, index) => (
           <li key={index}>
-            <a href={`#${link.id}`} className="detail-link">
+            {/* onClickで呼び出す */}
+            <a
+              href={`#${link.id}`}
+              className="detail-link"
+              onClick={handleSmoothScroll(link.id)}
+            >
               {link.label}
             </a>
           </li>
