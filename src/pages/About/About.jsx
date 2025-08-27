@@ -210,7 +210,7 @@ function About() {
         <div className="about-card" ref={aboutCardRef}>
           <div className="about-card-inner"></div>
           <AnimatedTitle
-            text="ABOUT"
+            text="ABOUT ME"
             trigger={aboutCardRef}
             className="about-section-title"
           />
