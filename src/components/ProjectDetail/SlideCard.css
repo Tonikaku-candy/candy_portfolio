@@ -143,4 +143,8 @@
   /* .thumbnail-slider .thumb-media:nth-child(n + 3) {
     display: none;
   } */
+
+    .modal-overlay {
+    display: none !important;
+  }
 }
