@@ -13,13 +13,14 @@
 .footer-icons a {
   margin: 0 1rem;
   font-size: 3rem;
-  color: #343434;
+  color: #FE00B6;
 }
 
 .footer-text p {
   margin: 0.3rem 0;
   font-family: 'Fredoka', sans-serif;
   font-size: 1.5rem;
+  color: #222222;
 }
 
 .copyright {
