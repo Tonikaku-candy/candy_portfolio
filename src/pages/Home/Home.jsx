@@ -101,6 +101,13 @@ function Home() {
     >
       <source src={headerVideoWebm} type="video/webm" />
       <source src={headerVideo} type="video/mp4" />
+      <track
+    src="/captions/hero-video-captions.vtt"
+    kind="captions"
+    srcLang="en"
+    label="English captions"
+    default
+  />
       Your browser does not support the video tag.
     </video>
       </div>
