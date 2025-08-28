@@ -9,7 +9,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import AnimatedTitle from '../../components/AnimatedTitle'; // 新しいコンポーネントを使用
 
 // images
-import headerVideo from '../../assets/home/header/candy-fukaya-motion-design-portfolio.mp4';
+import headerVideo from '../../assets/home/header/candy-fukaya-motion-design-portfolio.webm';
 import featuredProjectsTitleImage from '../../assets/home/featured-projects/eye.png';
 import aboutMeTitleImage from '../../assets/home/about-me/fireworks.png';
 import aboutMeVideo from '../../assets/home/about-me/kawaii-intro-candy-fukaya.mp4';
