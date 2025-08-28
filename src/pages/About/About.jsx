@@ -45,6 +45,9 @@ function About() {
   const helloSubRef = useRef(null);
   const helloPhotoRef = useRef(null);
 
+  // モバイル用プロフィール画像のrefを追加
+  const mobilePhotoRef = useRef(null);
+
   // Section refs for AnimatedTitle
   const aboutCardRef = useRef(null);
   const classmatesGridRef = useRef(null);
@@ -85,7 +88,7 @@ function About() {
 
     return () => {
       tl.kill();
-      ScrollTrigger.getAll().forEach((st) => st.kill());
+      // ScrollTrigger.getAll().forEach((st) => st.kill());
     };
   }, []);
 
@@ -118,27 +121,58 @@ function About() {
     const cards = classmatesGridRef.current.querySelectorAll('.classmate-card');
 
     cards.forEach((card, i) => {
-  gsap.fromTo(
-    card,
-    { autoAlpha: 0, y: 24, scale: 0.9 },
-    {
-      autoAlpha: 1,
-      y: 0,
-      scale: 1,
-      duration: 0.6,
-      ease: 'back.out(1.8)',   // ちょい弾む
-      delay: i * 0.12,
-      transformOrigin: '50% 50%',
-      scrollTrigger: {
-        trigger: card,
-        start: 'top 80%',
-        toggleActions: 'play none none none',
-        once: true,
-      },
-    }
-  );
-});
+      gsap.fromTo(
+        card,
+        { autoAlpha: 0, y: 24, scale: 0.9 },
+        {
+          autoAlpha: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.6,
+          ease: 'back.out(1.8)', // ちょい弾む
+          delay: i * 0.12,
+          transformOrigin: '50% 50%',
+          scrollTrigger: {
+            trigger: card,
+            start: 'top 80%',
+            toggleActions: 'play none none none',
+            once: true,
+          },
+        }
+      );
+    });
 
+    return () => {
+      // ScrollTrigger.getAll().forEach((st) => st.kill());
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!mobilePhotoRef.current) return;
+
+    gsap.fromTo(
+      mobilePhotoRef.current,
+      { opacity: 0, y: 50 }, // 下から上に移動しながらフェードイン
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: mobilePhotoRef.current,
+          start: 'top 80%', // モバイル画像が画面の80%に入ったらアニメーション開始
+          toggleActions: 'play none none none',
+          once: true,
+        },
+      }
+    );
+
+    return () => {
+      // ScrollTrigger.getAll().forEach((st) => st.kill()); // 不要な重複を避けるためコメントアウト
+    };
+  }, []);
+
+  useEffect(() => {
     return () => {
       ScrollTrigger.getAll().forEach((st) => st.kill());
     };
@@ -187,7 +221,10 @@ function About() {
         <div className="diagonal-top-about"></div>
         <div className="grid-overlay-about"></div>
 
-        <div className="about-profile-image-wrapper mobile" ref={helloPhotoRef}>
+        <div
+          className="about-profile-image-wrapper mobile"
+          ref={mobilePhotoRef}
+        >
           <img
             src={profileBg}
             alt="sakura background"

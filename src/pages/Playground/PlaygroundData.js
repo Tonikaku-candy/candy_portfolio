@@ -21,6 +21,7 @@ import bowling from '../../assets/Playground/bowling-line.webp';
 import star from '../../assets/Playground/star-line.webp';
 import fruitLine from '../../assets/Playground/fruit-line.webp';
 import flower from '../../assets/Playground/flower-line.webp';
+import rabbit from '../../assets/Playground/rabbit-line.webp';
 
 
 
@@ -53,7 +54,7 @@ const playgroundProjects = [
     tags: ['GRAPHIC', 'FASHION'],
     layout: 'left',
     size: 'medium',
-      line: shiny,
+      line: rabbit,
   },
 
   {
