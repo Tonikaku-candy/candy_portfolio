@@ -123,7 +123,7 @@ function MagicMusicMv() {
         <FadeInOnScroll>
           <div className="video-wrapper rhythm-video">
             <iframe
-              src="https://www.youtube.com/embed/86v80QINcoc?si=Go9FBk6DLy5TmY-9"
+              src="https://www.youtube.com/embed/VN9nHoXtddE?si=pGI9K4UByQIAX1P3"
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"

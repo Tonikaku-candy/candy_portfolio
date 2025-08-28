@@ -1,23 +1,162 @@
 .playground {
-  background-color: #806BFF;
+  background-color: #806bff;
   position: relative;
-  padding-bottom: 150px;
-  margin-bottom: 200px;
-
-  h1 {
-    font-size: 10rem;
-    text-align: center;
-    
-
+  z-index: 0;
 }
 
-p {
+/* title */
+
+.subtitles.playground {
+  font-family: 'Bungee', sans-serif;
+  font-size: 38px;
+  font-size: clamp(18px, 4vw, 38px);
+  margin: 0 auto;
+  color: white;
+  border-bottom: 8px solid #ffa0ee;
+  display: inline-block;
+  max-width: 100%;
+  white-space: normal;
+  word-break: break-word;
   text-align: center;
-  font-size: 3rem;
-  
+  position: relative;
+  white-space: pre-line;
+}
+
+.playground-title {
+  display: inline-block;
+}
+
+.playground-title-wrapper {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 3rem;
+  margin-bottom: 1rem;
+}
+.playground-title-image-wrapper {
+  text-align: center;
+}
+
+.playground-title-image {
+  width: 70px;
+  transform: scaleX(-1);
+}
+
+/* title end */
+
+/* intro */
+.playground-intro {
+  color: white;
+  text-align: center;
+  width: 80%;
+  font-family: 'Fredoka', sans-serif;
+  font-size: clamp(14px, 2.5vw, 1.3rem);
+  line-height: 1.5;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+.dot {
+  width: 85%;
+  border-bottom: 4px dotted #ffffff;
+  margin: 0 auto;
+}
+
+/* intro end */
+
+/* category */
+.section-center-play {
+  margin-top: 2rem;
+  position: relative;
+  text-align: center;
+  margin-right: 40px;
+  z-index: 2;
+}
+
+.section-center-play span {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.section-center-play span:hover {
+  color: #4d4d4d;
+}
+
+.section-center-play .active-tag {
+  color: #ff62bc;
+  font-weight: bold;
+  text-decoration: underline;
+}
+/* category end */
+
+/* project layout */
+
+.project-list {
+  margin-top: 3rem;
+  color: white;
+  line-height: 1.5;
+
+  h3 {
+    font-size: 1.5rem;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+  p {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1.3rem;
+    text-align: left;
+  }
+  h3::before {
+  content: '■';
+  color: #ffffff;
+  margin-right: 6px;
 }
 }
 
+
+
+.project-block {
+  margin: 60px 0;
+  position: relative;
+}
+
+.project-block.left {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* 子要素を垂直方向の中央に揃える */
+  justify-content: space-between; /* 子要素間に均等なスペースを配置 */
+  gap: 20px;
+  width: 100%; /* 親要素の横幅いっぱいに広げる */
+  max-width: 1200px;
+  margin: 60px auto;
+}
+
+.project-block.left .text {
+  flex: 1;
+  text-align: center;
+  padding-left: 60px;
+  max-width: 600px;
+}
+
+.project-block.left h3 {
+  margin-bottom: 2rem;
+}
+
+.project-block.center h3 {
+  margin-top: 3rem;
+}
+
+/* line */
+
+.line {
+  width: 100%; /* 横幅いっぱい */
+  height: auto;
+  display: block;
+}
+
+/* grid */
 
 .grid-overlay-play {
   position: absolute;
@@ -25,40 +164,189 @@ p {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image:   linear-gradient(rgba(144, 65, 255, 0.2) 3px, transparent 0),         
-  linear-gradient(90deg, rgba(144, 65, 255, 0.2) 3px, transparent 0);
+  background-image: linear-gradient(rgba(144, 65, 255, 0.2) 3px, transparent 0),
+    linear-gradient(90deg, rgba(144, 65, 255, 0.2) 3px, transparent 0);
   background-size: 200px 200px;
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 }
 
 
 
-
-.playground-section::before {
-  content: '';
+.diagonal-bottom-play {
   position: absolute;
-  bottom: -146px;
+  bottom: -70px;
   left: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 100vw 146px 0;
-  border-color: transparent #806BFF transparent transparent;
+  width: 100%;
+  height: 180px;
+  background-color: #806bff;
+  background-image: linear-gradient(
+    90deg,
+    rgba(144, 65, 255, 0.2) 3px,
+    transparent 0
+  );
+  background-size: 200px 200px;
+  transform: skewY(3deg);
   z-index: -1;
   pointer-events: none;
 }
 
-.diagonal-bottom-play {
-    position: absolute;
-    bottom: -150px;
-    left: 0;
-    width: 100%;
-    height: 180px;
-    background-color: #806BFF;
-    background-image: linear-gradient(90deg, rgba(144,65, 255, 0.2) 3px, transparent 0);
-    background-size: 200px 200px;
-    transform: skewY(3deg);
-    z-index: 0;
-    pointer-events: none;
+.project-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* 動画とテキストの間 */
+  flex-wrap: wrap; /* モバイルで縦積みにする */
 }
+
+/* project layout */
+
+.project-list {
+  margin-top: 3rem;
+  color: white; /* リスト全体にパディングを追加 */
+  margin-bottom: 0;
+}
+
+.project-block {
+  margin: 60px auto; /* 中央寄せしつつ、上下のマージンを維持 */
+  position: relative;
+  max-width: 1200px;
+}
+
+.project-block.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* video */
+.iframe-play {
+  width: 90%; /* デフォルトの幅 */
+  max-width: 1200px;
+  border-radius: 12px;
+  aspect-ratio: 16 / 9;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+/* 縦動画（YouTube Shorts 用）を対応させたい場合 */
+.iframe-play.vertical {
+  width: 400px;
+  height: 710px;
+}
+
+/* image */
+.playground-image {
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 100%;
+  margin: 0 auto;
+  height: auto;
+}
+/* 個別サイズ */
+.playground-image.small {
+  max-width: 400px; /* 小さめ */
+}
+
+.playground-image.medium {
+  max-width: 650px; /* 標準 */
+}
+
+.project-block .text {
+  /* すべてのproject-block内のtextに適用されるスタイル */
+  padding: 10px;
+}
+
+/* レスポンシブ対応 (モバイル向け) */
+@media (max-width: 768px) {
+  .project-block {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-block.left {
+    flex-direction: column; /* モバイルでは縦積みにする */
+    text-align: center; /* テキストを中央寄せに */
+  }
+
+  /* 縦動画のモバイルでの調整 */
+.iframe-play.vertical {
+  width: 70%;
+  max-width: 400px; 
+  aspect-ratio: 9 / 16; 
+  height: auto;      
+  display: block;
+  margin: 0 auto;    
+}
+
+  .project-list {
+    margin-top: 3rem;
+    color: white;
+    line-height: 1.5;
+
+    h3 {
+      font-size: 1.5rem;
+      font-size: clamp(16px, 2vw, 20px);
+      font-family: 'Fredoka', sans-serif;
+      font-weight: 500;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+    p {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 1.3rem;
+      font-size: clamp(14px, 2vw, 16px);
+      text-align: left;
+    }
+  }
+
+  .playground-image.medium {
+    max-width: 90%;
+  }
+
+  .playground-image.small {
+    max-width: 50%;
+  }
+
+  .project-block.left .text {
+    flex: 1;
+    text-align: left;   /* ← 左寄せ */
+    width: 100%;        /* ← 横幅いっぱい使う */
+    max-width: 90%;     /* ← 余白を残したい場合 */
+    margin: 0 auto;     /* ← センターに配置 */
+    padding-left: 0;    /* ← 左パディング不要 */
+  }
+}
+
+
+@media (max-width: 1200px) and (min-width: 769px) {
+  .project-block.left {
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    max-width: 95%;   
+  }
+
+  .playground-image.medium {
+    max-width: 50%;  
+  }
+
+  .playground-image.small {
+    max-width: 30%;
+  }
+
+  .project-block .text {
+    max-width: 45%;   /* ← テキストエリアも縮小 */
+    font-size: 0.95rem; /* 少しだけ文字も縮める */
+  }
+
+  .iframe-play {
+    max-width: 90%; /* 動画も横並びのまま縮小 */
+  }
+}
+
+
+

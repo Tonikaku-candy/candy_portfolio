@@ -118,7 +118,7 @@ body {
   position: relative;
   background: #fff94c;
 
-  padding: 1rem 2rem;
+  padding: 0rem 2rem;
   z-index: 2;
   padding-bottom: 90px;
   background-size: contain;
@@ -170,7 +170,7 @@ body {
 }
 
 .about-me-title-image {
-  width: 70px;
+  width: 90px;
   text-align: center;
 }
 
@@ -486,7 +486,17 @@ body {
   gap: 2rem;
   margin-top: 2rem;
   margin-left: 20px;
+
 }
+
+.girl-comment .char {
+  font-family: 'Fredoka', sans-serif;
+  font-weight: 500;
+}
+
+
+
+
 
 .girl-image {
   width: 200px;
@@ -633,7 +643,7 @@ body {
 }
 
 .my-look-title-image {
-  width: 70px;
+  width: 110px;
   text-align: center;
 }
 
@@ -1302,6 +1312,11 @@ body {
   .thread {
     display: none;
   }
+
+  .my-look-title-image {
+  width: 70px;
+  text-align: center;
+}
 }
 
 @supports (-webkit-touch-callout: none) {

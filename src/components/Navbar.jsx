@@ -7,6 +7,7 @@ import { bubble as Menu } from 'react-burger-menu';
 import burger from './assets/humburger.png';
 import ufo from '../assets/About/rabbit-ufo.svg';
 import close from '../components/assets/crossing-hands.webp';
+import { FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 
 function Navbar({ menuOpen, setMenuOpen }) {
   const [isMobile, setIsMobile] = useState(false);
@@ -118,13 +119,20 @@ function Navbar({ menuOpen, setMenuOpen }) {
           </div>
         </NavLink>
 
-        {/* PC時：横並び */}
-        {!isMobile && (
-          <ul className="nav-links">
-            <li>{renderLinks()}</li>
-          </ul>
-        )}
-
+       {/* PC時：横並び */}
+{!isMobile && (
+  <ul className="nav-links">
+    <li>{renderLinks()}</li>
+    <li>
+      <NavLink
+        to="mailto:candyfukaya@gmail.com"
+        className="mail-icon-nav"
+      >
+        <FaEnvelope />
+      </NavLink>
+    </li>
+  </ul>
+)}
         {/* モバイル時：bubbleメニュー */}
         {isMobile && (
           <Menu
@@ -142,6 +150,29 @@ function Navbar({ menuOpen, setMenuOpen }) {
             {renderLinks()}
             <div className="menu-footer-images">
               <img src={ufo} alt="ufo rabbit" className="ufo-nav" />
+            </div>
+            <div className="mobile-social-links">
+              <a
+                href="mailto:candyfukaya@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaEnvelope size={40} color="#ff62bc" />
+              </a>
+              <a
+                href="https://www.instagram.com/candy_ramune/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaInstagram size={40} color="#38f03eff" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/candy-f-7207a0356/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaLinkedin size={40} color="#00cfff" />
+              </a>
             </div>
           </Menu>
         )}

@@ -9,7 +9,7 @@ import AnimatedTitle from '../../components/AnimatedTitle';
 import UfoAnimation from '../../components/Gsap/UfoAnimation';
 
 // images & icons
-import myLookTitleImage from '../../assets/home/my-look/dress-icon.png';
+import myLookTitleImage from '../../assets/home/my-look/rainbow.png';
 import illustratorIcon from '../../assets/About/icons/illustrator-icon.png';
 import aftereffectsIcon from '../../assets/About/icons/aftereffects-icon.png';
 import canvaIcon from '../../assets/About/icons/canva-icon.png';
@@ -31,7 +31,7 @@ import colorfulChameleon from '../../assets/About/colorful-chameleon.webp';
 import sewingMachine from '../../assets/home/my-look/sewing-machine.webp';
 import tomato from '../../assets/home/my-look/tomato-pin-cushion.webp';
 import thread from '../../assets/home/my-look/colorful-thread.webp';
-import speechBubble from '../../assets/About/speech-bubble.png';
+import speechBubble from '../../assets/About/speech-bubble2.png';
 import jordan from '../../assets/About/jordan-profile-photo.png';
 import sunny from '../../assets/About/sunny-profile-photo.png';
 import branden from '../../assets/About/branden-profile-photo.png';
@@ -187,7 +187,7 @@ function About() {
         <div className="diagonal-top-about"></div>
         <div className="grid-overlay-about"></div>
 
-        <div className="about-profile-image-wrapper mobile">
+        <div className="about-profile-image-wrapper mobile" ref={helloPhotoRef}>
           <img
             src={profileBg}
             alt="sakura background"

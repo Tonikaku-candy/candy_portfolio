@@ -11,19 +11,19 @@ import AnimatedTitle from '../../components/AnimatedTitle'; // 新しいコン�
 // images
 import headerVideo from '../../assets/home/header/candy-fukaya-motion-design-portfolio.mp4';
 import featuredProjectsTitleImage from '../../assets/home/featured-projects/eye.png';
-import aboutMeTitleImage from '../../assets/home/about-me/candy.png';
+import aboutMeTitleImage from '../../assets/home/about-me/fireworks.png';
 import aboutMeVideo from '../../assets/home/about-me/kawaii-intro-candy-fukaya.mp4';
 import lollipop from '../../assets/home/about-me/heart-lollipop.webp';
 import jellyBeans from '../../assets/home/about-me/jelly-beans.webp';
 
-import letsConnectTitleImage from '../../assets/home/connect/mail.png';
+import letsConnectTitleImage from '../../assets/home/connect/mail3.png';
 import rainbow from '../../assets/home/connect/rainbow-stripe.webp';
 import mailIcon from '../../assets/home/connect/mail-icon.png';
 import instagramIcon from '../../assets/home/connect/instagram-icon.png';
 import linkedinIcon from '../../assets/home/connect/linkedin-icon.png';
 import girl from '../../assets/home/connect/girl.webp';
 
-import myLookTitleImage from '../../assets/home/my-look/dress-icon.png';
+import myLookTitleImage from '../../assets/home/my-look/rainbow.png';
 import sewingMachine from '../../assets/home/my-look/sewing-machine.webp';
 import tomato from '../../assets/home/my-look/tomato-pin-cushion.webp';
 import thread from '../../assets/home/my-look/colorful-thread.webp';
@@ -135,7 +135,7 @@ function Home() {
                 <img
                   src={aboutMeTitleImage}
                   className="about-me-title-image"
-                  alt="candy emoji"
+                  alt="fireworks icon"
                 />
               </div>
               {/* タイトルだけ AnimatedTitle */}
@@ -272,7 +272,7 @@ function Home() {
               <img
                 src={myLookTitleImage}
                 className="my-look-title-image"
-                alt="dress icon"
+                alt="rainbow icon"
               />
             </div>
             {/* タイトルだけ AnimatedTitle */}
