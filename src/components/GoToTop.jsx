@@ -3,8 +3,8 @@ import bunny from './assets/go-to-top.png';
 import '../components/GoToTop.css';
 
 export default function GoToTop() {
-  const [bottom, setBottom] = useState(20); 
-  const [show, setShow] = useState(false); 
+  const [bottom, setBottom] = useState(20);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     const handleLift = () => {
@@ -14,7 +14,6 @@ export default function GoToTop() {
       const rect = footer.getBoundingClientRect();
       const vh = window.innerHeight;
 
- 
       const overlap = Math.max(0, vh - rect.top);
       setBottom(20 + overlap);
 
@@ -36,6 +35,7 @@ export default function GoToTop() {
     <div
       className={`go-to-top-floating ${show ? 'show' : ''}`}
       onClick={toTop}
+      role="button"
       aria-label="Back to top"
       style={{ bottom }}
     >
