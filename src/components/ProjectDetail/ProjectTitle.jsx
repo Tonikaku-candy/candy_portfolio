@@ -9,7 +9,7 @@ export default function ProjectTitle({ title = 'ALL PROJECTS' }) {
         {/* h2 → AnimatedTitle に置き換え */}
         <AnimatedTitle
           text={title}
-          trigger=".all-projects-title-wrapper" // スクロール時のトリガー
+          trigger=".all-projects-title-wrapper" 
           className="subtitles all-projects"
         />
       </div>

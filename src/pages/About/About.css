@@ -682,7 +682,7 @@ body {
 }
 
 .my-look-title-image {
-  width: 70px;
+  width: 110px;
   text-align: center;
 }
 
@@ -838,7 +838,7 @@ body {
   .hello-section {
     position: relative;
     background: #ff62bc;
-    padding: 1.5rem 3rem 10rem;
+    padding: 2rem 3rem 12rem;
     display: flex;
     justify-content: center;
     align-items: center;
