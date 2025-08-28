@@ -119,20 +119,20 @@ function Navbar({ menuOpen, setMenuOpen }) {
           </div>
         </NavLink>
 
-       {/* PC時：横並び */}
-{!isMobile && (
-  <ul className="nav-links">
-    <li>{renderLinks()}</li>
-    <li>
-      <NavLink
-        to="mailto:candyfukaya@gmail.com"
-        className="mail-icon-nav"
-      >
-        <FaEnvelope />
-      </NavLink>
-    </li>
-  </ul>
-)}
+        {/* PC時：横並び */}
+        {!isMobile && (
+          <ul className="nav-links">
+            <li>{renderLinks()}</li>
+            <li>
+              <NavLink
+                to="mailto:candyfukaya@gmail.com"
+                className="mail-icon-nav"
+              >
+                <FaEnvelope />
+              </NavLink>
+            </li>
+          </ul>
+        )}
         {/* モバイル時：bubbleメニュー */}
         {isMobile && (
           <Menu
@@ -156,6 +156,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
                 href="mailto:candyfukaya@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Email Candy"
               >
                 <FaEnvelope size={40} color="#ff62bc" />
               </a>
@@ -163,6 +164,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
                 href="https://www.instagram.com/candy_ramune/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Candy's Instagram"
               >
                 <FaInstagram size={40} color="#38f03eff" />
               </a>
@@ -170,6 +172,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
                 href="https://www.linkedin.com/in/candy-f-7207a0356/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Candy's LinkedIn"
               >
                 <FaLinkedin size={40} color="#00cfff" />
               </a>
