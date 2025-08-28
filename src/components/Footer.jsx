@@ -20,6 +20,7 @@ const Footer = () => {
         <a
           href="https://www.instagram.com/candy_ramune/"
           target="_blank"
+          aria-label="Candy's Instagram"
           rel="noopener noreferrer"
         >
           <FaInstagram />
@@ -28,10 +29,11 @@ const Footer = () => {
           href="https://www.linkedin.com/in/candy-f-7207a0356/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Candy's LinkedIn"
         >
           <FaLinkedin />
         </a>
-        <a href="mailto:candyfukaya@gmail.com">
+        <a href="mailto:candyfukaya@gmail.com" aria-label="Email Candy">
           <FaEnvelope />
         </a>
 

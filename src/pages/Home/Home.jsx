@@ -10,6 +10,8 @@ import AnimatedTitle from '../../components/AnimatedTitle'; // 新しいコン�
 
 // images
 import headerVideo from '../../assets/home/header/candy-fukaya-motion-design-portfolio.mp4';
+import headerVideoWebm from '../../assets/home/header/candy-fukaya-motion-design-portfolio.webm';
+
 import featuredProjectsTitleImage from '../../assets/home/featured-projects/eye.png';
 import aboutMeTitleImage from '../../assets/home/about-me/fireworks.png';
 import aboutMeVideo from '../../assets/home/about-me/kawaii-intro-candy-fukaya.mp4';
@@ -91,13 +93,16 @@ function Home() {
           Candy Fukaya – Graphic & Motion Designer Portfolio
         </h1>
         <video
-          className="video"
-          src={headerVideo}
-          autoPlay
-          muted
-          loop
-          playsInline
-        ></video>
+      className="video"
+      autoPlay
+      muted
+      loop
+      playsInline
+    >
+      <source src={headerVideoWebm} type="video/webm" />
+      <source src={headerVideo} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
       </div>
       {/* header end */}
 
