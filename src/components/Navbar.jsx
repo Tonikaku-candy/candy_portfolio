@@ -127,6 +127,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
               <NavLink
                 to="mailto:candyfukaya@gmail.com"
                 className="mail-icon-nav"
+                ria-label="Send email to Candy Fukaya"
               >
                 <FaEnvelope />
               </NavLink>
