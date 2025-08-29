@@ -42,7 +42,7 @@ const playgroundProjects = [
   },
     {
     id: 3,
-    videoUrl: 'https://www.youtube.com/embed/He1340hDQS0?si=ZnR9mGvWCZGXqgx-',
+    videoUrl: 'https://www.youtube.com/embed/kYqyZ9Zctdk?si=EzJDsBQlunTHphBQ',
     tags: ['MOTION'],
     layout: 'center',
       line: hand,
