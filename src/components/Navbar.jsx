@@ -12,6 +12,26 @@ import { FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 function Navbar({ menuOpen, setMenuOpen }) {
   const [isMobile, setIsMobile] = useState(false);
 
+  const messages = [
+    'Stay sweet!',
+    'Stay weird!',
+    'Stay creating!',
+    'Stay colorful!',
+    'Stay playful!',
+    'Candylicious',
+
+  ];
+
+  const [openBubble, setOpenBubble] = useState(false);
+  const [msgIndex, setMsgIndex] = useState(0);
+  const handleUfoClick = () => {
+    setOpenBubble(true);
+    setMsgIndex(Math.floor(Math.random() * messages.length));
+    // 自動で閉じる
+    window.clearTimeout(window.__ufoTimer);
+    window.__ufoTimer = window.setTimeout(() => setOpenBubble(false), 2500);
+  };
+
   // 画面幅でモバイル判定
   useEffect(() => {
     const checkWidth = () => setIsMobile(window.innerWidth <= 768);
@@ -127,7 +147,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
               <NavLink
                 to="mailto:candyfukaya@gmail.com"
                 className="mail-icon-nav"
-                ria-label="Send email to Candy Fukaya"
+                aria-label="Send email to Candy Fukaya"
               >
                 <FaEnvelope />
               </NavLink>
@@ -150,7 +170,16 @@ function Navbar({ menuOpen, setMenuOpen }) {
           >
             {renderLinks()}
             <div className="menu-footer-images">
-              <img src={ufo} alt="ufo rabbit" className="ufo-nav" />
+              <button
+                className="ufo-btn"
+                onClick={handleUfoClick}
+                aria-label="Show secret message"
+              >
+                <img src={ufo} alt="ufo rabbit" className="ufo-nav" />
+              </button>
+              {openBubble && (
+                <div className="ufo-bubble-nav">{messages[msgIndex]}</div>
+              )}
             </div>
             <div className="mobile-social-links">
               <a
