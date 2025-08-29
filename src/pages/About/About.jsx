@@ -240,7 +240,7 @@ function About() {
             alt="Candy profile picture"
             className="about-profile-image front mobile"
           />
-          <p className="about-profile-text mobile">Top me!</p>
+          <p className="about-profile-text mobile">Tap me!</p>
         </div>
 
         {/* Section Title & Text Box */}
