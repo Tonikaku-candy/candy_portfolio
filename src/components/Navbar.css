@@ -326,7 +326,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-20px); /* 上に少し移動 */
+    transform: translateY(-18px); /* 上に少し移動 */
   }
   100% {
     transform: translateY(0);
@@ -343,7 +343,7 @@
   position: relative;              /* ←重要 */
   display: flex;
   justify-content: center;
-  padding: 12px 0 20px;
+  padding: 12px 0px;
 }
 
 /* react-burger-menu 内で切れないように */
@@ -363,7 +363,7 @@
 .ufo-bubble-nav{
     font-family: 'Fredoka', sans-serif;
   position: absolute;
-  top: 0px;                      /* UFOの上に出す。下なら bottom に変更 */
+  top: -20px;                      /* UFOの上に出す。下なら bottom に変更 */
   left: 50%;
   transform: translateX(-50%);
   background: #fff;
@@ -413,6 +413,13 @@
 @keyframes nav-bubble-pop{
   from{ transform: translateX(-50%) scale(.92); opacity:0 }
   to  { transform: translateX(-50%) scale(1);   opacity:1 }
+}
+
+.menu-footer-images img.ufo-nav{
+  width: 200px;             /* ← 200px → 140px（お好みで 120〜160）*/
+  height: auto;
+  margin: 0.75rem 0 0 ;  /* ← 2rem → 0.75rem/0.25rem に */
+  animation: float 3s ease-in-out infinite;
 }
 
 
