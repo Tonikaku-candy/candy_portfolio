@@ -335,6 +335,89 @@
 
 
 
+
+/* ufo comment */
+
+/* UFOエリアを吹き出しの基準にする */
+.menu-footer-images{
+  position: relative;              /* ←重要 */
+  display: flex;
+  justify-content: center;
+  padding: 12px 0 20px;
+}
+
+/* react-burger-menu 内で切れないように */
+.bm-item-list { overflow: visible; }
+.bm-menu-wrap, .bm-menu { overflow: visible !important; }
+
+/* UFOボタン */
+.ufo-btn{
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+.ufo-nav{ width: 80px; height: auto; }
+
+/* 吹き出し */
+.ufo-bubble-nav{
+    font-family: 'Fredoka', sans-serif;
+  position: absolute;
+  top: 0px;                      /* UFOの上に出す。下なら bottom に変更 */
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #222;
+  border: 2px solid #000;
+  border-radius: 12px;
+  padding: 6px 12px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  animation: nav-bubble-pop .18s ease-out;
+  z-index: 9999;
+  animation: bubble-pop 0.25s ease-out, bubble-fade 0.3s ease-in forwards;
+  animation-delay: 0s, 2.2s;
+}
+
+@keyframes bubble-pop {
+  0%   { transform: translateX(-50%) scale(0.8); opacity: 0; }
+  80%  { transform: translateX(-50%) scale(1.05); opacity: 1; }
+  100% { transform: translateX(-50%) scale(1); opacity: 1; }
+}
+
+@keyframes bubble-fade {
+  from { opacity: 1; transform: translateX(-50%) scale(1); }
+  to   { opacity: 0; transform: translateX(-50%) scale(0.8); }
+}
+
+.ufo-bubble-nav::after{
+  content:"";
+  position:absolute;
+  bottom:-16px;
+  left:50%; transform:translateX(-50%);
+  border:8px solid transparent;
+  border-top-color:#ffffff;
+  border-width:8px;
+  border-style:solid;
+  border-color:#000 transparent transparent transparent;
+}
+.ufo-bubble-nav::before{
+  content:"";
+  position:absolute;
+  bottom:-7px;
+  left:50%; transform:translateX(-50%);
+  border:6px solid transparent;
+  border-top-color:#fff;
+}
+@keyframes nav-bubble-pop{
+  from{ transform: translateX(-50%) scale(.92); opacity:0 }
+  to  { transform: translateX(-50%) scale(1);   opacity:1 }
+}
+
+
+
+
 /* --- メディアクエリで制御 --- */
 @media (max-width: 768px) {
   .bm-item-list .home-button,
