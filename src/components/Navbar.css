@@ -1,24 +1,28 @@
 /* logo */
 .logo {
   max-width: 120px;
+  width: 80%;
   height: auto;
-
-  margin-top: 4rem;
+  margin-top: 50%;
   margin-bottom: auto;
   z-index: 5;
   position: relative;
-   transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  /* width: 75%; */
+  /* width: clamp(90px, 10vw, 120px); */
 }
 
 .logo:hover {
-    transform: scale(1.1) rotate(-3deg);
+  transform: scale(1.1) rotate(-3deg);
 }
 
 /* ロゴとタブをまとめて配置 */
 .logo-wrapper {
   position: relative;
   display: inline-block;
-  width: 20%;
+
+  width: clamp(90px, 12vw, 150px);
+  /* max-width: 150px;   */
 }
 
 /* ロゴの上にちょっと飛び出すボックス */
@@ -29,11 +33,15 @@
   position: relative;
   /* margin-left: 80px; */
   width: 150px;
-  height: 190px;
+  /* height: 190px; */
+  width: 100%; /* wrapper に合わせる */
+  aspect-ratio: 3 / 4;
   background-color: #ff44b7;
   border: solid 4px #fff;
   border-radius: 10px;
   z-index: 1;
+  width: 100%;               /* wrapper に合わせる */
+  aspect-ratio: 3 / 4;    
 }
 
 /* logo end */
@@ -58,9 +66,9 @@
   width: 95%;
   height: 80px;
   margin: 0 auto;
-  max-width: 1440px;
+  /* max-width: 1440px; */
   padding: 0 0px;
-  padding-right: 2%;
+  /* padding-right: 2%; */
 }
 
 /* PC用ナビリンク */
@@ -70,7 +78,6 @@
   justify-content: space-between;
   list-style: none;
   gap: 1rem;
-
 }
 
 .nav-links {
@@ -78,10 +85,12 @@
   align-items: center;
   gap: 1rem;
   max-width: 750px;
-    padding-right: 100px;
+  /* padding-right: 100px; */
+  width: 75%;
+  /* 右に寄せる時に */
 
+  justify-content: flex-end;
 }
-
 
 .nav-links li a {
   /* display: flex; */
@@ -138,21 +147,20 @@
 
 /* 既存の .nav-links li a に影響されないように */
 .nav-links li .mail-icon-nav {
-  width: 55px !important;   /* 強制的に正円に */
+  width: 55px !important; /* 強制的に正円に */
   height: 50px !important;
   border-radius: 50%;
-  padding: 0;               /* 余計な内側余白を消す */
+  padding: 0; /* 余計な内側余白を消す */
   display: flex;
   align-items: center;
   justify-content: center;
 
-  background-color: #FF1393;  /* 緑丸背景 */
+  background-color: #ff1393; /* 緑丸背景 */
   color: white;
   font-size: 22px;
   line-height: 1;
-    border: 2px solid #343434;
+  border: 2px solid #343434;
 }
-
 
 .nav-links .home-button:hover,
 .nav-links .about-button:hover,
@@ -162,13 +170,9 @@
 }
 
 .mail-icon-nav:hover {
-  transform: scale(1.1);       /* ホバー時に少し大きく */
-  background-color: #ff1e90;   /* 濃い色に変化 */
+  transform: scale(1.1); /* ホバー時に少し大きく */
+  background-color: #ff1e90; /* 濃い色に変化 */
 }
-
-
-
-
 
 /* アクティブ時の色 */
 .home-button.active .text,
@@ -333,37 +337,42 @@
   }
 }
 
-
-
-
 /* ufo comment */
 
 /* UFOエリアを吹き出しの基準にする */
-.menu-footer-images{
-  position: relative;              /* ←重要 */
+.menu-footer-images {
+  position: relative; /* ←重要 */
   display: flex;
   justify-content: center;
   padding: 12px 0px;
 }
 
 /* react-burger-menu 内で切れないように */
-.bm-item-list { overflow: visible; }
-.bm-menu-wrap, .bm-menu { overflow: visible !important; }
+.bm-item-list {
+  overflow: visible;
+}
+.bm-menu-wrap,
+.bm-menu {
+  overflow: visible !important;
+}
 
 /* UFOボタン */
-.ufo-btn{
+.ufo-btn {
   background: transparent;
   border: none;
   padding: 0;
   cursor: pointer;
 }
-.ufo-nav{ width: 80px; height: auto; }
+.ufo-nav {
+  width: 80px;
+  height: auto;
+}
 
 /* 吹き出し */
-.ufo-bubble-nav{
-    font-family: 'Fredoka', sans-serif;
+.ufo-bubble-nav {
+  font-family: 'Fredoka', sans-serif;
   position: absolute;
-  top: -20px;                      /* UFOの上に出す。下なら bottom に変更 */
+  top: -20px; /* UFOの上に出す。下なら bottom に変更 */
   left: 50%;
   transform: translateX(-50%);
   background: #fff;
@@ -374,56 +383,76 @@
   font-weight: 700;
   font-size: 0.9rem;
   white-space: nowrap;
-  animation: nav-bubble-pop .18s ease-out;
+  animation: nav-bubble-pop 0.18s ease-out;
   z-index: 9999;
   animation: bubble-pop 0.25s ease-out, bubble-fade 0.3s ease-in forwards;
   animation-delay: 0s, 2.2s;
 }
 
 @keyframes bubble-pop {
-  0%   { transform: translateX(-50%) scale(0.8); opacity: 0; }
-  80%  { transform: translateX(-50%) scale(1.05); opacity: 1; }
-  100% { transform: translateX(-50%) scale(1); opacity: 1; }
+  0% {
+    transform: translateX(-50%) scale(0.8);
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(-50%) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes bubble-fade {
-  from { opacity: 1; transform: translateX(-50%) scale(1); }
-  to   { opacity: 0; transform: translateX(-50%) scale(0.8); }
+  from {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50%) scale(0.8);
+  }
 }
 
-.ufo-bubble-nav::after{
-  content:"";
-  position:absolute;
-  bottom:-16px;
-  left:50%; transform:translateX(-50%);
-  border:8px solid transparent;
-  border-top-color:#ffffff;
-  border-width:8px;
-  border-style:solid;
-  border-color:#000 transparent transparent transparent;
+.ufo-bubble-nav::after {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 8px solid transparent;
+  border-top-color: #ffffff;
+  border-width: 8px;
+  border-style: solid;
+  border-color: #000 transparent transparent transparent;
 }
-.ufo-bubble-nav::before{
-  content:"";
-  position:absolute;
-  bottom:-7px;
-  left:50%; transform:translateX(-50%);
-  border:6px solid transparent;
-  border-top-color:#fff;
+.ufo-bubble-nav::before {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #fff;
 }
-@keyframes nav-bubble-pop{
-  from{ transform: translateX(-50%) scale(.92); opacity:0 }
-  to  { transform: translateX(-50%) scale(1);   opacity:1 }
+@keyframes nav-bubble-pop {
+  from {
+    transform: translateX(-50%) scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
 }
 
-.menu-footer-images img.ufo-nav{
-  width: 200px;             /* ← 200px → 140px（お好みで 120〜160）*/
+.menu-footer-images img.ufo-nav {
+  width: 200px; /* ← 200px → 140px（お好みで 120〜160）*/
   height: auto;
-  margin: 0.75rem 0 0 ;  /* ← 2rem → 0.75rem/0.25rem に */
+  margin: 0.75rem 0 0; /* ← 2rem → 0.75rem/0.25rem に */
   animation: float 3s ease-in-out infinite;
 }
-
-
-
 
 /* --- メディアクエリで制御 --- */
 @media (max-width: 768px) {
@@ -467,7 +496,6 @@
     margin-bottom: auto;
     z-index: 5;
     position: relative;
-
   }
 
   .logo-wrapper {
