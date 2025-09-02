@@ -167,8 +167,8 @@ function RhythmGame() {
                 colorClass="yellow"
                 extraClass="small-padding-box"
               >
-                <ul>
-                  <li className="game">June 15th – July 2nd, 2025</li>
+                <ul className="tight-paragraph">
+                  <li>June 15th – July 2nd, 2025</li>
                 </ul>
               </DetailBox>
             </FadeInOnScroll>
@@ -210,7 +210,7 @@ function RhythmGame() {
                 Instead, I studied gameplay videos and reimagined <br />
                 what a rhythm game could look like in my own style.
               </p>
-              <div className="image-wrapper">
+              <div className="image-wrapper small">
                 <img
                   src={gameCover}
                   alt="Rhythm Heaven game cover"
@@ -251,7 +251,7 @@ function RhythmGame() {
                   The whole piece is designed to be humorous, energetic, and
                   self-aware.
                 </p>
-                <div className="gif-wrapper">
+                <div className="gif-wrapper small">
                   <img src={ending} alt="Ending screen" />
                 </div>
               </div>
@@ -263,7 +263,7 @@ function RhythmGame() {
             <DetailBox title="PRODUCTION HIGHLIGHTS" colorClass="orange">
               <p>
                 In my previous project, the
-                <Link to="/projects/bumper" className="bumper-link">
+                <Link to="/projects/bumper" className="link-pink">
                   “Bumper Opener”
                 </Link>
                 , my main goal was simply to get comfortable with After Effects
@@ -275,7 +275,7 @@ function RhythmGame() {
                 which added a greater sense of depth and atmosphere to the
                 animation.
               </p>
-              <div className="gif-wrapper">
+              <div className="gif-wrapper small">
                 <img
                   src={gardenEelBubbles}
                   alt="Garden eel scene with particles"

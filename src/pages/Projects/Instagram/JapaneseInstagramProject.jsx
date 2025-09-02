@@ -173,7 +173,9 @@ function JapaneseInstagramProject() {
                     colorClass="yellow"
                     extraClass="small-padding-box"
                   >
-                    <p className="tight-paragraph">Feb – June, 2025</p>
+                    <ul className="tight-paragraph">
+                      <li>Feb – June, 2025</li>
+                    </ul>
                   </DetailBox>
                 </FadeInOnScroll>
               </div>

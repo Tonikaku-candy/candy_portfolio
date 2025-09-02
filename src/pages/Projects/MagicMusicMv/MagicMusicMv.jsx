@@ -260,7 +260,7 @@ function MagicMusicMv() {
                 {/* Left: Text */}
                 <p>
                   Although the MV may appear random, the chaos is carefully
-                  structured. At 0:44–0:49, I built a sequence around image
+                  structured. <strong>At 0:44–0:49, </strong>I built a sequence around image
                   references: a pixelated clip humorously labeled “4K,” a reveal
                   of a hidden green suit, and rotobrush/mask work that allowed
                   text to appear only on my face and hands.
@@ -274,7 +274,7 @@ function MagicMusicMv() {
                 </div>
 
                 <p>
-                  From 0:51 to 1:09, I created a sequence based on the lyric
+                  <strong>From 0:51 to 1:09,</strong> I created a sequence based on the lyric
                   “sexy girl.” A woman at the beach turns around to reveal a
                   clown face, blows a kiss, and a heart flies out. In the next
                   karate scene, the heart gets punched to the right in rhythm
@@ -296,11 +296,11 @@ function MagicMusicMv() {
                   they reinterpret animations I had previously created in my{' '}
                   <Link
                     to="/projects/rhythm-game"
-                    className="rhythm-gamer-link"
+                    className="link-pink"
                   >
-                    “Rhythm Game Animation project",
+                    “Rhythm Game Animation project"
                   </Link>
-                  now brought into live-action form. I had imagined doing them
+                  ,now brought into live-action form. I had imagined doing them
                   myself back when I first made the animation, so this MV gave
                   me the chance to realize that idea in practice.
                 </p>
@@ -313,7 +313,7 @@ function MagicMusicMv() {
                 </div>
 
                 <p>
-                  At 1:25, the opening scene reappears in an evening version to
+                  <strong>At 1:25,</strong> the opening scene reappears in an evening version to
                   signal the ending. These details show how the humor and chaos
                   were tied back into a deliberate framework.
                 </p>
@@ -326,7 +326,7 @@ function MagicMusicMv() {
                 </div>
 
                 <p>
-                  From 1:14 to 1:22, I staged a fashion show scene to showcase
+                  <strong>From 1:14 to 1:22,</strong> I staged a fashion show scene to showcase
                   the clothes I had personally designed. Since the song is
                   titled “Magic Music,” I also added a playful moment where I
                   cast a spell on a dress form, transforming it as if my

@@ -25,16 +25,15 @@
   color: #343434;
   font-family: 'Bungee', sans-serif;
   padding: 0.6rem 3px 0.6rem 1rem;
-   padding: clamp(0.6rem, 0.4vw, 1rem) clamp(1rem, 0.6vw + 0.4rem, 1.5rem);
+   padding: clamp(0.55rem, 0.7vw, 1.6rem) clamp(0.9rem, 0.9vw + 0.3rem, 2.6rem);
 
   border-radius: 0px 5px 5px 0px;
   font-size: 0.85rem;
-    font-size: clamp(0.85rem, 0.5vw + 0.3rem, 1.5rem);
-
+font-size: clamp(0.8rem, 0.75vw + 0.25rem, 1.4rem);
   box-shadow: 2px 2px 0 #e58b00;
   transition: transform 0.2s ease, background-color 0.2s ease;
-  min-width: 120px;
-
+  min-width: 100px;
+max-width: 300px;
   list-style: none;
   text-align: right;
     /* padding-left: 2rem; */
@@ -53,8 +52,8 @@
   display: block; /* ← a も li 全体に広がる */
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 1480px) {
   .detail-links {
-    display: none; /* 1500px未満は非表示 */
+    display: none; 
   }
 }

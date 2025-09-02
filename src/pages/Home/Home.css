@@ -2,8 +2,6 @@ body {
   overflow-x: hidden;
 }
 
-
-
 #root {
   overflow: hidden;
   min-width: 330px;
@@ -20,7 +18,7 @@ body {
 
 .video-timer {
   position: absolute;
-  top: 10%;
+  top: 12%;
   left: -5px;
   z-index: 10;
   color: white;
@@ -28,13 +26,17 @@ body {
   font-size: clamp(1.5rem, 4vw, 5rem);
   background-color: rgba(0, 0, 0, 0.4);
   max-width: 270px;
-  height: 100px;
-  padding: 10px;
+  /* height: 100px; */
+
+height: 10%;
+  aspect-ratio: 5 / 2;
+  padding: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: 'Jersey 15', sans-serif;
   z-index: 0;
+  border-radius: 0 3px 3px 0;
 }
 
 .video {
@@ -154,7 +156,6 @@ body {
   transform: scaleX(-1);
 }
 
-
 /* 他のスタイルは省略 */
 .about-title {
   display: inline-block;
@@ -258,7 +259,7 @@ body {
 
 .intro-button:hover {
   transform: scale(1.1);
-    transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 .about-image {
   margin: 0 auto;
@@ -486,17 +487,12 @@ body {
   gap: 2rem;
   margin-top: 2rem;
   margin-left: 20px;
-
 }
 
 .girl-comment .char {
   font-family: 'Fredoka', sans-serif;
   font-weight: 500;
 }
-
-
-
-
 
 .girl-image {
   width: 200px;
@@ -923,7 +919,7 @@ body {
     height: 30px;
     padding: 5px;
     background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 0 10px 10px 0;
+    border-radius: 0 3px 3px 0;
   }
   .featured-projects {
     padding-bottom: 50px;
@@ -1314,9 +1310,9 @@ body {
   }
 
   .my-look-title-image {
-  width: 70px;
-  text-align: center;
-}
+    width: 70px;
+    text-align: center;
+  }
 }
 
 @supports (-webkit-touch-callout: none) {

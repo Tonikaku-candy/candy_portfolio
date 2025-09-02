@@ -119,6 +119,7 @@
 
 .project-block {
   margin: 60px 0;
+  /* margin: clamp(30px, 2vw, 60px); */
   position: relative;
 }
 

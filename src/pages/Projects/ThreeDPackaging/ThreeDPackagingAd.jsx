@@ -177,13 +177,13 @@ function ThreeDPackagingAd() {
 
             <FadeInOnScroll>
               <DetailBox size="S" title="DURATION" colorClass="yellow">
-                <p>
-                  May 1–2, 2024 (Pixel Pattern Design)
-                  <br />
-                  June 6–14, 2025 (3D Packaging Mockup)
-                  <br />
-                  July 27, 2025 (Animated Promo Video)
-                </p>
+                <ul>
+                  <li>May 1–2, 2024 (Pixel Pattern Design)</li>
+                  
+                  <li>June 6–14, 2025 (3D Packaging Mockup)</li>
+                  
+                  <li>July 27, 2025 (Animated Promo Video)</li>
+                </ul>
               </DetailBox>
             </FadeInOnScroll>
           </div>

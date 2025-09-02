@@ -44,14 +44,14 @@ function UfoAnimation() {
           y: -100
         }, {
           opacity: 1,
-          y: 0,
+          y: 20,
           stagger: 0.1,
           duration: 0.3, // 0.5から0.3に短縮
           onComplete: () => {
             // GSAPアニメーション完了後に、GSAPでCSSアニメーションを再現
             // UFOの浮遊アニメーション
             gsap.to(ufoElement, {
-              y: "+=30", // 現在の位置から45px下に移動
+              y: "+=50", // 現在の位置から__px下に移動
               duration: 2,
               ease: "power1.inOut",
               repeat: -1, // 無限に繰り返す

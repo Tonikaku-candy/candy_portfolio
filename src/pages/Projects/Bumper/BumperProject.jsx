@@ -182,7 +182,9 @@ function BumperProject() {
                 colorClass="yellow"
                 extraClass="small-padding-box"
               >
-                <p className="tight-paragraph">June 4 – June 7, 2025</p>
+                <ul className="tight-paragraph">
+                  <li>June 4 – June 7, 2025</li>
+                </ul>
               </DetailBox>
             </FadeInOnScroll>
           </div>
@@ -257,9 +259,15 @@ function BumperProject() {
                       wanted to make something energetic and full of
                       personality.
                       <br />
-                      While working on a T-shirt design for my Japanese teaching
-                      Instagram, I had the idea to bring that same chaotic vibe
-                      into motion.
+                      While working on a T-shirt design for my{' '}
+                      <Link
+                        to="/projects/japanese-instagram-project"
+                        className="link-pink"
+                      >
+                        “Japanese teaching Instagram”
+                      </Link>{' '}
+                      I had the idea to bring that same chaotic vibe into
+                      motion.
                       <br />
                       <br />
                       I started by choosing background music that made me want

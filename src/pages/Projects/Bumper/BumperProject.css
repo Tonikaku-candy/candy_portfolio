@@ -47,10 +47,7 @@
     width: 100%;
 } */
 
-.tight-paragraph {
-  margin: 3rem 0; /* 上下の余白を小さくする */
-  padding: 0; /* paddingは完全にゼロ */
-}
+
 
 .green-bg-works.bumper {
   position: absolute;

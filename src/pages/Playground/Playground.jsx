@@ -90,7 +90,7 @@ export default function Playground() {
           ease: 'power3.out',
           scrollTrigger: {
             trigger: block,
-            start: 'top 85%',
+            start: 'top 70%',
             toggleActions: 'play none none none',
             once: true,
           },
