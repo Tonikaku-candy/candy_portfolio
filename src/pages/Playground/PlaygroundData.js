@@ -22,39 +22,43 @@ import star from '../../assets/Playground/star-line.webp';
 import fruitLine from '../../assets/Playground/fruit-line.webp';
 import flower from '../../assets/Playground/flower-line.webp';
 import rabbit from '../../assets/Playground/rabbit-line.webp';
-
-
-
-
-
-
-
-
+import cherry from '../../assets/Playground/cherry-border.webp';
 
 const playgroundProjects = [
+
+    {
+    id: 13,
+     videoUrl: 'https://www.youtube.com/embed/9aD_m9uWLk0',
+   tags: ['MOTION'],
+    layout: 'left',
+    orientation: 'vertical',
+    line: cherry,
+  },
   {
     id: 1,
-    videoUrl: 'https://www.youtube.com/embed/pWFZhEVgrd8',
+    videoUrl: 'https://www.youtube.com/embed/euLlnhKGKiw',
+    
     tags: ['MOTION'],
     layout: 'left',
     orientation: 'vertical',
     line: donuts,
   },
-    {
+
+  {
     id: 3,
     videoUrl: 'https://www.youtube.com/embed/kYqyZ9Zctdk?si=EzJDsBQlunTHphBQ',
     tags: ['MOTION'],
     layout: 'center',
-      line: hand,
+    line: hand,
   },
 
-     {
+  {
     id: 11,
     image: bag,
     tags: ['GRAPHIC', 'FASHION'],
     layout: 'left',
     size: 'medium',
-      line: rabbit,
+    line: rabbit,
   },
 
   {
@@ -66,8 +70,14 @@ const playgroundProjects = [
     line: shiny,
   },
 
-
-  { id: 4, image: cardGame, tags: ['GRAPHIC'], layout: 'left', size: 'medium' ,   line: candy,},
+  {
+    id: 4,
+    image: cardGame,
+    tags: ['GRAPHIC'],
+    layout: 'left',
+    size: 'medium',
+    line: candy,
+  },
 
   {
     id: 5,
@@ -75,7 +85,7 @@ const playgroundProjects = [
     tags: ['GRAPHIC'],
     layout: 'left',
     size: 'medium',
-      line: heart,
+    line: heart,
   },
 
   {
@@ -84,7 +94,7 @@ const playgroundProjects = [
     tags: ['GRAPHIC'],
     layout: 'left',
     size: 'medium',
-      line: sakura,
+    line: sakura,
   },
 
   {
@@ -92,7 +102,7 @@ const playgroundProjects = [
     videoUrl: 'https://www.youtube.com/embed/S1TH3IqtXuM?si=AmEC_YiZ3TiLQm2f',
     tags: ['MOTION'],
     layout: 'center',
-      line: star,
+    line: star,
   },
 
   {
@@ -101,16 +111,16 @@ const playgroundProjects = [
     tags: ['GRAPHIC'],
     layout: 'left',
     size: 'small',
-      line: bowling,
+    line: bowling,
   },
 
-    {
+  {
     id: 12,
     image: fashionMagazine,
     tags: ['FASHION'],
     layout: 'left',
     size: 'medium',
-      line: flower,
+    line: flower,
   },
 
   {
@@ -119,7 +129,7 @@ const playgroundProjects = [
     tags: ['GRAPHIC', 'WEB'],
     layout: 'left',
     size: 'medium',
-      line: fruitLine,
+    line: fruitLine,
   },
 
   {
@@ -128,10 +138,12 @@ const playgroundProjects = [
     tags: ['GRAPHIC'],
     layout: 'left',
     size: 'medium',
-      line: shiny,
+    line: shiny,
   },
 
 
+
+  // next 14
 ];
 
 export default playgroundProjects;

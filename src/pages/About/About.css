@@ -875,9 +875,9 @@ body {
     position: absolute;
 
     width: 70%;
-    width: clamp(150px, 20vw, 200px);
+    width: clamp(120px, 10vw, 150px);
     z-index: 2;
-    top: -70%;
+    top: -60%;
 
     transform: translateX(-0%);
   }
@@ -987,10 +987,11 @@ body {
 
   .about-page-text {
     font-size: 1rem;
-    line-height: 2;
+    line-height: 1.5;
 
     p {
       font-size: clamp(16px, 2.5vw, 16px);
+      
     }
   }
 
@@ -1132,10 +1133,10 @@ body {
 
     @keyframes floatUfoMobile {
     0%, 100% {
-      transform: translateY(5px);
+      transform: translateY(0px);
     }
     50% {
-      transform: translateY(20px);
+      transform: translateY(10px);
     }
   }
 
@@ -1173,7 +1174,7 @@ body {
     position: relative;
     width: clamp(100px, 40vw, 200px);
     top: 40%;
-    right: 0px;
+    right: -10px;
     transform: translateX(0%);
   }
 }

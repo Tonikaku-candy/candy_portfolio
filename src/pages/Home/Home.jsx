@@ -29,6 +29,7 @@ import myLookTitleImage from '../../assets/home/my-look/rainbow.png';
 import sewingMachine from '../../assets/home/my-look/sewing-machine.webp';
 import tomato from '../../assets/home/my-look/tomato-pin-cushion.webp';
 import thread from '../../assets/home/my-look/colorful-thread.webp';
+import placeHolder from '../../assets/home/header/candy-fukaya-portfolio-placeholder.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -98,6 +99,7 @@ function Home() {
       muted
       loop
       playsInline
+      poster={placeHolder} 
     >
       <source src={headerVideoWebm} type="video/webm" />
       <source src={headerVideo} type="video/mp4" />
