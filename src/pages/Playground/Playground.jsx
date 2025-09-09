@@ -30,7 +30,7 @@ const AnimatedTitle = ({ text, trigger, className }) => {
         ease: 'back.out(1.7)',
         scrollTrigger: {
           trigger: trigger.current,
-          start: 'top 80%',
+          start: 'top 70%',
           toggleActions: 'play none none none',
           once: true,
         },
@@ -182,6 +182,20 @@ export default function Playground() {
                   )}
 
                   <div className="text">
+                    {p.id === 13 && (
+                      <>
+                        <h3>
+                          <span className="icon"></span>Japanese Cream Soda –
+                          Motion Graphics
+                        </h3>
+                        <p>
+                          A motion graphics animation created in After Effects,
+                          with a summer vibe. This project was also a practice
+                          in liquid animation.
+                        </p>
+                      </>
+                    )}
+
                     {p.id === 1 && (
                       <>
                         <h3>
