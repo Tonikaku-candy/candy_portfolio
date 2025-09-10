@@ -7,6 +7,7 @@ import DetailBox from '../../../components/ProjectDetail/DetailBox.jsx';
 import '../../../components/ProjectDetail/DetailBox.css';
 import Footer from '../../../components/Footer.jsx';
 import '../ProjectsDetailLayout.css';
+import DetailLinks from '../../../components/ProjectDetail/DetailLinks.jsx';
 // import './FashionZineProject.css';
 import ScrollingTagBar from '../../../components/ProjectDetail/ScrollingTagBar.jsx';
 import ProjectTitle from '../../../components/ProjectDetail/ProjectTitle.jsx';
@@ -95,7 +96,7 @@ function FashionZineAndEventProject() {
     };
   }, [currentIndex, projects]);
 
-  const  baseTags = [
+  const baseTags = [
     'EVENT ORGANIZE',
     'FASHION ZINE',
     'LOGO DESIGN',
@@ -127,6 +128,18 @@ function FashionZineAndEventProject() {
           </div>
         ) : (
           <>
+
+               {/* ページ内リンク */}
+                  <DetailLinks
+                    links={[
+                      { id: 'magazine', label: 'Magazine' },
+                      { id: 'overview', label: 'Overview' },
+                      { id: 'design', label: 'Design Concept' },
+                      { id: 'landing', label: 'Landing Page' },
+                        { id: 'history', label: 'Event History' },
+                    ]}
+                  />
+                  <div id="magazine"></div>
             <FadeInOnScroll>
               <Flipbook />
             </FadeInOnScroll>
@@ -158,13 +171,20 @@ function FashionZineAndEventProject() {
 
                 <FadeInOnScroll>
                   <DetailBox size="S" title="DURATION" colorClass="yellow">
-                    <ul>
-                      <li>March – May, 2025</li>
+                    <ul className="tight-paragraph">
+                      <li>
+                        March 2025 — Logo, Poster & Landing
+                        Page
+                      </li>
+                      <li>
+                        June–July 2025 — Fashion Zine
+                      </li>
                     </ul>
                   </DetailBox>
                 </FadeInOnScroll>
               </div>
 
+        <div id="overview"></div>
               <FadeInOnScroll>
                 <DetailBox title="OVERVIEW" colorClass="pink">
                   <p>
@@ -188,6 +208,7 @@ function FashionZineAndEventProject() {
                 </DetailBox>
               </FadeInOnScroll>
 
+      <div id="design"></div>
               <FadeInOnScroll>
                 <DetailBox title="DESIGN CONCEPT" colorClass="green">
                   <p>
@@ -229,6 +250,7 @@ function FashionZineAndEventProject() {
                 </DetailBox>
               </FadeInOnScroll>
 
+   <div id="landing"></div>
               <FadeInOnScroll>
                 <DetailBox title="EVENT LANDING PAGE" colorClass="purple">
                   <p>
@@ -262,6 +284,7 @@ function FashionZineAndEventProject() {
                 </DetailBox>
               </FadeInOnScroll>
 
+   <div id="history"></div>
               <FadeInOnScroll>
                 <DetailBox title="EVENT HISTORY" colorClass="orange">
                   <p>

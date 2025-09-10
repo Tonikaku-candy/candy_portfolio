@@ -142,6 +142,7 @@ function JapaneseInstagramProject() {
                 { id: 'concept', label: 'concept' },
                 { id: 'strategy', label: 'strategy' },
                 { id: 'engagement', label: 'engagement' },
+                     { id: 'instagram', label: 'Instagram' },
               ]}
             />
 
@@ -343,6 +344,7 @@ function JapaneseInstagramProject() {
                     <SlideCard slideData={SlideData} />
                   </div>
                   <div className="text-center">
+                        <div id="instagram"></div>
                     <a
                       href="https://www.instagram.com/atarashiivancouver/"
                       target="_blank"

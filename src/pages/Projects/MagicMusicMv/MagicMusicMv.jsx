@@ -120,6 +120,8 @@ function MagicMusicMv() {
         </div>
 
         <ProjectTitle title="Magic Music - Music Video" />
+
+            <div id="video"></div>
         <FadeInOnScroll>
           <div className="video-wrapper rhythm-video">
             <iframe
@@ -135,6 +137,7 @@ function MagicMusicMv() {
         {/* ページ内リンク */}
         <DetailLinks
           links={[
+              { id: 'video', label: 'Video' },
             { id: 'overview', label: 'Overview' },
             { id: 'inspiration', label: 'Inspiration' },
             { id: 'production', label: 'Production' },

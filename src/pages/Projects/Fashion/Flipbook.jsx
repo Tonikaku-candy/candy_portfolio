@@ -1,5 +1,5 @@
-import React from 'react';
 import HTMLFlipBook from 'react-pageflip';
+import React, { useRef } from 'react';
 import './Flipbook.css';
 
 // 画像をここでまとめて import
@@ -32,6 +32,7 @@ import page26 from '../../../assets/ProjectDetails/Fashion/magazine2-26.webp';
 
 function Flipbook() {
   const isMobile = window.innerWidth < 768;
+  const book = useRef();
   const pages = [
     page1,
     page2,
@@ -63,7 +64,16 @@ function Flipbook() {
 
   return (
     <div className="magazine-wrapper">
+      {/* 左矢印 */}
+      <button
+        className="flipbook-arrow left"
+        onClick={() => book.current.pageFlip().flipPrev()}
+      >
+        &lt;
+      </button>
+
       <HTMLFlipBook
+        ref={book}
         width={570}
         height={760}
         size="stretch"
@@ -84,6 +94,13 @@ function Flipbook() {
           </div>
         ))}
       </HTMLFlipBook>
+      {/* 右矢印 */}
+      <button
+        className="flipbook-arrow right"
+        onClick={() => book.current.pageFlip().flipNext()}
+      >
+        &gt;
+      </button>
     </div>
   );
 }
