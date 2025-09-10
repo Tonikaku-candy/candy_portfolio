@@ -12,23 +12,23 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 
   height: auto;
-  position: relative; /* 擬似要素の基準 */
+  position: relative; 
   overflow: hidden;
 }
 
 /* 真ん中の黒い中心線 */
-.flipbook-container::before {
+/* .flipbook-container::before {
   content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   left: 50%;
-  width: 2px; /* 線の太さ */
+  width: 2px; 
   background-color: black;
   transform: translateX(-50%);
   z-index: 10;
   
-}
+} */
 
 /* 各ページ */
 .flipbook-page {
@@ -50,22 +50,5 @@
 
 
 @media (max-width: 768px) {
-  .flipbook-container {
-    max-width: 300px; /* スマホ幅に縮小 */
-  }
-}
 
-
-.flipbook-page {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.flipbook-image {
-  width: 100%;
-  height: auto; /* アスペクト比を保持 */
-
-  object-fit: contain;
 }
