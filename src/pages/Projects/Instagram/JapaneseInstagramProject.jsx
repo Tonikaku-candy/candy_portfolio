@@ -121,7 +121,7 @@ function JapaneseInstagramProject() {
 
         {notFound ? (
           <div className="project-not-found">
-            <p>指定のプロジェクトが見つかりませんでした。</p>
+            <p>Can not find project</p>
             <Link to="/works" className="back-button center">
               Back to Projects
             </Link>
