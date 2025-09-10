@@ -125,6 +125,7 @@ function ThreeDPackagingAd() {
         <ProjectTitle title="3D PACKAGING AD - Apparel Motion Design" />
 
         <div className="video-wrapper poster">
+              <div id="video"></div>
           <FadeInOnScroll>
             <iframe
               width="560"
@@ -140,6 +141,7 @@ function ThreeDPackagingAd() {
 
         <DetailLinks
           links={[
+              { id: 'video', label: 'Video' },
             { id: 'overview', label: 'OVERVIEW' },
             { id: 'inspiration', label: 'Inspiration' },
             { id: 'brainstorming', label: 'Brainstorming' },

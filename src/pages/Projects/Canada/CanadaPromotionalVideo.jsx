@@ -114,9 +114,10 @@ function CanadaPromotionalVideo() {
         <ProjectTitle
           title={`“Canada Ain’t What I Thought!”\nPlayful Travel Campaign Film`}
         />
-
+          <div id="video"></div>
         <FadeInOnScroll>
           <div className="video-wrapper canada">
+
             <iframe
               width="560"
               height="315"
@@ -132,6 +133,7 @@ function CanadaPromotionalVideo() {
         {/* ページ内リンク */}
         <DetailLinks
           links={[
+                  { id: 'video', label: 'Video' },
             { id: 'overview', label: 'Overview' },
             { id: 'concept', label: 'Concept' },
             { id: 'approach', label: 'Approach' },

@@ -115,6 +115,7 @@ function RhythmGame() {
 
         <ProjectTitle title="Rhythm Game Animation in After Effects" />
         <div className="video-wrapper rhythm-video">
+          <div id="short"></div>
           <FadeInOnScroll>
             <iframe
               src="https://www.youtube.com/embed/FirjiKAvp8U?si=U27l5qBcxGKhgS_I"
@@ -129,6 +130,7 @@ function RhythmGame() {
         {/* ページ内リンク */}
         <DetailLinks
           links={[
+            { id: 'short', label: 'Short Video' },
             { id: 'overview', label: 'Overview' },
             { id: 'inspiration', label: 'Inspiration' },
             { id: 'story', label: 'Storytelling' },

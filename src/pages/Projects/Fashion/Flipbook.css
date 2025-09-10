@@ -2,39 +2,37 @@
   display: flex;
   justify-content: center;
   margin: 2rem 0;
-  
+  align-items: center;
 }
 
 /* Flipbook本体 */
 .flipbook-container {
-
   border-radius: 16px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 
   height: auto;
-  position: relative; 
+  position: relative;
   overflow: hidden;
+  margin: 0 1rem;
 }
 
 /* 真ん中の黒い中心線 */
-/* .flipbook-container::before {
-  content: "";
+.flipbook-container::before {
+  content: '';
   position: absolute;
   top: 0;
   bottom: 0;
   left: 50%;
-  width: 2px; 
-  background-color: black;
+  width: 2px;
+  background-color: rgb(143, 143, 143);
   transform: translateX(-50%);
   z-index: 10;
-  
-} */
+}
 
 /* 各ページ */
 .flipbook-page {
   width: 100%;
-  
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,12 +41,71 @@
 /* ページの画像 */
 .flipbook-image {
   width: 100%;
+
   height: auto;
 
   /* object-fit: contain; */
 }
 
+/* arrow */
+.flipbook-arrow {
+  background: #ff66aa;
+  color: white;
+  border: none;
+  font-size: clamp(1rem, 2vw, 2rem);
+
+  font-weight: bold;
+  width: clamp(38px, 3vw, 48px);
+  height: clamp(38px, 3vw, 48px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.flipbook-arrow:hover {
+  background: #b14576;
+  transform: scale(1.1);
+}
+
+.flipbook-arrow.left {
+  margin-left: 1rem;
+}
+
+.flipbook-arrow.right {
+  margin-right: 1rem;
+}
 
 @media (max-width: 768px) {
+  .flipbook-arrow {
+    background: #ff66aa;
+    color: white;
+    border: none;
+    font-size: clamp(0.5rem, 2vw, 1rem);
+    font-weight: bold;
+    width: clamp(28px, 3vw, 38px);
+    height: clamp(28px, 3vw, 38px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
 
+  .flipbook-arrow.left {
+    margin-left: 1rem;
+  }
+
+  .flipbook-arrow.right {
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 609px) {
+  .flipbook-container::before {
+    display: none;
+  }
 }

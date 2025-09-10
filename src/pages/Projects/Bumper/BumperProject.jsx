@@ -121,6 +121,7 @@ function BumperProject() {
         {/* 動画 */}
 
         <div className="video-wrapper">
+                    <div id="video"></div>
           <FadeInOnScroll>
             <iframe
               width="560"
@@ -137,6 +138,7 @@ function BumperProject() {
         {/* ページ内リンク */}
         <DetailLinks
           links={[
+              { id: 'video', label: 'Video' },
             { id: 'overview', label: 'Overview' },
             { id: 'inspiration', label: 'Inspiration' },
             { id: 'brainstorming', label: 'Brainstorming' },
