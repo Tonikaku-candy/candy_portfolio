@@ -72,14 +72,14 @@ const projects = [
 
   {
     id: 'fashion-zine',
-    title: 'Fashion Zine',
+    title: 'Fashion Zine and Event',
     category: ['Branding', 'Fashion'],
     description: [
       '- Magazine Design, Event Planning, Fashion & Web Integration',
       '- Harajuku fashion event zine combining photos & layout',
     ],
     image: zine,
-    link: '/projects/fashion-zine',
+    link: '/projects/fashion-zine-and-event',
   },
 
   {
