@@ -99,7 +99,7 @@ function Home() {
       muted
       loop
       playsInline
-      // poster={placeHolder} 
+      poster={placeHolder} 
     >
       <source src={headerVideoWebm} type="video/webm" />
       <source src={headerVideo} type="video/mp4" />
