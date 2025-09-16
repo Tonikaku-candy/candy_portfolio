@@ -8,12 +8,15 @@
 .footer-icons {
   margin-top: 20px;
   margin-bottom: 20px;
+  
 }
 
 .footer-icons a {
   margin: 0 1rem;
   font-size: 3rem;
   color: #FE00B6;
+
+  
 }
 
 .footer-text p {

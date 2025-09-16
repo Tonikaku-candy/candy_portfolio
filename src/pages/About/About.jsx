@@ -385,6 +385,7 @@ function About() {
 
           {/* Extra Skills */}
           <div className="skills-card extra">
+       
             <h2 className="about-section-title extra relative-version">
               EXTRA SKILLS
             </h2>
@@ -396,14 +397,14 @@ function About() {
               />
             </div>
             <ul className="extra-skills-list">
-              <li>Social Media Content Creation</li>
-              <li>Flexible Creative Thinking</li>
-              <li>Detail-Oriented & Reliable</li>
-              <li>Storytelling with Humor</li>
-              <li>Fashion Coordination & Creative Styling</li>
-              <li>Garment Construction (Industrial Sewing)</li>
-              <li>Voiceover / Narration</li>
-              <li>Japanese Language Instruction</li>
+              <li>Social Media <br></br> Content Creation</li>
+              <li>Flexible <br></br>Creative Thinking</li>
+              <li>Detail-Oriented<br></br> & Reliable</li>
+              <li>Storytelling <br></br>with Humor</li>
+              <li>Fashion Coordination  <br></br>& Creative Styling</li>
+              <li>Garment Construction <br></br> (Industrial Sewing)</li>
+              <li>Voiceover <br></br>& Narration</li>
+              <li>Japanese Language <br></br> Instruction</li>
             </ul>
           </div>
         </div>

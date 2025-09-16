@@ -38,10 +38,24 @@
   aspect-ratio: 3 / 4;
   background-color: #ff44b7;
   border: solid 4px #fff;
+  
   border-radius: 10px;
   z-index: 1;
   width: 100%;               /* wrapper に合わせる */
   aspect-ratio: 3 / 4;    
+}
+
+.logo-tab-box::before {
+  content: "";
+  position: absolute;
+  top: -4px;  
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px solid #343434; 
+  border-radius: 10px;       
+  pointer-events: none;     
+  z-index: -1;              
 }
 
 /* logo end */
@@ -488,11 +502,11 @@
 
   .logo {
     display: block;
-    width: 70px;
+    width: clamp(55px, 3vw,70px);
     height: auto;
     margin-left: 0;
 
-    margin-top: 30px;
+    margin-top: clamp(20px, 2vw,30px);
     margin-bottom: auto;
     z-index: 5;
     position: relative;
@@ -509,8 +523,8 @@
     align-items: center; /* 縦方向に中央 */
     position: relative;
     margin-left: 10px;
-    height: 100px;
-    width: 90px;
+    height:clamp(80px, 3vw,100px);
+    width: clamp(70px, 3vw,90px);
     background-color: #ff44b7;
     border: solid 4px #fff;
     border-radius: 10px;

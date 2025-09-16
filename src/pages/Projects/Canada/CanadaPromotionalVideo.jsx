@@ -1,7 +1,6 @@
-// src/pages/Projects/Canada/CanadaPromotionalVideoFilm.jsx
-
 import React, { useState, useMemo } from 'react';
 import { useParams, useLocation, Link } from 'react-router-dom';
+import Modal from 'react-modal';
 import '../../../components/TagBar.css';
 import DetailBox from '../../../components/ProjectDetail/DetailBox.jsx';
 import '../../../components/ProjectDetail/DetailBox.css';
@@ -20,57 +19,13 @@ import DetailLinks from '../../../components/ProjectDetail/DetailLinks.jsx';
 import SlideData from './CanadaSlideData.js';
 import SlideCard from '../../../components/ProjectDetail/SlideCard';
 
-/* -----------------------
-   resolveProjectIndex 関数（高機能版）
-------------------------- */
-function resolveProjectIndex(projects, location, params) {
-  const norm = (v) =>
-    String(v ?? '')
-      .replace(/\/+$/, '')
-      .toLowerCase();
+Modal.setAppElement('#root');
 
-  const paramCandidates = Object.values(params || {})
-    .filter(Boolean)
-    .map((v) => norm(v));
-  const lastSeg = norm(location?.pathname?.split('/').filter(Boolean).pop());
-  const candidates = [...paramCandidates, lastSeg].filter(Boolean);
-
-  const pickKeys = (p) => {
-    const keys = new Set();
-    keys.add(norm(p.id));
-    keys.add(norm(p.slug));
-    keys.add(norm(p.link));
-    const linkLast = norm((p.link || '').split('/').filter(Boolean).pop());
-    keys.add(linkLast);
-    return keys;
-  };
-
-  for (let i = 0; i < projects.length; i++) {
-    const keys = pickKeys(projects[i]);
-    if (candidates.some((c) => keys.has(c))) return i;
-  }
-
-  const path = norm(location?.pathname || '');
-  return projects.findIndex((p) => norm(p.link) === path);
-}
-
-/* -----------------------
-   buildProjectLink 関数
-------------------------- */
-function buildProjectLink(proj) {
-  if (!proj) return '/works';
-  if (proj.link) return proj.link.replace(/\/+$/, '');
-  const idOrSlug = proj.slug ?? proj.id;
-  return `/projects/${idOrSlug}`;
-}
-
-/* -----------------------
-   CanadaPromotionalVideo コンポーネント
-------------------------- */
 function CanadaPromotionalVideo() {
   const params = useParams();
   const location = useLocation();
   const [selectedTag, setSelectedTag] = useState('');
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const currentIndex = useMemo(
     () => resolveProjectIndex(projects, location, params),
@@ -106,18 +61,18 @@ function CanadaPromotionalVideo() {
         <ScrollingTagBar tags={tags} />
 
         <div className="back-to-works top">
-          <Link to="/works" className="back-button">
-            ← Back to projects
-          </Link>
+         <Link to="/projects" className="back-button top">
+                   <span className="button_top">← Back to projects</span>
+                 </Link>
         </div>
 
-        <ProjectTitle
-          title={`“Canada Ain’t What I Thought!”\nPlayful Travel Campaign Film`}
-        />
-          <div id="video"></div>
+    <ProjectTitle
+  className="long-title"
+  title={`“Canada Ain’t What I Thought!”\nPlayful Travel Campaign Film`}
+/>
+        <div id="video"></div>
         <FadeInOnScroll>
           <div className="video-wrapper canada">
-
             <iframe
               width="560"
               height="315"
@@ -133,7 +88,7 @@ function CanadaPromotionalVideo() {
         {/* ページ内リンク */}
         <DetailLinks
           links={[
-                  { id: 'video', label: 'Video' },
+            { id: 'video', label: 'Video' },
             { id: 'overview', label: 'Overview' },
             { id: 'concept', label: 'Concept' },
             { id: 'approach', label: 'Approach' },
@@ -178,6 +133,7 @@ function CanadaPromotionalVideo() {
               </DetailBox>
             </FadeInOnScroll>
           </div>
+
           <div id="overview"></div>
           <FadeInOnScroll>
             <DetailBox title="Overview" colorClass="pink">
@@ -190,6 +146,7 @@ function CanadaPromotionalVideo() {
               </p>
             </DetailBox>
           </FadeInOnScroll>
+
           <div id="concept"></div>
           <FadeInOnScroll>
             <DetailBox title="CONCEPT & DIRECTION" colorClass="green">
@@ -217,8 +174,7 @@ function CanadaPromotionalVideo() {
                 surprises like being placed in a language school full of people
                 from my own country, or realizing how different the environment
                 was from what the travel agents told me.
-                <br />
-                <br />
+                <br /> <br />
                 Over time, though, I found joy in multicultural life, especially
                 the shared food and culture, and eventually came to love living
                 in Canada. This personal experience shaped the new storyline: a
@@ -229,7 +185,10 @@ function CanadaPromotionalVideo() {
               <br />
               <h3 className="story-plan-heading">Here is the story plan:</h3>
               <div className="project-slider-detail canada-slide">
-                <SlideCard slideData={SlideData} />
+                <SlideCard
+                  slideData={SlideData}
+                  onImageClick={setSelectedImage}
+                />
               </div>
             </DetailBox>
           </FadeInOnScroll>
@@ -247,7 +206,7 @@ function CanadaPromotionalVideo() {
               </p>
               <div className="text-center">
                 <a
-                  href="https://suno.com/playlist/80ca1620-0b76-44f5-b7d8-a86db1bb8f7a"
+                  href="https://suno.com/playlist/80ca1620-0b76-44f5-b7d8-a86e00c125bb"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="suno-link"
@@ -267,12 +226,10 @@ function CanadaPromotionalVideo() {
                 to feel like a musical, but with a twist showing the honest
                 experience of an international student, with both the ups and
                 downs.
-                <br />
-                <br />I also used Adobe After Effects for adding motion
+                <br /> <br />I also used Adobe After Effects for adding motion
                 graphics, transitions, and subtle visual effects to make the
                 storytelling more dynamic and polished.
-                <br />
-                <br />
+                <br /> <br />
                 Screenshot from Adobe After Effects, showing the “What!?!!”
                 comic-style cut scene created with Loto Blush font. This editing
                 process involved layering video footage with animated speech
@@ -283,7 +240,7 @@ function CanadaPromotionalVideo() {
                 <img
                   src={screenShot}
                   alt="Adobe After Effects editing screenshot of 'What!?!' comic-style cut scene with Loto Blush font"
-            
+                  onClick={() => setSelectedImage(screenShot)}
                 />
               </div>
               <p>
@@ -299,42 +256,133 @@ function CanadaPromotionalVideo() {
                 <img
                   src={wall}
                   alt="Mural in Vancouver with 'MORE AWESOME NOW' text, used in Canada promo video"
-                
+                  onClick={() => setSelectedImage(wall)}
                 />
               </div>
             </DetailBox>
           </FadeInOnScroll>
         </div>
+ {/* --- Prev / Next --- */}
+            <div className="project-nav">
+              {prevProject && (
+                <Link
+                  to={buildProjectLink(prevProject)}
+                  className="nav-button prev"
+                >
+                  <span className="button_top">← Prev</span>
+                </Link>
+              )}
+              <Link to="/projects" className="back-button center">
+                <span className="button_top">Back to projects</span>
+              </Link>
+              {nextProject && (
+                <Link
+                  to={buildProjectLink(nextProject)}
+                  className="nav-button next"
+                >
+                  <span className="button_top">Next →</span>
+                </Link>
+              )}
+            </div>
+        {/* モーダル（クリックで画像拡大表示） */}
+    <Modal
+  isOpen={!!selectedImage}
+  onRequestClose={() => setSelectedImage(null)}
+  contentLabel="拡大画像"
+  style={{
+    content: {
+      top: "50%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      transform: "translate(-50%, -50%)",
+      background: "rgba(0,0,0,0.95)",
+      border: "none",
+      padding: 0,
+      overflow: "auto", // スクロールできるようにする
+      maxWidth: "95vw",
+      maxHeight: "95vh",
+    },
+    overlay: {
+      backgroundColor: "rgba(0,0,0,0.85)",
+      zIndex: 50,
+    },
+  }}
+>
+  <button
+    onClick={() => setSelectedImage(null)}
+    style={{
+      position: "absolute",
+      top: "10px",
+      right: "10px",
+      fontSize: "2rem",
+      color: "white",
+      background: "rgba(0,0,0,0.5)",
+      border: "none",
+      borderRadius: "8px",
+      padding: "0 8px",
+    }}
+  >
+    ✕
+  </button>
+  <img
+    src={selectedImage}
+    alt="拡大画像"
+    className="max-h-[90vh] max-w-[90vw] object-contain"
+  />
+</Modal>
 
-        {/* --- Prev / Next --- */}
-        <div className="project-nav">
-          {prevProject && (
-            <Link
-              to={buildProjectLink(prevProject)}
-              className="nav-button prev"
-            >
-              ← Prev
-            </Link>
-          )}
-          <Link to="/works" className="back-button center">
-            Back to Projects
-          </Link>
-          {nextProject && (
-            <Link
-              to={buildProjectLink(nextProject)}
-              className="nav-button next"
-            >
-              Next →
-            </Link>
-          )}
-        </div>
       </div>
-
-      <div className="footer-detail">
+        <div className="footer-detail">
         <Footer />
       </div>
     </>
   );
+}
+
+// ここにある `resolveProjectIndex` と `buildProjectLink` 関数は省略（元のコードと同じ）
+/* -----------------------
+   resolveProjectIndex 関数（高機能版）
+------------------------- */
+function resolveProjectIndex(projects, location, params) {
+  const norm = (v) =>
+    String(v ?? '')
+      .replace(/\/+$/, '')
+      .toLowerCase();
+
+  const paramCandidates = Object.values(params || {})
+    .filter(Boolean)
+    .map((v) => norm(v));
+  const lastSeg = norm(location?.pathname?.split('/').filter(Boolean).pop());
+  const candidates = [...paramCandidates, lastSeg].filter(Boolean);
+
+  const pickKeys = (p) => {
+    const keys = new Set();
+    keys.add(norm(p.id));
+    keys.add(norm(p.slug));
+    keys.add(norm(p.link));
+    const linkLast = norm((p.link || '').split('/').filter(Boolean).pop());
+    keys.add(linkLast);
+    return keys;
+  };
+
+  for (let i = 0; i < projects.length; i++) {
+    const keys = pickKeys(projects[i]);
+    if (candidates.some((c) => keys.has(c))) return i;
+  }
+
+  const path = norm(location?.pathname || '');
+  return projects.findIndex((p) => norm(p.link) === path);
+}
+
+/* -----------------------
+   buildProjectLink 関数
+------------------------- */
+function buildProjectLink(proj) {
+  if (!proj) return '/projects';
+  if (proj.link) return proj.link.replace(/\/+$/, '');
+  const idOrSlug = proj.slug ?? proj.id;
+  return `/projects/${idOrSlug}`;
 }
 
 export default CanadaPromotionalVideo;

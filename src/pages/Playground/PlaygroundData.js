@@ -42,6 +42,7 @@ const playgroundProjects = [
     layout: 'left',
     orientation: 'vertical',
     line: donuts,
+
   },
 
   {
@@ -138,7 +139,7 @@ const playgroundProjects = [
     tags: ['GRAPHIC'],
     layout: 'left',
     size: 'medium',
-    line: shiny,
+    line: star,
   },
 
 

@@ -55,11 +55,8 @@ function Home() {
     return () => clearInterval(interval);
   }, []);
 
-
   // slider animation
-    const sliderRef = useRef(null);
-
-
+  const sliderRef = useRef(null);
 
   // girl comment
   const [isVisible, setIsVisible] = useState(false);
@@ -94,24 +91,24 @@ function Home() {
           Candy Fukaya – Graphic & Motion Designer Portfolio
         </h1>
         <video
-      className="video"
-      autoPlay
-      muted
-      loop
-      playsInline
-      poster={placeHolder} 
-    >
-      <source src={headerVideoWebm} type="video/webm" />
-      <source src={headerVideo} type="video/mp4" />
-      <track
-    src="/captions/hero-video-captions.vtt"
-    kind="captions"
-    srcLang="en"
-    label="English captions"
-    default
-  />
-      Your browser does not support the video tag.
-    </video>
+          className="video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          poster={placeHolder}
+        >
+          <source src={headerVideoWebm} type="video/webm" />
+          <source src={headerVideo} type="video/mp4" />
+          <track
+            src="/captions/hero-video-captions.vtt"
+            kind="captions"
+            srcLang="en"
+            label="English captions"
+            default
+          />
+          Your browser does not support the video tag.
+        </video>
       </div>
       {/* header end */}
 
@@ -162,7 +159,7 @@ function Home() {
           </div>
 
           <div className="intro-outline-wrapper">
-      <img src={lollipop} className="lollipop" alt="heart lollipop" />
+            <img src={lollipop} className="lollipop" alt="heart lollipop" />
 
             <div className="candy-text-wrapper">
               <div className="candy-outline-text-top">
@@ -182,9 +179,12 @@ function Home() {
                     culture — a Japanese aesthetic centered around cuteness,
                     color, and playfulness!
                   </p>
-                  <Link to="/about" className="intro-button">
-                    More about me
-                  </Link>
+
+                  
+                 <Link to="/about" className="intro-button">
+  <span className="button_top">More about me</span>
+</Link>
+
                 </div>
                 <div className="about-image">
                   <video
@@ -200,7 +200,7 @@ function Home() {
             </div>
           </div>
         </div>
-     <img src={jellyBeans} className="jelly" alt="jelly beans" />
+        <img src={jellyBeans} className="jelly" alt="jelly beans" />
         <div className="diagonal-bottom"></div>
       </section>
       {/* about me end */}

@@ -155,6 +155,7 @@
   width: 100%; /* 横幅いっぱい */
   height: auto;
   display: block;
+
 }
 
 /* grid */
@@ -319,6 +320,13 @@
     margin: 0 auto;     /* ← センターに配置 */
     padding-left: 0;    /* ← 左パディング不要 */
   }
+
+  .line {
+  width: 100%; /* 横幅いっぱい */
+  height: auto;
+  display: block;
+  transform: scale(3);
+}
 }
 
 

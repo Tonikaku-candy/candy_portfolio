@@ -35,10 +35,20 @@
   margin: 20px 0;
 }
 
+/* title font size */
+.subtitles.all-projects.long-title {
+  font-size: clamp(1.2rem, 2vw, 38px);
+}
+
 @media (max-width: 768px) {
   .subtitles.all-projects {
     font-size: clamp(14px, 4vw, 20px);
+      border-bottom: 4px solid #00cfff;
   }
+
+  .subtitles.all-projects.long-title {
+  font-size: clamp(11px, 3vw, 20px);
+}
 }
 
 @media (max-width: 480px) {

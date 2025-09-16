@@ -61,7 +61,7 @@ function resolveProjectIndex(projects, location, params) {
    buildProjectLink 関数
 ------------------------- */
 function buildProjectLink(proj) {
-  if (!proj) return '/works';
+  if (!proj) return '/projects';
   if (proj.link) return proj.link.replace(/\/+$/, '');
   const idOrSlug = proj.slug ?? proj.id;
   return `/projects/${idOrSlug}`;
@@ -112,9 +112,9 @@ function BumperProject() {
         <ScrollingTagBar tags={tags} />
 
         <div className="back-to-works top">
-          <Link to="/works" className="back-button top">
-            ← Back to Projects
-          </Link>
+            <Link to="/projects" className="back-button top">
+                      <span className="button_top">← Back to projects</span>
+                    </Link>
         </div>
         <ProjectTitle title="Bumper Opener Video" />
 
@@ -349,23 +349,23 @@ function BumperProject() {
         {/* --- Prev / Next --- */}
         <div className="project-nav">
           {prevProject && (
-            <Link
-              to={buildProjectLink(prevProject)}
-              className="nav-button prev"
-            >
-              ← Prev
-            </Link>
-          )}
-          <Link to="/works" className="back-button center">
-            Back to Projects
-          </Link>
-          {nextProject && (
-            <Link
-              to={buildProjectLink(nextProject)}
-              className="nav-button next"
-            >
-              Next →
-            </Link>
+             <Link
+                        to={buildProjectLink(prevProject)}
+                        className="nav-button prev"
+                      >
+                        <span className="button_top">← Prev</span>
+                      </Link>
+                    )}
+                    <Link to="/projects" className="back-button center">
+                      <span className="button_top">Back to projects</span>
+                    </Link>
+                    {nextProject && (
+                      <Link
+                        to={buildProjectLink(nextProject)}
+                        className="nav-button next"
+                      >
+                        <span className="button_top">Next →</span>
+                      </Link>
           )}
         </div>
       </div>
