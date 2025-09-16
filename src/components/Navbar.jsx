@@ -161,7 +161,11 @@ function Navbar({ menuOpen, setMenuOpen }) {
             isOpen={menuOpen} // ← 状態で制御
             onStateChange={(state) => setMenuOpen(state.isOpen)} // ← 自動同期
             customBurgerIcon={<img src={burger} alt="menu" />}
+
+
+            
             customCrossIcon={<img src={close} alt="close menu" />}
+
             styles={{
               bmMorphShape: {
                 fill: '#fff94d',
