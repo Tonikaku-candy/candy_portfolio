@@ -1018,6 +1018,19 @@ padding-top: 0;
     }
   }
 
+
+  .subtitles.say {
+  font-family: 'Bungee', sans-serif;
+  font-size: 2.5rem;
+  font-size: clamp(1rem, 4vw, 2.5rem);
+  color: #222222;
+  border-bottom: 4px solid #ff4dc4;
+  display: inline-block;
+  /* h2 {
+    font-size: clamp(24px, 3vw, 60px);
+  } */
+}
+
   .chameleon-wrapper {
     position: absolute;
     left: 80%;

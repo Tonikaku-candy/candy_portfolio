@@ -531,6 +531,20 @@
     z-index: 1;
   }
 
+  .logo-tab-box::before {
+  content: "";
+  position: absolute;
+  top: -4px;  
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 1px solid #343434; 
+  border-radius: 10px;       
+  pointer-events: none;     
+  z-index: -1;              
+}
+
+
   /* .burger-icon {
     display: block;
     background-color: #ff62bc;
