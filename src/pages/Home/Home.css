@@ -1185,7 +1185,7 @@ height: 10%;
 
   .candy-outline-text-top {
     position: absolute;
-    top: 2px;
+    top: 1px;
     left: 50%;
     transform: translateX(-50%);
     font-family: 'Bungee', sans-serif;
