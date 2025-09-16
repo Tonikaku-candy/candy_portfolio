@@ -120,17 +120,9 @@
     gap: 8px;
   }
 
-  /* .modal-content {
-    img {
-      object-fit: cover;
-      aspect-ratio: 1;
-    }
-  } */
-
   .thumb-media {
     width: 20%;
     height: auto;
-    /* height: 45px; */
   }
 
   .custom-arrow {
@@ -140,11 +132,5 @@
     font-size: 1rem;
   }
 
-  /* .thumbnail-slider .thumb-media:nth-child(n + 3) {
-    display: none;
-  } */
 
-    .modal-overlay {
-    display: none !important;
-  }
 }

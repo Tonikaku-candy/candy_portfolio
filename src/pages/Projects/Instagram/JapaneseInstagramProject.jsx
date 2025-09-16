@@ -20,6 +20,8 @@ import FadeInOnScroll from '../../../components/FadeInOnScroll.jsx';
 
 // image
 import instagramImage from '../../../components/assets/japanese-instagram-content-posts.webp';
+import image2 from '../../../assets/ProjectDetails/Instagram/instagram-insights.webp';
+import image1 from '../../../assets/ProjectDetails/Instagram/instagram-insights2.webp'
 
 /* -----------------------
    resolveProjectIndex 関数（高機能版）
@@ -64,7 +66,7 @@ function resolveProjectIndex(projects, location, params) {
    buildProjectLink 関数
 ------------------------- */
 function buildProjectLink(proj) {
-  if (!proj) return '/works';
+  if (!proj) return '/projects';
   if (proj.link) return proj.link.replace(/\/+$/, '');
   const idOrSlug = proj.slug ?? proj.id;
   return `/projects/${idOrSlug}`;
@@ -112,17 +114,20 @@ function JapaneseInstagramProject() {
         <ScrollingTagBar tags={tags} />
 
         <div className="back-to-works top">
-          <Link to="/works" className="back-button">
-            ← Back to projects
+          <Link to="/projects" className="back-button top">
+            <span className="button_top">← Back to projects</span>
           </Link>
         </div>
 
-        <ProjectTitle title="INSTAGRAM CONTENT CREATION" />
+        <ProjectTitle
+          className="long-title"
+          title="INSTAGRAM CONTENT CREATION"
+        />
 
         {notFound ? (
           <div className="project-not-found">
             <p>Can not find project</p>
-            <Link to="/works" className="back-button center">
+            <Link to="/projects" className="back-button center">
               Back to Projects
             </Link>
           </div>
@@ -142,7 +147,7 @@ function JapaneseInstagramProject() {
                 { id: 'concept', label: 'concept' },
                 { id: 'strategy', label: 'strategy' },
                 { id: 'engagement', label: 'engagement' },
-                     { id: 'instagram', label: 'Instagram' },
+                { id: 'instagram', label: 'Instagram' },
               ]}
             />
 
@@ -313,6 +318,12 @@ function JapaneseInstagramProject() {
                     </li>
                   </ul>
                   <br />
+                    <div className="image-wrapper">
+                                <img src={image1} />
+                    </div>
+                        <p>This reel is a playful parody of the viral “PPAP” song (Pen-Pineapple-Apple-Pen). We combined “I have a Negi” + “I have a Toro” = Negitoro, a popular Japanese sushi made with tuna and green onion. It’s silly, it’s unexpected—and that’s exactly why it grabbed attention. By referencing internet culture and blending it with Japanese food vocabulary, we made something both memorable and fun to share.</p>
+                <br></br><br></br>
+        
                   <p>
                     Another featured a word game battle presented with intense,
                     mock-serious visuals.
@@ -340,18 +351,25 @@ function JapaneseInstagramProject() {
                     Japanese culture with internet humor resonates well—even
                     with users who aren't actively studying Japanese.
                   </p>
-                  <div className="project-slider-detail">
-                    <SlideCard slideData={SlideData} />
-                  </div>
+                     <div className="image-wrapper">
+                                <img src={image2} />
+                    </div>
+
+                    <p>
+                       This Reel features a Japanese word game, Shiritori, styled like an intense battle scene. By combining language play with dramatic visuals, we turned a simple concept into something attention-grabbing and fun to watch.
+
+                    </p>
+                    <br></br>
+                
                   <div className="text-center">
-                        <div id="instagram"></div>
+                    <div id="instagram"></div>
                     <a
                       href="https://www.instagram.com/atarashiivancouver/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="visit-instagram-button"
+                      className="colorful-button"
                     >
-                      Visit our Instagram
+                      <span className="button_top">Visit our Instagram</span>
                     </a>
                   </div>
                 </DetailBox>
@@ -365,18 +383,18 @@ function JapaneseInstagramProject() {
                   to={buildProjectLink(prevProject)}
                   className="nav-button prev"
                 >
-                  ← Prev
+                  <span className="button_top">← Prev</span>
                 </Link>
               )}
-              <Link to="/works" className="back-button center">
-                Back to Projects
+              <Link to="/projects" className="back-button center">
+                <span className="button_top">Back to projects</span>
               </Link>
               {nextProject && (
                 <Link
                   to={buildProjectLink(nextProject)}
                   className="nav-button next"
                 >
-                  Next →
+                  <span className="button_top">Next →</span>
                 </Link>
               )}
             </div>

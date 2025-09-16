@@ -88,10 +88,111 @@
 }
 
 .back-to-works.top {
-  margin-top: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
   margin-left: 2rem;
 }
 
+.back-button,
+.nav-button {
+  --button_radius: 30px;
+  --button_color: #ff6ea0;         /* 内側の色 */
+  --button_outline_color: #343434; /* 外枠色 */
+
+  font-family: 'Bungee', sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  text-decoration: none;
+  padding: 0;
+}
+
+/* 内側のレイヤー */
+.back-button .button_top,
+.nav-button .button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 10px 20px;
+  background: var(--button_color);
+  color: white;
+  transform: translateY(-0.2em); /* introより少し控えめに浮かす */
+  transition: transform 0.1s ease, background-color 0.3s ease;
+  box-shadow: 0 2px 0 var(--button_outline_color); /* 軽めの影 */
+}
+
+/* hover → 浮きが浅くなる */
+.back-button:hover .button_top,
+.nav-button:hover .button_top {
+  transform: translateY(-0.1em);
+  background-color: #e35b92;
+  box-shadow: 0 1px 0 var(--button_outline_color);
+}
+
+/* active → 完全に沈む */
+.back-button:active .button_top,
+.nav-button:active .button_top {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+
+/* colorful button */
+/* 外枠 */
+.colorful-button {
+  --button_radius: 40px;
+  --button_color: linear-gradient(to right, #ff6ec4, #7873f5); /* 内側はグラデ */
+  --button_outline_color: #343434;
+
+  font-family: 'Bungee', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+  text-decoration: none;
+  padding: 0;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 内側レイヤー */
+.colorful-button .button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.8rem 1.5rem;
+  background: var(--button_color);
+  color: white;
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 0 var(--button_outline_color);
+}
+
+/* hover */
+.colorful-button:hover .button_top {
+  transform: translateY(-0.1em);
+  box-shadow: 0 1px 0 var(--button_outline_color);
+}
+
+/* active */
+.colorful-button:active .button_top {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+
+/* 
 .back-button {
   font-family: 'Bungee', sans-serif;
   font-size: 16px;
@@ -102,6 +203,7 @@
   text-decoration: none;
   transition: background-color 0.3s ease;
   margin: 0;
+ border: 2px solid #343434;
 }
 
 .nav-button {
@@ -113,12 +215,13 @@
   border-radius: 30px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+   border: 2px solid #343434;
 }
 
 .back-button:hover,
 .nav-button:hover {
   background-color: #e35b92;
-}
+} */
 
 .project-detail-page::before {
   content: '';
@@ -206,6 +309,11 @@
       display: block;
       padding: 0;
     }
+  }
+
+
+  .colorful-button {
+      font-size: 1rem;
   }
   .project-grid {
     flex-direction: column;

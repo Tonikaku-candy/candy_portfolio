@@ -64,7 +64,7 @@ function resolveProjectIndex(projects, location, params) {
    buildProjectLink 関数
 ------------------------- */
 function buildProjectLink(proj) {
-  if (!proj) return '/works';
+  if (!proj) return '/projects';
   if (proj.link) return proj.link.replace(/\/+$/, '');
   const idOrSlug = proj.slug ?? proj.id;
   return `/projects/${idOrSlug}`;
@@ -112,8 +112,8 @@ function FashionZineAndEventProject() {
         <ScrollingTagBar tags={tags} />
 
         <div className="back-to-works top">
-          <Link to="/works" className="back-button">
-            ← Back to projects
+          <Link to="/projects" className="back-button top">
+            <span className="button_top">← Back to projects</span>
           </Link>
         </div>
 
@@ -122,24 +122,23 @@ function FashionZineAndEventProject() {
         {notFound ? (
           <div className="project-not-found">
             <p>Can not find project</p>
-            <Link to="/works" className="back-button center">
+            <Link to="/projects" className="back-button center">
               Back to Projects
             </Link>
           </div>
         ) : (
           <>
-
-               {/* ページ内リンク */}
-                  <DetailLinks
-                    links={[
-                      { id: 'magazine', label: 'Magazine' },
-                      { id: 'overview', label: 'Overview' },
-                      { id: 'design', label: 'Design Concept' },
-                      { id: 'landing', label: 'Landing Page' },
-                        { id: 'history', label: 'Event History' },
-                    ]}
-                  />
-                  <div id="magazine"></div>
+            {/* ページ内リンク */}
+            <DetailLinks
+              links={[
+                { id: 'magazine', label: 'Magazine' },
+                { id: 'overview', label: 'Overview' },
+                { id: 'design', label: 'Design Concept' },
+                { id: 'landing', label: 'Landing Page' },
+                { id: 'history', label: 'Event History' },
+              ]}
+            />
+            <div id="magazine"></div>
             <FadeInOnScroll>
               <Flipbook />
             </FadeInOnScroll>
@@ -172,19 +171,14 @@ function FashionZineAndEventProject() {
                 <FadeInOnScroll>
                   <DetailBox size="S" title="DURATION" colorClass="yellow">
                     <ul className="tight-paragraph">
-                      <li>
-                        March 2025 — Logo, Poster & Landing
-                        Page
-                      </li>
-                      <li>
-                        June–July 2025 — Fashion Zine
-                      </li>
+                      <li>March 2025 — Logo, Poster & Landing Page</li>
+                      <li>June–July 2025 — Fashion Zine</li>
                     </ul>
                   </DetailBox>
                 </FadeInOnScroll>
               </div>
 
-        <div id="overview"></div>
+              <div id="overview"></div>
               <FadeInOnScroll>
                 <DetailBox title="OVERVIEW" colorClass="pink">
                   <p>
@@ -208,7 +202,7 @@ function FashionZineAndEventProject() {
                 </DetailBox>
               </FadeInOnScroll>
 
-      <div id="design"></div>
+              <div id="design"></div>
               <FadeInOnScroll>
                 <DetailBox title="DESIGN CONCEPT" colorClass="green">
                   <p>
@@ -250,7 +244,7 @@ function FashionZineAndEventProject() {
                 </DetailBox>
               </FadeInOnScroll>
 
-   <div id="landing"></div>
+              <div id="landing"></div>
               <FadeInOnScroll>
                 <DetailBox title="EVENT LANDING PAGE" colorClass="purple">
                   <p>
@@ -273,18 +267,18 @@ function FashionZineAndEventProject() {
                   </p>
                   <div className="text-center">
                     <a
-                      href="https://purinp1.github.io/harajukuwalkvyr/?fbclid=PAZXh0bgNhZW0CMTEAAaeTMLoHwojy7-NJFC-ZrlBCwMmefHMRp8pJCoDoHShF1kdJohM-FcFNMur8pw_aem_vCRrUP4Je3wMvFKxzT6SVg"
+                      href="https://purinp1.github.io/harajukuwalkvyr/?fbclid=..."
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="visit-instagram-button"
+                      className="colorful-button"
                     >
-                      View Live Website
+                      <span className="button_top">View Live Website</span>
                     </a>
                   </div>
                 </DetailBox>
               </FadeInOnScroll>
 
-   <div id="history"></div>
+              <div id="history"></div>
               <FadeInOnScroll>
                 <DetailBox title="EVENT HISTORY" colorClass="orange">
                   <p>
@@ -316,18 +310,18 @@ function FashionZineAndEventProject() {
                   to={buildProjectLink(prevProject)}
                   className="nav-button prev"
                 >
-                  ← Prev
+                  <span className="button_top">← Prev</span>
                 </Link>
               )}
-              <Link to="/works" className="back-button center">
-                Back to Projects
+              <Link to="/projects" className="back-button center">
+                <span className="button_top">Back to projects</span>
               </Link>
               {nextProject && (
                 <Link
                   to={buildProjectLink(nextProject)}
                   className="nav-button next"
                 >
-                  Next →
+                  <span className="button_top">Next →</span>
                 </Link>
               )}
             </div>

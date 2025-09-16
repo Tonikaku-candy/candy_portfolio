@@ -84,7 +84,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
       </NavLink>
 
       <NavLink
-        to="/works"
+        to="/projects"
         onClick={() => setMenuOpen(false)}
         className={({ isActive }) =>
           isActive ? 'works-button active' : 'works-button'

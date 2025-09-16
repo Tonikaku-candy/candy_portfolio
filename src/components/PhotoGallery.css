@@ -1,10 +1,35 @@
 .photo-slide {
+position: relative;
   width: 300px;
   aspect-ratio: 1 / 1;
-  overflow: hidden;
+  overflow: visible;
   flex-shrink: 0;
   border-top: solid 15px #fff;
     border-bottom: solid 15px #fff;
+   
+  
+}
+
+/* 上の黒線 */
+.photo-slide::before {
+  content: "";
+  position: absolute;
+  top: -17px; /* 白borderの外側 */
+  left: 0;
+  width: 100%;
+  height: 2px; /* 黒線の太さ */
+  background-color: #343434;
+}
+
+/* 下の黒線 */
+.photo-slide::after {
+  content: "";
+  position: absolute;
+  bottom: -17px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #343434;
 }
 
 .photo-slide img {
@@ -14,19 +39,41 @@
 }
 .photo-gallery-wrapper {
 
-  overflow: hidden; 
+  /* overflow: hidden;  */
 }
 
 
 /* mobile */
 @media (max-width: 768px) {
 .photo-slide {
-  width: 150px;
+  width: 200px;
   aspect-ratio: 1 / 1;
-  overflow: hidden;
+  /* overflow: hidden; */
   flex-shrink: 0;
   border-top: solid 10px #fff;
     border-bottom: solid 10px #fff;
+}
+
+/* 上の黒線 */
+.photo-slide::before {
+  content: "";
+  position: absolute;
+  top: -12px; /* 白borderの外側 */
+  left: 0;
+  width: 100%;
+  height: 2px; /* 黒線の太さ */
+  background-color: #343434;
+}
+
+/* 下の黒線 */
+.photo-slide::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #343434;
 }
 
 .photo-slide img {
@@ -36,6 +83,6 @@
 }
 .photo-gallery-wrapper {
 
-  overflow: hidden; 
+  /* overflow: hidden;  */
 }
   }

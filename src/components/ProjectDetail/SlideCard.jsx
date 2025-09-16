@@ -1,27 +1,14 @@
-// src/components/SlideCard.jsx
+import React, { useRef, useState } from "react";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/react-splide/css";
+import "./SlideCard.css";
 
-// photo slide for project detail page 
-
-import React, { useRef, useState } from 'react';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import '@splidejs/react-splide/css';
-import './SlideCard.css';
-
-export default function SlideCard({ slideData }) {
+export default function SlideCard({ slideData, onImageClick }) {
   const mainRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [modalImage, setModalImage] = useState(null);
 
   const handleThumbnailClick = (index) => {
     mainRef.current?.go(index);
-  };
-
-  const handleImageClick = (image) => {
-    setModalImage(image);
-  };
-
-  const closeModal = () => {
-    setModalImage(null);
   };
 
   if (!Array.isArray(slideData)) {
@@ -32,7 +19,7 @@ export default function SlideCard({ slideData }) {
     <div className="gallery02">
       <Splide
         options={{
-          type: 'fade',
+          type: "fade",
           pagination: false,
           arrows: false,
           rewind: true,
@@ -47,9 +34,8 @@ export default function SlideCard({ slideData }) {
               <img
                 src={slide.image}
                 alt={slide.alt}
-                className="main-img"
-                onClick={() => handleImageClick(slide.image)}
-                style={{ cursor: 'zoom-in' }}
+                className="main-img cursor-zoom-in"
+                onClick={() => onImageClick && onImageClick(slide.image)} 
               />
               <p className="slide-caption">{slide.text}</p>
             </div>
@@ -58,7 +44,10 @@ export default function SlideCard({ slideData }) {
       </Splide>
 
       <div className="thumbnail-slider-wrapper">
-        <button className="custom-arrow" onClick={() => mainRef.current?.go('<')}>
+        <button
+          className="custom-arrow"
+          onClick={() => mainRef.current?.go("<")}
+        >
           ←
         </button>
 
@@ -66,7 +55,7 @@ export default function SlideCard({ slideData }) {
           {slideData.map((slide, index) => (
             <div
               key={index}
-              className={`thumb-media ${index === currentSlide ? 'is-active' : ''}`}
+              className={`thumb-media ${index === currentSlide ? "is-active" : ""}`}
               onClick={() => handleThumbnailClick(index)}
             >
               <img src={slide.image} alt={slide.alt} />
@@ -74,18 +63,13 @@ export default function SlideCard({ slideData }) {
           ))}
         </div>
 
-        <button className="custom-arrow" onClick={() => mainRef.current?.go('>')}>
+        <button
+          className="custom-arrow"
+          onClick={() => mainRef.current?.go(">")}
+        >
           →
         </button>
       </div>
-
-      {modalImage && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content">
-            <img src={modalImage} alt="large image" />
-          </div>
-        </div>
-      )}
     </div>
   );
 }

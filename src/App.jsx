@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Navbar from './components/Navbar';
 //pages
 import About from './pages/About/About';
-import Works from './pages/Works/Works';
+import Projects from './pages/Works/Projects';
 import Home from './pages/Home/Home';
 import Playground from './pages/Playground/Playground';
 import '../src/styles/global.css';
@@ -36,7 +36,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/works" element={<Works />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/playground" element={<Playground />} />
 
         {/* 他のルート */}
