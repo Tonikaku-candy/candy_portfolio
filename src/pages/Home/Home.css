@@ -1185,7 +1185,7 @@ height: 10%;
 
   .candy-outline-text-top {
     position: absolute;
-    top: 0px;
+    top: 2px;
     left: 50%;
     transform: translateX(-50%);
     font-family: 'Bungee', sans-serif;
@@ -1200,7 +1200,7 @@ height: 10%;
 
   .candy-outline-text-bottom {
     position: absolute;
-    bottom: 0px;
+    bottom: -2px;
     left: 50%;
     word-spacing: 10rem;
     transform: translateX(-50%);
