@@ -1024,6 +1024,7 @@ height: 10%;
     border-radius: 50px;
     margin: 0 auto;
       min-width: 270px;
+
   }
 
   /* pink */
@@ -1188,7 +1189,7 @@ height: 10%;
     left: 50%;
     transform: translateX(-50%);
     font-family: 'Bungee', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     color: #343434;
     word-spacing: 10rem;
     white-space: nowrap;
@@ -1204,7 +1205,7 @@ height: 10%;
     word-spacing: 10rem;
     transform: translateX(-50%);
     font-family: 'Bungee', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     color: #343434;
     white-space: nowrap;
     animation: bottomMove 15s linear infinite;
@@ -1360,6 +1361,6 @@ height: 10%;
 
 @supports (-webkit-touch-callout: none) {
   .candy-text-wrapper {
-    padding: 40px;
+    padding: 20px;
   }
 }
