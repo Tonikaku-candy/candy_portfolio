@@ -61,15 +61,15 @@ function CanadaPromotionalVideo() {
         <ScrollingTagBar tags={tags} />
 
         <div className="back-to-works top">
-         <Link to="/projects" className="back-button top">
-                   <span className="button_top">← Back to projects</span>
-                 </Link>
+          <Link to="/projects" className="back-button top">
+            <span className="button_top">← Back to projects</span>
+          </Link>
         </div>
 
-    <ProjectTitle
-  className="long-title"
-  title={`“Canada Ain’t What I Thought!”\nPlayful Travel Campaign Film`}
-/>
+        <ProjectTitle
+          className="long-title"
+          title={`“Canada Ain’t What I Thought!”\nPlayful Travel Campaign Film`}
+        />
         <div id="video"></div>
         <FadeInOnScroll>
           <div className="video-wrapper canada">
@@ -262,78 +262,79 @@ function CanadaPromotionalVideo() {
             </DetailBox>
           </FadeInOnScroll>
         </div>
- {/* --- Prev / Next --- */}
-            <div className="project-nav">
-              {prevProject && (
-                <Link
-                  to={buildProjectLink(prevProject)}
-                  className="nav-button prev"
-                >
-                  <span className="button_top">← Prev</span>
-                </Link>
-              )}
-              <Link to="/projects" className="back-button center">
-                <span className="button_top">Back to projects</span>
-              </Link>
-              {nextProject && (
-                <Link
-                  to={buildProjectLink(nextProject)}
-                  className="nav-button next"
-                >
-                  <span className="button_top">Next →</span>
-                </Link>
-              )}
-            </div>
+        {/* --- Prev / Next --- */}
+        <div className="project-nav">
+          {prevProject && (
+            <Link
+              to={buildProjectLink(prevProject)}
+              className="nav-button prev"
+            >
+              <span className="button_top">← Prev</span>
+            </Link>
+          )}
+          <Link to="/projects" className="back-button center">
+            <span className="button_top">Back to projects</span>
+          </Link>
+          {nextProject && (
+            <Link
+              to={buildProjectLink(nextProject)}
+              className="nav-button next"
+            >
+              <span className="button_top">Next →</span>
+            </Link>
+          )}
+        </div>
         {/* モーダル（クリックで画像拡大表示） */}
-    <Modal
-  isOpen={!!selectedImage}
-  onRequestClose={() => setSelectedImage(null)}
-  contentLabel="拡大画像"
-  style={{
-    content: {
-      top: "50%",
-      left: "50%",
-      right: "auto",
-      bottom: "auto",
-      transform: "translate(-50%, -50%)",
-      background: "rgba(0,0,0,0.95)",
-      border: "none",
-      padding: 0,
-      overflow: "auto", // スクロールできるようにする
-      maxWidth: "95vw",
-      maxHeight: "95vh",
-    },
-    overlay: {
-      backgroundColor: "rgba(0,0,0,0.85)",
-      zIndex: 50,
-    },
-  }}
->
-  <button
-    onClick={() => setSelectedImage(null)}
-    style={{
-      position: "absolute",
-      top: "10px",
-      right: "10px",
-      fontSize: "2rem",
-      color: "white",
-      background: "rgba(0,0,0,0.5)",
-      border: "none",
-      borderRadius: "8px",
-      padding: "0 8px",
-    }}
-  >
-    ✕
-  </button>
-  <img
-    src={selectedImage}
-    alt="拡大画像"
-    className="max-h-[90vh] max-w-[90vw] object-contain"
-  />
-</Modal>
-
+        <Modal
+          isOpen={!!selectedImage}
+          onRequestClose={() => setSelectedImage(null)}
+          contentLabel="拡大画像"
+          style={{
+            content: {
+              top: '50%',
+              left: '50%',
+              right: 'auto',
+              bottom: 'auto',
+              transform: 'translate(-50%, -50%)',
+              background: 'rgba(0,0,0,0.95)',
+              border: 'none',
+              padding: 0,
+              overflow: 'auto', // スクロールできるようにする
+              width: '95vw',
+              height: 'auto',
+            },
+            overlay: {
+              backgroundColor: 'rgba(0,0,0,0.85)',
+              zIndex: 50,
+            },
+          }}
+        >
+          <button
+            onClick={() => setSelectedImage(null)}
+            style={{
+              position: 'absolute',
+              top: '10px',
+              right: '10px',
+              fontSize: '2rem',
+              color: 'white',
+              background: 'rgba(0,0,0,0.5)',
+              border: 'none',
+              borderRadius: '8px',
+              padding: '0 8px',
+            }}
+          >
+            ✕
+          </button>
+          <img
+            src={selectedImage}
+            alt="拡大画像"
+            style={{
+              width: '100%',
+            }}
+          />
+        </Modal>
       </div>
-        <div className="footer-detail">
+      <div className="footer-detail">
         <Footer />
       </div>
     </>
