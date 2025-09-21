@@ -18,7 +18,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
     'Stay creating!',
     'Stay colorful!',
     'Stay playful!',
-    'Candylicious',
+    'Candelicious',
 
   ];
 
@@ -30,6 +30,11 @@ function Navbar({ menuOpen, setMenuOpen }) {
     // Trigger shake animation
     setIsShaking(true);
     setTimeout(() => setIsShaking(false), 500); // Shake duration
+    
+    // デバイスのバイブレーション機能を使用
+    if (navigator.vibrate) {
+      navigator.vibrate([100, 50, 100]); // 100ms振動、50ms停止、100ms振動
+    }
     
     setOpenBubble(true);
     setMsgIndex(Math.floor(Math.random() * messages.length));
