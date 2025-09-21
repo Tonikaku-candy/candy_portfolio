@@ -24,7 +24,13 @@ function Navbar({ menuOpen, setMenuOpen }) {
 
   const [openBubble, setOpenBubble] = useState(false);
   const [msgIndex, setMsgIndex] = useState(0);
+  const [isShaking, setIsShaking] = useState(false);
+  
   const handleUfoClick = () => {
+    // Trigger shake animation
+    setIsShaking(true);
+    setTimeout(() => setIsShaking(false), 500); // Shake duration
+    
     setOpenBubble(true);
     setMsgIndex(Math.floor(Math.random() * messages.length));
     // 自動で閉じる
@@ -179,7 +185,11 @@ function Navbar({ menuOpen, setMenuOpen }) {
                 onClick={handleUfoClick}
                 aria-label="Show secret message"
               >
-                <img src={ufo} alt="ufo rabbit" className="ufo-nav" />
+                <img 
+                  src={ufo} 
+                  alt="ufo rabbit" 
+                  className={`ufo-nav ${isShaking ? 'shake' : ''}`} 
+                />
               </button>
               {openBubble && (
                 <div className="ufo-bubble-nav">{messages[msgIndex]}</div>
