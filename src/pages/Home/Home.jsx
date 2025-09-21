@@ -8,11 +8,14 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import AnimatedTitle from '../../components/AnimatedTitle'; // 新しいコンポーネントを使用
 
+// icon
+import EyeIcon from '../../components/EyeIcon'
+
 // images
 import headerVideo from '../../assets/home/header/candy-fukaya-motion-design-portfolio.mp4';
 import headerVideoWebm from '../../assets/home/header/candy-fukaya-motion-design-portfolio.webm';
 
-import featuredProjectsTitleImage from '../../assets/home/featured-projects/eye.png';
+// import featuredProjectsTitleImage from '../../assets/home/featured-projects/eye.png';
 import aboutMeTitleImage from '../../assets/home/about-me/fireworks.png';
 import aboutMeVideo from '../../assets/home/about-me/kawaii-intro-candy-fukaya.mp4';
 import lollipop from '../../assets/home/about-me/heart-lollipop.webp';
@@ -117,11 +120,12 @@ function Home() {
         <div className="featured-title-wrapper">
           <div className="featured-title">
             <div className="featured-title-image-wrapper">
-              <img
+              {/* <img
                 src={featuredProjectsTitleImage}
                 className="featured-projects-title-image"
                 alt="eye emoji"
-              />
+              /> */}
+              <EyeIcon className="featured-projects-title-image" />
             </div>
             {/* タイトルだけ AnimatedTitle で一文字ずつアニメーション */}
             <AnimatedTitle

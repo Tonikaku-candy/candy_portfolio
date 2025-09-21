@@ -34,14 +34,18 @@
 .all-projects-title-wrapper {
   text-align: left;
   margin-left: 40px;
+  
 }
 .all-projects-title-image-wrapper {
   text-align: center;
+  
 }
 
 .all-projects-title-image {
   width: 70px;
-  transform: scaleX(-1);
+    z-index: 1; 
+  position: relative; 
+
 }
 
 /* title end */

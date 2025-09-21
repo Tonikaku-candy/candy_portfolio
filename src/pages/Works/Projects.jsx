@@ -9,6 +9,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import '../../components/TagBar.css';
 import './Works.css';
 
+// icon
+import EyeIcon from '../../components/EyeIcon'
+
 // GSAPプラグインを登録
 gsap.registerPlugin(ScrollTrigger);
 
@@ -130,11 +133,12 @@ function Works() {
           >
             <div className="all-projects-title">
               <div className="all-projects-title-image-wrapper">
-                <img
+                {/* <img
                   src={eyeIcon}
                   className="all-projects-title-image"
                   alt="eye icon"
-                />
+                /> */}
+                      <EyeIcon className="all-projects-title-image" />
               </div>
               {/* AnimatedTitleコンポーネントを適用 */}
               <AnimatedTitle
