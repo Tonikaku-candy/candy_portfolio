@@ -26,7 +26,7 @@ const Footer = () => {
           <FaInstagram />
         </a>
         <a
-          href="https://www.linkedin.com/in/candy-f-7207a0356/"
+          href="https://www.linkedin.com/in/candy-fukaya"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Candy's LinkedIn"
