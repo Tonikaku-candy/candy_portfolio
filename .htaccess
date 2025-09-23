@@ -9,3 +9,4 @@ RewriteRule . /index.html [L]
 RewriteCond %{HTTP_HOST} ^candyfukaya\.ca$ [NC,OR]
 RewriteCond %{HTTP_HOST} ^www\.candyfukaya\.ca$ [NC]
 RewriteRule ^(.*)$ https://candyfukaya.com/$1 [L,R=301]
+ 
