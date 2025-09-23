@@ -85,6 +85,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
 }
 .modal-overlay {
   position: fixed;
@@ -130,6 +131,7 @@
     height: auto;
     padding: 2%;
     font-size: 1rem;
+    aspect-ratio: 1;
   }
 
 
