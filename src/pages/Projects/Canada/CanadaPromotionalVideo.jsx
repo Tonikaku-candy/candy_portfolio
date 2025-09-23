@@ -206,7 +206,7 @@ function CanadaPromotionalVideo() {
               </p>
               <div className="text-center">
                 <a
-                  href="https://suno.com/playlist/80ca1620-0b76-44f5-b7d8-a86e00c125bb"
+                  href="https://suno.com/playlist/80ca1620-0b76-44f5-b7d8-a86db1bb8f7a"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="suno-link"
@@ -285,30 +285,33 @@ function CanadaPromotionalVideo() {
           )}
         </div>
         {/* モーダル（クリックで画像拡大表示） */}
-        <Modal
-          isOpen={!!selectedImage}
-          onRequestClose={() => setSelectedImage(null)}
-          contentLabel="拡大画像"
-          style={{
-            content: {
-              top: '50%',
-              left: '50%',
-              right: 'auto',
-              bottom: 'auto',
-              transform: 'translate(-50%, -50%)',
-              background: 'rgba(0,0,0,0.95)',
-              border: 'none',
-              padding: 0,
-              overflow: 'auto', // スクロールできるようにする
-              width: '95vw',
-              height: 'auto',
-            },
-            overlay: {
-              backgroundColor: 'rgba(0,0,0,0.85)',
-              zIndex: 50,
-            },
-          }}
-        >
+  <Modal
+  isOpen={!!selectedImage}
+  onRequestClose={() => setSelectedImage(null)}
+  contentLabel="拡大画像"
+  style={{
+    content: {
+      top: '50%',
+      left: '50%',
+      right: 'auto',
+      bottom: 'auto',
+      transform: 'translate(-50%, -50%)',
+      background: 'rgba(0,0,0,0.95)',
+      border: 'none',
+      padding: 0,
+      overflow: 'auto',
+      width: '95vw',       // モバイル用
+      maxWidth: '800px',   // PCでは最大800pxまで
+      height: 'auto',
+      maxHeight: '90vh',   // 高さも制限してはみ出さないように
+    },
+    overlay: {
+      backgroundColor: 'rgba(0,0,0,0.85)',
+      zIndex: 50,
+    },
+  }}
+>
+
           <button
             onClick={() => setSelectedImage(null)}
             style={{
