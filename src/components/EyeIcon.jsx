@@ -12,7 +12,7 @@ const handleMouseMove = (e) => {
   // マウスが中心より右にある場合のみ動かす
   if (normalizedX > 0) {
     x = normalizedX * 50; // 右方向への動き
-  } 
+  }  
   // マウスが中心より左にある場合は、xは0のまま
   
   // 上下への動き
