@@ -1,5 +1,6 @@
 body {
   overflow-x: hidden;
+margin-top: 80px;
 }
 
 #root {
@@ -926,6 +927,7 @@ height: 10%;
   body {
     overflow-x: hidden;
     width: 100vw;
+    margin-top: 40px;
   }
   .made-by-me {
     font-family: 'Fredoka', sans-serif;

@@ -36,6 +36,7 @@ export default function SlideCard({ slideData, onImageClick }) {
                 alt={slide.alt}
                 className="main-img cursor-zoom-in"
                 onClick={() => onImageClick && onImageClick(slide.image)} 
+                style={{ cursor: "zoom-in" }} 
               />
               <p className="slide-caption">{slide.text}</p>
             </div>

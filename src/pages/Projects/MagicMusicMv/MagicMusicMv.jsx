@@ -14,6 +14,7 @@ import ProjectTitle from '../../../components/ProjectDetail/ProjectTitle.jsx';
 import projects from '../../../data/ProjectData.js';
 import DetailLinks from '../../../components/ProjectDetail/DetailLinks.jsx';
 import FadeInOnScroll from '../../../components/FadeInOnScroll.jsx';
+import Modal from 'react-modal';
 
 // photo slide
 import SlideCard from '../../../components/ProjectDetail/SlideCard.jsx';
@@ -28,6 +29,8 @@ import production2 from '../../../assets/ProjectDetails/MagicMusicMv/production-
 import production3 from '../../../assets/ProjectDetails/MagicMusicMv/karate-scene.gif';
 import production4 from '../../../assets/ProjectDetails/MagicMusicMv/sunset-scene.gif';
 import production5 from '../../../assets/ProjectDetails/MagicMusicMv/fashion-show-scene.gif';
+
+Modal.setAppElement('#root');
 /* -----------------------
    resolveProjectIndex 関数（高機能版）
 ------------------------- */
@@ -79,6 +82,7 @@ function MagicMusicMv() {
   const params = useParams();
   const location = useLocation();
   const [selectedTag, setSelectedTag] = useState('');
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const currentIndex = useMemo(
     () => resolveProjectIndex(projects, location, params),
@@ -115,13 +119,13 @@ function MagicMusicMv() {
 
         <div className="back-to-works top">
           <Link to="/projects" className="back-button top">
-                    <span className="button_top">← Back to projects</span>
-                  </Link>
+            <span className="button_top">← Back to projects</span>
+          </Link>
         </div>
 
         <ProjectTitle title="Magic Music - Music Video" />
 
-            <div id="video"></div>
+        <div id="video"></div>
         <FadeInOnScroll>
           <div className="video-wrapper rhythm-video">
             <iframe
@@ -137,7 +141,7 @@ function MagicMusicMv() {
         {/* ページ内リンク */}
         <DetailLinks
           links={[
-              { id: 'video', label: 'Video' },
+            { id: 'video', label: 'Video' },
             { id: 'overview', label: 'Overview' },
             { id: 'inspiration', label: 'Inspiration' },
             { id: 'production', label: 'Production' },
@@ -244,7 +248,10 @@ function MagicMusicMv() {
                 everything I wanted to try.”
               </p>
               <div className="project-slider-detail">
-                <SlideCard slideData={SlideData} />
+                <SlideCard
+                  slideData={SlideData}
+                  onImageClick={(img) => setSelectedImage(img)}
+                />
               </div>
             </DetailBox>
           </FadeInOnScroll>
@@ -263,10 +270,10 @@ function MagicMusicMv() {
                 {/* Left: Text */}
                 <p>
                   Although the MV may appear random, the chaos is carefully
-                  structured. <strong>At 0:44–0:49, </strong>I built a sequence around image
-                  references: a pixelated clip humorously labeled “4K,” a reveal
-                  of a hidden green suit, and rotobrush/mask work that allowed
-                  text to appear only on my face and hands.
+                  structured. <strong>At 0:44–0:49, </strong>I built a sequence
+                  around image references: a pixelated clip humorously labeled
+                  “4K,” a reveal of a hidden green suit, and rotobrush/mask work
+                  that allowed text to appear only on my face and hands.
                 </p>
                 <div className="gif-wrapper small">
                   <img
@@ -277,12 +284,12 @@ function MagicMusicMv() {
                 </div>
 
                 <p>
-                  <strong>From 0:51 to 1:09,</strong> I created a sequence based on the lyric
-                  “sexy girl.” A woman at the beach turns around to reveal a
-                  clown face, blows a kiss, and a heart flies out. In the next
-                  karate scene, the heart gets punched to the right in rhythm
-                  with the beat. Finally, during the stage performance, the
-                  heart flies in from the left, hits the singer’s head, and
+                  <strong>From 0:51 to 1:09,</strong> I created a sequence based
+                  on the lyric “sexy girl.” A woman at the beach turns around to
+                  reveal a clown face, blows a kiss, and a heart flies out. In
+                  the next karate scene, the heart gets punched to the right in
+                  rhythm with the beat. Finally, during the stage performance,
+                  the heart flies in from the left, hits the singer’s head, and
                   shatters. These three moments are linked together through the
                   recurring heart motif.
                 </p>
@@ -297,10 +304,7 @@ function MagicMusicMv() {
                 <p>
                   The karate and stage scenes were especially meaningful because
                   they reinterpret animations I had previously created in my{' '}
-                  <Link
-                    to="/projects/rhythm-game"
-                    className="link-pink"
-                  >
+                  <Link to="/projects/rhythm-game" className="link-pink">
                     “Rhythm Game Animation project"
                   </Link>
                   ,now brought into live-action form. I had imagined doing them
@@ -316,9 +320,10 @@ function MagicMusicMv() {
                 </div>
 
                 <p>
-                  <strong>At 1:25,</strong> the opening scene reappears in an evening version to
-                  signal the ending. These details show how the humor and chaos
-                  were tied back into a deliberate framework.
+                  <strong>At 1:25,</strong> the opening scene reappears in an
+                  evening version to signal the ending. These details show how
+                  the humor and chaos were tied back into a deliberate
+                  framework.
                 </p>
                 <div className="gif-wrapper small">
                   <img
@@ -329,13 +334,13 @@ function MagicMusicMv() {
                 </div>
 
                 <p>
-                  <strong>From 1:14 to 1:22,</strong> I staged a fashion show scene to showcase
-                  the clothes I had personally designed. Since the song is
-                  titled “Magic Music,” I also added a playful moment where I
-                  cast a spell on a dress form, transforming it as if my
-                  handmade clothing came to life. This sequence allowed me to
-                  integrate my background in fashion design into the MV in both
-                  a literal and surreal way. Because the green screen setup
+                  <strong>From 1:14 to 1:22,</strong> I staged a fashion show
+                  scene to showcase the clothes I had personally designed. Since
+                  the song is titled “Magic Music,” I also added a playful
+                  moment where I cast a spell on a dress form, transforming it
+                  as if my handmade clothing came to life. This sequence allowed
+                  me to integrate my background in fashion design into the MV in
+                  both a literal and surreal way. Because the green screen setup
                   muted the colors of my rainbow outfit in other scenes, this
                   became the place where I could highlight it more directly.
                 </p>
@@ -394,25 +399,76 @@ function MagicMusicMv() {
         {/* --- Prev / Next --- */}
         <div className="project-nav">
           {prevProject && (
-              <Link
-                  to={buildProjectLink(prevProject)}
-                  className="nav-button prev"
-                >
-                  <span className="button_top">← Prev</span>
-                </Link>
-              )}
-              <Link to="/projects" className="back-button center">
-                <span className="button_top">Back to projects</span>
-              </Link>
-              {nextProject && (
-                <Link
-                  to={buildProjectLink(nextProject)}
-                  className="nav-button next"
-                >
-                  <span className="button_top">Next →</span>
-                </Link>
+            <Link
+              to={buildProjectLink(prevProject)}
+              className="nav-button prev"
+            >
+              <span className="button_top">← Prev</span>
+            </Link>
+          )}
+          <Link to="/projects" className="back-button center">
+            <span className="button_top">Back to projects</span>
+          </Link>
+          {nextProject && (
+            <Link
+              to={buildProjectLink(nextProject)}
+              className="nav-button next"
+            >
+              <span className="button_top">Next →</span>
+            </Link>
           )}
         </div>
+        {/* モーダル（クリックで画像拡大表示） */}
+        <Modal
+          isOpen={!!selectedImage}
+          onRequestClose={() => setSelectedImage(null)}
+          contentLabel="拡大画像"
+          style={{
+            content: {
+              top: '50%',
+              left: '50%',
+              right: 'auto',
+              bottom: 'auto',
+              transform: 'translate(-50%, -50%)',
+              background: 'rgba(0,0,0,0.95)',
+              border: 'none',
+              padding: 0,
+              overflow: 'auto',
+              width: '95vw', // モバイル用
+              maxWidth: '800px', // PCでは最大800pxまで
+              height: 'auto',
+              maxHeight: '90vh', // 高さも制限してはみ出さないように
+            },
+            overlay: {
+              backgroundColor: 'rgba(0,0,0,0.85)',
+              zIndex: 50,
+            },
+          }}
+        >
+          <button
+            onClick={() => setSelectedImage(null)}
+            style={{
+              position: 'absolute',
+              top: '10px',
+              right: '10px',
+              fontSize: '2rem',
+              color: 'white',
+              background: 'rgba(0,0,0,0.5)',
+              border: 'none',
+              borderRadius: '8px',
+              padding: '0 8px',
+            }}
+          >
+            ✕
+          </button>
+          <img
+            src={selectedImage}
+            alt="拡大画像"
+            style={{
+              width: '100%',
+            }}
+          />
+        </Modal>
       </div>
 
       <div className="footer-detail">

@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from 'react';
 import { useParams, useLocation, Link } from 'react-router-dom';
+import Modal from 'react-modal';
 
 import '../../../components/TagBar.css';
 import DetailBox from '../../../components/ProjectDetail/DetailBox';
@@ -25,6 +26,7 @@ import SlideData from '../../../pages/Projects/ThreeDPackaging/ThreeDSlideData.j
 // image
 import SushiGif from '../../../assets/ProjectDetails/ThreeD/sushi.gif';
 
+Modal.setAppElement('#root');
 /* -----------------------
    resolveProjectIndex 関数（高機能版）
 ------------------------- */
@@ -77,6 +79,8 @@ function buildProjectLink(proj) {
 function ThreeDPackagingAd() {
   const params = useParams();
   const location = useLocation();
+
+    const [selectedImage, setSelectedImage] = useState(null);
 
   // 現在インデックス
   const currentIndex = useMemo(
@@ -293,7 +297,9 @@ function ThreeDPackagingAd() {
                   ]}
                 />
                 <div className="project-slider-detail canada">
-                  <SlideCard slideData={SlideData} />
+                  <SlideCard slideData={SlideData}
+                  
+                  onImageClick={(img) => setSelectedImage(img)}/>
                 </div>
               </DetailBox>
             </FadeInOnScroll>
@@ -356,6 +362,57 @@ function ThreeDPackagingAd() {
                 </Link>
           )}
         </div>
+         {/* モーダル（クリックで画像拡大表示） */}
+                <Modal
+                  isOpen={!!selectedImage}
+                  onRequestClose={() => setSelectedImage(null)}
+                  contentLabel="拡大画像"
+                  style={{
+                    content: {
+                      top: '50%',
+                      left: '50%',
+                      right: 'auto',
+                      bottom: 'auto',
+                      transform: 'translate(-50%, -50%)',
+                      background: 'rgba(0,0,0,0.95)',
+                      border: 'none',
+                      padding: 0,
+                      overflow: 'auto',
+                      width: '95vw', // モバイル用
+                      maxWidth: '800px', // PCでは最大800pxまで
+                      height: 'auto',
+                      maxHeight: '90vh', // 高さも制限してはみ出さないように
+                    },
+                    overlay: {
+                      backgroundColor: 'rgba(0,0,0,0.85)',
+                      zIndex: 50,
+                    },
+                  }}
+                >
+                  <button
+                    onClick={() => setSelectedImage(null)}
+                    style={{
+                      position: 'absolute',
+                      top: '10px',
+                      right: '10px',
+                      fontSize: '2rem',
+                      color: 'white',
+                      background: 'rgba(0,0,0,0.5)',
+                      border: 'none',
+                      borderRadius: '8px',
+                      padding: '0 8px',
+                    }}
+                  >
+                    ✕
+                  </button>
+                  <img
+                    src={selectedImage}
+                    alt="拡大画像"
+                    style={{
+                      width: '100%',
+                    }}
+                  />
+                </Modal>
       </div>
 
       <div className="footer-detail">

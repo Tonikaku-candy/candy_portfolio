@@ -2,6 +2,8 @@
 
 import React, { useState, useMemo } from 'react';
 import { useParams, useLocation, Link } from 'react-router-dom';
+import Modal from 'react-modal';
+
 import '../../../components/TagBar.css';
 import DetailBox from '../../../components/ProjectDetail/DetailBox.jsx';
 import '../../../components/ProjectDetail/DetailBox.css';
@@ -23,6 +25,7 @@ import BumperSlideData from './BumperSlideData.js';
 // image
 import brainstormingImage from '../../../assets/ProjectDetails/Bumper/bumper-origin-visual.webp';
 
+Modal.setAppElement('#root');
 /* -----------------------
    resolveProjectIndex 関数（高機能版）
 ------------------------- */
@@ -74,6 +77,7 @@ function BumperProject() {
   const params = useParams();
   const location = useLocation();
   const [selectedTag, setSelectedTag] = useState('');
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const currentIndex = useMemo(
     () => resolveProjectIndex(projects, location, params),
@@ -112,16 +116,16 @@ function BumperProject() {
         <ScrollingTagBar tags={tags} />
 
         <div className="back-to-works top">
-            <Link to="/projects" className="back-button top">
-                      <span className="button_top">← Back to projects</span>
-                    </Link>
+          <Link to="/projects" className="back-button top">
+            <span className="button_top">← Back to projects</span>
+          </Link>
         </div>
         <ProjectTitle title="Bumper Opener Video" />
 
         {/* 動画 */}
 
         <div className="video-wrapper">
-                    <div id="video"></div>
+          <div id="video"></div>
           <FadeInOnScroll>
             <iframe
               width="560"
@@ -138,7 +142,7 @@ function BumperProject() {
         {/* ページ内リンク */}
         <DetailLinks
           links={[
-              { id: 'video', label: 'Video' },
+            { id: 'video', label: 'Video' },
             { id: 'overview', label: 'Overview' },
             { id: 'inspiration', label: 'Inspiration' },
             { id: 'brainstorming', label: 'Brainstorming' },
@@ -243,7 +247,10 @@ function BumperProject() {
                     </p>
                   </div>
                   <div className="project-slider-detail">
-                    <SlideCard slideData={BumperSlideData} />
+                    <SlideCard
+                      slideData={BumperSlideData}
+                      onImageClick={(img) => setSelectedImage(img)}
+                    />
                   </div>
                 </div>
               </DetailBox>
@@ -349,25 +356,76 @@ function BumperProject() {
         {/* --- Prev / Next --- */}
         <div className="project-nav">
           {prevProject && (
-             <Link
-                        to={buildProjectLink(prevProject)}
-                        className="nav-button prev"
-                      >
-                        <span className="button_top">← Prev</span>
-                      </Link>
-                    )}
-                    <Link to="/projects" className="back-button center">
-                      <span className="button_top">Back to projects</span>
-                    </Link>
-                    {nextProject && (
-                      <Link
-                        to={buildProjectLink(nextProject)}
-                        className="nav-button next"
-                      >
-                        <span className="button_top">Next →</span>
-                      </Link>
+            <Link
+              to={buildProjectLink(prevProject)}
+              className="nav-button prev"
+            >
+              <span className="button_top">← Prev</span>
+            </Link>
+          )}
+          <Link to="/projects" className="back-button center">
+            <span className="button_top">Back to projects</span>
+          </Link>
+          {nextProject && (
+            <Link
+              to={buildProjectLink(nextProject)}
+              className="nav-button next"
+            >
+              <span className="button_top">Next →</span>
+            </Link>
           )}
         </div>
+        {/* モーダル（クリックで画像拡大表示） */}
+        <Modal
+          isOpen={!!selectedImage}
+          onRequestClose={() => setSelectedImage(null)}
+          contentLabel="拡大画像"
+          style={{
+            content: {
+              top: '50%',
+              left: '50%',
+              right: 'auto',
+              bottom: 'auto',
+              transform: 'translate(-50%, -50%)',
+              background: 'rgba(0,0,0,0.95)',
+              border: 'none',
+              padding: 0,
+              overflow: 'auto',
+              width: '95vw', // モバイル用
+              maxWidth: '800px', // PCでは最大800pxまで
+              height: 'auto',
+              maxHeight: '90vh', // 高さも制限してはみ出さないように
+            },
+            overlay: {
+              backgroundColor: 'rgba(0,0,0,0.85)',
+              zIndex: 50,
+            },
+          }}
+        >
+          <button
+            onClick={() => setSelectedImage(null)}
+            style={{
+              position: 'absolute',
+              top: '10px',
+              right: '10px',
+              fontSize: '2rem',
+              color: 'white',
+              background: 'rgba(0,0,0,0.5)',
+              border: 'none',
+              borderRadius: '8px',
+              padding: '0 8px',
+            }}
+          >
+            ✕
+          </button>
+          <img
+            src={selectedImage}
+            alt="拡大画像"
+            style={{
+              width: '100%',
+            }}
+          />
+        </Modal>
       </div>
 
       <div className="footer-detail">

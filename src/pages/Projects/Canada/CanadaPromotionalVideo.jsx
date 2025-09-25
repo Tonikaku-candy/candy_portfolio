@@ -188,6 +188,7 @@ function CanadaPromotionalVideo() {
                 <SlideCard
                   slideData={SlideData}
                   onImageClick={setSelectedImage}
+              
                 />
               </div>
             </DetailBox>
@@ -241,6 +242,7 @@ function CanadaPromotionalVideo() {
                   src={screenShot}
                   alt="Adobe After Effects editing screenshot of 'What!?!' comic-style cut scene with Loto Blush font"
                   onClick={() => setSelectedImage(screenShot)}
+                
                 />
               </div>
               <p>
@@ -257,6 +259,7 @@ function CanadaPromotionalVideo() {
                   src={wall}
                   alt="Mural in Vancouver with 'MORE AWESOME NOW' text, used in Canada promo video"
                   onClick={() => setSelectedImage(wall)}
+                
                 />
               </div>
             </DetailBox>
