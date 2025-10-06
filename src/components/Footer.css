@@ -28,7 +28,8 @@
 
 .copyright {
   color: #828282;
-  margin-bottom: 20px;
+  margin:10px 20px;
+    text-align: center;
 }
 
 .footer-section img {

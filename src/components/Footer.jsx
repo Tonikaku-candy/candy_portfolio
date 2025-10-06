@@ -46,7 +46,8 @@ const Footer = () => {
           <FaGithub />
         </a>
       </div>
-      <p className="copyright">Candy Fukaya 2025</p>
+  <p className="copyright">Designed and coded by Candy Fukaya with React © 2025</p>
+
       <div className="go-to-top" onClick={scrollToTop}>
         <img src={logo} alt="colorful chameleon logo for Candy Fukaya brand" />
       </div>
