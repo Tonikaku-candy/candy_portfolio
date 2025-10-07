@@ -23,8 +23,17 @@ import fruitLine from '../../assets/Playground/fruit-line.webp';
 import flower from '../../assets/Playground/flower-line.webp';
 import rabbit from '../../assets/Playground/rabbit-line.webp';
 import cherry from '../../assets/Playground/cherry-border.webp';
+import leaf from '../../assets/Playground/leaf-line.webp';
 
 const playgroundProjects = [
+
+    {
+    id: 14,
+     videoUrl: 'https://www.youtube.com/embed/MrCV41qRtHc?si=1IyDW5hc2jVgE4KJ',
+   tags: ['MOTION'],
+    layout: 'center',
+    line: leaf,
+  },
 
     {
     id: 13,
@@ -144,7 +153,7 @@ const playgroundProjects = [
 
 
 
-  // next 14
+  // next 15
 ];
 
 export default playgroundProjects;

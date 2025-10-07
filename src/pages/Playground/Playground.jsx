@@ -182,6 +182,19 @@ export default function Playground() {
                   )}
 
                   <div className="text">
+                         {p.id === 14 && (
+                      <>
+                        <h3>
+                          <span className="icon"></span> Taste of Fall – Motion Graphic
+                        </h3>
+                        <p>
+                        A motion graphics animation inspired by the warmth and coziness of autumn.
+    This piece celebrates Japan’s “season of appetite” through playful motion,
+    color, and rhythm.
+                        </p>
+                      </>
+                    )}
+
                     {p.id === 13 && (
                       <>
                         <h3>
