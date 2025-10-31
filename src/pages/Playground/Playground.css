@@ -263,6 +263,14 @@
 
 /* レスポンシブ対応 (モバイル向け) */
 @media (max-width: 768px) {
+
+
+.subtitles.playground {
+
+  border-bottom: 4px solid #ffa0ee;
+
+}
+
   .project-block {
     flex-direction: column;
     align-items: center;
