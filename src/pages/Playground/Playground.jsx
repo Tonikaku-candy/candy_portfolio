@@ -182,37 +182,45 @@ export default function Playground() {
                   )}
 
                   <div className="text">
-                          {p.id === 16 && (
+                    {p.id === 16 && (
                       <>
                         <h3>
-                          <span className="icon"></span> Halloween Motion Graphic
+                          <span className="icon"></span> Halloween Motion
+                          Graphic
                         </h3>
                         <p>
-                       A looping grid animation inspired by the spooky season. Exploring playful motion and vibrant Halloween colors.
+                          A looping grid animation inspired by the spooky
+                          season. It explores playful motion and vibrant
+                          Halloween colors, created using shape tools in After
+                          Effects and Illustrator.
                         </p>
                       </>
                     )}
 
-                               {p.id === 15 && (
+                    {p.id === 15 && (
                       <>
                         <h3>
-                          <span className="icon"></span> How Does an Apple Grow?  – Playful Motion Graphic Advertisement Practice
+                          <span className="icon"></span> How Does an Apple Grow?
+                          – Playful Motion Graphic Advertisement Practice
                         </h3>
                         <p>
-                       A short motion graphic showing how an apple grows—from seed to fruit—turned into a playful iPhone-style ad.
+                          A short motion graphic showing how an apple grows—from
+                          seed to fruit—turned into a playful iPhone-style ad.
                         </p>
                       </>
                     )}
 
-                         {p.id === 14 && (
+                    {p.id === 14 && (
                       <>
                         <h3>
-                          <span className="icon"></span> Taste of Fall – Motion Graphic
+                          <span className="icon"></span> Taste of Fall – Motion
+                          Graphic
                         </h3>
                         <p>
-                        A motion graphics animation inspired by the warmth and coziness of autumn.
-    This piece celebrates Japan’s “season of appetite” through playful motion,
-    color, and rhythm.
+                          A motion graphics animation inspired by the warmth and
+                          coziness of autumn. This piece celebrates Japan’s
+                          “season of appetite” through playful motion, color,
+                          and rhythm.
                         </p>
                       </>
                     )}
