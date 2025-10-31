@@ -182,6 +182,17 @@ export default function Playground() {
                   )}
 
                   <div className="text">
+                          {p.id === 16 && (
+                      <>
+                        <h3>
+                          <span className="icon"></span> Halloween Motion Graphic
+                        </h3>
+                        <p>
+                       A looping grid animation inspired by the spooky season. Exploring playful motion and vibrant Halloween colors.
+                        </p>
+                      </>
+                    )}
+
                                {p.id === 15 && (
                       <>
                         <h3>
