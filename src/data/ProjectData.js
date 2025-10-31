@@ -11,6 +11,19 @@ import rhythmGame from '../assets/ProjectDetails/RhythmGame/rhythm-game-cover.we
 import magicMusic from '../assets/ProjectDetails/MagicMusicMv/magic-music-mv-cover.webp';
 
 const projects = [
+
+    {
+    id: 'musicvideo',
+    title: 'Magic Music – Music Video',
+    description: [
+      '- Motion Graphics & After Effects Project',
+      '- Fan-made music video with handmade costumes and playful visuals',
+    ],
+    category: ['Motion Graphics', 'Video Production'],
+    image: magicMusic,
+    link: '/projects/magic-music-mv',
+  },
+
   {
     id: 'bumper',
     title: 'Bumper Opener Video',
@@ -47,17 +60,7 @@ const projects = [
     link: '/projects/3d-packaging-ad',
   },
 
-  {
-    id: 'musicvideo',
-    title: 'Magic Music – Music Video',
-    description: [
-      '- Motion Graphics & After Effects Project',
-      '- Fan-made music video with handmade costumes and playful visuals',
-    ],
-    category: ['Motion Graphics', 'Video Production'],
-    image: magicMusic,
-    link: '/projects/magic-music-mv',
-  },
+
   {
     id: 'japanese-instagram-project',
     title: 'Instagram Contents',
@@ -70,17 +73,7 @@ const projects = [
     link: '/projects/japanese-instagram-project',
   },
 
-  {
-    id: 'fashion-zine',
-    title: 'Fashion Zine and Event',
-    category: ['Branding', 'Fashion', 'Web Development'],
-    description: [
-      '- Branding, Logo Design, Event Poster, Fashion Zine, Web Design',
-   '- Event organization with landing page',
-    ],
-    image: zine,
-    link: '/projects/fashion-zine-and-event',
-  },
+
 
   {
     id: 'canada-promotional-video',
@@ -92,6 +85,17 @@ const projects = [
     ],
     image: canada,
     link: '/projects/canada-promotional-video',
+  },
+    {
+    id: 'fashion-zine',
+    title: 'Fashion Zine and Event',
+    category: ['Branding', 'Fashion', 'Web Development'],
+    description: [
+      '- Branding, Logo Design, Event Poster, Fashion Zine, Web Design',
+   '- Event organization with landing page',
+    ],
+    image: zine,
+    link: '/projects/fashion-zine-and-event',
   },
 ];
 

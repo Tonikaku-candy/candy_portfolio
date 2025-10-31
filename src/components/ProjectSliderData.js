@@ -16,6 +16,16 @@ const projectData = [
     image: instagram,
     link: '/projects/japanese-instagram-project',
   },
+    {
+    id: 4,
+    title: 'After Effects MV',
+    subtitle: 'Motion Graphics',
+    description:
+      'Fan-made music video in After Effects with handmade costumes and playful visuals.',
+    image: magicMusic,
+    link: '/projects/magic-music-mv',
+  },
+
   {
     id: 2,
     title: '3D PACKAGING AD',
@@ -34,18 +44,10 @@ const projectData = [
     link: '/projects/bumper',
   },
 
-  {
-    id: 4,
-    title: 'After Effects MV',
-    subtitle: 'Motion Graphics',
-    description:
-      'Fan-made music video in After Effects with handmade costumes and playful visuals.',
-    image: magicMusic,
-    link: '/projects/magic-music-mv',
-  },
+
   {
     id: 5,
-    title: 'Rhythm Game Motion',
+    title: 'Rhythm Motion',
     subtitle: 'Motion Graphics',
     description:
       'Beat-synced rhythm game animation with playful visuals in After Effects.',
