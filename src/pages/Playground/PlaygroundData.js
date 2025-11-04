@@ -26,8 +26,21 @@ import cherry from '../../assets/Playground/cherry-border.webp';
 import leaf from '../../assets/Playground/leaf-line.webp';
 import apple from '../../assets/Playground/apple-line.webp';
 import pumpkin from '../../assets/Playground/pumpkin-line.webp';
+import coffee from '../../assets/Playground/coffee-line.webp';
 
 const playgroundProjects = [
+
+    {
+    id: 17,
+    videoUrl: 'https://www.youtube.com/embed/9zuoXAtIXd0',
+    
+    tags: ['MOTION'],
+    layout: 'left',
+    orientation: 'vertical',
+    line: coffee,
+
+  },
+ 
        {
     id: 16,
      videoUrl: 'https://www.youtube.com/embed/4WA7PxyCIqE?si=rKW6TAwVMHHjydmU',
@@ -170,7 +183,7 @@ const playgroundProjects = [
 
 
 
-  // next 17
+  // next 18
 ];
 
 export default playgroundProjects;

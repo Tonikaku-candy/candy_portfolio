@@ -182,6 +182,19 @@ export default function Playground() {
                   )}
 
                   <div className="text">
+                        {p.id === 17 && (
+                      <>
+                        <h3>
+                          <span className="icon"></span> Hot to Cold — Starbucks-style 3D Camera Motion
+                        </h3>
+                        <p>
+                  I often burn my tongue on hot drinks, so I turned that moment into a motion piece.
+This project uses 3D camera tracking and a cylinder effect in After Effects to visualize temperature change.
+I also designed a logo in Illustrator that changes its expression based on temperature.
+                        </p>
+                      </>
+                    )}
+
                     {p.id === 16 && (
                       <>
                         <h3>
