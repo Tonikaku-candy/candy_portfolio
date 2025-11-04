@@ -127,8 +127,9 @@ function CanadaPromotionalVideo() {
                 extraClass="small-padding-box"
               >
                 <ul>
+                       <li>Re-edited August 4th, 2025</li>
                   <li>March 20th – April 11th, 2025</li>
-                  <li>Re-edited August 4th, 2025</li>
+             
                 </ul>
               </DetailBox>
             </FadeInOnScroll>

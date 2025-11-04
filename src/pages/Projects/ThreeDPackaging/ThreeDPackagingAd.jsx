@@ -80,7 +80,7 @@ function ThreeDPackagingAd() {
   const params = useParams();
   const location = useLocation();
 
-    const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   // 現在インデックス
   const currentIndex = useMemo(
@@ -121,19 +121,15 @@ function ThreeDPackagingAd() {
         <ScrollingTagBar tags={tags} />
 
         <div className="back-to-works top">
-         <Link to="/projects" className="back-button top">
-                   <span className="button_top">← Back to projects</span>
-                 </Link>
+          <Link to="/projects" className="back-button top">
+            <span className="button_top">← Back to projects</span>
+          </Link>
         </div>
 
-<ProjectTitle
-
-  title={`3D PACKAGING AD\n- Apparel Motion Design`}
-/>
-
+        <ProjectTitle title={`3D PACKAGING AD\n- Apparel Motion Design`} />
 
         <div className="video-wrapper poster">
-              <div id="video"></div>
+          <div id="video"></div>
           <FadeInOnScroll>
             <iframe
               width="560"
@@ -149,7 +145,7 @@ function ThreeDPackagingAd() {
 
         <DetailLinks
           links={[
-              { id: 'video', label: 'Video' },
+            { id: 'video', label: 'Video' },
             { id: 'overview', label: 'OVERVIEW' },
             { id: 'inspiration', label: 'Inspiration' },
             { id: 'brainstorming', label: 'Brainstorming' },
@@ -188,11 +184,9 @@ function ThreeDPackagingAd() {
             <FadeInOnScroll>
               <DetailBox size="S" title="DURATION" colorClass="yellow">
                 <ul>
-                  <li>May 1–2, 2024 (Pixel Pattern Design)</li>
-                  
-                  <li>June 6–14, 2025 (3D Packaging Mockup)</li>
-                  
                   <li>July 27, 2025 (Animated Promo Video)</li>
+                  <li>June 6–14, 2025 (3D Packaging Mockup)</li>
+                  <li>May 1–2, 2024 (Pixel Pattern Design)</li>
                 </ul>
               </DetailBox>
             </FadeInOnScroll>
@@ -297,9 +291,10 @@ function ThreeDPackagingAd() {
                   ]}
                 />
                 <div className="project-slider-detail canada">
-                  <SlideCard slideData={SlideData}
-                  
-                  onImageClick={(img) => setSelectedImage(img)}/>
+                  <SlideCard
+                    slideData={SlideData}
+                    onImageClick={(img) => setSelectedImage(img)}
+                  />
                 </div>
               </DetailBox>
             </FadeInOnScroll>
@@ -343,76 +338,76 @@ function ThreeDPackagingAd() {
         {/* --- Prev / Next --- */}
         <div className="project-nav">
           {prevProject && (
-           <Link
-                  to={buildProjectLink(prevProject)}
-                  className="nav-button prev"
-                >
-                  <span className="button_top">← Prev</span>
-                </Link>
-              )}
-              <Link to="/projects" className="back-button center">
-                <span className="button_top">Back to projects</span>
-              </Link>
-              {nextProject && (
-                <Link
-                  to={buildProjectLink(nextProject)}
-                  className="nav-button next"
-                >
-                  <span className="button_top">Next →</span>
-                </Link>
+            <Link
+              to={buildProjectLink(prevProject)}
+              className="nav-button prev"
+            >
+              <span className="button_top">← Prev</span>
+            </Link>
+          )}
+          <Link to="/projects" className="back-button center">
+            <span className="button_top">Back to projects</span>
+          </Link>
+          {nextProject && (
+            <Link
+              to={buildProjectLink(nextProject)}
+              className="nav-button next"
+            >
+              <span className="button_top">Next →</span>
+            </Link>
           )}
         </div>
-         {/* モーダル（クリックで画像拡大表示） */}
-                <Modal
-                  isOpen={!!selectedImage}
-                  onRequestClose={() => setSelectedImage(null)}
-                  contentLabel="拡大画像"
-                  style={{
-                    content: {
-                      top: '50%',
-                      left: '50%',
-                      right: 'auto',
-                      bottom: 'auto',
-                      transform: 'translate(-50%, -50%)',
-                      background: 'rgba(0,0,0,0.95)',
-                      border: 'none',
-                      padding: 0,
-                      overflow: 'auto',
-                      width: '95vw', // モバイル用
-                      maxWidth: '800px', // PCでは最大800pxまで
-                      height: 'auto',
-                      maxHeight: '90vh', // 高さも制限してはみ出さないように
-                    },
-                    overlay: {
-                      backgroundColor: 'rgba(0,0,0,0.85)',
-                      zIndex: 50,
-                    },
-                  }}
-                >
-                  <button
-                    onClick={() => setSelectedImage(null)}
-                    style={{
-                      position: 'absolute',
-                      top: '10px',
-                      right: '10px',
-                      fontSize: '2rem',
-                      color: 'white',
-                      background: 'rgba(0,0,0,0.5)',
-                      border: 'none',
-                      borderRadius: '8px',
-                      padding: '0 8px',
-                    }}
-                  >
-                    ✕
-                  </button>
-                  <img
-                    src={selectedImage}
-                    alt="拡大画像"
-                    style={{
-                      width: '100%',
-                    }}
-                  />
-                </Modal>
+        {/* モーダル（クリックで画像拡大表示） */}
+        <Modal
+          isOpen={!!selectedImage}
+          onRequestClose={() => setSelectedImage(null)}
+          contentLabel="拡大画像"
+          style={{
+            content: {
+              top: '50%',
+              left: '50%',
+              right: 'auto',
+              bottom: 'auto',
+              transform: 'translate(-50%, -50%)',
+              background: 'rgba(0,0,0,0.95)',
+              border: 'none',
+              padding: 0,
+              overflow: 'auto',
+              width: '95vw', // モバイル用
+              maxWidth: '800px', // PCでは最大800pxまで
+              height: 'auto',
+              maxHeight: '90vh', // 高さも制限してはみ出さないように
+            },
+            overlay: {
+              backgroundColor: 'rgba(0,0,0,0.85)',
+              zIndex: 50,
+            },
+          }}
+        >
+          <button
+            onClick={() => setSelectedImage(null)}
+            style={{
+              position: 'absolute',
+              top: '10px',
+              right: '10px',
+              fontSize: '2rem',
+              color: 'white',
+              background: 'rgba(0,0,0,0.5)',
+              border: 'none',
+              borderRadius: '8px',
+              padding: '0 8px',
+            }}
+          >
+            ✕
+          </button>
+          <img
+            src={selectedImage}
+            alt="拡大画像"
+            style={{
+              width: '100%',
+            }}
+          />
+        </Modal>
       </div>
 
       <div className="footer-detail">

@@ -180,7 +180,7 @@ function MagicMusicMv() {
                 extraClass="small-padding-box"
               >
                 <ul>
-                  <li className="game">June 15th – July 2nd, 2025</li>
+                  <li className="game">July 19th – August 9th, 2025</li>
                 </ul>
               </DetailBox>
             </FadeInOnScroll>

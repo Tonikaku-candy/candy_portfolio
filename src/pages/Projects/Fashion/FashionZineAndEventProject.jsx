@@ -135,6 +135,7 @@ function FashionZineAndEventProject() {
                 { id: 'overview', label: 'Overview' },
                 { id: 'design', label: 'Design Concept' },
                 { id: 'landing', label: 'Landing Page' },
+                 { id: 'website', label: 'Official Website'},
                 { id: 'history', label: 'Event History' },
               ]}
             />
@@ -171,6 +172,7 @@ function FashionZineAndEventProject() {
                 <FadeInOnScroll>
                   <DetailBox size="S" title="DURATION" colorClass="yellow">
                     <ul className="tight-paragraph">
+                         <li>September 2025 — Official Website</li>
                       <li>March 2025 — Logo, Poster & Landing Page</li>
                       <li>June–July 2025 — Fashion Zine</li>
                     </ul>
@@ -246,28 +248,70 @@ function FashionZineAndEventProject() {
 
               <div id="landing"></div>
               <FadeInOnScroll>
-                <DetailBox title="EVENT LANDING PAGE" colorClass="purple">
+                <DetailBox
+                  title="EVENT LANDING PAGE (First Project)"
+                  colorClass="purple"
+                >
                   <p>
-                    Alongside the zine and poster, I designed and coded a
-                    <strong> one-page event website</strong> using Tailwind CSS.
-                    The landing page was created to welcome first-time
-                    participants and those unfamiliar with Harajuku fashion,
-                    making the event easy to understand at a glance.
-                    <br />
-                    <br />I included photos of different Harajuku fashion styles
-                    , clear event details, and playful visuals to reflect the
-                    unique, colorful atmosphere of the community. The site aimed
-                    to replicate the excitement of the event while guiding
-                    visitors smoothly through the information.
+                    This was the <strong>first event website</strong> I created
+                    for Harajuku Walk YVR — a one-page landing site designed to
+                    introduce the event to newcomers and those unfamiliar with
+                    Harajuku fashion.
                     <br />
                     <br />
-                    The header video was designed in two versions: a horizontal
-                    format for desktop and a vertical format for mobile so the
-                    experience feels responsive and dynamic across devices.
+                    It aimed to{' '}
+                    <strong>
+                      explain the concept quickly and visually
+                    </strong>{' '}
+                    through bright photos, playful colors, and clear event
+                    details, making it easy for first-time participants to
+                    understand what the event was about.
+                    <br />
+                    <br />
+                    Built with <strong>Tailwind CSS</strong>, the site featured
+                    a responsive design and simple navigation for a friendly
+                    user experience.
                   </p>
                   <div className="text-center">
                     <a
                       href="https://purinp1.github.io/harajukuwalkvyr/?fbclid=..."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="colorful-button"
+                    >
+                      <span className="button_top">View Live Website</span>
+                    </a>
+                  </div>
+                </DetailBox>
+              </FadeInOnScroll>
+
+              <div id="website"></div>
+              <FadeInOnScroll>
+                <DetailBox
+                  title="OFFICIAL WEBSITE (Second Project)"
+                  colorClass="pink"
+                >
+                  <p>
+                    After the first landing page, I created a{' '}
+                    <strong>full official website</strong>
+                    to expand the community and showcase more aspects of the
+                    event.
+                    <br />
+                    <br />
+                    The official site focused on{' '}
+                    <strong>event storytelling and community building</strong>,
+                    featuring sections for fashion styles, zine release, past
+                    photos, and more.
+                    <br />
+                    <br />
+                    Its goal was to{' '}
+                    <strong>celebrate Harajuku culture in Vancouver</strong>
+                    through interactive design and vibrant visuals that reflect
+                    the diversity of participants.
+                  </p>
+                  <div className="text-center">
+                    <a
+                      href="https://purinp1.github.io/harajuku-walk-yvr/index.html"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="colorful-button"
