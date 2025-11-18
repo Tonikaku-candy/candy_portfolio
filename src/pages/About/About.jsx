@@ -260,7 +260,7 @@ function About() {
                 <br />
                 <br />
                 Before starting this program, I had almost no experience with
-                technology — I could barely use a computer. But through this
+                technology. I could barely use a computer. But through this
                 journey, I’ve discovered a true passion for creating digital
                 work that blends fun, weirdness, and heartfelt expression.
                 <br />
@@ -271,14 +271,14 @@ function About() {
                 <br />
                 <br />I come from a fashion design background, where I made
                 handmade clothes and accessories. That experience taught me how
-                to express personality through design — something I now bring
+                to express personality through design, something I now bring
                 into my digital projects.
               </p>
               <br />
               <div className="about-box">
                 <p>
                   I’m also a fan of Japanese comedy, and I enjoy creating work
-                  that’s a little silly or chaotic — but always made with full
+                  that’s a little silly or chaotic but always made with full
                   sincerity. Whether it’s an animation or a quirky interface, my
                   goal is to make people smile and enjoy the moment.
                 </p>
@@ -302,7 +302,7 @@ function About() {
                 I like working ahead and pushing myself beyond just meeting
                 deadlines because I truly want to improve, experiment, and keep
                 learning. Even when I struggle, I stay committed. My dedication
-                and sense of responsibility are traits I’m proud of — rooted in
+                and sense of responsibility are traits I’m proud of, rooted in
                 my Japanese upbringing.
                 <br />
                 <br />
@@ -315,7 +315,7 @@ function About() {
                 <br />
                 Right now, I’m focused on growing as a designer who can turn
                 unique ideas into meaningful, memorable experiences. Cute,
-                strange, funny — and made to make people happy.
+                strange, funny, and made to make people happy.
               </p>
             </div>
           </div>
@@ -498,7 +498,7 @@ function About() {
               <p>
                 Candy is hilarious and always makes people laugh, sometimes
                 without even trying. At the same time, she’s one of the
-                hardest-working and most productive students I know — like a
+                hardest-working and most productive students I know, like a
                 one-person creative agency handling design, social media, and
                 more. Her unique mix of humor and dedication is a rare strength,
                 and it makes her stand out in the best way.

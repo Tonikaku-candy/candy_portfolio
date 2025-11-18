@@ -13,7 +13,9 @@ import EyeIcon from '../../components/EyeIcon'
 
 // images
 import headerVideo from '../../assets/home/header/candy-fukaya-motion-design-portfolio.mp4';
+import headerVideo2 from '../../assets/home/header/candy-fukaya-motion-design-portfolio2.mp4';
 import headerVideoWebm from '../../assets/home/header/candy-fukaya-motion-design-portfolio.webm';
+import headerVideoWebm2 from '../../assets/home/header/candy-fukaya-motion-design-portfolio2.webm';
 
 // import featuredProjectsTitleImage from '../../assets/home/featured-projects/eye.png';
 import aboutMeTitleImage from '../../assets/home/about-me/fireworks.png';
@@ -101,8 +103,8 @@ function Home() {
           playsInline
           poster={placeHolder}
         >
-          <source src={headerVideoWebm} type="video/webm" />
-          <source src={headerVideo} type="video/mp4" />
+          <source src={headerVideoWebm2} type="video/webm" />
+          <source src={headerVideo2} type="video/mp4" />
           <track
             src="/captions/hero-video-captions.vtt"
             kind="captions"
