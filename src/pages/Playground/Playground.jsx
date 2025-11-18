@@ -238,6 +238,24 @@ I also designed a logo in Illustrator that changes its expression based on tempe
                       </>
                     )}
 
+                               {p.id === 18 && (
+                      <>
+                        <h3>Costume Design</h3>
+                        <p style={{ whiteSpace: 'pre-line' }}>
+      
+                          I custom-designed the pattern and sewed a kimono-style costume for{' '}
+                          <a
+                            href="https://www.instagram.com/blueejoy/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Bluee Joy
+                          </a>
+                          , a Japanese drag queen based in Vancouver, BC
+                        </p>
+                      </>
+                    )}
+
                     {p.id === 13 && (
                       <>
                         <h3>
@@ -296,6 +314,21 @@ I also designed a logo in Illustrator that changes its expression based on tempe
                         </p>
                       </>
                     )}
+
+                             {p.id === 19 && (
+                      <>
+                        <h3>
+                          <span className="icon"></span>
+Dunkin’ Donuts Short Advertisement Video
+                        </h3>
+                        <p>
+                        A short promotional video highlighting Dunkin’s cheerful brand image.
+  Focused on morning energy, color harmony, and positive visual rhythm.
+                        </p>
+                      </>
+                    )}
+
+               
 
                     {p.id === 11 && (
                       <>

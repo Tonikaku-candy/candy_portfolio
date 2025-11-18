@@ -9,7 +9,7 @@ import fruit from '../../assets/Playground/fruit-shop-design.webp';
 import orthodontistLogo from '../../assets/Playground/orthodontist-logo.webp';
 import bag from '../../assets/Playground/bag-design.webp';
 import fashionMagazine from '../../assets/Playground/fashion-magazine.webp';
-
+import kimono from '../../assets/Playground/kimono-outfit.webp';
 //line
 import donuts from '../../assets/Playground/donuts-line.webp';
 import hand from '../../assets/Playground/hand-line.webp';
@@ -27,6 +27,7 @@ import leaf from '../../assets/Playground/leaf-line.webp';
 import apple from '../../assets/Playground/apple-line.webp';
 import pumpkin from '../../assets/Playground/pumpkin-line.webp';
 import coffee from '../../assets/Playground/coffee-line.webp';
+import momiji from '../../assets/Playground/momiji-line.webp';
 
 const playgroundProjects = [
 
@@ -65,6 +66,15 @@ const playgroundProjects = [
     line: leaf,
   },
 
+     {
+    id: 18,
+    image: kimono,
+    tags: ['FASHION'],
+    layout: 'left',
+    size: 'medium',
+    line: momiji,
+  },
+
     {
     id: 13,
      videoUrl: 'https://www.youtube.com/embed/9aD_m9uWLk0',
@@ -90,6 +100,14 @@ const playgroundProjects = [
     tags: ['MOTION'],
     layout: 'center',
     line: hand,
+  },
+
+  {
+    id: 19,
+    videoUrl: 'https://www.youtube.com/embed/8BqNfR3B6tE?si=vUWTTO4zKbnmR0SM',
+    tags: ['MOTION'],
+    layout: 'center',
+    line: donuts,
   },
 
   {
@@ -183,7 +201,7 @@ const playgroundProjects = [
 
 
 
-  // next 18
+  // next 19
 ];
 
 export default playgroundProjects;
