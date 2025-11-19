@@ -9,13 +9,15 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import AnimatedTitle from '../../components/AnimatedTitle'; // 新しいコンポーネントを使用
 
 // icon
-import EyeIcon from '../../components/EyeIcon'
+import EyeIcon from '../../components/EyeIcon';
 
 // images
 import headerVideo from '../../assets/home/header/candy-fukaya-motion-design-portfolio.mp4';
 import headerVideo2 from '../../assets/home/header/candy-fukaya-motion-design-portfolio2.mp4';
 import headerVideoWebm from '../../assets/home/header/candy-fukaya-motion-design-portfolio.webm';
 import headerVideoWebm2 from '../../assets/home/header/candy-fukaya-motion-design-portfolio2.webm';
+import headerVideoMobile from '../../assets/home/header/candy-fukaya-motion-design-portfolio-mobile.mp4';
+import headerVideoWebmMobile from '../../assets/home/header/candy-fukaya-motion-design-portfolio-mobile.webm';
 
 // import featuredProjectsTitleImage from '../../assets/home/featured-projects/eye.png';
 import aboutMeTitleImage from '../../assets/home/about-me/fireworks.png';
@@ -86,6 +88,17 @@ function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    function handleResize() {
+      setIsMobile(window.innerWidth < 768);
+    }
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div>
       {/* header */}
@@ -103,8 +116,17 @@ function Home() {
           playsInline
           poster={placeHolder}
         >
-          <source src={headerVideoWebm2} type="video/webm" />
-          <source src={headerVideo2} type="video/mp4" />
+          {isMobile ? (
+            <>
+              <source src={headerVideoMobile} type="video/mp4" />
+              <source src={headerVideoWebmMobile} type="video/webm" />
+            </>
+          ) : (
+            <>
+              <source src={headerVideoWebm2} type="video/webm" />
+              <source src={headerVideo2} type="video/mp4" />
+            </>
+          )}
           <track
             src="/captions/hero-video-captions.vtt"
             kind="captions"
@@ -186,11 +208,9 @@ function Home() {
                     color, and playfulness!
                   </p>
 
-                  
-                 <Link to="/about" className="intro-button">
-  <span className="button_top">More about me</span>
-</Link>
-
+                  <Link to="/about" className="intro-button">
+                    <span className="button_top">More about me</span>
+                  </Link>
                 </div>
                 <div className="about-image">
                   <video
