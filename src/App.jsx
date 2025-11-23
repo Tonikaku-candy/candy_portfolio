@@ -9,7 +9,6 @@ import Home from './pages/Home/Home';
 import Playground from './pages/Playground/Playground';
 import '../src/styles/global.css';
 
-
 // projects
 import BumperProject from './pages/Projects/Bumper/BumperProject';
 import ThreeDPackagingAd from './pages/Projects/ThreeDPackaging/ThreeDPackagingAd';
@@ -18,8 +17,7 @@ import CanadaPromotionalVideo from './pages/Projects/Canada/CanadaPromotionalVid
 import RhythmGame from './pages/Projects/RhythmGame/RhythmGame';
 import MagicMusicMv from './pages/Projects/MagicMusicMv/MagicMusicMv';
 import FashionZineAndEventProject from './pages/Projects/Fashion/FashionZineAndEventProject';
-
-
+import Shiseido from './pages/Projects/Shiseido/ShiseidoPackage';
 
 import GoToTop from './components/GoToTop';
 import ScrollToTop from './components/ScrollToTop';
@@ -55,8 +53,13 @@ function App() {
           element={<CanadaPromotionalVideo />}
         />
         <Route path="/projects/rhythm-game" element={<RhythmGame />} />
-        <Route path="/projects/fashion-zine-and-event" element={<FashionZineAndEventProject />} />
+        <Route
+          path="/projects/fashion-zine-and-event"
+          element={<FashionZineAndEventProject />}
+        />
         <Route path="/projects/magic-music-mv" element={<MagicMusicMv />} />
+
+        <Route path="/projects/shiseido-package" element={<Shiseido />} />
       </Routes>
 
       {/* メニュー開いてる時は GoToTop を非表示 */}

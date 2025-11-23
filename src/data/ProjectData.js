@@ -9,6 +9,7 @@ import instagram from '../components/assets/japanese-instagram-content-posts.web
 import canada from '../assets/ProjectDetails/Canada/Promotional-Short-Video.webp';
 import rhythmGame from '../assets/ProjectDetails/RhythmGame/rhythm-game-cover.webp';
 import magicMusic from '../assets/ProjectDetails/MagicMusicMv/magic-music-mv-cover.webp';
+import shiseido from '../assets/ProjectDetails/Shiseido/ultimune-final-poster.webp';
 
 const projects = [
 
@@ -47,6 +48,17 @@ const projects = [
     image: rhythmGame,
     link: '/projects/rhythm-game',
   },
+{
+  id: 'shiseido',
+  title: 'Shiseido Package Design',
+  description: [
+    '- Graphic Design, Packaging Mockup, Poster Design',
+    '- Unofficial concept inspired by Shiseido Ultimune 2026 Limited Edition',
+  ],
+  category: ['Graphic Design'],
+  image: shiseido,
+  link: '/projects/shiseido-package',
+},
 
   {
     id: '3d-packaging-ad',
