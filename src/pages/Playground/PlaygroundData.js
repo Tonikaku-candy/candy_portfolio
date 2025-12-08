@@ -28,8 +28,19 @@ import apple from '../../assets/Playground/apple-line.webp';
 import pumpkin from '../../assets/Playground/pumpkin-line.webp';
 import coffee from '../../assets/Playground/coffee-line.webp';
 import momiji from '../../assets/Playground/momiji-line.webp';
+import chainsaw from '../../assets/Playground/chainsaw-line.webp';
 
 const playgroundProjects = [
+
+   {
+    id: 20,
+    videoUrl: 'https://www.youtube.com/embed/mvCH_SjRiEo?si=TO2cG--mqjCIGNKh',
+    tags: ['MOTION'],
+    layout: 'center',
+    line: chainsaw,
+  },
+
+
 
     {
     id: 17,
@@ -201,7 +212,7 @@ const playgroundProjects = [
 
 
 
-  // next 19
+  // next 21
 ];
 
 export default playgroundProjects;

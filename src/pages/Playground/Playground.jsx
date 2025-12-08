@@ -182,15 +182,34 @@ export default function Playground() {
                   )}
 
                   <div className="text">
-                        {p.id === 17 && (
+                    {p.id === 20 && (
                       <>
                         <h3>
-                          <span className="icon"></span> Hot to Cold — Starbucks-style 3D Camera Motion
+                          <span className="icon"></span>
+                          Lyric Video Practice – Iris Out (Song by Kenshi Yonezu)
                         </h3>
                         <p>
-                  I often burn my tongue on hot drinks, so I turned that moment into a motion piece.
-This project uses 3D camera tracking and a cylinder effect in After Effects to visualize temperature change.
-I also designed a logo in Illustrator that changes its expression based on temperature.
+                          This is my first lyric video experiment. The song was
+                          composed for the Chainsaw Man movie, and I
+                          incorporated visual motifs inspired by its world and
+                          symbolism to build a dark, atmospheric style.
+                        </p>
+                      </>
+                    )}
+
+                    {p.id === 17 && (
+                      <>
+                        <h3>
+                          <span className="icon"></span> Hot to Cold —
+                          Starbucks-style 3D Camera Motion
+                        </h3>
+                        <p>
+                          I often burn my tongue on hot drinks, so I turned that
+                          moment into a motion piece. This project uses 3D
+                          camera tracking and a cylinder effect in After Effects
+                          to visualize temperature change. I also designed a
+                          logo in Illustrator that changes its expression based
+                          on temperature.
                         </p>
                       </>
                     )}
@@ -238,12 +257,12 @@ I also designed a logo in Illustrator that changes its expression based on tempe
                       </>
                     )}
 
-                               {p.id === 18 && (
+                    {p.id === 18 && (
                       <>
                         <h3>Costume Design</h3>
                         <p style={{ whiteSpace: 'pre-line' }}>
-      
-                          I custom-designed the pattern and sewed a kimono-style costume for{' '}
+                          I custom-designed the pattern and sewed a kimono-style
+                          costume for{' '}
                           <a
                             href="https://www.instagram.com/blueejoy/"
                             target="_blank"
@@ -315,20 +334,19 @@ I also designed a logo in Illustrator that changes its expression based on tempe
                       </>
                     )}
 
-                             {p.id === 19 && (
+                    {p.id === 19 && (
                       <>
                         <h3>
                           <span className="icon"></span>
-Dunkin’ Donuts Short Advertisement Video
+                          Dunkin’ Donuts Short Advertisement Video
                         </h3>
                         <p>
-                        A short promotional video highlighting Dunkin’s cheerful brand image.
-  Focused on morning energy, color harmony, and positive visual rhythm.
+                          A short promotional video highlighting Dunkin’s
+                          cheerful brand image. Focused on morning energy, color
+                          harmony, and positive visual rhythm.
                         </p>
                       </>
                     )}
-
-               
 
                     {p.id === 11 && (
                       <>
