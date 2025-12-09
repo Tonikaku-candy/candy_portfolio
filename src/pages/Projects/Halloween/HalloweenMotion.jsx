@@ -167,7 +167,7 @@ function HalloweenMotion() {
             <FadeInOnScroll>
               <DetailBox size="S" title="DURATION" colorClass="yellow">
                 <ul>
-                  <li>Oct 27 – 28, 2025</li>
+                  <li>Oct 27 – 29, 2025</li>
                 </ul>
               </DetailBox>
             </FadeInOnScroll>
