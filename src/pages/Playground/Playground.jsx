@@ -202,8 +202,7 @@ export default function Playground() {
                       <>
                         <h3>
                           <span className="icon"></span>
-                          Lyric Video Practice – Iris Out (Song by Kenshi
-                          Yonezu)
+                          A Cute Animation About Me Ignoring Break Warnings
                         </h3>
                         <p>
                           This animation shows what I’m like when I’m working in
