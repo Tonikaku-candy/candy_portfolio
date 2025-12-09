@@ -114,7 +114,7 @@ function Home() {
           muted
           loop
           playsInline
-          poster={placeHolder}
+          // poster={placeHolder}
         >
           {isMobile ? (
             <>
