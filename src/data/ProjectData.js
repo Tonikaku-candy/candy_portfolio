@@ -10,7 +10,7 @@ import canada from '../assets/ProjectDetails/Canada/Promotional-Short-Video.webp
 import rhythmGame from '../assets/ProjectDetails/RhythmGame/rhythm-game-cover.webp';
 import magicMusic from '../assets/ProjectDetails/MagicMusicMv/magic-music-mv-cover.webp';
 import shiseido from '../assets/ProjectDetails/Shiseido/ultimune-final-poster.webp';
-import Halloween from '../assets/ProjectDetails/Halloween/halloween.webp';
+import Halloween from '../assets/ProjectDetails/Halloween/Halloween.webp';
 
 const projects = [
   {
