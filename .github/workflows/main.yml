@@ -1,29 +1,39 @@
+name: 🚀 Deploy website on push
 on:
   push:
-    branches: [ main ]
-name: 🚀 Deploy website on push
+    branches: [main]
+
 jobs:
   web-deploy:
-    name: 🚀 Deploy React
+    name: 🚀 Deploy React to Netlify
     runs-on: ubuntu-latest
     steps:
       - name: Get latest code
         uses: actions/checkout@v4
+
       - name: Use Node.js 20
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
+          cache: 'npm'
+
       - name: ⛏️Build Project
         run: |
-          npm install
+          npm ci
           npm run build
-      - name: Copy .htaccess to dist
-        run: cp .htaccess dist/.htaccess
-      - name: 📁 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+
+      # .htaccess のコピーは削除しました（Netlifyでは機能しません）
+
+      - name: 🚀 Deploy to Netlify
+        uses: nwtgck/actions-netlify@v3.0
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: "dist/"
-          server-dir: "public_html/"
+          publish-dir: './dist' # Viteなら dist, CRAなら build
+          production-branch: main
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          deploy-message: 'Deploy from GitHub Actions'
+          enable-pull-request-comment: false
+          enable-commit-comment: true
+          overwrites-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
