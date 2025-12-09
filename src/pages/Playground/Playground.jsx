@@ -186,13 +186,33 @@ export default function Playground() {
                       <>
                         <h3>
                           <span className="icon"></span>
-                          Lyric Video Practice – Iris Out (Song by Kenshi Yonezu)
+                          Lyric Video Practice – Iris Out (Song by Kenshi
+                          Yonezu)
                         </h3>
                         <p>
                           This is my first lyric video experiment. The song was
                           composed for the Chainsaw Man movie, and I
                           incorporated visual motifs inspired by its world and
                           symbolism to build a dark, atmospheric style.
+                        </p>
+                      </>
+                    )}
+
+                    {p.id === 21 && (
+                      <>
+                        <h3>
+                          <span className="icon"></span>
+                          Lyric Video Practice – Iris Out (Song by Kenshi
+                          Yonezu)
+                        </h3>
+                        <p>
+                          This animation shows what I’m like when I’m working in
+                          After Effects, completely focused. <br></br>It was created
+                          using my original illustrations drawn in Adobe
+                          Illustrator. The story captures a humorous moment when
+                          a sudden “Take a break!” error pops up. In the end,
+                          the character must choose between Continue and End,
+                          and of course, she chooses Continue.
                         </p>
                       </>
                     )}
@@ -214,20 +234,20 @@ export default function Playground() {
                       </>
                     )}
 
-                    {/* {p.id === 16 && (
+                    {p.id === 16 && (
                       <>
                         <h3>
-                          <span className="icon"></span> Halloween Motion
-                          Graphic
+                          <span className="icon"></span> Dutch Bunny Maker
                         </h3>
                         <p>
-                          A looping grid animation inspired by the spooky
-                          season. It explores playful motion and vibrant
-                          Halloween colors, created using shape tools in After
-                          Effects and Illustrator.
+                          Dutch Bunny Maker is a game-style animation created
+                          using my original illustrations drawn in Adobe
+                          Illustrator. I designed all the character parts, UI
+                          elements, and pastel visuals to mimic a cute
+                          character-customizer game.
                         </p>
                       </>
-                    )} */}
+                    )}
 
                     {p.id === 15 && (
                       <>

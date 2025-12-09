@@ -29,15 +29,26 @@ import pumpkin from '../../assets/Playground/pumpkin-line.webp';
 import coffee from '../../assets/Playground/coffee-line.webp';
 import momiji from '../../assets/Playground/momiji-line.webp';
 import chainsaw from '../../assets/Playground/chainsaw-line.webp';
+import rabbit2 from '../../assets/Playground/rabbit-line2.webp';
 
 const playgroundProjects = [
 
    {
     id: 20,
-    videoUrl: 'https://www.youtube.com/embed/mvCH_SjRiEo?si=TO2cG--mqjCIGNKh',
+    videoUrl: 'https://www.youtube.com/embed/OHo8ZAunkTQ?si=5IWyjrLSvd-8ufhU',
     tags: ['MOTION'],
     layout: 'center',
     line: chainsaw,
+  },
+
+   {
+    id: 21,
+    videoUrl: 'https://www.youtube.com/embed/Hj7-Hoty1gc?si=TmsmGmfyqPmF9EMV',
+    
+    tags: ['MOTION'],
+    layout: 'center',
+    line: candy,
+
   },
 
 
@@ -53,13 +64,13 @@ const playgroundProjects = [
 
   },
  
-  //      {
-  //   id: 16,
-  //    videoUrl: 'https://www.youtube.com/embed/4WA7PxyCIqE?si=rKW6TAwVMHHjydmU',
-  //  tags: ['MOTION'],
-  //   layout: 'center',
-  //   line: pumpkin,
-  // },
+       {
+    id: 16,
+     videoUrl: 'https://www.youtube.com/embed/5qlEvDuQu-w?si=zZmU9migwL0OT4s1',
+   tags: ['MOTION'],
+    layout: 'center',
+    line: rabbit2,
+  },
 
      {
     id: 15,
@@ -212,7 +223,7 @@ const playgroundProjects = [
 
 
 
-  // next 21
+  // next 22
 ];
 
 export default playgroundProjects;
