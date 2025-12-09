@@ -214,7 +214,7 @@ export default function Playground() {
                       </>
                     )}
 
-                    {p.id === 16 && (
+                    {/* {p.id === 16 && (
                       <>
                         <h3>
                           <span className="icon"></span> Halloween Motion
@@ -227,7 +227,7 @@ export default function Playground() {
                           Effects and Illustrator.
                         </p>
                       </>
-                    )}
+                    )} */}
 
                     {p.id === 15 && (
                       <>

@@ -10,10 +10,10 @@ import canada from '../assets/ProjectDetails/Canada/Promotional-Short-Video.webp
 import rhythmGame from '../assets/ProjectDetails/RhythmGame/rhythm-game-cover.webp';
 import magicMusic from '../assets/ProjectDetails/MagicMusicMv/magic-music-mv-cover.webp';
 import shiseido from '../assets/ProjectDetails/Shiseido/ultimune-final-poster.webp';
+import halloween from '../assets/ProjectDetails/Halloween/halloween.webp';
 
 const projects = [
-
-    {
+  {
     id: 'musicvideo',
     title: 'Magic Music – Music Video',
     description: [
@@ -38,27 +38,29 @@ const projects = [
   },
 
   {
-    id: 'rhythm-game',
-    title: 'Rhythm Lab',
+    id: 'halloween-motion',
+    title: 'Halloween Geometric Motion Loop',
     description: [
-      '- Rhythm game–style animation created in After Effects',
-      '- Creative storytelling with beat-synced motion graphics',
+      '- Seamless geometric loop created in After Effects',
+      '- Playful ghost character and vibrant seasonal color palette',
     ],
     category: ['Motion Graphics'],
-    image: rhythmGame,
-    link: '/projects/rhythm-game',
+    image: halloween,
+    link: '/projects/halloween-motion',
   },
+
 {
-  id: 'shiseido',
-  title: 'Shiseido Package Design',
+  id: 'rhythm-game',
+  title: 'Rhythm Motion',
   description: [
-    '- Graphic Design, Packaging Mockup, Poster Design',
-    '- Unofficial concept inspired by Shiseido Ultimune 2026 Limited Edition',
+    '- Rhythm-game–inspired motion graphic created in After Effects',
+    '- Beat-synced animation with playful visual storytelling',
   ],
-  category: ['Graphic Design'],
-  image: shiseido,
-  link: '/projects/shiseido-package',
+  category: ['Motion Graphics'],
+  image: rhythmGame,
+  link: '/projects/rhythm-game',
 },
+
 
   {
     id: '3d-packaging-ad',
@@ -72,6 +74,17 @@ const projects = [
     link: '/projects/3d-packaging-ad',
   },
 
+  {
+    id: 'shiseido',
+    title: 'Shiseido Package Design',
+    description: [
+      '- Graphic Design, Packaging Mockup, Poster Design',
+      '- Unofficial concept inspired by Shiseido Ultimune 2026 Limited Edition',
+    ],
+    category: ['Graphic Design'],
+    image: shiseido,
+    link: '/projects/shiseido-package',
+  },
 
   {
     id: 'japanese-instagram-project',
@@ -85,8 +98,6 @@ const projects = [
     link: '/projects/japanese-instagram-project',
   },
 
-
-
   {
     id: 'canada-promotional-video',
     title: 'Travel Campaign Film',
@@ -98,13 +109,13 @@ const projects = [
     image: canada,
     link: '/projects/canada-promotional-video',
   },
-    {
+  {
     id: 'fashion-zine',
     title: 'Fashion Zine and Event',
     category: ['Branding', 'Fashion', 'Web Development'],
     description: [
       '- Branding, Logo Design, Event Poster, Fashion Zine, Web Design',
-   '- Event organization with landing page',
+      '- Event organization with landing page',
     ],
     image: zine,
     link: '/projects/fashion-zine-and-event',
