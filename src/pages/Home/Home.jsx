@@ -37,6 +37,7 @@ import sewingMachine from '../../assets/home/my-look/sewing-machine.webp';
 import tomato from '../../assets/home/my-look/tomato-pin-cushion.webp';
 import thread from '../../assets/home/my-look/colorful-thread.webp';
 import placeHolder from '../../assets/home/header/candy-fukaya-portfolio-placeholder.webp';
+import placeHolder2 from '../../assets/home/header/candy-fukaya-portfolio-placeholder2.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -114,7 +115,7 @@ function Home() {
           muted
           loop
           playsInline
-          // poster={placeHolder}
+          poster={placeHolder2}
         >
           {isMobile ? (
             <>
