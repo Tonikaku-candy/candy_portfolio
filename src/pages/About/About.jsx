@@ -259,10 +259,10 @@ function About() {
                 I’m a New Media student at BCIT, originally from Japan.
                 <br />
                 <br />
-                Before starting this program, I had almost no experience with
-                technology. I could barely use a computer. But through this
-                journey, I’ve discovered a true passion for creating digital
-                work that blends fun, weirdness, and heartfelt expression.
+                Before starting this program, I had <strong>almost no experience with
+                technology</strong>. I could barely use a computer. But through this
+                journey, I’ve discovered a <strong>true passion for creating digital
+                work</strong> that blends fun, weirdness, and heartfelt expression.
                 <br />
                 <br />
                 My creative style is inspired by Japanese kawaii culture,
