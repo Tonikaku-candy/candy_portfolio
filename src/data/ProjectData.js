@@ -11,7 +11,7 @@ import rhythmGame from '../assets/ProjectDetails/RhythmGame/rhythm-game-cover.we
 import magicMusic from '../assets/ProjectDetails/MagicMusicMv/magic-music-mv-cover.webp';
 import shiseido from '../assets/ProjectDetails/Shiseido/ultimune-final-poster.webp';
 import halloween from '../assets/ProjectDetails/Halloween/halloween.webp';
-import coding from '../assets/ProjectDetails/CandyVsCoding/candy-vs-coding.webp';
+import coding from '../assets/ProjectDetails/CandyVsCoding/candy-vs-coding2.webp';
 
 const projects = [
 {

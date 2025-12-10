@@ -6,7 +6,7 @@ import zine from './assets/vancouver-jfashion-zine-cover.webp';
 import bumper from './assets/bumper-animation.webp';
 import rhythmGame from '../assets/ProjectDetails/RhythmGame/rhythm-game-cover.webp';
 import magicMusic from '../assets/ProjectDetails/MagicMusicMv/magic-music-mv-cover.webp';
-import coding from '../assets/ProjectDetails/CandyVsCoding/candy-vs-coding.webp';
+import coding from '../assets/ProjectDetails/CandyVsCoding/candy-vs-coding2.webp';
 
 const projectData = [
   {

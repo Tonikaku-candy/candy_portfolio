@@ -256,7 +256,7 @@ function About() {
             <div className="about-page-text">
               <h3>I’m Candy!</h3>
               <p>
-                I’m a New Media student at BCIT, originally from Japan.
+                 I’m a designer based in Vancouver, originally from Japan.
                 <br />
                 <br />
                 Before starting this program, I had <strong>almost no experience with
