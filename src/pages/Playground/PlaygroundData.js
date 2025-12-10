@@ -41,6 +41,14 @@ const playgroundProjects = [
     line: chainsaw,
   },
 
+     {
+    id: 22,
+    videoUrl: 'https://www.youtube.com/embed/uwm7ZS_FCG4?si=JhxKnAkD5gqZuG4B',
+    tags: ['MOTION'],
+    layout: 'center',
+    line: heart,
+  },
+
    {
     id: 21,
     videoUrl: 'https://www.youtube.com/embed/Hj7-Hoty1gc?si=TmsmGmfyqPmF9EMV',
@@ -223,7 +231,7 @@ const playgroundProjects = [
 
 
 
-  // next 22
+  // next 23
 ];
 
 export default playgroundProjects;

@@ -133,8 +133,27 @@ function ShiseidoPackage() {
         <DetailLinks
           links={[
             { id: 'overview', label: 'Overview' },
-            { id: 'moodboard', label: 'Moodboard' },
-            { id: 'process', label: 'Process' },
+            {
+              id: 'moodboard',
+              label: (
+                <>
+                  Research &
+                  <br />
+                  Moodboard
+                </>
+              ),
+            },
+            {
+              id: 'process',
+              label: (
+                <>
+                  {' '}
+                  Design
+                  <br />
+                  Process
+                </>
+              ),
+            },
             { id: 'product', label: 'Product Design' },
           ]}
         />
@@ -199,8 +218,8 @@ function ShiseidoPackage() {
                 limited-edition Ultimune releases to understand how the brand
                 incorporates cultural themes. The target audience I envisioned
                 was women in their late 20s to 40s who enjoy high-end skincare
-                and prefer designs that are minimal, elegant, and subtly
-                cute with just the right amount of vibrance.
+                and prefer designs that are minimal, elegant, and subtly cute
+                with just the right amount of vibrance.
               </p>
               <br />
               <p>
@@ -252,24 +271,26 @@ function ShiseidoPackage() {
           {/* Product */}
           <div id="product"></div>
           <FadeInOnScroll>
-            
             <DetailBox title="Product Design" colorClass="orange">
               <p>
-  For the final product design, I placed the geometric horse illustration onto
-  the Ultimune bottle and box, carefully adjusting shapes and colors so the
-  artwork blended naturally with Shiseido’s signature red aesthetic. The gold
-  accents highlight the New Year theme, while the camellia motif connects back
-  to both Japanese culture and the Ultimune formula itself. My goal was to
-  create a limited-edition look that feels modern, elegant, and visually
-  charming—something collectors would want to display rather than simply use.
-</p>
-<br></br>
+                For the final product design, I placed the geometric horse
+                illustration onto the Ultimune bottle and box, carefully
+                adjusting shapes and colors so the artwork blended naturally
+                with Shiseido’s signature red aesthetic. The gold accents
+                highlight the New Year theme, while the camellia motif connects
+                back to both Japanese culture and the Ultimune formula itself.
+                My goal was to create a limited-edition look that feels modern,
+                elegant, and visually charming—something collectors would want
+                to display rather than simply use.
+              </p>
+              <br></br>
               <p>
-  The scattered shapes surrounding the horse illustration came from an idea I
-  discovered while experimenting with different geometric compositions. As I
-  moved and rearranged the shapes during the design process, I found that these
-  accents added a sense of movement and rhythm to the overall visual.
-</p>
+                The scattered shapes surrounding the horse illustration came
+                from an idea I discovered while experimenting with different
+                geometric compositions. As I moved and rearranged the shapes
+                during the design process, I found that these accents added a
+                sense of movement and rhythm to the overall visual.
+              </p>
 
               <div className="image-wrapper" style={{ marginTop: '2rem' }}>
                 <img src={Package} alt="Packaging Mockup" />

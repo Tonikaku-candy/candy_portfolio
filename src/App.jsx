@@ -19,6 +19,7 @@ import MagicMusicMv from './pages/Projects/MagicMusicMv/MagicMusicMv';
 import FashionZineAndEventProject from './pages/Projects/Fashion/FashionZineAndEventProject';
 import Shiseido from './pages/Projects/Shiseido/ShiseidoPackage';
 import Halloween from './pages/Projects/Halloween/HalloweenMotion'
+import Coding from './pages/Projects/Coding/CandyVsCoding';
 
 import GoToTop from './components/GoToTop';
 import ScrollToTop from './components/ScrollToTop';
@@ -63,6 +64,7 @@ function App() {
         <Route path="/projects/shiseido-package" element={<Shiseido />} />
 
             <Route path="/projects/halloween-motion" element={<Halloween />} />
+             <Route path="/projects/candy-vs-coding" element={<Coding />} />
       </Routes>
 
       {/* メニュー開いてる時は GoToTop を非表示 */}

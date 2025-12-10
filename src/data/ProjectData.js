@@ -11,8 +11,24 @@ import rhythmGame from '../assets/ProjectDetails/RhythmGame/rhythm-game-cover.we
 import magicMusic from '../assets/ProjectDetails/MagicMusicMv/magic-music-mv-cover.webp';
 import shiseido from '../assets/ProjectDetails/Shiseido/ultimune-final-poster.webp';
 import halloween from '../assets/ProjectDetails/Halloween/halloween.webp';
+import coding from '../assets/ProjectDetails/CandyVsCoding/candy-vs-coding.webp';
 
 const projects = [
+{
+  id: 'candyvscoding',
+  title: 'How I Built My Portfolio',
+  description: [
+'- Motion Graphics project visualizing my playful portfolio-building journey',
+'- Street Fighter–style battle representing my coding challenges',
+
+
+  ],
+  category: ['Motion Graphics', 'Web Development', 'UI / UX'],
+  image: coding,
+  link: '/projects/candy-vs-coding',
+},
+
+
   {
     id: 'musicvideo',
     title: 'Magic Music – Music Video',
@@ -44,7 +60,7 @@ const projects = [
       '- Seamless geometric loop created in After Effects',
       '- Playful ghost character and vibrant seasonal color palette',
     ],
-    category: ['Motion Graphics'],
+    category: ['Motion Graphics', 'Content Creation'],
     image: halloween,
     link: '/projects/halloween-motion',
   },

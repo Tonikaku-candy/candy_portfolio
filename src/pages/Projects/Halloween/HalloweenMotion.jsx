@@ -136,7 +136,11 @@ function HalloweenMotion() {
             { id: 'video', label: 'Video' },
             { id: 'overview', label: 'Overview' },
             { id: 'inspiration', label: 'Inspiration' },
-            { id: 'wip', label: 'Short Video' },
+            { id: 'wip', label:  <>
+                  Behind-the-Scenes 
+                  <br />
+                  Short Video
+                </> },
             { id: 'neonversion', label: 'Neon Version' },
           ]}
         />

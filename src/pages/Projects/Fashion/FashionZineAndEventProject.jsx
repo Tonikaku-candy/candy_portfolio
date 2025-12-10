@@ -134,8 +134,16 @@ function FashionZineAndEventProject() {
                 { id: 'magazine', label: 'Magazine' },
                 { id: 'overview', label: 'Overview' },
                 { id: 'design', label: 'Design Concept' },
-                { id: 'landing', label: 'Landing Page' },
-                 { id: 'website', label: 'Official Website'},
+                { id: 'landing', label:  <>
+                  Landing Page
+                  <br />
+                  ( 1st Project)
+                </> },
+                 { id: 'website', label:  <>
+                  Official Website
+                  <br />
+                  ( 2nd Project)
+                </> },
                 { id: 'history', label: 'Event History' },
               ]}
             />

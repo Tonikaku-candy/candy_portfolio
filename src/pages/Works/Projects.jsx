@@ -68,6 +68,7 @@ const baseTags = [
   'SOCIAL MEDIA',
   'MARKETING',
   'WEB DEVELOPMENT',
+  'UI / UX'
 ];
 
 const tags = [...baseTags, ...baseTags, ...baseTags]; // タグを繰り返し表示（スクロール用など）
@@ -157,7 +158,8 @@ function Works() {
               'Motion Graphics',
               'Graphic Design',
               'Branding',
-              'Web Development'
+              'Web Development',
+              
             ].map((tag, index) => (
               <span
                 key={index}

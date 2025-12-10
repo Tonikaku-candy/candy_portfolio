@@ -198,16 +198,37 @@ export default function Playground() {
                       </>
                     )}
 
-                    {p.id === 21 && (
+                    {p.id === 22 && (
                       <>
                         <h3>
                           <span className="icon"></span>
-                          A Cute Animation About Me Ignoring Break Warnings
+                          Pulling My Logo Out of the Screen
+                        </h3>
+                        <p>
+                          This animation plays with the idea of breaking the
+                          fourth wall. I reach into the screen and pull my logo
+                          out by hand, creating a playful moment that reflects
+                          my love for humor and motion graphics. <br />
+                          <br />
+                          To bring the concept even further into the real world,
+                          I also made an actual chameleon necklace out of perler
+                          beads based on my pixel logo. Turning my digital
+                          mascot into a handmade physical item adds a fun,
+                          personal touch to the project.
+                        </p>
+                      </>
+                    )}
+
+                    {p.id === 21 && (
+                      <>
+                        <h3>
+                          <span className="icon"></span>A Cute Animation About
+                          Me Ignoring Break Warnings
                         </h3>
                         <p>
                           This animation shows what I’m like when I’m working in
-                          After Effects, completely focused. <br></br>It was created
-                          using my original illustrations drawn in Adobe
+                          After Effects, completely focused. <br></br>It was
+                          created using my original illustrations drawn in Adobe
                           Illustrator. The story captures a humorous moment when
                           a sudden “Take a break!” error pops up. In the end,
                           the character must choose between Continue and End,
