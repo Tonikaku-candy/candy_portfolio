@@ -19,6 +19,7 @@ import look10 from './assets/PhotoGallery/look10.webp';
 import look11 from './assets/PhotoGallery/look11.webp';
 import look12 from './assets/PhotoGallery/look12.webp';
 import look13 from './assets/PhotoGallery/look13.webp';
+import look14 from './assets/PhotoGallery/look14.webp';
 
 // 仮の画像
 const images = [
@@ -62,6 +63,10 @@ const images = [
     src: look10,
     alt: 'Colorful Decora-inspired outfit posing in front of a Harajuku-style mural wall',
   },
+     {
+    src: look14,
+    alt: 'Kimono inspired dress',
+  },
   {
     src: look11,
     alt: 'Vintage-inspired colorful floral dress in Shinsekai, Osaka, with matching hat and sunglasses',
@@ -75,6 +80,7 @@ const images = [
     src: look13,
     alt: 'Vintage-inspired colorful floral dress in Shinsekai, Osaka, with matching hat and sunglasses',
   },
+ 
 ];
 
 const PhotoGallery = ({ direction = 'ltr' }) => {
