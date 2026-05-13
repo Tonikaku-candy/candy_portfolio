@@ -4,7 +4,7 @@ import './Navbar.css';
 import { useState, useEffect } from 'react';
 import heart from './assets/pixel-heart.png';
 import { bubble as Menu } from 'react-burger-menu';
-import burger from './assets/humburger.png';
+import burger from './assets/humburger2.png';
 import ufo from '../assets/About/rabbit-ufo.svg';
 import close from '../components/assets/crossing-hands.webp';
 import { FaInstagram, FaLinkedin, FaEnvelope } from 'react-icons/fa';

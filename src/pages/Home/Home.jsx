@@ -32,6 +32,8 @@ import instagramIcon from '../../assets/home/connect/instagram-icon.png';
 import linkedinIcon from '../../assets/home/connect/linkedin-icon.png';
 import girl from '../../assets/home/connect/girl.webp';
 
+import playgroundTitleImage from '../../assets/Playground/heart.png';
+
 import myLookTitleImage from '../../assets/home/my-look/rainbow.png';
 import sewingMachine from '../../assets/home/my-look/sewing-machine.webp';
 import tomato from '../../assets/home/my-look/tomato-pin-cushion.webp';
@@ -234,6 +236,7 @@ function Home() {
 
       {/* connect */}
       <section className="connect-section">
+          
         <div className="rainbow">
           <img src={rainbow} alt="rainbow-stripe" />
         </div>
@@ -288,8 +291,53 @@ function Home() {
             ))}
           </p>
         </div>
+          <div className="diagonal-bottom-connect"></div>
+    
       </section>
       {/* connect end */}
+      
+{/* playground */}
+
+
+<section className="playground-preview">
+  
+  <div className="playground-preview-title-wrapper">
+    <div className="playground-title-image-wrapper">
+      <img
+        src={playgroundTitleImage}
+        className="playground-title-image"
+        alt="heart icon"
+      />
+    </div>
+
+    <AnimatedTitle
+      text={'PLAYGROUND'}
+      trigger=".playground-preview"
+      className="subtitles playground-preview-title"
+    />
+  </div>
+
+  <p className="playground-preview-description">
+    A collection of experimental and personal works, practice projects, and
+    playful ideas created while exploring new creative skills and concepts
+  </p>
+
+  <Link
+    to="/playground"
+    className="playground-preview-card preview-rotate-left"
+  >
+    <div className="playground-preview-tags">
+      <span className="playground-preview-tag">Motion</span>
+      <span className="playground-preview-tag">Graphic</span>
+      <span className="playground-preview-tag">Fashion</span>
+      <span className="playground-preview-tag">Web</span>
+    </div>
+
+    <h3>Go Check My Playground</h3>
+  </Link>
+</section>
+
+{/* playground end */}
 
       {/* my looks */}
       <section className="my-looks-section">
