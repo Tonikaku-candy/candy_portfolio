@@ -24,6 +24,7 @@ import premiereproIcon from '../../assets/About/icons/premierepro-icon.png';
 import reactIcon from '../../assets/About/icons/react-icon.png';
 import tailwindIcon from '../../assets/About/icons/tailwind-icon.png';
 import wordpressIcon from '../../assets/About/icons/wordpress-icon.png';
+import davinci from '../../assets/About/icons/DaVinci-Resolve-Studio-icon.png'
 import profileBg from '../../assets/About/sakura-bg.webp';
 import profile1 from '../../assets/About/candy-profile1.webp';
 import profile2 from '../../assets/About/candy-profile2.webp';
@@ -256,13 +257,11 @@ function About() {
             <div className="about-page-text">
               <h3>I’m Candy!</h3>
               <p>
-                 I’m a designer based in Vancouver, originally from Japan.
+                  I’m a multidisciplinary designer originally from Japan, with a background in fashion and experience across <strong>graphic design, motion graphics, video editing, digital content and front-end development</strong>
                 <br />
                 <br />
-                Before starting this program, I had <strong>almost no experience with
-                technology</strong>. I could barely use a computer. But through this
-                journey, I’ve discovered a <strong>true passion for creating digital
-                work</strong> that blends fun, weirdness, and heartfelt expression.
+                My journey into digital design started from an unexpected place. Before I began studying digital design, I had <strong>almost no experience with technology</strong>.   
+                <br /> In a relatively short time, I grew from a complete beginner into a multidisciplinary designer and discovered a <strong>true passion for creating digital work</strong> along the way. I’m proud of how much I’ve grown and how quickly I’ve been able to turn new skills into creative projects.
                 <br />
                 <br />
                 My creative style is inspired by Japanese kawaii culture,
@@ -291,7 +290,7 @@ function About() {
                 I may be quiet and shy in person, but my imagination is anything
                 but. I’m always thinking of odd, funny ideas and unexpected ways
                 to tell a story. One of my creative mottos is:{' '}
-                <strong>“Make something silly, seriously.”</strong>I believe
+                <strong>“Make something silly, seriously.”</strong> I believe
                 humor, when treated with care, can be just as powerful as any
                 serious message.
               </p>
@@ -379,6 +378,10 @@ function About() {
               <div className="icon-with-label">
                 <img src={capcutIcon} alt="CapCut" />
                 <span className="label">CapCut</span>
+              </div>
+                 <div className="icon-with-label">
+                <img src={davinci} alt="DaVinci Resolve" />
+                <span className="label">DaVinci Resolve</span>
               </div>
             </div>
           </div>
