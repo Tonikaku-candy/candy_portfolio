@@ -10,6 +10,7 @@ import orthodontistLogo from '../../assets/Playground/orthodontist-logo.webp';
 import bag from '../../assets/Playground/bag-design.webp';
 import fashionMagazine from '../../assets/Playground/fashion-magazine.webp';
 import kimono from '../../assets/Playground/kimono-outfit.webp';
+import bookCover from '../../assets/Playground/room404-book-cover.webp';
 //line
 import donuts from '../../assets/Playground/donuts-line.webp';
 import hand from '../../assets/Playground/hand-line.webp';
@@ -30,6 +31,8 @@ import coffee from '../../assets/Playground/coffee-line.webp';
 import momiji from '../../assets/Playground/momiji-line.webp';
 import chainsaw from '../../assets/Playground/chainsaw-line.webp';
 import rabbit2 from '../../assets/Playground/rabbit-line2.webp';
+import glitch from '../../assets/Playground/glitch-line.webp'
+
 
 const playgroundProjects = [
 
@@ -48,6 +51,15 @@ const playgroundProjects = [
     layout: 'center',
     line: heart,
   },
+
+  {
+  id: 23,
+  image: bookCover,
+  tags: ['GRAPHIC'],
+  layout: 'left',
+  size: 'medium',
+  line: glitch,
+},
 
    {
     id: 21,
@@ -231,7 +243,7 @@ const playgroundProjects = [
 
 
 
-  // next 23
+  // next 24
 ];
 
 export default playgroundProjects;

@@ -219,6 +219,26 @@ export default function Playground() {
                       </>
                     )}
 
+
+                    {p.id === 23 && (
+                      <>
+                        <h3>
+                          <span className="icon"></span>
+                         ROOM 404 — Book Cover Design
+                        </h3>
+                        <p>
+      A fictional book cover inspired by error messages, digital glitches,
+      and the mysterious world behind “404.”
+      <br />
+      <br />
+      I used distorted typography, code-inspired details, and a dark visual
+      style to create an unsettling, tech-driven atmosphere. This project
+      allowed me to explore a visual direction outside of my usual colorful
+      and playful style.
+    </p>
+                      </>
+                    )}
+
                     {p.id === 21 && (
                       <>
                         <h3>

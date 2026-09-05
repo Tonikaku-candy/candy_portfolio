@@ -24,7 +24,7 @@ import premiereproIcon from '../../assets/About/icons/premierepro-icon.png';
 import reactIcon from '../../assets/About/icons/react-icon.png';
 import tailwindIcon from '../../assets/About/icons/tailwind-icon.png';
 import wordpressIcon from '../../assets/About/icons/wordpress-icon.png';
-import davinci from '../../assets/About/icons/DaVinci-Resolve-Studio-icon.png'
+import davinci from '../../assets/About/icons/DaVinci-Resolve-Studio-icon.png';
 import profileBg from '../../assets/About/sakura-bg.webp';
 import profile1 from '../../assets/About/candy-profile1.webp';
 import profile2 from '../../assets/About/candy-profile2.webp';
