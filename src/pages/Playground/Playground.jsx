@@ -94,7 +94,7 @@ export default function Playground() {
             toggleActions: 'play none none none',
             once: true,
           },
-        }
+        },
       );
     });
 
@@ -219,23 +219,25 @@ export default function Playground() {
                       </>
                     )}
 
-
-                    {p.id === 23 && (
+                    {p.id === 24 && (
                       <>
                         <h3>
                           <span className="icon"></span>
-                         ROOM 404 — Book Cover Design
+                          Strange Flower Exhibition — Station Poster Design
                         </h3>
                         <p>
-      A fictional book cover inspired by error messages, digital glitches,
-      and the mysterious world behind “404.”
-      <br />
-      <br />
-      I used distorted typography, code-inspired details, and a dark visual
-      style to create an unsettling, tech-driven atmosphere. This project
-      allowed me to explore a visual direction outside of my usual colorful
-      and playful style.
-    </p>
+                          A fictional exhibition poster featuring unusual
+                          flowers that exist in the real world. The concept
+                          explores the strange and unexpected beauty found in
+                          nature through dramatic photography, bold typography,
+                          and a dark visual style.
+                          <br />
+                          <br />
+                          Designed as a poster for display in train stations, I
+                          organized the essential event information so viewers
+                          can understand the exhibition at a glance without
+                          relying on a QR code.
+                        </p>
                       </>
                     )}
 
@@ -257,6 +259,25 @@ export default function Playground() {
                       </>
                     )}
 
+                    {p.id === 23 && (
+                      <>
+                        <h3>
+                          <span className="icon"></span>
+                          ROOM 404 — Book Cover Design
+                        </h3>
+                        <p>
+                          A fictional book cover inspired by error messages,
+                          digital glitches, and the mysterious world behind
+                          “404.”
+                          <br />
+                          <br />I used distorted typography, code-inspired
+                          details, and a dark visual style to create an
+                          unsettling, tech-driven atmosphere. This project
+                          allowed me to explore a visual direction outside of my
+                          usual colorful and playful style.
+                        </p>
+                      </>
+                    )}
                     {p.id === 17 && (
                       <>
                         <h3>

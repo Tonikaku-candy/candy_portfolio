@@ -11,6 +11,7 @@ import bag from '../../assets/Playground/bag-design.webp';
 import fashionMagazine from '../../assets/Playground/fashion-magazine.webp';
 import kimono from '../../assets/Playground/kimono-outfit.webp';
 import bookCover from '../../assets/Playground/room404-book-cover.webp';
+import poster from '../../assets/Playground/strange-flower-exhibition-poster.webp';
 //line
 import donuts from '../../assets/Playground/donuts-line.webp';
 import hand from '../../assets/Playground/hand-line.webp';
@@ -32,6 +33,7 @@ import momiji from '../../assets/Playground/momiji-line.webp';
 import chainsaw from '../../assets/Playground/chainsaw-line.webp';
 import rabbit2 from '../../assets/Playground/rabbit-line2.webp';
 import glitch from '../../assets/Playground/glitch-line.webp'
+import grass from '../../assets/Playground/grass-line.webp';
 
 
 const playgroundProjects = [
@@ -52,14 +54,16 @@ const playgroundProjects = [
     line: heart,
   },
 
-  {
-  id: 23,
-  image: bookCover,
+    {
+  id: 24,
+  image: poster,
   tags: ['GRAPHIC'],
   layout: 'left',
   size: 'medium',
-  line: glitch,
+  line: grass,
 },
+
+
 
    {
     id: 21,
@@ -71,7 +75,14 @@ const playgroundProjects = [
 
   },
 
-
+  {
+  id: 23,
+  image: bookCover,
+  tags: ['GRAPHIC'],
+  layout: 'left',
+  size: 'medium',
+  line: glitch,
+},
 
     {
     id: 17,
@@ -243,7 +254,7 @@ const playgroundProjects = [
 
 
 
-  // next 24
+  // next 25
 ];
 
 export default playgroundProjects;

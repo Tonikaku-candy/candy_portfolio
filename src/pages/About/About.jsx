@@ -72,19 +72,19 @@ function About() {
     tl.fromTo(
       helloTitleRef.current,
       { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' }
+      { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' },
     )
       .fromTo(
         helloSubRef.current,
         { y: 20, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' },
-        '-=0.2'
+        '-=0.2',
       )
       .fromTo(
         helloPhotoRef.current,
         { y: 40, opacity: 0 },
         { y: 0, opacity: 1, duration: 0.9, ease: 'power3.out' },
-        '-=0.1'
+        '-=0.1',
       );
 
     return () => {
@@ -108,7 +108,7 @@ function About() {
           chameleon.classList.add('animate');
         }
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     observer.observe(target);
@@ -139,7 +139,7 @@ function About() {
             toggleActions: 'play none none none',
             once: true,
           },
-        }
+        },
       );
     });
 
@@ -165,7 +165,7 @@ function About() {
           toggleActions: 'play none none none',
           once: true,
         },
-      }
+      },
     );
 
     return () => {
@@ -257,11 +257,22 @@ function About() {
             <div className="about-page-text">
               <h3>I’m Candy!</h3>
               <p>
-                  I’m a multidisciplinary designer originally from Japan, with a background in fashion and experience across <strong>graphic design, motion graphics, video editing, digital content and front-end development</strong>
+                I’m a multidisciplinary designer originally from Japan, with a
+                background in fashion and experience across{' '}
+                <strong>
+                  graphic design, motion graphics, video editing, digital
+                  content and front-end development
+                </strong>
                 <br />
                 <br />
-                My journey into digital design started from an unexpected place. Before I began studying digital design, I had <strong>almost no experience with technology</strong>.   
-                <br /> In a relatively short time, I grew from a complete beginner into a multidisciplinary designer and discovered a <strong>true passion for creating digital work</strong> along the way. I’m proud of how much I’ve grown and how quickly I’ve been able to turn new skills into creative projects.
+                My journey into digital design started from an unexpected place.
+                Before I began studying digital design, I had{' '}
+                <strong>almost no experience with technology</strong>.
+                <br /> In a relatively short time, I grew from a complete
+                beginner into a multidisciplinary designer and discovered a{' '}
+                <strong>true passion for creating digital work</strong> along
+                the way. I’m proud of how much I’ve grown and how quickly I’ve
+                been able to turn new skills into creative projects.
                 <br />
                 <br />
                 My creative style is inspired by Japanese kawaii culture,
@@ -379,7 +390,7 @@ function About() {
                 <img src={capcutIcon} alt="CapCut" />
                 <span className="label">CapCut</span>
               </div>
-                 <div className="icon-with-label">
+              <div className="icon-with-label">
                 <img src={davinci} alt="DaVinci Resolve" />
                 <span className="label">DaVinci Resolve</span>
               </div>
@@ -388,7 +399,6 @@ function About() {
 
           {/* Extra Skills */}
           <div className="skills-card extra">
-       
             <h2 className="about-section-title extra relative-version">
               EXTRA SKILLS
             </h2>
@@ -400,14 +410,30 @@ function About() {
               />
             </div>
             <ul className="extra-skills-list">
-              <li>Social Media <br></br> Content Creation</li>
-              <li>Flexible <br></br>Creative Thinking</li>
-              <li>Detail-Oriented<br></br> & Reliable</li>
-              <li>Storytelling <br></br>with Humor</li>
-              <li>Fashion Coordination  <br></br>& Creative Styling</li>
-              <li>Garment Construction <br></br> (Industrial Sewing)</li>
-              <li>Voiceover <br></br>& Narration</li>
-              <li>Japanese Language <br></br> Instruction</li>
+              <li>
+                Social Media <br></br> Content Creation
+              </li>
+              <li>
+                Flexible <br></br>Creative Thinking
+              </li>
+              <li>
+                Detail-Oriented<br></br> & Reliable
+              </li>
+              <li>
+                Storytelling <br></br>with Humor
+              </li>
+              <li>
+                Fashion Coordination <br></br>& Creative Styling
+              </li>
+              <li>
+                Garment Construction <br></br> (Industrial Sewing)
+              </li>
+              <li>
+                Voiceover <br></br>& Narration
+              </li>
+              <li>
+                Japanese Language <br></br> Instruction
+              </li>
             </ul>
           </div>
         </div>
