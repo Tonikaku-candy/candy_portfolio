@@ -301,3 +301,34 @@
     font-size: 0.95rem;
   }
 }
+
+
+/* =========================
+   JAPANESE FONT
+========================= */
+
+/* ALL PROJECTS → 制作実績 */
+.subtitles.all-projects.japanese-text,
+.subtitles.all-projects.japanese-text h2,
+.subtitles.all-projects.japanese-text .char {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 900;
+}
+
+/* フィルター */
+.section-center.japanese-text span {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 600;
+}
+
+/* プロジェクトタイトル */
+.project-info.japanese-text .project-title {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 800;
+}
+
+/* プロジェクト説明 */
+.project-info.japanese-text .project-description {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 400;
+}

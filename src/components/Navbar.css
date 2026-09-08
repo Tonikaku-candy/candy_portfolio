@@ -150,6 +150,12 @@
   z-index: 1;
 }
 
+/* 日本語ナビ */
+.japanese-text {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 600;
+}
+
 .nav-links li a .text {
   position: relative;
   z-index: 2;
@@ -209,6 +215,20 @@
 .mail-icon-nav:hover {
   transform: scale(1.1); /* ホバー時に少し大きく */
   background-color: #ff1e90; /* 濃い色に変化 */
+}
+
+.language-icon-nav {
+  background: none;
+  border: none;
+  color: #343434;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.language-icon-nav:hover {
+  color: #00cfff;
+  transform: rotate(15deg);
 }
 
 /* アクティブ時の色 */

@@ -6,22 +6,26 @@ import projects from '../../data/ProjectData';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
+// language
+import { useLanguage } from '../../components/context/LanguageContext.jsx';
+
 import '../../components/TagBar.css';
 import './Works.css';
 
 // icon
-import EyeIcon from '../../components/EyeIcon'
+import EyeIcon from '../../components/EyeIcon';
 
 // GSAPプラグインを登録
 gsap.registerPlugin(ScrollTrigger);
 
-// AnimatedTitleコンポーネントを統合
+// AnimatedTitleコンポーネント
 const AnimatedTitle = ({ text, trigger, className }) => {
   const titleRef = useRef(null);
 
   useEffect(() => {
     if (titleRef.current && trigger.current) {
       const chars = titleRef.current.querySelectorAll('.char');
+
       gsap.fromTo(
         chars,
         { y: 40, opacity: 0 },
@@ -40,13 +44,13 @@ const AnimatedTitle = ({ text, trigger, className }) => {
         }
       );
     }
-  }, [trigger]);
+  }, [trigger, text]);
 
   return (
     <div ref={titleRef} className={className}>
       <h2>
         {text.split('').map((char, i) => (
-          <span key={i} className="char">
+          <span key={`${text}-${i}`} className="char">
             {char === ' ' ? '\u00A0' : char}
           </span>
         ))}
@@ -54,9 +58,6 @@ const AnimatedTitle = ({ text, trigger, className }) => {
     </div>
   );
 };
-
-// images
-import eyeIcon from '../../assets/home/featured-projects/eye.png';
 
 // scrolling tab bar
 const baseTags = [
@@ -68,25 +69,62 @@ const baseTags = [
   'SOCIAL MEDIA',
   'MARKETING',
   'WEB DEVELOPMENT',
-  'UI / UX'
+  'UI / UX',
 ];
 
-const tags = [...baseTags, ...baseTags, ...baseTags]; // タグを繰り返し表示（スクロール用など）
+const tags = [...baseTags, ...baseTags, ...baseTags];
 
 function Works() {
+  const { language } = useLanguage();
+
   const [selectedTag, setSelectedTag] = useState('');
+
   const allProjectsTitleTriggerRef = useRef(null);
   const projectsGridRef = useRef(null);
   const sectionCenterRef = useRef(null);
 
-  // 新しいuseEffectフックを追加してセクションのフェードインを管理
+  // フィルター表示用
+  // valueはProjectDataのcategoryと照合する英語名
+  const filterTags = [
+    {
+      value: '',
+      en: 'All',
+      ja: 'すべて',
+    },
+    {
+      value: 'Content Creation',
+      en: 'Content Creation',
+      ja: 'コンテンツ制作',
+    },
+    {
+      value: 'Motion Graphics',
+      en: 'Motion Graphics',
+      ja: 'モーショングラフィックス',
+    },
+    {
+      value: 'Graphic Design',
+      en: 'Graphic Design',
+      ja: 'グラフィックデザイン',
+    },
+    {
+      value: 'Branding',
+      en: 'Branding',
+      ja: 'ブランディング',
+    },
+    {
+      value: 'Web Development',
+      en: 'Web Development',
+      ja: 'Web開発',
+    },
+  ];
 
   // プロジェクトグリッドのフェードインアニメーション
   useEffect(() => {
     if (projectsGridRef.current) {
-      const cards = projectsGridRef.current.querySelectorAll('.project-card');
+      const cards =
+        projectsGridRef.current.querySelectorAll('.project-card');
 
-      cards.forEach((card, i) => {
+      cards.forEach((card) => {
         gsap.fromTo(
           card,
           { opacity: 0, y: 40 },
@@ -134,77 +172,102 @@ function Works() {
           >
             <div className="all-projects-title">
               <div className="all-projects-title-image-wrapper">
-                {/* <img
-                  src={eyeIcon}
-                  className="all-projects-title-image"
-                  alt="eye icon"
-                /> */}
-                      <EyeIcon className="all-projects-title-image" />
+                <EyeIcon className="all-projects-title-image" />
               </div>
-              {/* AnimatedTitleコンポーネントを適用 */}
+
               <AnimatedTitle
-                text="ALL PROJECTS"
+                text={
+                  language === 'en'
+                    ? 'ALL PROJECTS'
+                    : '制作実績'
+                }
                 trigger={allProjectsTitleTriggerRef}
-                className="subtitles all-projects"
+                className={`subtitles all-projects ${
+                  language === 'ja' ? 'japanese-text' : ''
+                }`}
               />
             </div>
           </div>
 
           {/* カテゴリーフィルター */}
-          <div className="section-center" ref={sectionCenterRef}>
-            {[
-              'All',
-              'Content Creation',
-              'Motion Graphics',
-              'Graphic Design',
-              'Branding',
-              'Web Development',
-              
-            ].map((tag, index) => (
+          <div
+            className={`section-center ${
+              language === 'ja' ? 'japanese-text' : ''
+            }`}
+            ref={sectionCenterRef}
+          >
+            {filterTags.map((tag) => (
               <span
-                key={index}
+                key={tag.value || 'all'}
                 className={
-                  selectedTag === tag || (tag === 'All' && selectedTag === '')
+                  selectedTag === tag.value
                     ? 'active-tag'
                     : ''
                 }
-                onClick={() => setSelectedTag(tag === 'All' ? '' : tag)}
-                style={{ cursor: 'pointer', margin: '0 8px' }}
+                onClick={() => setSelectedTag(tag.value)}
+                style={{
+                  cursor: 'pointer',
+                  margin: '0 8px',
+                }}
               >
-                {tag}
+                {tag[language]}
               </span>
             ))}
           </div>
 
           {/* プロジェクトカード表示 */}
-          <div className="projects-grid" ref={projectsGridRef}>
+          <div
+            className="projects-grid"
+            ref={projectsGridRef}
+          >
             {projects
               .filter(
                 (project) =>
                   !selectedTag ||
                   project.category.some(
-                    (cat) => cat.toLowerCase() === selectedTag.toLowerCase()
+                    (cat) =>
+                      cat.toLowerCase() ===
+                      selectedTag.toLowerCase()
                   )
               )
-              .map((project, index) => (
+              .map((project) => (
                 <Link
                   to={project.link}
-                  key={index}
-                  style={{ textDecoration: 'none', color: 'inherit' }}
+                  key={project.id}
+                  style={{
+                    textDecoration: 'none',
+                    color: 'inherit',
+                  }}
                 >
                   <div className="project-card">
                     <img
                       src={project.image}
-                      alt={project.title}
+                      alt={project.title[language]}
                       className="project-image"
                     />
-                    <div className="project-info">
-                      <h3 className="project-title">{project.title}</h3>
+
+                    <div
+                      className={`project-info ${
+                        language === 'ja'
+                          ? 'japanese-text'
+                          : ''
+                      }`}
+                    >
+                      <h3 className="project-title">
+                        {project.title[language]}
+                      </h3>
+
                       <ul className="project-description">
-                        {project.description.map((point, index) => (
-                          <li key={index}>{point}</li>
-                        ))}
+                        {project.description[language].map(
+                          (point, index) => (
+                            <li key={index}>
+                              {point}
+                            </li>
+                          )
+                        )}
                       </ul>
+
+                      {/* Categoryは英語のまま */}
                       <p className="project-tags">
                         {project.category.join(', ')}
                       </p>
@@ -214,6 +277,7 @@ function Works() {
               ))}
           </div>
         </section>
+
         <div className="diagonal-bottom-works"></div>
       </div>
 

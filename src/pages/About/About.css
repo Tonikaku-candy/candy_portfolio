@@ -1204,3 +1204,75 @@ body {
     transform: translateX(0%);
   }
 }
+
+/* =========================
+   JAPANESE FONT
+========================= */
+
+.japanese-text,
+.japanese-text p,
+.japanese-text span,
+.japanese-text li {
+  font-family: 'M PLUS Rounded 1c', sans-serif ;
+}
+
+/* 日本語の本文 */
+.about-page-text.japanese-text,
+.extra-skills-list.japanese-text,
+.classmate-card .japanese-text {
+  font-family: 'M PLUS Rounded 1c', sans-serif ;
+  font-weight: 500;
+}
+
+/* 日本語タイトル */
+.about-section-title.japanese-text,
+.about-section-title.japanese-text h2,
+.about-section-title.japanese-text .char,
+.subtitles.japanese-text,
+.subtitles.japanese-text h2,
+.subtitles.japanese-text .char {
+  font-family: 'M PLUS Rounded 1c', sans-serif ;
+  font-weight: 800;
+}
+
+/* HELLO部分 */
+.hello-text.japanese-text,
+.hello-text.japanese-text h1,
+.hello-text.japanese-text span {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.06em;
+}
+
+.hello-text.japanese-text p {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.1em;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.about-page-text.japanese-text p {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 400;
+}
+
+.about-page-text.japanese-text strong {
+  font-weight: 700;
+}
+
+.extra-skills-list.japanese-text li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 50px;
+  padding: 0.35rem 1rem;
+  line-height: 1.4;
+}
+
+/* PCだけ日本語本文を少し小さく */
+@media (min-width: 769px) {
+  .about-page-text.japanese-text p {
+    font-size: 1.4rem;
+  }
+}
