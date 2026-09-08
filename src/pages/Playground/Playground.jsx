@@ -240,6 +240,36 @@ export default function Playground() {
                         </p>
                       </>
                     )}
+                    {p.id === 25 && (
+                      <>
+                        <h3>
+                          <span className="icon"></span>
+                          Aesthetic Moments in Japan
+                        </h3>
+
+                        <p>
+                          An experimental short-form video created during my
+                          internship at Pure Japan Moments.
+                          <br />
+                          <br />
+                          While the account typically focused on informative
+                          travel content, I was asked to explore a different
+                          creative direction. I used the trending “The Next
+                          Station Is” audio and fast-paced transitions between
+                          scenes to keep viewers engaged while capturing the
+                          atmosphere of Japan.
+                          <br />
+                          <br />
+                          <a
+                            href="https://www.instagram.com/pure.japan.moments/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            View Pure Japan Moments →
+                          </a>
+                        </p>
+                      </>
+                    )}
 
                     {p.id === 21 && (
                       <>

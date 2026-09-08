@@ -32,13 +32,12 @@ import coffee from '../../assets/Playground/coffee-line.webp';
 import momiji from '../../assets/Playground/momiji-line.webp';
 import chainsaw from '../../assets/Playground/chainsaw-line.webp';
 import rabbit2 from '../../assets/Playground/rabbit-line2.webp';
-import glitch from '../../assets/Playground/glitch-line.webp'
+import glitch from '../../assets/Playground/glitch-line.webp';
 import grass from '../../assets/Playground/grass-line.webp';
-
+import train from '../../assets/Playground/train-line.webp';
 
 const playgroundProjects = [
-
-   {
+  {
     id: 20,
     videoUrl: 'https://www.youtube.com/embed/OHo8ZAunkTQ?si=5IWyjrLSvd-8ufhU',
     tags: ['MOTION'],
@@ -46,7 +45,7 @@ const playgroundProjects = [
     line: chainsaw,
   },
 
-     {
+  {
     id: 22,
     videoUrl: 'https://www.youtube.com/embed/uwm7ZS_FCG4?si=JhxKnAkD5gqZuG4B',
     tags: ['MOTION'],
@@ -54,72 +53,76 @@ const playgroundProjects = [
     line: heart,
   },
 
-    {
-  id: 24,
-  image: poster,
-  tags: ['GRAPHIC'],
-  layout: 'left',
-  size: 'medium',
-  line: grass,
-},
-
-
-
-   {
-    id: 21,
-    videoUrl: 'https://www.youtube.com/embed/Hj7-Hoty1gc?si=TmsmGmfyqPmF9EMV',
-    
+  {
+    id: 24,
+    image: poster,
+    tags: ['GRAPHIC'],
+    layout: 'left',
+    size: 'medium',
+    line: grass,
+  },
+  {
+    id: 25,
+    videoUrl: 'https://www.youtube.com/embed/sCGGbffJrsk',
     tags: ['MOTION'],
-    layout: 'center',
-    line: candy,
-
+    layout: 'left',
+    orientation: 'vertical',
+    line: train,
   },
 
   {
-  id: 23,
-  image: bookCover,
-  tags: ['GRAPHIC'],
-  layout: 'left',
-  size: 'medium',
-  line: glitch,
-},
+    id: 21,
+    videoUrl: 'https://www.youtube.com/embed/Hj7-Hoty1gc?si=TmsmGmfyqPmF9EMV',
 
-    {
+    tags: ['MOTION'],
+    layout: 'center',
+    line: candy,
+  },
+
+  {
+    id: 23,
+    image: bookCover,
+    tags: ['GRAPHIC'],
+    layout: 'left',
+    size: 'medium',
+    line: glitch,
+  },
+
+  {
     id: 17,
     videoUrl: 'https://www.youtube.com/embed/9zuoXAtIXd0',
-    
+
     tags: ['MOTION'],
     layout: 'left',
     orientation: 'vertical',
     line: coffee,
-
   },
- 
-       {
+
+  {
     id: 16,
-     videoUrl: 'https://www.youtube.com/embed/5qlEvDuQu-w?si=zZmU9migwL0OT4s1',
-   tags: ['MOTION'],
+    videoUrl: 'https://www.youtube.com/embed/5qlEvDuQu-w?si=zZmU9migwL0OT4s1',
+    tags: ['MOTION'],
     layout: 'center',
     line: rabbit2,
   },
 
-     {
+  {
     id: 15,
-     videoUrl: 'https://www.youtube.com/embed/SFmts6269-I?si=3_hTVvutShXrcCih',
-   tags: ['MOTION'],
+    videoUrl: 'https://www.youtube.com/embed/SFmts6269-I?si=3_hTVvutShXrcCih',
+    tags: ['MOTION'],
     layout: 'center',
     line: apple,
   },
 
-    {
+  {
     id: 14,
-     videoUrl: 'https://www.youtube.com/embed/MrCV41qRtHc?si=1IyDW5hc2jVgE4KJ',
-   tags: ['MOTION'],
+    videoUrl: 'https://www.youtube.com/embed/MrCV41qRtHc?si=1IyDW5hc2jVgE4KJ',
+    tags: ['MOTION'],
     layout: 'center',
     line: leaf,
   },
 
-     {
+  {
     id: 18,
     image: kimono,
     tags: ['FASHION'],
@@ -128,10 +131,10 @@ const playgroundProjects = [
     line: momiji,
   },
 
-    {
+  {
     id: 13,
-     videoUrl: 'https://www.youtube.com/embed/9aD_m9uWLk0',
-   tags: ['MOTION'],
+    videoUrl: 'https://www.youtube.com/embed/9aD_m9uWLk0',
+    tags: ['MOTION'],
     layout: 'left',
     orientation: 'vertical',
     line: cherry,
@@ -139,12 +142,11 @@ const playgroundProjects = [
   {
     id: 1,
     videoUrl: 'https://www.youtube.com/embed/euLlnhKGKiw',
-    
+
     tags: ['MOTION'],
     layout: 'left',
     orientation: 'vertical',
     line: donuts,
-
   },
 
   {
@@ -252,9 +254,7 @@ const playgroundProjects = [
     line: star,
   },
 
-
-
-  // next 25
+  // next 26
 ];
 
 export default playgroundProjects;

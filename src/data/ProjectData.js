@@ -12,6 +12,7 @@ import magicMusic from '../assets/ProjectDetails/MagicMusicMv/magic-music-mv-cov
 import shiseido from '../assets/ProjectDetails/Shiseido/ultimune-final-poster.webp';
 import halloween from '../assets/ProjectDetails/Halloween/halloween.webp';
 import coding from '../assets/ProjectDetails/CandyVsCoding/candy-vs-coding2.webp';
+import vancouver from '../assets/ProjectDetails/VancouverBrochure/brochure-cover.webp';
 
 const projects = [
 {
@@ -76,7 +77,22 @@ const projects = [
   image: rhythmGame,
   link: '/projects/rhythm-game',
 },
+{
+  id: 'vancouver-brochure',
 
+  title: 'Vancouver Architecture Brochure',
+
+  description: [
+    '- Tri-fold brochure and design for a self-guided architecture tour',
+    '- Improved navigation, map design, and visual hierarchy through iteration',
+  ],
+
+  category: ['Graphic Design'],
+
+  image: vancouver,
+
+  link: '/projects/vancouver-brochure',
+},
 
   {
     id: '3d-packaging-ad',
