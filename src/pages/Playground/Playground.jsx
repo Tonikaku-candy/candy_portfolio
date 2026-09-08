@@ -18,17 +18,24 @@ const AnimatedTitle = ({ text, trigger, className }) => {
   const titleRef = useRef(null);
 
   useEffect(() => {
+    let titleAnimation;
+
     if (titleRef.current && trigger.current) {
-      const chars = titleRef.current.querySelectorAll('.char');
+      const chars =
+        titleRef.current.querySelectorAll('.char');
 
-      gsap.set(chars, { y: 40, opacity: 0 });
+      gsap.set(chars, {
+        y: 40,
+        opacity: 0,
+      });
 
-      gsap.to(chars, {
+      titleAnimation = gsap.to(chars, {
         y: 0,
         opacity: 1,
         duration: 0.5,
         stagger: 0.08,
         ease: 'back.out(1.7)',
+
         scrollTrigger: {
           trigger: trigger.current,
           start: 'top 70%',
@@ -39,15 +46,24 @@ const AnimatedTitle = ({ text, trigger, className }) => {
     }
 
     return () => {
-      ScrollTrigger.getAll().forEach((t) => t.kill());
+      if (titleAnimation) {
+        titleAnimation.scrollTrigger?.kill();
+        titleAnimation.kill();
+      }
     };
   }, [trigger, text]);
 
   return (
-    <div ref={titleRef} className={className}>
+    <div
+      ref={titleRef}
+      className={className}
+    >
       <h2>
         {text.split('').map((char, i) => (
-          <span key={`${text}-${i}`} className="char">
+          <span
+            key={`${text}-${i}`}
+            className="char"
+          >
             {char === ' ' ? '\u00A0' : char}
           </span>
         ))}
