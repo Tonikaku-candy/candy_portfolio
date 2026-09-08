@@ -56,3 +56,8 @@
     /* font-size: 18px; */
   }
 }
+
+.subtitles.all-projects.japanese-text {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 900;
+}

@@ -242,3 +242,28 @@ body {
 
 }
 }
+
+
+/* Japanese Project Slider */
+.slide-text.japanese-text h3 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 800;
+  font-size: clamp(18px, 1.7vw, 28px);
+}
+
+.slide-text.japanese-text p {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 500;
+  font-size: clamp(12px, 1.5vw, 18px);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .slide-text.japanese-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .slide-text.japanese-text p {
+    font-size: 0.9rem;
+  }
+}

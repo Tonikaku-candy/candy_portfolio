@@ -358,3 +358,47 @@
     }
   }
 }
+
+
+/* =========================
+   Japanese Project Detail
+========================= */
+
+/* ページ全体 */
+.project-detail-page.japanese-text {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+/* DetailBox 本文 */
+.project-detail-page.japanese-text .detail-box p,
+.project-detail-page.japanese-text .detail-box li {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+/* 戻る・Prev・Nextボタン */
+.project-detail-page.japanese-text .back-button,
+.project-detail-page.japanese-text .nav-button {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 700;
+}
+
+/* PC */
+@media (min-width: 769px) {
+  .project-detail-page.japanese-text .detail-box p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .project-detail-page.japanese-text .detail-box p {
+    font-size: 0.95rem;
+  }
+
+  .project-detail-page.japanese-text .back-button,
+  .project-detail-page.japanese-text .nav-button {
+    font-size: 10px;
+  }
+}

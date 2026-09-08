@@ -111,7 +111,7 @@ const projects = [
       ],
     },
 
-    category: ['Motion Graphics', 'Content Creation'],
+    category: ['Motion Graphics', 'Content Creation', 'Graphic Design'],
 
     image: halloween,
 
@@ -293,7 +293,7 @@ const projects = [
       ],
     },
 
-    category: ['Branding', 'Fashion', 'Web Development'],
+    category: ['Branding', 'Fashion', 'Web Development', 'Graphic Design'],
 
     image: zine,
 

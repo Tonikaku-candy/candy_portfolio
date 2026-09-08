@@ -7,16 +7,24 @@ import { bubble as Menu } from 'react-burger-menu';
 import burger from './assets/humburger2.png';
 import ufo from '../assets/About/rabbit-ufo.svg';
 import close from '../components/assets/crossing-hands.webp';
+
 import {
   FaInstagram,
   FaLinkedin,
   FaEnvelope,
   FaGlobe,
 } from 'react-icons/fa';
+
 import { useLanguage } from './context/LanguageContext.jsx';
 
 function Navbar({ menuOpen, setMenuOpen }) {
-  const { language, toggleLanguage } = useLanguage();
+  const {
+    language,
+    toggleLanguage,
+    setLanguage,
+  } = useLanguage();
+
+  const [languageOpen, setLanguageOpen] = useState(false);
 
   const [isMobile, setIsMobile] = useState(false);
   const [showNavbar, setShowNavbar] = useState(true);
@@ -120,7 +128,6 @@ function Navbar({ menuOpen, setMenuOpen }) {
       >
         {({ isActive }) => (
           <span className="text-with-hearts">
-
             {isActive && (
               <img
                 src={heart}
@@ -131,7 +138,9 @@ function Navbar({ menuOpen, setMenuOpen }) {
 
             <span
               className={`text ${
-                language === 'ja' ? 'japanese-text' : ''
+                language === 'ja'
+                  ? 'japanese-text'
+                  : ''
               }`}
             >
               {language === 'en'
@@ -146,7 +155,6 @@ function Navbar({ menuOpen, setMenuOpen }) {
                 className="active-heart right"
               />
             )}
-
           </span>
         )}
       </NavLink>
@@ -163,7 +171,6 @@ function Navbar({ menuOpen, setMenuOpen }) {
       >
         {({ isActive }) => (
           <span className="text-with-hearts">
-
             {isActive && (
               <img
                 src={heart}
@@ -174,7 +181,9 @@ function Navbar({ menuOpen, setMenuOpen }) {
 
             <span
               className={`text ${
-                language === 'ja' ? 'japanese-text' : ''
+                language === 'ja'
+                  ? 'japanese-text'
+                  : ''
               }`}
             >
               {language === 'en'
@@ -189,7 +198,6 @@ function Navbar({ menuOpen, setMenuOpen }) {
                 className="active-heart right"
               />
             )}
-
           </span>
         )}
       </NavLink>
@@ -206,7 +214,6 @@ function Navbar({ menuOpen, setMenuOpen }) {
       >
         {({ isActive }) => (
           <span className="text-with-hearts">
-
             {isActive && (
               <img
                 src={heart}
@@ -217,7 +224,9 @@ function Navbar({ menuOpen, setMenuOpen }) {
 
             <span
               className={`text ${
-                language === 'ja' ? 'japanese-text' : ''
+                language === 'ja'
+                  ? 'japanese-text'
+                  : ''
               }`}
             >
               {language === 'en'
@@ -232,7 +241,6 @@ function Navbar({ menuOpen, setMenuOpen }) {
                 className="active-heart right"
               />
             )}
-
           </span>
         )}
       </NavLink>
@@ -249,7 +257,6 @@ function Navbar({ menuOpen, setMenuOpen }) {
       >
         {({ isActive }) => (
           <span className="text-with-hearts">
-
             {isActive && (
               <img
                 src={heart}
@@ -260,7 +267,9 @@ function Navbar({ menuOpen, setMenuOpen }) {
 
             <span
               className={`text ${
-                language === 'ja' ? 'japanese-text' : ''
+                language === 'ja'
+                  ? 'japanese-text'
+                  : ''
               }`}
             >
               {language === 'en'
@@ -275,7 +284,6 @@ function Navbar({ menuOpen, setMenuOpen }) {
                 className="active-heart right"
               />
             )}
-
           </span>
         )}
       </NavLink>
@@ -333,24 +341,58 @@ function Navbar({ menuOpen, setMenuOpen }) {
               </li>
 
               {/* LANGUAGE */}
-              <li>
+              <li className="language-menu">
+
                 <button
                   type="button"
                   className="language-icon-nav"
-                  onClick={toggleLanguage}
-                  aria-label={
-                    language === 'en'
-                      ? 'Switch to Japanese'
-                      : 'Switch to English'
+                  onClick={() =>
+                    setLanguageOpen(
+                      (current) => !current
+                    )
                   }
-                  title={
-                    language === 'en'
-                      ? '日本語'
-                      : 'English'
-                  }
+                  aria-label="Select language"
+                  aria-expanded={languageOpen}
                 >
                   <FaGlobe />
                 </button>
+
+                {languageOpen && (
+                  <div className="language-dropdown">
+
+                    <button
+                      type="button"
+                      className={
+                        language === 'en'
+                          ? 'active-language'
+                          : ''
+                      }
+                      onClick={() => {
+                        setLanguage('en');
+                        setLanguageOpen(false);
+                      }}
+                    >
+                      English
+                    </button>
+
+                    <button
+                      type="button"
+                      className={`japanese-text ${
+                        language === 'ja'
+                          ? 'active-language'
+                          : ''
+                      }`}
+                      onClick={() => {
+                        setLanguage('ja');
+                        setLanguageOpen(false);
+                      }}
+                    >
+                      日本語
+                    </button>
+
+                  </div>
+                )}
+
               </li>
 
             </ul>
@@ -404,7 +446,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
 
                 <span
                   className={
-                    language === 'ja'
+                    language === 'en'
                       ? 'japanese-text'
                       : ''
                   }

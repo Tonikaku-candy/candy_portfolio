@@ -73,3 +73,20 @@
     margin-top: 1rem;
   }
 }
+
+/* japanese */
+.footer-text.japanese-text p {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.copyright.japanese-text {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .footer-text.japanese-text p {
+    font-size: 0.9rem;
+  }
+}

@@ -366,4 +366,31 @@
 }
 
 
+/* 日本語タイトル */
+
+
+/* 日本語のイントロ */
+.playground-intro.japanese-text {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 500;
+}
+
+/* 日本語カテゴリ */
+.section-center-play.japanese-text span {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 600;
+}
+
+/* 各作品の日本語タイトル */
+.text.japanese-text h3 {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 800;
+}
+
+/* 各作品の日本語説明 */
+.text.japanese-text p {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 400;
+}
+
 

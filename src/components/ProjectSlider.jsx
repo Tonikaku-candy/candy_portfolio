@@ -3,8 +3,11 @@ import '@splidejs/react-splide/css';
 import projectData from './ProjectSliderData';
 import './ProjectSlider.css';
 import { Link } from 'react-router-dom';
+import { useLanguage } from './context/LanguageContext.jsx';
 
 function ProjectSlider() {
+  const { language } = useLanguage();
+
   return (
     <div className="project-slider">
       <Splide
@@ -28,13 +31,21 @@ function ProjectSlider() {
               <div className="slide-card">
                 <div
                   className="slide-card-content-bg"
-                  style={{ backgroundImage: `url(${project.image})` }}
+                  style={{
+                    backgroundImage: `url(${project.image})`,
+                  }}
                 />
-                {/* <img src={project.image} alt={project.title} /> */}
-                <div className='slide-text'>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <h4>{project.subtitle}</h4>
+
+                <div
+                  className={`slide-text ${
+                    language === 'ja' ? 'japanese-text' : ''
+                  }`}
+                >
+                  <h3>{project.title[language]}</h3>
+
+                  <p>{project.description[language]}</p>
+
+                  <h4>{project.subtitle}</h4>
                 </div>
               </div>
             </Link>
