@@ -11,6 +11,7 @@ function ProjectSlider() {
   return (
     <div className="project-slider">
       <Splide
+        key={language}
         options={{
           type: 'loop',
           perPage: 3,

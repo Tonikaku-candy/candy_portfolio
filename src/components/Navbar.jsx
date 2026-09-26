@@ -8,21 +8,12 @@ import burger from './assets/humburger2.png';
 import ufo from '../assets/About/rabbit-ufo.svg';
 import close from '../components/assets/crossing-hands.webp';
 
-import {
-  FaInstagram,
-  FaLinkedin,
-  FaEnvelope,
-  FaGlobe,
-} from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaEnvelope, FaGlobe } from 'react-icons/fa';
 
 import { useLanguage } from './context/LanguageContext.jsx';
 
 function Navbar({ menuOpen, setMenuOpen }) {
-  const {
-    language,
-    toggleLanguage,
-    setLanguage,
-  } = useLanguage();
+  const { language, toggleLanguage, setLanguage } = useLanguage();
 
   const [languageOpen, setLanguageOpen] = useState(false);
 
@@ -56,9 +47,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
 
     setOpenBubble(true);
 
-    setMsgIndex(
-      Math.floor(Math.random() * messages.length)
-    );
+    setMsgIndex(Math.floor(Math.random() * messages.length));
 
     window.clearTimeout(window.__ufoTimer);
 
@@ -73,10 +62,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
     };
 
     const handleScroll = () => {
-      if (
-        window.scrollY > lastScrollY &&
-        window.scrollY > 100
-      ) {
+      if (window.scrollY > lastScrollY && window.scrollY > 100) {
         setShowNavbar(false);
       } else if (window.scrollY < lastScrollY) {
         setShowNavbar(true);
@@ -121,39 +107,23 @@ function Navbar({ menuOpen, setMenuOpen }) {
         to="/"
         onClick={() => setMenuOpen(false)}
         className={({ isActive }) =>
-          isActive
-            ? 'home-button active'
-            : 'home-button'
+          isActive ? 'home-button active' : 'home-button'
         }
       >
         {({ isActive }) => (
           <span className="text-with-hearts">
             {isActive && (
-              <img
-                src={heart}
-                alt=""
-                className="active-heart left"
-              />
+              <img src={heart} alt="" className="active-heart left" />
             )}
 
             <span
-              className={`text ${
-                language === 'ja'
-                  ? 'japanese-text'
-                  : ''
-              }`}
+              className={`text ${language === 'ja' ? 'japanese-text' : ''}`}
             >
-              {language === 'en'
-                ? 'Home'
-                : 'ホーム'}
+              {language === 'en' ? 'Home' : 'ホーム'}
             </span>
 
             {isActive && (
-              <img
-                src={heart}
-                alt=""
-                className="active-heart right"
-              />
+              <img src={heart} alt="" className="active-heart right" />
             )}
           </span>
         )}
@@ -164,39 +134,23 @@ function Navbar({ menuOpen, setMenuOpen }) {
         to="/about"
         onClick={() => setMenuOpen(false)}
         className={({ isActive }) =>
-          isActive
-            ? 'about-button active'
-            : 'about-button'
+          isActive ? 'about-button active' : 'about-button'
         }
       >
         {({ isActive }) => (
           <span className="text-with-hearts">
             {isActive && (
-              <img
-                src={heart}
-                alt=""
-                className="active-heart left"
-              />
+              <img src={heart} alt="" className="active-heart left" />
             )}
 
             <span
-              className={`text ${
-                language === 'ja'
-                  ? 'japanese-text'
-                  : ''
-              }`}
+              className={`text ${language === 'ja' ? 'japanese-text' : ''}`}
             >
-              {language === 'en'
-                ? 'About'
-                : 'プロフィール'}
+              {language === 'en' ? 'About' : 'プロフィール'}
             </span>
 
             {isActive && (
-              <img
-                src={heart}
-                alt=""
-                className="active-heart right"
-              />
+              <img src={heart} alt="" className="active-heart right" />
             )}
           </span>
         )}
@@ -207,39 +161,23 @@ function Navbar({ menuOpen, setMenuOpen }) {
         to="/projects"
         onClick={() => setMenuOpen(false)}
         className={({ isActive }) =>
-          isActive
-            ? 'works-button active'
-            : 'works-button'
+          isActive ? 'works-button active' : 'works-button'
         }
       >
         {({ isActive }) => (
           <span className="text-with-hearts">
             {isActive && (
-              <img
-                src={heart}
-                alt=""
-                className="active-heart left"
-              />
+              <img src={heart} alt="" className="active-heart left" />
             )}
 
             <span
-              className={`text ${
-                language === 'ja'
-                  ? 'japanese-text'
-                  : ''
-              }`}
+              className={`text ${language === 'ja' ? 'japanese-text' : ''}`}
             >
-              {language === 'en'
-                ? 'Projects'
-                : '制作実績'}
+              {language === 'en' ? 'Projects' : '制作実績'}
             </span>
 
             {isActive && (
-              <img
-                src={heart}
-                alt=""
-                className="active-heart right"
-              />
+              <img src={heart} alt="" className="active-heart right" />
             )}
           </span>
         )}
@@ -250,39 +188,23 @@ function Navbar({ menuOpen, setMenuOpen }) {
         to="/playground"
         onClick={() => setMenuOpen(false)}
         className={({ isActive }) =>
-          isActive
-            ? 'playground-button active'
-            : 'playground-button'
+          isActive ? 'playground-button active' : 'playground-button'
         }
       >
         {({ isActive }) => (
           <span className="text-with-hearts">
             {isActive && (
-              <img
-                src={heart}
-                alt=""
-                className="active-heart left"
-              />
+              <img src={heart} alt="" className="active-heart left" />
             )}
 
             <span
-              className={`text ${
-                language === 'ja'
-                  ? 'japanese-text'
-                  : ''
-              }`}
+              className={`text ${language === 'ja' ? 'japanese-text' : ''}`}
             >
-              {language === 'en'
-                ? 'Playground'
-                : '実験室'}
+              {language === 'en' ? 'Playground' : '実験室'}
             </span>
 
             {isActive && (
-              <img
-                src={heart}
-                alt=""
-                className="active-heart right"
-              />
+              <img src={heart} alt="" className="active-heart right" />
             )}
           </span>
         )}
@@ -293,28 +215,19 @@ function Navbar({ menuOpen, setMenuOpen }) {
   return (
     <div
       className={`navbar-container ${
-        !showNavbar && !menuOpen
-          ? 'navbar-hidden'
-          : ''
+        !showNavbar && !menuOpen ? 'navbar-hidden' : ''
       }`}
     >
       <header className="header-bar">
-
         <nav className="navbar">
-
           {/* LOGO */}
-          <NavLink
-            to="/"
-            className="logo-wrapper"
-          >
+          <NavLink to="/" className="logo-wrapper">
             <div className="logo-tab-box">
-
               <img
                 src={logo}
                 className="logo"
                 alt="colorful chameleon logo for Candy Fukaya brand"
               />
-
             </div>
           </NavLink>
 
@@ -324,10 +237,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
 
           {!isMobile && (
             <ul className="nav-links">
-
-              <li>
-                {renderLinks()}
-              </li>
+              <li>{renderLinks()}</li>
 
               {/* EMAIL */}
               <li>
@@ -342,31 +252,31 @@ function Navbar({ menuOpen, setMenuOpen }) {
 
               {/* LANGUAGE */}
               <li className="language-menu">
-
                 <button
                   type="button"
-                  className="language-icon-nav"
-                  onClick={() =>
-                    setLanguageOpen(
-                      (current) => !current
-                    )
-                  }
+                  className="language-switcher"
+                  onClick={() => setLanguageOpen((current) => !current)}
                   aria-label="Select language"
                   aria-expanded={languageOpen}
                 >
-                  <FaGlobe />
+                  <span className="language-icon-nav">
+                    <FaGlobe />
+                  </span>
+
+                  <span
+                    className={`language-label ${
+                      language === 'en' ? 'japanese-text' : ''
+                    }`}
+                  >
+                    {language === 'en' ? 'English' : '日本語'}
+                  </span>
                 </button>
 
                 {languageOpen && (
                   <div className="language-dropdown">
-
                     <button
                       type="button"
-                      className={
-                        language === 'en'
-                          ? 'active-language'
-                          : ''
-                      }
+                      className={language === 'en' ? 'active-language' : ''}
                       onClick={() => {
                         setLanguage('en');
                         setLanguageOpen(false);
@@ -378,9 +288,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
                     <button
                       type="button"
                       className={`japanese-text ${
-                        language === 'ja'
-                          ? 'active-language'
-                          : ''
+                        language === 'ja' ? 'active-language' : ''
                       }`}
                       onClick={() => {
                         setLanguage('ja');
@@ -389,12 +297,9 @@ function Navbar({ menuOpen, setMenuOpen }) {
                     >
                       日本語
                     </button>
-
                   </div>
                 )}
-
               </li>
-
             </ul>
           )}
 
@@ -406,28 +311,15 @@ function Navbar({ menuOpen, setMenuOpen }) {
             <Menu
               right
               isOpen={menuOpen}
-              onStateChange={(state) =>
-                setMenuOpen(state.isOpen)
-              }
-              customBurgerIcon={
-                <img
-                  src={burger}
-                  alt="menu"
-                />
-              }
-              customCrossIcon={
-                <img
-                  src={close}
-                  alt="close menu"
-                />
-              }
+              onStateChange={(state) => setMenuOpen(state.isOpen)}
+              customBurgerIcon={<img src={burger} alt="menu" />}
+              customCrossIcon={<img src={close} alt="close menu" />}
               styles={{
                 bmMorphShape: {
                   fill: '#fff94d',
                 },
               }}
             >
-
               {/* MOBILE NAV LINKS */}
               {renderLinks()}
 
@@ -437,29 +329,18 @@ function Navbar({ menuOpen, setMenuOpen }) {
                 className="mobile-language-button"
                 onClick={toggleLanguage}
                 aria-label={
-                  language === 'en'
-                    ? 'Switch to Japanese'
-                    : 'Switch to English'
+                  language === 'en' ? 'Switch to Japanese' : 'Switch to English'
                 }
               >
                 <FaGlobe />
 
-                <span
-                  className={
-                    language === 'en'
-                      ? 'japanese-text'
-                      : ''
-                  }
-                >
-                  {language === 'en'
-                    ? '日本語'
-                    : 'English'}
+                <span className={language === 'en' ? 'japanese-text' : ''}>
+                  {language === 'en' ? '日本語' : 'English'}
                 </span>
               </button>
 
               {/* UFO */}
               <div className="menu-footer-images">
-
                 <button
                   className="ufo-btn"
                   onClick={handleUfoClick}
@@ -468,34 +349,20 @@ function Navbar({ menuOpen, setMenuOpen }) {
                   <img
                     src={ufo}
                     alt="ufo rabbit"
-                    className={`ufo-nav ${
-                      isShaking
-                        ? 'shake'
-                        : ''
-                    }`}
+                    className={`ufo-nav ${isShaking ? 'shake' : ''}`}
                   />
                 </button>
 
                 {openBubble && (
-                  <div className="ufo-bubble-nav">
-                    {messages[msgIndex]}
-                  </div>
+                  <div className="ufo-bubble-nav">{messages[msgIndex]}</div>
                 )}
-
               </div>
 
               {/* SOCIAL LINKS */}
               <div className="mobile-social-links">
-
                 {/* EMAIL */}
-                <a
-                  href="mailto:candyfukaya@gmail.com"
-                  aria-label="Email Candy"
-                >
-                  <FaEnvelope
-                    size={40}
-                    color="#ff62bc"
-                  />
+                <a href="mailto:candyfukaya@gmail.com" aria-label="Email Candy">
+                  <FaEnvelope size={40} color="#ff62bc" />
                 </a>
 
                 {/* INSTAGRAM */}
@@ -505,10 +372,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
                   rel="noopener noreferrer"
                   aria-label="Candy's Instagram"
                 >
-                  <FaInstagram
-                    size={40}
-                    color="#38f03eff"
-                  />
+                  <FaInstagram size={40} color="#38f03eff" />
                 </a>
 
                 {/* LINKEDIN */}
@@ -518,19 +382,12 @@ function Navbar({ menuOpen, setMenuOpen }) {
                   rel="noopener noreferrer"
                   aria-label="Candy's LinkedIn"
                 >
-                  <FaLinkedin
-                    size={40}
-                    color="#00cfff"
-                  />
+                  <FaLinkedin size={40} color="#00cfff" />
                 </a>
-
               </div>
-
             </Menu>
           )}
-
         </nav>
-
       </header>
     </div>
   );

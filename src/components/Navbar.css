@@ -218,7 +218,39 @@
   background-color: #ff1e90; /* 濃い色に変化 */
 }
 
-/* language icon */
+/* =========================
+   LANGUAGE SWITCHER
+========================= */
+
+.nav-links li.language-menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transform: translateY(7px);
+}
+
+/* 🌐 + language text button */
+.language-switcher {
+  appearance: none;
+  -webkit-appearance: none;
+
+  background: transparent;
+  border: none;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 2px;
+
+  cursor: pointer;
+}
+
+/* blue globe circle */
 .language-icon-nav {
   background: #4169e1;
   border: 2px solid #343434;
@@ -233,40 +265,61 @@
   justify-content: center;
 
   font-size: 22px;
-  cursor: pointer;
-  padding: 0;
+  line-height: 1;
 
-  transition: transform 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
 }
 
-.language-icon-nav:hover {
+.language-switcher:hover .language-icon-nav {
   background: #3154c7;
-  color: white;
-  transform: scale(1.1);
+  transform: scale(1.08);
 }
 
-/* LANGUAGE DROPDOWN */
-.nav-links li.language-menu {
-  position: relative;
+/* 日本語 / English under globe */
+.language-label {
   display: block;
+
+  color: #343434;
+
+  font-family: 'Fredoka', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+
+  line-height: 1;
+  white-space: nowrap;
 }
+
+.language-label.japanese-text {
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 700;
+}
+
+/* =========================
+   LANGUAGE DROPDOWN
+========================= */
+
 .language-dropdown {
   position: absolute;
+
   top: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%);
 
-
   display: flex;
   flex-direction: column;
+
   gap: 6px;
 
   width: 120px;
   padding: 6px;
 
   background: #fff;
+
   border: 2px solid #343434;
   border-radius: 12px;
+
   box-shadow: 3px 3px 0 #343434;
 
   z-index: 9999;
@@ -274,8 +327,8 @@
 
 .language-dropdown button {
   display: block;
-  width: 100%;
 
+  width: 100%;
   padding: 9px 8px;
 
   background: transparent;
@@ -283,12 +336,14 @@
   border-radius: 7px;
 
   color: #343434;
+
   font-family: 'Fredoka', sans-serif;
   font-size: 0.9rem;
   font-weight: 700;
 
   text-align: center;
   white-space: nowrap;
+
   cursor: pointer;
 }
 
@@ -301,7 +356,6 @@
   background: #4169e1;
   color: #fff;
 }
-
 /* アクティブ時の色 */
 .home-button.active .text,
 .about-button.active .text,
