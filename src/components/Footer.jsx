@@ -1,6 +1,7 @@
 import {
   FaInstagram,
   FaLinkedin,
+  FaBehance,
   FaEnvelope,
   FaGithub,
 } from 'react-icons/fa';
@@ -56,6 +57,15 @@ const Footer = () => {
           aria-label="Candy's LinkedIn"
         >
           <FaLinkedin />
+        </a>
+
+        <a
+          href="https://www.behance.net/candyfukaya"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Candy's Behance"
+        >
+          <FaBehance />
         </a>
 
         <a

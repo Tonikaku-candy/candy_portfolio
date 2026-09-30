@@ -30,6 +30,7 @@ import rainbow from '../../assets/home/connect/rainbow-stripe.webp';
 import mailIcon from '../../assets/home/connect/mail-icon.png';
 import instagramIcon from '../../assets/home/connect/instagram-icon.png';
 import linkedinIcon from '../../assets/home/connect/linkedin-icon.png';
+import behanceIcon from '../../assets/home/connect/behance-icon.png';
 import girl from '../../assets/home/connect/girl.webp';
 
 import playgroundTitleImage from '../../assets/Playground/heart.png';
@@ -102,9 +103,7 @@ function Home() {
   }, []);
 
   // mobile
-  const [isMobile, setIsMobile] = useState(
-    window.innerWidth < 768
-  );
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
     function handleResize() {
@@ -131,9 +130,7 @@ function Home() {
       ========================== */}
 
       <div className="hero-wrapper">
-        <div className="video-timer">
-          {currentTime}
-        </div>
+        <div className="video-timer">{currentTime}</div>
 
         <h1 className="visually-hidden">
           {language === 'en'
@@ -151,30 +148,17 @@ function Home() {
         >
           {isMobile ? (
             <>
-              <source
-                src={headerVideoMobile}
-                type="video/mp4"
-              />
+              <source src={headerVideoMobile} type="video/mp4" />
 
-              <source
-                src={headerVideoWebmMobile}
-                type="video/webm"
-              />
+              <source src={headerVideoWebmMobile} type="video/webm" />
             </>
           ) : (
             <>
-              <source
-                src={headerVideoWebm2}
-                type="video/webm"
-              />
+              <source src={headerVideoWebm2} type="video/webm" />
 
-              <source
-                src={headerVideo2}
-                type="video/mp4"
-              />
+              <source src={headerVideo2} type="video/mp4" />
             </>
           )}
-
           <track
             src="/captions/hero-video-captions.vtt"
             kind="captions"
@@ -182,7 +166,6 @@ function Home() {
             label="English captions"
             default
           />
-
           Your browser does not support the video tag.
         </video>
       </div>
@@ -194,25 +177,19 @@ function Home() {
       <section className="featured-projects">
         <div className="featured-title-wrapper">
           <div className="featured-title">
-
             <div className="featured-title-image-wrapper">
               <EyeIcon className="featured-projects-title-image" />
             </div>
 
             <AnimatedTitle
               text={
-                language === 'en'
-                  ? 'FEATURED PROJECTS'
-                  : 'ピックアップ作品'
+                language === 'en' ? 'FEATURED PROJECTS' : 'ピックアップ作品'
               }
               trigger=".featured-projects"
               className={`subtitles featured ${
-                language === 'ja'
-                  ? 'japanese-text'
-                  : ''
+                language === 'ja' ? 'japanese-text' : ''
               }`}
             />
-
           </div>
         </div>
 
@@ -224,16 +201,12 @@ function Home() {
       ========================== */}
 
       <section className="about-section">
-
         <div className="diagonal-top"></div>
         <div className="grid-overlay"></div>
 
         <div className="about-section-inner">
-
           <div className="about-title-wrapper">
-
             <div className="about-title">
-
               <div className="about-title-image-wrapper">
                 <img
                   src={aboutMeTitleImage}
@@ -243,33 +216,19 @@ function Home() {
               </div>
 
               <AnimatedTitle
-                text={
-                  language === 'en'
-                    ? 'ABOUT ME'
-                    : '私について'
-                }
+                text={language === 'en' ? 'ABOUT ME' : '私について'}
                 trigger=".about-section"
                 className={`subtitles about ${
-                  language === 'ja'
-                    ? 'japanese-text'
-                    : ''
+                  language === 'ja' ? 'japanese-text' : ''
                 }`}
               />
-
             </div>
-
           </div>
 
           <div className="intro-outline-wrapper">
-
-            <img
-              src={lollipop}
-              className="lollipop"
-              alt="heart lollipop"
-            />
+            <img src={lollipop} className="lollipop" alt="heart lollipop" />
 
             <div className="candy-text-wrapper">
-
               <div className="candy-outline-text-top">
                 CANDY CANDY CANDY CANDY
               </div>
@@ -279,15 +238,11 @@ function Home() {
               </div>
 
               <div className="intro-card">
-
                 <div
                   className={`intro-text ${
-                    language === 'ja'
-                      ? 'japanese-text'
-                      : ''
+                    language === 'ja' ? 'japanese-text' : ''
                   }`}
                 >
-
                   <h2>
                     {language === 'en'
                       ? "HELLO!!  I'M CANDY"
@@ -300,21 +255,14 @@ function Home() {
                       : 'コンテンツ制作、グラフィックデザイン、モーションデザインを中心に制作しています。服飾デザインの経験を活かし、日本の「かわいい」文化からインスピレーションを得た、カラフルで遊び心のある世界観をつくることが好きです。'}
                   </p>
 
-                  <Link
-                    to="/about"
-                    className="intro-button"
-                  >
+                  <Link to="/about" className="intro-button">
                     <span className="button_top">
-                      {language === 'en'
-                        ? 'More about me'
-                        : 'もっと見る'}
+                      {language === 'en' ? 'More about me' : 'もっと見る'}
                     </span>
                   </Link>
-
                 </div>
 
                 <div className="about-image">
-
                   <video
                     className="about-video"
                     src={aboutMeVideo}
@@ -323,25 +271,15 @@ function Home() {
                     loop
                     playsInline
                   />
-
                 </div>
-
               </div>
-
             </div>
-
           </div>
-
         </div>
 
-        <img
-          src={jellyBeans}
-          className="jelly"
-          alt="jelly beans"
-        />
+        <img src={jellyBeans} className="jelly" alt="jelly beans" />
 
         <div className="diagonal-bottom"></div>
-
       </section>
 
       {/* =========================
@@ -349,12 +287,8 @@ function Home() {
       ========================== */}
 
       <section className="connect-section">
-
         <div className="rainbow">
-          <img
-            src={rainbow}
-            alt="rainbow-stripe"
-          />
+          <img src={rainbow} alt="rainbow-stripe" />
         </div>
 
         <img
@@ -364,21 +298,14 @@ function Home() {
         />
 
         <AnimatedTitle
-          text={
-            language === 'en'
-              ? "LET'S CONNECT"
-              : 'お問い合わせ'
-          }
+          text={language === 'en' ? "LET'S CONNECT" : 'お問い合わせ'}
           trigger=".connect-section"
           className={`subtitles connect ${
-            language === 'ja'
-              ? 'japanese-text'
-              : ''
+            language === 'ja' ? 'japanese-text' : ''
           }`}
         />
 
         <div className="social-links">
-
           {/* EMAIL */}
           <a
             className="shiny"
@@ -386,10 +313,7 @@ function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              src={mailIcon}
-              alt="Email Icon"
-            />
+            <img src={mailIcon} alt="Email Icon" />
           </a>
 
           {/* LINKEDIN */}
@@ -399,10 +323,7 @@ function Home() {
             rel="noopener noreferrer"
             className="shiny"
           >
-            <img
-              src={linkedinIcon}
-              alt="LinkedIn Icon"
-            />
+            <img src={linkedinIcon} alt="LinkedIn Icon" />
           </a>
 
           {/* INSTAGRAM */}
@@ -412,52 +333,44 @@ function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img
-              src={instagramIcon}
-              alt="Instagram Icon"
-            />
+            <img src={instagramIcon} alt="Instagram Icon" />
           </a>
 
+          {/* BEHANCE */}
+          <a
+            className="shiny"
+            href="https://www.behance.net/candyfukaya"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Candy's Behance"
+          >
+            <img src={behanceIcon} alt="Behance Icon" />
+          </a>
         </div>
 
         <div className="girl-comment-wrapper">
-
-          <img
-            src={girl}
-            className="girl-image swing-img"
-            alt="girl"
-          />
+          <img src={girl} className="girl-image swing-img" alt="girl" />
 
           <p
-            className={`girl-comment ${
-              isVisible ? 'visible' : ''
-            } ${
-              language === 'ja'
-                ? 'japanese-text'
-                : ''
+            className={`girl-comment ${isVisible ? 'visible' : ''} ${
+              language === 'ja' ? 'japanese-text' : ''
             }`}
           >
-            {girlComment
-              .split('')
-              .map((char, i) => (
-                <span
-                  key={`${language}-${i}`}
-                  className="char"
-                  style={{
-                    animationDelay: `${i * 0.05}s`,
-                  }}
-                >
-                  {char === ' '
-                    ? '\u00A0'
-                    : char}
-                </span>
-              ))}
+            {girlComment.split('').map((char, i) => (
+              <span
+                key={`${language}-${i}`}
+                className="char"
+                style={{
+                  animationDelay: `${i * 0.05}s`,
+                }}
+              >
+                {char === ' ' ? '\u00A0' : char}
+              </span>
+            ))}
           </p>
-
         </div>
 
         <div className="diagonal-bottom-connect"></div>
-
       </section>
 
       {/* =========================
@@ -465,40 +378,27 @@ function Home() {
       ========================== */}
 
       <section className="playground-preview">
-
         <div className="playground-preview-title-wrapper">
-
           <div className="playground-title-image-wrapper">
-
             <img
               src={playgroundTitleImage}
               className="playground-title-image"
               alt="heart icon"
             />
-
           </div>
 
           <AnimatedTitle
-            text={
-              language === 'en'
-                ? 'PLAYGROUND'
-                : '実験室'
-            }
+            text={language === 'en' ? 'PLAYGROUND' : '実験室'}
             trigger=".playground-preview"
             className={`subtitles playground-preview-title ${
-              language === 'ja'
-                ? 'japanese-text'
-                : ''
+              language === 'ja' ? 'japanese-text' : ''
             }`}
           />
-
         </div>
 
         <p
           className={`playground-preview-description ${
-            language === 'ja'
-              ? 'japanese-text'
-              : ''
+            language === 'ja' ? 'japanese-text' : ''
           }`}
         >
           {language === 'en'
@@ -510,41 +410,22 @@ function Home() {
           to="/playground"
           className="playground-preview-card preview-rotate-left"
         >
-
           <div className="playground-preview-tags">
+            <span className="playground-preview-tag">Motion</span>
 
-            <span className="playground-preview-tag">
-              Motion
-            </span>
+            <span className="playground-preview-tag">Graphic</span>
 
-            <span className="playground-preview-tag">
-              Graphic
-            </span>
+            <span className="playground-preview-tag">Fashion</span>
 
-            <span className="playground-preview-tag">
-              Fashion
-            </span>
-
-            <span className="playground-preview-tag">
-              Web
-            </span>
-
+            <span className="playground-preview-tag">Web</span>
           </div>
 
-          <h3
-            className={
-              language === 'ja'
-                ? 'japanese-text'
-                : ''
-            }
-          >
+          <h3 className={language === 'ja' ? 'japanese-text' : ''}>
             {language === 'en'
               ? 'Go Check My Playground'
               : '実験室をのぞいてみる'}
           </h3>
-
         </Link>
-
       </section>
 
       {/* =========================
@@ -552,7 +433,6 @@ function Home() {
       ========================== */}
 
       <section className="my-looks-section">
-
         <div className="diagonal-top-mylooks"></div>
 
         <div className="grid-overlay-mylooks"></div>
@@ -563,62 +443,38 @@ function Home() {
           alt="pink sewing machine"
         />
 
-        <img
-          src={tomato}
-          className="tomato"
-          alt="tomato sewing cushion"
-        />
+        <img src={tomato} className="tomato" alt="tomato sewing cushion" />
 
-        <img
-          src={thread}
-          alt="colorful thread"
-          className="thread"
-        />
+        <img src={thread} alt="colorful thread" className="thread" />
 
         <div className="my-look-title-wrapper">
-
           <div className="my-look-title">
-
             <div className="my-look-title-image-wrapper">
-
               <img
                 src={myLookTitleImage}
                 className="my-look-title-image"
                 alt="rainbow icon"
               />
-
             </div>
 
             <AnimatedTitle
-              text={
-                language === 'en'
-                  ? 'MY SEWING WORKS'
-                  : '私の洋裁作品'
-              }
+              text={language === 'en' ? 'MY SEWING WORKS' : '私の洋裁作品'}
               trigger=".my-looks-section"
               className={`subtitles look ${
-                language === 'ja'
-                  ? 'japanese-text'
-                  : ''
+                language === 'ja' ? 'japanese-text' : ''
               }`}
             />
 
-            <h3 className="made-by-me">
-              🩷#MadeByMe🩷
-            </h3>
-
+            <h3 className="made-by-me">🩷#MadeByMe🩷</h3>
           </div>
-
         </div>
 
         <PhotoGallery />
 
         <div className="diagonal-bottom-mylooks"></div>
-
       </section>
 
       <Footer className="footer-home" />
-
     </div>
   );
 }

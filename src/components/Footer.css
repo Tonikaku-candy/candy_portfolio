@@ -53,15 +53,15 @@
   font-family: 'Fredoka', sans-serif;
 }
 
+
 @media (max-width: 768px) {
   .footer-text p {
     font-size: 1rem;
   }
 
-  .footer-icons {
-    gap: 1.2rem;
-    font-size: 1.5rem;
-    flex-wrap: wrap;
+  .footer-icons a {
+    font-size: 2.3rem;
+    margin: 0 0.7rem;
   }
 
   .footer-section .go-to-top img {
@@ -73,7 +73,6 @@
     margin-top: 1rem;
   }
 }
-
 /* japanese */
 .footer-text.japanese-text p {
   font-family: 'M PLUS Rounded 1c', sans-serif;
